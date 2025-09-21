@@ -1,0 +1,115 @@
+File: CHA_focus_affection_intimacy.yaml
+# Purpose: Fokus-Schema für Zuneigung / Verliebtsein / hohe Sympathie / Attraktion / Intimität
+# =========================
+schema_version: 1.0
+id: CHA_FOCUS_AFFECTION_INTIMACY
+label: "Fokus: Zuneigung & Intimität"
+doc_types: [ "chat", "email" ]
+gates:
+  min_segments: 2
+  min_total_markers: 5
+  require_cross_family: false # Affekt kann auch klar in SEM sichtbar sein
+bias_check:
+  mode: normal
+  rules: [ "halo_effect", "wishful_thinking", "confirmation_bias", "positivity_bias" ]
+
+target_marker_families:
+  ATO:
+  - ATO_AFFECTION_WORDS # Zärtlichkeitsbegriffe, Kosenamen
+  - ATO_SELF_DISCLOSURE # Selbstöffnung, persönliche Einblicke
+  - ATO_CARE_OFFER # „Soll ich dir… bringen?“, Fürsorgeangebote
+  - ATO_SYNC_CHECK # „Bist du gut angekommen?“, Check-ins
+  SEM:
+  - SEM_RESONANCE # Dichte Bestätigungen/Spiegelungen
+  - SEM_VALIDATION # Validierung, Verständnis zeigen
+  - SEM_VULNERABILITY # Verletzlichkeit ausdrücken
+  - SEM_PROXIMITY_SEEKING # Nähe suchen (Zeit, Ort, Kontakt)
+  CLU:
+  - CLU_REPAIR_SEQUENCE # Wiedergutmachung/Reparatur nach Reibung
+  - CLU_AFFECTION_RITUALS # kleine Rituale (Gute-Nacht, „xx/xxx“)
+  - CLU_JOINT_MEANING # geteilte Insider/Story-Building
+  MEMA:
+  - MEMA_SAFE_BASE # sichere Basis / Bindungssicherheit
+  - MEMA_ATTACHMENT_GROWTH # wachsende Bindung über Zeitfenster
+
+weights_override:
+  indices:
+    trust: { w: { ATO:0.7, SEM:1.2, CLU:1.3, MEMA:1.0 }, bias: 0.2 }
+    deesc: { w: { ATO:0.6, SEM:1.0, CLU:1.1, MEMA:0.8 }, bias: 0.1 }
+    conflict: { w: { ATO:0.5, SEM:0.6, CLU:0.6, MEMA:0.5 }, bias: -0.2 }
+    sync: { w: { ATO:0.7, SEM:1.1, CLU:1.2, MEMA:0.9 }, bias: 0.1 }
+  calib:
+    mu: { trust:0.00, deesc:0.00, conflict:0.00, sync:0.00 }
+    sigma: { trust:1.00, deesc:1.00, conflict:1.00, sync:1.00 }
+
+scoring:
+  custom_indices:
+    affection_intimacy_index:
+      formula: "0.35*SEM_RESONANCE + 0.25*SEM_VULNERABILITY + 0.2*CLU_AFFECTION_RITUALS + 0.2*MEMA_SAFE_BASE"
+      scale: [ 0, 100 ]
+      gate: { families_required: [ "SEM" ], min_hits: 3 }
+  evidence_quotas:
+    per_marker_examples: 2
+    per_person_min_hits: 2
+
+axes_and_trends:
+  # Für Verlaufs-Darstellung (optional)
+  axes:
+  - { key: "nearness", left: "Distanz", right: "Nähe" }
+  - { key: "tension", left: "Spannung", right: "Ruhe" }
+  - { key: "openness", left: "Schutz", right: "Offenheit" }
+  - { key: "care_exchange", left: "Ego-Fokus", right: "Fürsorge" }
+
+sections_order:
+- scene_overview
+- affection_hits
+- per_person_profiles
+- interaction_glue
+- system_attachment_image
+- repair_sequences
+- indices
+- final_appraisal
+- bias_selfcheck
+
+sections:
+  scene_overview:
+    title: "Worum geht es hier?"
+    fields: [ narrative_long ]
+  affection_hits:
+    title: "Zuneigungs-Marker (mit Bedeutung)"
+    layout: table
+    columns: [ marker_id, short_meaning, count, short_quotes ]
+    options:
+      families: [ "SEM", "CLU", "MEMA", "ATO" ]
+  per_person_profiles:
+    title: "Pro Person: Ausdruck von Nähe"
+    fields: [ name, top_markers_with_meaning, care_gestures, self_disclosure, short_quotes ]
+  interaction_glue:
+    title: "Was hält euch zusammen?"
+    fields: [ resonance, rituals, joint_meaning, proximity_signals ]
+  system_attachment_image:
+    title: "Bindungsbild"
+    fields: [ safe_base_signs, growth_signs, boundaries, context_notes ]
+  repair_sequences:
+    title: "Repair-Sequenzen"
+    fields: [ sequence_points, pattern, examples ]
+  indices:
+    title: "Indizes"
+    show_if_gate_passed: true
+    fields: [ trust, deesc, conflict, sync, affection_intimacy_index, contributors ]
+  final_appraisal:
+    title: "Gesamteinschätzung"
+    fields: [ marker_based_view, speculative_if_any ]
+  bias_selfcheck:
+    title: "Bias-Hinweis"
+    fields: [ found_or_none ]
+
+html:
+  template: "carl/analyse.HTML"
+  payload_builder: "build_dashboard_payload"
+  benchmarks_hook: "applyPairBenchmarks"
+  highlight: true
+
+routing_hints:
+  prefer_if_user_requests: [ "zuneigung", "verliebt", "intimität", "anziehung", "hingezogen", "wärme", "nähe" ]
+  fallback_to: null

@@ -1,0 +1,25 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object",
+  "properties":{
+    "ld_spec":{"const":"LeanDeep 3.4"},
+    "version":{"type":"string"},
+    "markers":{
+      "type":"array",
+      "items":{
+        "type":"object",
+        "properties":{
+          "id":{"type":"string"},
+          "type":{"enum":["ATO","SEM","CLU","MEMA"]},
+          "activation":{"type":"object"},
+          "pattern":{"type":"array","items":{"type":"string"}},
+          "tags":{"type":"array","items":{"type":"string"}},
+          "composed_of":{"type":"array","items":{"type":"string"}},
+          "examples":{"type":"array","items":{"type":"string"}}
+        },
+        "required":["id","type"]
+      }
+    }
+  },
+  "required":["ld_spec","version","markers"]
+}

@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "input_hash": "abdd6bc2270e0d3ab39a0083f3c1e2f9b68000356ea214ac48a28fc9f1b3960f",
+    "canon_hash": "8ce72f346510043aafe4a69e926ff04d037aad2d28f55e9725069fda0a86d810",
+    "engine_hash": "aeaa3de36f8b475c385428b18313d2367579767294df7de8b577e0a5f20508d1",
+    "elapsed_ms": 8,
+    "gated": true
+  },
+  "segments": [
+    {
+      "who": "A",
+      "text": "hi"
+    },
+    {
+      "who": "B",
+      "text": "ok"
+    },
+    {
+      "who": "A",
+      "text": "danke"
+    },
+    {
+      "who": "B",
+      "text": "passt"
+    }
+  ],
+  "markers": [
+    {
+      "id": "ATO_ACK",
+      "type": "ATO",
+      "span": {
+        "start": 3,
+        "end": 5
+      },
+      "segment_idx": 1,
+      "who": "B",
+      "evidence": "ok",
+      "promotion_of": []
+    },
+    {
+      "id": "ATO_ACK",
+      "type": "ATO",
+      "span": {
+        "start": 6,
+        "end": 11
+      },
+      "segment_idx": 2,
+      "who": "A",
+      "evidence": "danke",
+      "promotion_of": []
+    },
+    {
+      "id": "ATO_ACK",
+      "type": "ATO",
+      "span": {
+        "start": 12,
+        "end": 17
+      },
+      "segment_idx": 3,
+      "who": "B",
+      "evidence": "passt",
+      "promotion_of": []
+    }
+  ],
+  "promotion": [],
+  "counts": {
+    "total": {
+      "ATO": 3,
+      "SEM": 0,
+      "CLU": 0,
+      "MEMA": 0
+    },
+    "by_speaker": {
+      "A": {
+        "ATO": 1
+      },
+      "B": {
+        "ATO": 2
+      }
+    },
+    "by_segment": [
+      {},
+      {
+        "ATO": 1
+      },
+      {
+        "ATO": 1
+      },
+      {
+        "ATO": 1
+      }
+    ]
+  },
+  "density": {
+    "text_len": 17,
+    "per_1k_chars": {
+      "ATO": 176.47058823529412,
+      "SEM": 0,
+      "CLU": 0,
+      "MEMA": 0
+    }
+  },
+  "features": {
+    "ATO": 1,
+    "SEM": 0,
+    "CLU": 0,
+    "MEMA": 0
+  },
+  "indices": {
+    "trust": {
+      "raw": 0.35,
+      "z": 0.35
+    },
+    "deesc": {
+      "raw": 0.4,
+      "z": 0.4
+    },
+    "conflict": {
+      "raw": 0.3,
+      "z": 0.3
+    },
+    "sync": {
+      "raw": 0.25,
+      "z": 0.25
+    }
+  }
+}

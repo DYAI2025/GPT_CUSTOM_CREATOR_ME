@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CARL Analyse</title>
+  <style>
+    :root { --bg:#0b1020; --panel:#121a2b; --muted:#9fb3c8; --fg:#e6eef6; --accent:#5dd4ff; }
+    html,body { margin:0; padding:0; background:var(--bg); color:var(--fg); font:14px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial; }
+    header { padding:16px 20px; background:var(--panel); position:sticky; top:0; z-index:10; box-shadow:0 2px 0 rgba(0,0,0,.2); }
+    header h1 { margin:0; font-size:18px; letter-spacing:.5px; }
+    main { padding:20px; display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+    section { background:var(--panel); border-radius:8px; padding:16px; box-shadow: 0 0 0 1px rgba(255,255,255,.05) inset; }
+    h2 { margin:.2rem 0 1rem; font-size:15px; color:var(--accent); }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; }
+    .kv { display:grid; grid-template-columns: 160px 1fr; gap:6px 12px; }
+    .kv div { color:var(--muted); }
+    table { width:100%; border-collapse:collapse; }
+    th,td { border-bottom:1px solid rgba(255,255,255,.06); padding:6px 8px; text-align:left; }
+    .bar { height:8px; background:rgba(93,212,255,.2); border-radius:4px; overflow:hidden; }
+    .bar > i { display:block; height:100%; background:var(--accent); width:0%; }
+    .pill { display:inline-block; padding:2px 8px; border-radius:999px; background:rgba(255,255,255,.08); color:var(--muted); margin-right:6px; }
+    .muted { color:var(--muted); }
+    .grid-3 { display:grid; grid-template-columns: repeat(3, 1fr); gap:10px; }
+    .grid-2 { display:grid; grid-template-columns: repeat(2, 1fr); gap:10px; }
+    footer { color:var(--muted); padding:16px 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CARL Analyse-Dashboard</h1>
+  </header>
+  <main>
+    <section id="meta">
+      <h2>Meta & Prüfsummen</h2>
+      <div class="kv mono" id="metaKv"></div>
+    </section>
+    <section id="indices">
+      <h2>Indizes</h2>
+      <div class="grid-2" id="indicesGrid"></div>
+    </section>
+    <section id="features">
+      <h2>Features</h2>
+      <table><thead><tr><th>Typ</th><th>Wert</th><th style="width:45%">Dichte</th></tr></thead><tbody id="featuresT"></tbody></table>
+    </section>
+    <section id="counts">
+      <h2>Counts</h2>
+      <div class="grid-3">
+        <div><div class="muted">ATO</div><div class="mono" id="cATO">-</div></div>
+        <div><div class="muted">SEM</div><div class="mono" id="cSEM">-</div></div>
+        <div><div class="muted">CLU</div><div class="mono" id="cCLU">-</div></div>
+        <div><div class="muted">MEMA</div><div class="mono" id="cMEMA">-</div></div>
+        <div><div class="muted">Textlänge</div><div class="mono" id="textLen">-</div></div>
+        <div><div class="muted">Gated</div><div class="mono" id="gated">-</div></div>
+      </div>
+    </section>
+    <section id="segments">
+      <h2>Segmente</h2>
+      <table>
+        <thead><tr><th>#</th><th>Wer</th><th>Text</th></tr></thead>
+        <tbody id="segmentsT"></tbody>
+      </table>
+    </section>
+    <section id="markers">
+      <h2>Marker</h2>
+      <table>
+        <thead><tr><th>#</th><th>ID</th><th>Typ</th><th>Segment</th><th>Wer</th><th>Span</th><th>Evidence</th></tr></thead>
+        <tbody id="markersT"></tbody>
+      </table>
+    </section>
+  </main>
+  <footer class="mono">
+    Renderer liest ausschließlich window.ANALYSIS_DATA (schema.output.json-konform)
+  </footer>
+
+  <script>
+  (function(){
+    'use strict';
+
+    function el(tag, attrs, ...children){
+      const n = document.createElement(tag);
+      if (attrs) for (const k of Object.keys(attrs)) {
+        if (k === 'class') n.className = attrs[k]; else n.setAttribute(k, attrs[k]);
+      }
+      for (const c of children){
+        if (c == null) continue;
+        n.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
+      }
+      return n;
+    }
+
+    function fmtPct(x){
+      if (typeof x !== 'number' || !isFinite(x)) return '-';
+      return (x * 100).toFixed(1) + '%';
+    }
+
+    function renderBar(value){
+      const v = Math.max(0, Math.min(1, value || 0));
+      const i = el('i'); i.style.width = (v * 100).toFixed(1) + '%';
+      return el('div', { class:'bar' }, i);
+    }
+
+    function ensureValidShape(o){
+      const must = ['meta','segments','markers','counts','features','indices'];
+      for (const k of must) if (!o || typeof o !== 'object' || !(k in o)) throw new Error('Output fehlt Feld: '+k);
+      return o;
+    }
+
+    function renderDashboard(){
+      const data = ensureValidShape(window.ANALYSIS_DATA);
+
+      const mkv = document.getElementById('metaKv');
+      mkv.innerHTML = '';
+      const kv = {
+        'input_hash': data.meta.input_hash,
+        'canon_hash': data.meta.canon_hash,
+        'engine_hash': data.meta.engine_hash,
+        'elapsed_ms': String(data.meta.elapsed_ms)+' ms',
+        'gated': String(data.meta.gated)
+      };
+      for (const k of Object.keys(kv)){
+        mkv.appendChild(el('div', null, k));
+        mkv.appendChild(el('div', null, kv[k]));
+      }
+
+      const ig = document.getElementById('indicesGrid');
+      ig.innerHTML = '';
+      for (const key of ['trust','deesc','conflict','sync']){
+        const s = data.indices[key] || {};
+        const raw = typeof s.raw === 'number' ? s.raw : NaN;
+        const z = s.z;
+        const p = s.p;
+        ig.appendChild(el('div', null,
+          el('div', { class:'muted' }, key.toUpperCase()),
+          el('div', { class:'mono' }, 'raw: '+(isFinite(raw)? raw.toFixed(3) : '-')), 
+          el('div', { class:'mono' }, 'z: ' + (typeof z==='number'? z.toFixed(3) : '-')), 
+          el('div', { class:'mono' }, 'p: ' + (typeof p==='number'? p.toFixed(3) : '-')),
+          renderBar(Math.max(0, Math.min(1, raw)))
+        ));
+      }
+
+      const fT = document.getElementById('featuresT');
+      fT.innerHTML = '';
+      const dens = data?.density?.per_1k_chars || {};
+      for (const t of ['ATO','SEM','CLU','MEMA']){
+        const v = data.features[t];
+        const d = dens[t];
+        fT.appendChild(el('tr', null,
+          el('td', null, t),
+          el('td', { class:'mono' }, String(v)),
+          el('td', null, renderBar(Math.max(0, Math.min(1, (typeof d==='number'? d : 0)))) )
+        ));
+      }
+
+      document.getElementById('cATO').textContent = String(data.counts.total.ATO);
+      document.getElementById('cSEM').textContent = String(data.counts.total.SEM);
+      document.getElementById('cCLU').textContent = String(data.counts.total.CLU);
+      document.getElementById('cMEMA').textContent = String(data.counts.total.MEMA);
+      document.getElementById('gated').textContent = String(data.meta.gated);
+      document.getElementById('textLen').textContent = String(data?.density?.text_len ?? 0);
+
+      const sT = document.getElementById('segmentsT');
+      sT.innerHTML = '';
+      data.segments.forEach((s, i) => {
+        sT.appendChild(el('tr', null,
+          el('td', { class:'mono' }, String(i)),
+          el('td', null, s.who),
+          el('td', null, s.text)
+        ));
+      });
+
+      const mT = document.getElementById('markersT');
+      mT.innerHTML = '';
+      (data.markers || []).forEach((m, i) => {
+        const span = (m.span? m.span.start+'..'+m.span.end : '-');
+        mT.appendChild(el('tr', null,
+          el('td', { class:'mono' }, String(i)),
+          el('td', { class:'mono' }, m.id),
+          el('td', null, m.type),
+          el('td', { class:'mono' }, String(m.segment_idx)),
+          el('td', null, m.who || ''),
+          el('td', { class:'mono' }, span),
+          el('td', null, m.evidence || '')
+        ));
+      });
+    }
+
+    function applyPairBenchmarks(payload){
+      if (!payload || typeof payload !== 'object') return;
+      const wrap = el('section', null,
+        el('h2', null, 'Benchmarks: ' + (payload.pair || '–')),
+        el('div', { class:'grid-2' },
+          el('div', null,
+            el('div', { class:'muted' }, 'trust'), renderBar((payload.vectors?.trust?.[0] ?? 0) || 0)
+          ),
+          el('div', null,
+            el('div', { class:'muted' }, 'deesc'), renderBar((payload.vectors?.deesc?.[0] ?? 0) || 0)
+          ),
+          el('div', null,
+            el('div', { class:'muted' }, 'conflict'), renderBar((payload.vectors?.conflict?.[0] ?? 0) || 0)
+          ),
+          el('div', null,
+            el('div', { class:'muted' }, 'sync'), renderBar((payload.vectors?.sync?.[0] ?? 0) || 0)
+          )
+        )
+      );
+      document.querySelector('main').appendChild(wrap);
+    }
+
+    // Exponieren der Render-API
+    window.renderDashboard = renderDashboard;
+    window.applyPairBenchmarks = applyPairBenchmarks;
+
+    // Falls ANALYSIS_DATA bereits gesetzt ist, sofort rendern
+    if (window.ANALYSIS_DATA) {
+      try { renderDashboard(); } catch (e) { console.error(e); }
+    }
+  })();
+  </script>
+</body>
+</html>
+
+

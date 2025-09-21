@@ -1,0 +1,12 @@
+{
+  "version": "0.9",
+  "pairs": [
+    {
+      "label": "Allgemeine Paare (n≈…)",
+      "vectors": { "trust": [0.5], "deesc": [0.5], "conflict": [0.5], "sync": [0.5] },
+      "source": ""
+    }
+  ]
+}
+
+

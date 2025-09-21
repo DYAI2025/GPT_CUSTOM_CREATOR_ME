@@ -1,0 +1,252 @@
+# CHUNK_ANALYSE_V2.yaml
+meta:
+  name: "CHUNK_ANALYSE_V2"
+  version: "2.0"
+  purpose: >
+    Markerbasierte Ausgabelogik für CARL. Unterscheidet Chats vs. E-Mails, liefert tiefe, zeitliche und systemische Einsichten. Keine Tipps/Next Steps.
+
+defaults:
+  auto_chunk:
+    enabled: true
+    size_chars: 5000
+  names:
+    use_real_names_if_present: true
+    fallback: [ "Person A", "Person B" ]
+  legend:
+    explain_markers_inline: true # z.B. "DETECT_RESONANCE (wiederkehrende Bestätigung)"
+  gates:
+    min_total_markers: 5
+    min_segments: 2
+  render:
+    text_headings: true
+    html_template: "analyse.HTML" # bereits im Knowledge hinterlegt
+  constraints:
+    no_advice: true
+    no_next_steps: true
+    no_json_to_user: true
+
+routing:
+  detectors:
+  - type: "chat.whatsapp"
+    template: "CHAT_V1"
+    detect:
+    - regex: "\\b\\d{1,2}:\\d{2}\\] " # [HH:MM]
+    - regex: "(?i)nachricht gelöscht|\\b😂|❤️|👍"
+  - type: "chat.generic"
+    template: "CHAT_V1"
+    detect:
+    - regex: "^[^:\\n]{1,40}:\\s" # "Name: Text"
+  - type: "email.thread"
+    template: "EMAIL_V1"
+    detect:
+    - regex: "(?im)^subject:\\s"
+    - regex: "(?im)^from:\\s"
+    - regex: "(?im)^to:\\s"
+    - regex: "(?im)^date:\\s"
+  default_template: "CHAT_V1"
+
+templates:
+
+  CHAT_V1:
+    description: "Dialoganalyse (Messenging/Chat). Fokus auf Sequenzen, Repair, Resonanz/Widerstand."
+    sections_order:
+    - HEAD_FOCUS
+    - MARKER_CORE
+    - DRIFT_AXES
+    - BALANCE_HEATMAP
+    - GAPS_SILENCE
+    - NEED_ATTACHMENT
+    - META_MATRIX
+    - CHANGE_POINTS
+    - NARRATIVE_CONCLUSION
+    - VALIDITY
+    html_panels: [ "phases", "indices", "individuals", "system", "closing" ]
+    apply_if:
+      doc_type_in: [ "chat.whatsapp", "chat.generic" ]
+      gates_ok: true
+
+  EMAIL_V1:
+    description: "E-Mail-Threads. Erst Kontext (Betreff/Rollen/CTA), dann Marker, dann Systembild."
+    sections_order:
+    - EMAIL_CONTEXT
+    - MARKER_CORE
+    - DRIFT_AXES
+    - BALANCE_HEATMAP
+    - NEED_ATTACHMENT
+    - META_MATRIX
+    - CHANGE_POINTS
+    - NARRATIVE_CONCLUSION
+    - VALIDITY
+    html_panels: [ "indices", "phases", "system", "closing" ]
+    apply_if:
+      doc_type_in: [ "email.thread" ]
+      gates_ok: true
+
+sections:
+
+  HEAD_FOCUS:
+    title: "Worum geht es hier?"
+    fields:
+    - chunk_id
+    - time_span
+    - participants # extrahierte Namen; sonst Person A/B
+    - focus_title # 3–6 Wörter
+    - focus_one_liner # 1 Satz Vogelperspektive
+    source: [ engine.meta, segmentation ]
+
+  EMAIL_CONTEXT:
+    title: "Kontext der E-Mail-Kette"
+    fields:
+    - subject_line # Betreff-Cluster
+    - roles:
+        # Absender/Rollen (Chef, Kunde, Elternteil… falls ableitbar)
+        derive_from: headers
+    - cta_clarity # klar/unklar; markerbasiert (Rule/Wenn-Dann, Fragen, Deadlines)
+    - thread_progress # erste/letzte Mail, Antwortlatenzen
+    - power_distance # Hinweise: Titel, formelle Sprache, Adressierung
+    source: [ headers, timeline, markers ]
+
+  MARKER_CORE:
+    title: "Markertreffer (mit Bedeutung)"
+    per_type:
+      include_types: [ "ATO", "SEM", "CLU", "MEMA" ]
+      for_each:
+      - type
+      - count
+      - short_meaning # aus Legend/Canonical
+      - examples_max: 2 # kurze Zitate
+      - note_habituation: true # auffällige Häufung/Drift
+    per_person:
+      top_markers_max: 4
+      include_examples: true
+    source: [ ENGINE_RESULT, markers_canonical ]
+
+  DRIFT_AXES:
+    title: "Driftachsen & Trends"
+    axes:
+    - key: "NAEHE_DISTANZ" # −1 Distanz … +1 Nähe
+      derive:
+        from: [ "SEM_resonance", "CLU_withdrawal", "MEMA_boundary_*" ]
+    - key: "SPANNUNG_RUHE" # −1 Ruhe … +1 Spannung
+      derive:
+        from: [ "CLU_conflict", "SEM_deescalation" ]
+    - key: "KONTROLLE_FLEX" # −1 flexibel … +1 Wenn-Dann/Regel
+      derive:
+        from: [ "DETECT_REACTIVE_CONTROL_SPIRAL", "SEM_reappraisal" ]
+    - key: "KLÄRUNG_UNKLAR" # −1 unklar … +1 klärend
+      derive:
+        from: [ "SEM_ownership", "SEM_apology", "SEM_request_clarify" ]
+    output:
+      value_range: [ -1, 1 ]
+      trend: [ "steigt", "fällt", "stabil" ]
+      exemplar_turns: 2
+
+  BALANCE_HEATMAP:
+    title: "Balance & Heatmap"
+    balance:
+      initiative_vs_support: true # pro Person
+      talk_time_ratio: true # optional, wenn Segmentlängen vorliegen
+    heatmap:
+      bucket_size_chars: 500
+      show_types: [ "SEM", "CLU", "MEMA" ]
+    output: [ "table", "sparkline" ]
+
+  GAPS_SILENCE:
+    title: "Gaps & Silence"
+    metrics:
+    - key: "unanswered_turns"
+    - key: "latency_peaks" # Verzögerungsspitzen
+    - key: "reassurance_flags" # Bedürfnis nach Beruhigung/Bestätigung
+    derive_from: [ "CHA_gap_and_silence_scan", "ENGINE_RESULT" ]
+
+  NEED_ATTACHMENT:
+    title: "Bedürfnisse & Bindungshinweise"
+    composite_indices:
+    - key: "unsaid_need_index" # Hinweise auf indirekte Bitten/unerfüllte Erwartungen
+    - key: "attachment_vector" # Annäherung/Protest/Rückzug (EFT-nahe Marker)
+    output: [ "bullets_with_quotes" ]
+
+  META_MATRIX:
+    title: "Meta-Marker & Muster"
+    matrix:
+      rows: [ "Cluster/Pattern" ]
+      cols: [ "Hinweise", "Kurzdeutung (Alltagssprache)", "Belege" ]
+    include:
+    - "COMPLEX_MARKER_PATTERNS"
+    - "co_occurs_groups"
+    - "syntax_intensifiers" # !!!, ALL CAPS, Ironie-Hinweise
+    source: [ ENGINE_RESULT, tokenizer ]
+
+  CHANGE_POINTS:
+    title: "Change Points (Timeline)"
+    list:
+      max: 6
+      include:
+      - timestamp_or_seq
+      - involved_markers
+      - micro_narrative_1liner
+    detect:
+      methods: [ "density_spike", "marker_switch", "repair_sequence" ]
+
+  NARRATIVE_CONCLUSION:
+    title: "Gesamteinschätzung"
+    rules:
+      style: "Alltagssprache, systemisch, ohne Schuldzuweisung"
+      must_include:
+      - "Was ist passiert? (markergetragen)"
+      - "Wie stehen die Personen zueinander? (Rollen/Muster)"
+      - "Welche Muster verstärken sich sichtbar?"
+      optional_speculative:
+        allowed: true
+        prefix: "Spekulativ:"
+        grounding: "nur auf Markerbelege verweisen"
+    lens_appendix:
+      show_lenses: [ "CBCT", "EFT", "SFT", "GOTTMAN" ] # falls in weights.lenses vorhanden
+      format: "1-Satz-Deutung je Linse"
+
+  VALIDITY:
+    title: "Validität"
+    checks:
+    - "counts_vs_rawlog" # Summe Treffer vs. Segmentdurchlauf
+    - "sliding_window_confirm" # Stabilität über Fenster
+    - "gate_note" # Hinweis, falls Gates knapp erfüllt
+    output: [ "short_bullets" ]
+
+longitudinal:
+  roll_scores:
+    enabled: true
+    compute_from: [ "overview.indices", "lenses" ] # falls verfügbar
+    smoothing: "EMA(alpha=0.35)"
+    id_source: "pair_or_thread_id(names, subject)"
+  present:
+    text: "Roll-Score (Näherung): trust X, deesc Y, conflict Z, sync W"
+    html: "sparkline_enabled"
+
+rendering:
+  text:
+    heading_order_from_template: true
+    bullets_max_len: 140
+    include_marker_explanations: true
+  html:
+    template_file: "analyse.HTML"
+    inject:
+    - "ANALYSIS_DATA"
+    - "CARL_SCOREBOOK (optional)"
+
+modes:
+  analyse:
+    default: true
+    use_markers: "strict"
+  frei:
+    use_markers: "off_unless_requested"
+  präzise:
+    use_markers: "strict"
+    focus:
+      allow_candidate_markers: true # CAND_* Hinweise; zählen nicht in Indizes
+
+bias_selfcheck:
+  enabled: true
+  quicklist: [ "Confirmation Bias", "Voreilige Zuschreibung", "Gedankenlesen", "Negativity Bias" ]
+  output:
+    if_found: "Bias-Hinweis: <kurz + Korrektur>"
+    else: "Bias-Hinweis: kein Befund"

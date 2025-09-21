@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carl/schema/input",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "text": { "type": ["string", "null"] },
+    "segments": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "who": { "enum": ["A", "B", "other"] },
+          "text": { "type": "string" }
+        },
+        "required": ["who", "text"]
+      }
+    },
+    "benchmarks": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "pair": { "type": "string" },
+        "vectors": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "trust":   { "type": "array", "items": { "type": "number" } },
+            "deesc":   { "type": "array", "items": { "type": "number" } },
+            "conflict":{ "type": "array", "items": { "type": "number" } },
+            "sync":    { "type": "array", "items": { "type": "number" } }
+          }
+        }
+      }
+    },
+    "weights": { "$ref": "https://carl/schema/weights" }
+  }
+}
+
+

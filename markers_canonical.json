@@ -1,0 +1,134 @@
+{
+  "version": "1.0.0",
+  "engine_version": "carl-marker-engine-1",
+  "description": "Kanonischer Marker-Katalog für ATO/SEM/CLU/MEMA/DETECT. Enthält Regex, Beispiele, Tags und Kompositionen. Alle Erkennungen sind deterministisch und ausschließlich regex-/regel-basiert.",
+  "globals": {
+    "unicode_normalization": "NFC",
+    "regex_flags": "iu", 
+    "text_caps": {
+      "ATO": 80,
+      "SEM": 60,
+      "CLU": 40,
+      "MEMA": 40
+    }
+  },
+  "types": ["ATO","SEM","CLU","MEMA","DETECT"],
+  "markers": [
+    {
+      "id": "ATO_ACK",
+      "type": "ATO",
+      "regex": "\\b(danke(n)?|dankeschön|ok(ay)?|verstanden|klingt gut|einverstanden|passt)\\b",
+      "tags": ["agree","ack","polite"],
+      "examples": ["okay, klingt gut","verstanden, machen wir so","danke dir"],
+      "span_strategy": "match",
+      "composed_of": []
+    },
+    {
+      "id": "ATO_CONFIRM",
+      "type": "ATO",
+      "regex": "\\b(ja(,)? genau|genau|stimmt|richtig|exakt|so ist es)\\b",
+      "tags": ["agree","confirm"],
+      "examples": ["ja, genau","genau so","das stimmt"],
+      "span_strategy": "match",
+      "composed_of": []
+    },
+    {
+      "id": "ATO_QUESTION",
+      "type": "ATO",
+      "regex": "[?]$",
+      "tags": ["question"],
+      "examples": ["meinst du das ernst?"],
+      "span_strategy": "line",
+      "composed_of": []
+    },
+    {
+      "id": "ATO_APOLOGY",
+      "type": "ATO",
+      "regex": "\\b(es tut mir leid|entschuldigung|sorry)\\b",
+      "tags": ["repair","deescalation"],
+      "examples": ["es tut mir leid, das war nicht korrekt"],
+      "span_strategy": "match",
+      "composed_of": []
+    },
+    {
+      "id": "ATO_NEGATION",
+      "type": "ATO",
+      "regex": "\\b(nein|niemals|auf keinen fall|keineswegs)\\b",
+      "tags": ["disagree","conflict"],
+      "examples": ["auf keinen fall mache ich das"],
+      "span_strategy": "match",
+      "composed_of": []
+    },
+    {
+      "id": "SEM_VALIDATION",
+      "type": "SEM",
+      "regex": "\\b(ich verstehe dich|das ergibt sinn|das kann ich nachvollziehen)\\b",
+      "tags": ["validation","empathy"],
+      "examples": ["ich verstehe dich"],
+      "span_strategy": "match",
+      "composed_of": ["ATO_ACK","ATO_CONFIRM"]
+    },
+    {
+      "id": "SEM_REPAIR",
+      "type": "SEM",
+      "regex": "\\b(lass uns einen schritt zur\\u00fcck gehen|lass uns ruhig bleiben)\\b",
+      "tags": ["deescalation","repair"],
+      "examples": ["lass uns ruhig bleiben"],
+      "span_strategy": "match",
+      "composed_of": ["ATO_APOLOGY"]
+    },
+    {
+      "id": "CLU_ALIGNMENT",
+      "type": "CLU",
+      "regex": null,
+      "tags": ["alignment"],
+      "examples": ["SEM_VALIDATION markiert und zustimmende ATOs im Umfeld"],
+      "span_strategy": "sem_segment",
+      "composed_of": ["SEM_VALIDATION","ATO_ACK","ATO_CONFIRM"]
+    },
+    {
+      "id": "MEMA_EMPATHY",
+      "type": "MEMA",
+      "regex": null,
+      "tags": ["memory","empathy"],
+      "examples": ["annotiert SEM_VALIDATION mit Empathie"],
+      "span_strategy": "sem_segment",
+      "composed_of": ["SEM_VALIDATION"]
+    },
+    {
+      "id": "DETECT_UPPERCASE_SHOUT",
+      "type": "DETECT",
+      "regex": "\\b[A-Z\\u00c4\\u00d6\\u00dc]{2,}\\b",
+      "flags": "g",
+      "tags": ["signal","shout"],
+      "examples": ["DAS IST LAUT"],
+      "span_strategy": "match",
+      "composed_of": []
+    }
+  ],
+  "promotion_rules": [
+    {
+      "target": "SEM_VALIDATION",
+      "when": {
+        "segment_co_occurs": { "ids": ["ATO_ACK", "ATO_CONFIRM"], "min": 2 }
+      },
+      "produce": {
+        "id": "SEM_VALIDATION",
+        "type": "SEM",
+        "link_from": ["ATO_ACK","ATO_CONFIRM"]
+      }
+    }
+  ],
+  "annotation_rules": [
+    {
+      "target_type": "SEM",
+      "when_tags_any_of": ["validation","empathy"],
+      "annotate": [
+        { "type": "CLU", "id": "CLU_ALIGNMENT" },
+        { "type": "MEMA", "id": "MEMA_EMPATHY" }
+      ]
+    }
+  ]
+}
+
+

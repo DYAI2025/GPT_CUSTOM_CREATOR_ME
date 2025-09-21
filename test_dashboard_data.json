@@ -1,0 +1,139 @@
+{
+  "model": "carl-engine-js",
+  "axes": [],
+  "result": {
+    "summary": {
+      "top_clusters": [
+        [
+          "ALIGNMENT",
+          1
+        ]
+      ],
+      "drift": {
+        "direction": "neutral",
+        "magnitude": 0,
+        "confidence": 0
+      },
+      "total_markers": 6,
+      "by_type": {
+        "ATO": 2,
+        "SEM": 2,
+        "CLU": 1,
+        "MEMA": 1
+      }
+    },
+    "details": {
+      "sem": [
+        {
+          "name": "SEM_VALIDATION",
+          "family": "VALIDATION",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "score": 1,
+          "meta": {
+            "segment": 0,
+            "who": "A",
+            "evidence": ""
+          }
+        },
+        {
+          "name": "SEM_VALIDATION",
+          "family": "VALIDATION",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "score": 1,
+          "meta": {
+            "segment": 0,
+            "who": "A",
+            "evidence": ""
+          }
+        }
+      ],
+      "clu": [
+        {
+          "name": "CLU_ALIGNMENT",
+          "family": "ALIGNMENT",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "score": 1,
+          "meta": {
+            "segment": 0,
+            "who": "other",
+            "evidence": ""
+          }
+        }
+      ],
+      "mema": [
+        {
+          "name": "MEMA_EMPATHY",
+          "family": "EMPATHY",
+          "span": {
+            "start": 0,
+            "end": 0
+          },
+          "score": 1,
+          "meta": {
+            "segment": 0,
+            "who": "other",
+            "evidence": ""
+          }
+        }
+      ],
+      "ato": [
+        {
+          "name": "ATO_ACK",
+          "family": "ACK",
+          "span": {
+            "start": 0,
+            "end": 5
+          },
+          "score": 1,
+          "meta": {
+            "segment": 0,
+            "who": "A",
+            "evidence": "Danke"
+          }
+        },
+        {
+          "name": "ATO_ACK",
+          "family": "ACK",
+          "span": {
+            "start": 27,
+            "end": 37
+          },
+          "score": 1,
+          "meta": {
+            "segment": 0,
+            "who": "A",
+            "evidence": "klingt gut"
+          }
+        }
+      ]
+    }
+  },
+  "raw_text": "A: Danke für deine Hilfe! Das klingt gut.\nB: Gern geschehen! Ich verstehe deine Situation.",
+  "telemetry": {
+    "elapsed_ms": 4,
+    "engine_hash": "aeaa3de36f8b475c385428b18313d2367579767294df7de8b577e0a5f20508d1",
+    "canon_hash": "8ce72f346510043aafe4a69e926ff04d037aad2d28f55e9725069fda0a86d810"
+  },
+  "_bench": {
+    "runs": [
+      {
+        "name": "default",
+        "top_clusters": [
+          [
+            "ALIGNMENT",
+            1
+          ]
+        ]
+      }
+    ]
+  }
+}

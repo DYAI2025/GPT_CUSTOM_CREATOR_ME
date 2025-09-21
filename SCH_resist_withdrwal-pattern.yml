@@ -1,0 +1,112 @@
+# =========================
+# File: CHA_focus_passiv_aggressiv.yaml
+# Purpose: Fokus-Schema für Mikroabwehr / Widerstand / passiv-aggressives Verhalten
+# =========================
+schema_version: 1.0
+id: CHA_FOCUS_PASSIV_AGGRESSIV
+label: "Fokus: Mikroabwehr / Passiv-Aggressiv"
+doc_types: [ "chat", "email" ] # Router darf dieses Schema für beide Typen wählen, wenn explizit angefordert
+gates:
+  min_segments: 2
+  min_total_markers: 5
+  # Strenger: Mindestens zwei Markerfamilien müssen vorkommen, sonst nur Hinweise (keine Indizes)
+  require_cross_family: true
+bias_check:
+  mode: strict # verstärkte Selbstprüfung (Explizit ausgeben, wenn Befund unsicher)
+  rules: [ "confirmation_bias", "premature_labeling", "mind_reading", "negativity_bias" ]
+
+target_marker_families:
+  # ATO = atomare Auslöser (neutral), SEM = erste Bedeutungen, CLU = Cluster/Pattern, MEMA = Meta-Kontexte
+  ATO:
+  - ATO_RULE_SUGGEST # „muss“, „sollte“, verdeckte Forderung
+  - ATO_VAGUE_REFUSAL # vage Absage/Blockade („mal schauen“, „später“)
+  - ATO_SARCASM_HINT # sarkastische Marker / Ironie-Signale
+  - ATO_SIDE_COMMENT # Seitenhieb, Nebensatz-Abwertung
+  SEM:
+  - SEM_SUBTLE_DISMISSAL # subtile Abwertung / Herabspielen
+  - SEM_AMBIVALENCE_KNOT # „ja, aber…“ Knoten / Doppelbindung
+  - SEM_REACTIVE_CONTROL # Gegenkontrolle auf Regeln/Ansagen
+  - SEM_WITHHOLDING_INFO # Informationszurückhaltung
+  CLU:
+  - CLU_VAGUE_OBSTRUCTION # Muster aus Ausweichen + Verzögerung
+  - CLU_PASSIVE_AGGRESSION # latente Aggression ohne offene Konfrontation
+  - CLU_CO_REG_COLLAPSE # kleine Zusammenbrüche in der Abstimmung
+  MEMA:
+  - MEMA_PATTERN_ESCALATION # Kontext: Muster verstärkt sich über Sequenzen
+  - MEMA_POWER_TENSION # Kontext: verdeckte Macht-/Deutungshoheit
+
+weights_override:
+  indices:
+    trust: { w: { ATO:0.6, SEM:1.2, CLU:1.4, MEMA:0.8 }, bias: 0.0 }
+    deesc: { w: { ATO:0.5, SEM:1.0, CLU:1.2, MEMA:0.7 }, bias: 0.0 }
+    conflict: { w: { ATO:0.8, SEM:1.2, CLU:1.6, MEMA:1.0 }, bias: 0.2 }
+    sync: { w: { ATO:0.6, SEM:1.0, CLU:1.2, MEMA:0.6 }, bias: 0.0 }
+  calib:
+    mu: { trust:0.00, deesc:0.00, conflict:0.00, sync:0.00 }
+    sigma: { trust:1.00, deesc:1.00, conflict:1.00, sync:1.00 }
+
+scoring:
+  custom_indices:
+    passive_aggression_index:
+      formula: "0.4*CLU_PASSIVE_AGGRESSION + 0.25*CLU_VAGUE_OBSTRUCTION + 0.2*SEM_SUBTLE_DISMISSAL + 0.15*SEM_AMBIVALENCE_KNOT"
+      scale: [ 0, 100 ]
+      gate: { families_required: [ "SEM", "CLU" ], min_hits: 3 }
+  evidence_quotas:
+    per_marker_examples: 2
+    per_person_min_hits: 2
+
+sections_order:
+- scene_overview
+- focus_hits
+- per_person_profiles
+- interaction_patterns
+- resistance_system_image
+- change_points
+- indices
+- final_appraisal
+- bias_selfcheck
+
+sections:
+  scene_overview:
+    title: "Worum geht es hier?"
+    fields: [ narrative_long ]
+  focus_hits:
+    title: "Mikroabwehr-Marker (mit Bedeutung)"
+    layout: table
+    columns: [ marker_id, short_meaning, count, short_quotes ]
+    options:
+      families: [ "SEM", "CLU", "MEMA", "ATO" ]
+  per_person_profiles:
+    title: "Pro Person: typische Strategien"
+    fields: [ name, top_markers_with_meaning, derived_behaviours, short_quotes ]
+  interaction_patterns:
+    title: "Interaktion: Muster des Widerstands"
+    fields: [ resonances, frictions, loops, triggers ]
+  resistance_system_image:
+    title: "Systembild"
+    fields: [ roles, recurring_loops, power_tension, context_notes ]
+  change_points:
+    title: "Wendepunkte"
+    fields: [ sequence_points, before_after_glance ]
+  indices:
+    title: "Indizes"
+    show_if_gate_passed: true
+    fields: [ trust, deesc, conflict, sync, passive_aggression_index, contributors ]
+  final_appraisal:
+    title: "Gesamteinschätzung"
+    fields: [ marker_based_view, speculative_if_any ]
+  bias_selfcheck:
+    title: "Bias-Hinweis"
+    fields: [ found_or_none ]
+
+html:
+  template: "carl/analyse.HTML"
+  payload_builder: "build_dashboard_payload"
+  benchmarks_hook: "applyPairBenchmarks"
+  highlight: true
+
+routing_hints:
+  prefer_if_user_requests: [ "passiv", "mikroaggression", "widerstand", "passiv-aggressiv", "blockade", "subtil" ]
+  fallback_to: null
+---
+

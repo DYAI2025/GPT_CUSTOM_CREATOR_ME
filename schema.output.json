@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carl/schema/output",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "input_hash":  { "type": "string" },
+        "canon_hash":  { "type": "string" },
+        "engine_hash": { "type": "string" },
+        "elapsed_ms":  { "type": "integer" },
+        "gated":       { "type": "boolean" }
+      },
+      "required": ["input_hash", "canon_hash", "engine_hash", "elapsed_ms", "gated"]
+    },
+    "segments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "who": { "enum": ["A", "B", "other"] },
+          "text": { "type": "string" }
+        },
+        "required": ["who", "text"]
+      }
+    },
+    "markers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id":   { "type": "string" },
+          "type": { "enum": ["ATO", "SEM", "CLU", "MEMA", "DETECT"] },
+          "span": { "type": "object", "properties": { "start": { "type":"integer" }, "end": { "type":"integer" } }, "required": ["start", "end"], "additionalProperties": false },
+          "segment_idx": { "type": "integer" },
+          "who": { "enum": ["A", "B", "other"] },
+          "evidence": { "type": "string" },
+          "promotion_of": { "type": "array", "items": { "type": "string" } },
+          "meta": { "type": "object" }
+        },
+        "required": ["id", "type", "span", "segment_idx", "who"]
+      }
+    },
+    "promotion": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "sem_id": { "type":"string" },
+          "from_atos": { "type":"array", "items": {"type":"string"} },
+          "segment_idx": { "type":"integer" },
+          "who": { "enum": ["A", "B", "other"] }
+        },
+        "required": ["sem_id", "from_atos", "segment_idx", "who"]
+      }
+    },
+    "counts": {
+      "type":"object", "additionalProperties":false,
+      "properties":{
+        "total": { "type":"object", "properties":{"ATO":{"type":"integer"}, "SEM":{"type":"integer"}, "CLU":{"type":"integer"}, "MEMA":{"type":"integer"}}, "required":["ATO","SEM","CLU","MEMA"], "additionalProperties":false },
+        "by_speaker": { "type":"object", "properties":{"A":{"type":"object"}, "B":{"type":"object"}}, "additionalProperties":false },
+        "by_segment": { "type":"array", "items":{"type":"object"} }
+      },
+      "required":["total"]
+    },
+    "density": {
+      "type":"object", "additionalProperties":false,
+      "properties":{
+        "text_len": { "type":"integer" },
+        "per_1k_chars": { "type":"object", "properties":{"ATO":{"type":"number"}, "SEM":{"type":"number"}, "CLU":{"type":"number"}, "MEMA":{"type":"number"}}, "additionalProperties":false }
+      },
+      "required":["text_len"]
+    },
+    "features": {
+      "type":"object", "properties":{"ATO":{"type":"number"}, "SEM":{"type":"number"}, "CLU":{"type":"number"}, "MEMA":{"type":"number"}}, "required":["ATO","SEM","CLU","MEMA"], "additionalProperties":false
+    },
+    "indices": {
+      "type":"object", "properties":{
+        "trust":   { "$ref":"#/$defs/score" },
+        "deesc":   { "$ref":"#/$defs/score" },
+        "conflict":{ "$ref":"#/$defs/score" },
+        "sync":    { "$ref":"#/$defs/score" }
+      }, "required":["trust","deesc","conflict","sync"], "additionalProperties":false
+    },
+    "top_contributors": {
+      "type":"object", "properties":{
+        "A": { "type":"array", "items":{"type":"object", "properties":{"marker_id":{"type":"string"}, "type":{"type":"string"}, "count":{"type":"integer"}}, "required":["marker_id","type","count"], "additionalProperties":false} },
+        "B": { "type":"array", "items":{"type":"object", "properties":{"marker_id":{"type":"string"}, "type":{"type":"string"}, "count":{"type":"integer"}}, "required":["marker_id","type","count"], "additionalProperties":false} }
+      }, "additionalProperties":false
+    }
+  },
+  "required": ["meta", "segments", "markers", "counts", "features", "indices"],
+  "$defs": {
+    "score": {
+      "type":"object", "additionalProperties":false,
+      "properties":{"raw":{"type":"number"}, "z":{"type":"number"}, "p":{"type":"number", "minimum":0, "maximum":1}},
+      "required":["raw"]
+    }
+  }
+}
+
+

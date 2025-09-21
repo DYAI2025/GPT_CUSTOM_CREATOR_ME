@@ -1,0 +1,32 @@
+{
+  "default": "dialog",
+  "modes": {
+    "dialog": {
+      "description": "Dialoganalyse: A/B-Segmente, Standardgewichte",
+      "weights_scaling": { "ATO": 1.0, "SEM": 1.0, "CLU": 1.0, "MEMA": 1.0 },
+      "calib_adjust": { "mu": 0.0, "sigma": 1.0 }
+    },
+    "single": {
+      "description": "Einzeltextanalyse/Marker-Coach: SEM & MEMA stärker",
+      "weights_scaling": { "ATO": 1.0, "SEM": 1.2, "CLU": 1.0, "MEMA": 1.2 },
+      "calib_adjust": { "mu": 0.0, "sigma": 1.0 }
+    },
+    "coach": {
+      "description": "Coach-Modus (alias single)",
+      "weights_scaling": { "ATO": 1.0, "SEM": 1.2, "CLU": 1.0, "MEMA": 1.2 },
+      "calib_adjust": { "mu": 0.0, "sigma": 1.0 }
+    },
+    "learn": {
+      "description": "Lern-/Anschauungsmodus: alle Marker sichtbar, neutrale Kalibrierung",
+      "weights_scaling": { "ATO": 1.0, "SEM": 1.0, "CLU": 1.0, "MEMA": 1.0 },
+      "calib_adjust": { "mu": 0.5, "sigma": 0.25 }
+    },
+    "free": {
+      "description": "Freie Interpretation: Rohwerte näher an Features",
+      "weights_scaling": { "ATO": 0.8, "SEM": 0.8, "CLU": 0.8, "MEMA": 0.8 },
+      "calib_adjust": { "mu": 0.0, "sigma": 1.0 }
+    }
+  }
+}
+
+

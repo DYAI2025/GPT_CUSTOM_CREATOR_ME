@@ -1,0 +1,261 @@
+# OUTPUT_TEMPLATE_V3.yaml
+meta:
+  name: "OUTPUT_TEMPLATE_V3"
+  version: "3.0"
+  purpose: >
+    Markerbasierte Ausgabe für CARL mit psychologischen Deutungs-Linsen (CBCT, EFCT, SFT, Gottman), ohne Diagnostik. Alle Aussagen werden aus Markertreffern (ATO/SEM/CLU/MEMA) abgeleitet und in Alltagssprache erklärt. Linsen dienen der Rahmung, nicht der Etikettierung. :contentReference[oaicite:0]{index=0}
+
+defaults:
+  html_template: "analyse.HTML"
+  explain_markers_inline: true # Markername + Kurzbedeutung in Klammern
+  use_real_names_if_present: true
+  auto_chunk:
+    enabled: true
+    size_chars: 5000
+  gates:
+    min_total_markers: 5
+    min_segments: 2
+  constraints:
+    no_advice: true
+    no_next_steps: true
+    no_diagnosis: true
+    no_json_to_user: true
+    style: "Alltagssprache, warm, systemisch, ohne Schuldzuweisung"
+
+routing:
+  doc_types:
+    chat: [ "chat.whatsapp", "chat.generic" ]
+    email: [ "email.thread" ]
+  template_by_type:
+    chat.whatsapp: "CHAT_V2"
+    chat.generic: "CHAT_V2"
+    email.thread: "EMAIL_V2"
+  fallback_template: "CHAT_V2"
+
+templates:
+
+  CHAT_V2:
+    description: "Dialogausgabe für Chats mit Sequenzen/Repair/Resonanz-Widerstand."
+    sections_order:
+    - HEAD_FOCUS
+    - MARKER_CORE
+    - LENS_SUMMARY
+    - DRIFT_AXES
+    - BALANCE_HEATMAP
+    - ATTACHMENT_NEEDS
+    - SYSTEM_IMAGE
+    - CHANGE_POINTS
+    - NARRATIVE_CONCLUSION
+    - INDICES_SCORINGS
+    - VALIDITY
+
+  EMAIL_V2:
+    description: "E-Mail-Ausgabe: zuerst Thread-Kontext (Betreff/Rollen/CTA), dann Marker & Linsen."
+    sections_order:
+    - EMAIL_CONTEXT
+    - MARKER_CORE
+    - LENS_SUMMARY
+    - DRIFT_AXES
+    - SYSTEM_IMAGE
+    - CHANGE_POINTS
+    - NARRATIVE_CONCLUSION
+    - INDICES_SCORINGS
+    - VALIDITY
+
+sections:
+
+  HEAD_FOCUS:
+    title: "Worum geht es hier?"
+    fields:
+    - time_span
+    - participants
+    - focus_title # 3–6 Wörter
+    - focus_one_liner # 1 Satz Vogelperspektive (ohne Fachjargon)
+    source: [ engine.meta, segmentation ]
+
+  EMAIL_CONTEXT:
+    title: "Kontext der E-Mail-Kette"
+    fields:
+    - subject_line
+    - roles_inferred # Chef/Kunde/Elternteil etc. (sprachliche Höflichkeit/Titel)
+    - cta_clarity # klar/unklar; markerbasiert (Regeln/Fragen/Deadlines)
+    - thread_progress # erste/letzte Mail, Antwortlatenzen
+    - power_distance_cues # formelle Sprache/Anrede
+    source: [ headers, timeline, markers ]
+
+  MARKER_CORE:
+    title: "Markertreffer (mit Bedeutung)"
+    per_type:
+      include: [ "ATO", "SEM", "CLU", "MEMA" ]
+      fields:
+      - type
+      - count
+      - short_meaning # aus markers_canonical.json
+      - examples_max: 2 # kurze Zitate
+    per_person:
+      top_markers_max: 4
+      include_examples: true
+    note_on_language: "Marker = wiederkehrende Sprach-/Interaktionsmuster, keine Diagnosen."
+    source: [ ENGINE_RESULT, markers_canonical ]
+
+  LENS_SUMMARY:
+    title: "Rahmenlesen in Alltagssprache (keine Diagnosen)"
+    lenses:
+    - key: "CBCT"
+      label: "Denkmuster & Kommunikation (CBCT)"
+      one_sentence: "Welche Gedanken/Regeln prägen die Gespräche?"
+      derive_from:
+        includes: [ "DETECT_REACTIVE_CONTROL_SPIRAL", "ATO_ABSOLUTISMUS", "SEM_REAPPRAISAL", "SEM_OWNERSHIP" ]
+      output:
+      - "Hinweise (kurz, markerbasiert)"
+      - "1–2 Zitatbelege"
+    - key: "EFCT"
+      label: "Gefühle & Bindung (EFCT)"
+      one_sentence: "Wo zeigen sich Nähebedürfnis, Verletzlichkeit, Rückzug oder Protest?"
+      derive_from:
+        includes: [ "SEM_VULNERABILITY", "SEM_APOLOGY", "CLU_WITHDRAWAL", "MEMA_BOUNDARY_*", "SEM_REASSURANCE" ]
+      output:
+      - "Hinweise (Annäherung/Protest/Rückzug)"
+      - "1–2 Zitatbelege"
+    - key: "SFT"
+      label: "Struktur & Grenzen (SFT)"
+      one_sentence: "Welche Rollen/Grenzen und unausgesprochene Regeln steuern die Interaktionen?"
+      derive_from:
+        includes: [ "DETECT_FAMILIENDYNAMIK_MARKER", "MEMA_BOUNDARY_SET", "CLU_ROLE_SWITCH", "SEM_REQUEST_CLARIFY" ]
+      output:
+      - "Hinweise (Eltern/Kind/Peers, Hierarchie/Allianzen)"
+      - "1–2 Zitatbelege"
+    - key: "GOTTMAN"
+      label: "Konflikt-Signale (Gottman)"
+      one_sentence: "Wo tauchen Kritik, Verteidigung, Verachtung oder Rückzug sprachlich auf?"
+      derive_from:
+        includes: [ "CLU_CRITICISM", "CLU_DEFENSE", "CLU_CONTEMPT", "CLU_STONEWALLING", "GAPS_SILENCE" ]
+      flags:
+        note: "Nur als Kommunikationsmuster, nicht als Etikett."
+      output:
+      - "Gefundene Signale + Kurzdeutung"
+      - "1 Zitatbeleg je Signal"
+    disclaimer: "Linsen sind Deutungsrahmen in Alltagssprache; sie beschreiben Muster, keine Personen."
+    source: [ ENGINE_RESULT, markers_canonical ]
+
+  DRIFT_AXES:
+    title: "Verlauf & Drift"
+    axes:
+    - key: "NAEHE↔DISTANZ"
+      from_markers: [ "SEM_RESONANCE", "CLU_WITHDRAWAL", "MEMA_BOUNDARY_*" ]
+    - key: "SPANNUNG↔RUHE"
+      from_markers: [ "CLU_CONFLICT", "SEM_DEESCALATION" ]
+    - key: "KONTROLLE↔FLEXIBILITÄT"
+      from_markers: [ "DETECT_REACTIVE_CONTROL_SPIRAL", "SEM_REAPPRAISAL" ]
+    - key: "KLÄRUNG↔UNKLARHEIT"
+      from_markers: [ "SEM_OWNERSHIP", "SEM_REQUEST_CLARIFY" ]
+    output:
+      values_range: [ -1, 1 ]
+      trend: [ "steigt", "fällt", "stabil" ]
+      exemplar_turns: 2
+
+  BALANCE_HEATMAP:
+    title: "Balance & Dichte"
+    balance:
+      initiative_vs_support: true
+      talk_time_ratio: true
+    heatmap:
+      bucket_size_chars: 500
+      show_types: [ "SEM", "CLU", "MEMA" ]
+    output: [ "table", "sparkline" ]
+
+  ATTACHMENT_NEEDS:
+    title: "Bedürfnisse zwischen den Zeilen"
+    composites:
+    - key: "unsaid_need_index"
+      from_markers: [ "SEM_REASSURANCE", "SEM_INDIRECT_REQUEST", "MEMA_BOUNDARY_NEED" ]
+    - key: "repair_sequences"
+      from_patterns: [ "apology→accept", "clarify→acknowledge→plan" ]
+    output: [ "bullets_with_quotes" ]
+
+  SYSTEM_IMAGE:
+    title: "Systembild"
+    fields:
+    - roles_distribution # wer übernimmt welche Rolle (sprachliche Hinweise)
+    - recurring_patterns # wiederkehrende Schleifen/Trigger
+    - interaction_loops # z. B. Kritik↔Rückzug; Bitte↔Beruhigung
+    style: "Alltagssprache, systemisch, ohne Zuschreibung von Schuld"
+
+  CHANGE_POINTS:
+    title: "Wendepunkte"
+    detect:
+      methods: [ "density_spike", "marker_switch", "repair_sequence" ]
+    list_max: 6
+    fields: [ "timestamp_or_seq", "involved_markers", "micro_narrative_1liner" ]
+
+  NARRATIVE_CONCLUSION:
+    title: "Gesamteinschätzung"
+    must_include:
+    - "Was ist passiert? (markergetragen)"
+    - "Wie stehen die Personen zueinander? (Rollen/Muster)"
+    - "Welche Muster verstärken sich sichtbar?"
+    speculative:
+      allowed: true
+      prefix: "Spekulativ:"
+      grounding: "immer Marker-Belege nennen"
+
+  INDICES_SCORINGS:
+    title: "Indizes (aus Markern berechnet)"
+    indices: [ "trust", "deesc", "conflict", "sync" ]
+    show_contributors: true
+    render_html_rings: true
+    gating_note_if_low_data: true
+
+  VALIDITY:
+    title: "Validität"
+    checks:
+    - "counts_vs_rawlog"
+    - "sliding_window_confirm"
+    - "gate_note"
+
+lens_mapping:
+  # Zuordnung Markerfamilien → Linsen-Beiträge (Gewichtungen exemplarisch; kalibrierbar via weights.json)
+  CBCT:
+    SEM_REAPPRAISAL: 1.0
+    SEM_OWNERSHIP: 0.8
+    DETECT_REACTIVE_CONTROL_SPIRAL: 0.7
+    ATO_ABSOLUTISMUS: 0.6
+  EFCT:
+    SEM_VULNERABILITY: 1.0
+    SEM_APOLOGY: 0.8
+    CLU_WITHDRAWAL: -0.7
+    SEM_REASSURANCE: 0.6
+  SFT:
+    MEMA_BOUNDARY_SET: 0.9
+    DETECT_FAMILIENDYNAMIK_MARKER: 0.8
+    CLU_ROLE_SWITCH: 0.6
+  GOTTMAN:
+    CLU_CRITICISM: -1
+    CLU_DEFENSE: -0.8
+    CLU_CONTEMPT: -1
+    CLU_STONEWALLING: -0.9
+
+rendering:
+  text:
+    headings_from_template: true
+    include_marker_explanations: true
+  html:
+    template_file: "analyse.HTML"
+    inject: [ "ANALYSIS_DATA" ]
+
+modes:
+  analyse:
+    default: true
+    use_markers: "strict"
+  frei:
+    use_markers: "off_unless_requested"
+  präzise:
+    use_markers: "strict"
+    focus:
+      allow_candidate_markers: true # CAND_* zählt nicht in Indizes
+
+bias_selfcheck:
+  enabled: true
+  quicklist: [ "Confirmation Bias", "Voreilige Zuschreibung", "Gedankenlesen", "Negativity Bias" ]
+  output_if_found: "Bias-Hinweis: <kurz + Korrektur>"
+  output_else: "Bias-Hinweis: kein Befund"

@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "map": [
+    {
+      "promote": "SEM_VALIDATION",
+      "when": {
+        "segment_co_occurs": { "group": "VALIDATION", "min_ATO": 2 },
+        "tags_any_of": ["agree", "ack"]
+      },
+      "from_ATO_ids": ["ATO_ACK", "ATO_CONFIRM"]
+    },
+    {
+      "promote": "SEM_REPAIR",
+      "when": {
+        "segment_has": { "ids_any_of": ["ATO_APOLOGY"], "min": 1 },
+        "tags_any_of": ["deescalation", "repair"]
+      },
+      "from_ATO_ids": ["ATO_APOLOGY"]
+    }
+  ]
+}
+
+
