@@ -1,0 +1,50 @@
+project-gpt/
+  orchestrator.py
+  pack.py
+  validate.py
+  bundle_custom_gpt.py
+  requirements.txt
+  Makefile
+  .pre-commit-config.yaml
+  README.md
+  schemas/
+    profile.schema.json
+    schema_text.schema.json
+    schema_voice.schema.json
+  resources/
+    templates/
+      OUTPUT_TEMPLATE_V3.yaml         # <- deine Datei hier hineinlegen
+      CHUNK_ANALYSE_V2.yaml           # <- deine Datei hier hineinlegen
+    schemata/
+      SCH_TEXT.yaml
+      SCH_VOICE.yaml
+    profiles/
+      default.yaml
+      clinical.yaml
+      brief.yaml
+    config/
+      Model-registry.json             # <- deine Datei hier hineinlegen
+      model_switch_config.json        # <- deine Datei hier hineinlegen
+      PROF_marker_axes.json           # <- deine Datei hier hineinlegen
+    markers/                          # <- dein MarkerPack (YAML/JSON)
+  enginelib/
+    __init__.py
+    runtime.py
+  plugins/
+    detect_basics.py
+    detect_omission.py                # <- optional: bindet omission_Marker_py.zip ein
+    detect_voice.py                   # <- Skeleton; VOICE_MARKER_LD3.4.zip
+  extensions/
+    drift/
+      ewma_adapter.py                 # <- bindet PROF_DRIFT.py
+      drift_metrics_adapter.py        # <- bindet PROF_drift_metrics.py
+    archetypes/
+      archetype_weights.yaml          # <- optional: PROF_archetype_marker_weights.yaml
+      archetype_resonance_map.yaml    # <- optional: PROF_archetype_resonance_map.yaml
+  tests/
+    test_runtime_basic.py
+    test_model_switch.py
+  .github/workflows/ci.yml
+  scripts/
+    quick_checks.sh
+    model_switch_dryrun.py
