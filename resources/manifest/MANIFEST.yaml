@@ -1,0 +1,12 @@
+bundle_id: "project-gpt"
+marker_bundle:
+  name: ld-markers
+  version: "5.1"
+  canonical_json: resources/markers_canonical.json
+schemas_compatible:
+  - SCH_TEXT
+  - SCH_VOICE
+profiles:
+  - default
+  - clinical
+  - brief

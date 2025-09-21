@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "name": {"type": "string"},
+    "type": {"type": "string"},
+    "chunk_size": {"type": "integer", "minimum": 100, "maximum": 10000},
+    "description": {"type": "string"},
+    "validation": {
+      "type": "object",
+      "properties": {
+        "min_length": {"type": "integer", "minimum": 1},
+        "max_length": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "question_flow": {
+      "type": "object",
+      "properties": {
+        "gate_when": {
+          "type": "object",
+          "properties": {
+            "min_total_markers": {"type": "integer", "minimum": 0},
+            "min_segments": {"type": "integer", "minimum": 0}
+          },
+          "additionalProperties": false
+        }
+      },
+      "patternProperties": {
+        "^on_[a-z_]+$": {"$ref": "#/$defs/questionPlan"}
+      },
+      "additionalProperties": false
+    },
+    "blindspot_trigger": {"type": "string"}
+  },
+  "required": ["name", "type"],
+  "$defs": {
+    "questionPlan": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/questionStep"}
+    },
+    "questionStep": {
+      "type": "object",
+      "properties": {
+        "pack": {"type": "string"},
+        "ask": {"type": "integer", "minimum": 1, "maximum": 10}
+      },
+      "required": ["pack"],
+      "additionalProperties": false
+    }
+  }
+}

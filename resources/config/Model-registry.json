@@ -1,0 +1,16 @@
+{
+  "models": [
+    {
+      "id": "carl-js-engine",
+      "name": "CARL JavaScript Engine",
+      "description": "JavaScript-based marker analysis",
+      "version": "1.0.0"
+    },
+    {
+      "id": "default-model",
+      "name": "Default Analysis Model",
+      "description": "Standard analysis model",
+      "version": "1.0.0"
+    }
+  ]
+}

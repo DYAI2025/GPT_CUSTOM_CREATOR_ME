@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CARL Analyse</title>
+<link rel="stylesheet" href="assets/style.css">
+<!-- Charting -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
+</head>
+<body>
+<header>
+  <h1>CARL — Analyse-Dashboard</h1>
+  <div id="meta"></div>
+</header>
+
+<main class="grid">
+  <section class="card">
+    <h2>Top-Cluster</h2>
+    <canvas id="chartClusters"></canvas>
+  </section>
+
+  <section class="card">
+    <h2>Indizes</h2>
+    <canvas id="chartIndices"></canvas>
+  </section>
+
+  <section class="card">
+    <h2>Drift-Achsen</h2>
+    <canvas id="chartAxes"></canvas>
+    <div id="axesTrends" class="small"></div>
+  </section>
+
+  <section class="card">
+    <h2>Balance</h2>
+    <canvas id="chartBalance"></canvas>
+  </section>
+
+  <section class="card">
+    <h2>Linsen</h2>
+    <canvas id="chartLenses"></canvas>
+  </section>
+
+  <section class="card">
+    <h2>Heatmap</h2>
+    <div id="heatmap" class="heatmap"></div>
+  </section>
+
+  <section class="card span2">
+    <h2>Wendepunkte</h2>
+    <ul id="changePoints" class="list"></ul>
+  </section>
+
+  <section class="card span2">
+    <h2>Highlights</h2>
+    <div id="highlights" class="highlights"></div>
+  </section>
+
+  <section class="card span2">
+    <h2>Nachfragen &amp; Befunde</h2>
+    <div id="questionFollowUp"></div>
+  </section>
+
+  <section class="card">
+    <h2>Frage-Packs</h2>
+    <div id="questionBadges" class="badge-grid"></div>
+    <canvas id="chartQuestionAnswered" height="180"></canvas>
+    <canvas id="chartQuestionPromoted" height="180"></canvas>
+  </section>
+
+  <section class="card span2">
+    <h2>Q&amp;A Timeline</h2>
+    <ol id="questionTimeline" class="list"></ol>
+  </section>
+</main>
+
+<footer>
+  <button id="btnBench">Benchmarks anzeigen</button>
+</footer>
+
+<!--__INJECT_ANALYSIS_DATA__-->
+<script src="assets/utils.js"></script>
+<script src="assets/benchmarks.js"></script>
+<script src="assets/dashboard.js"></script>
+<script>
+  const data = window.ANALYSIS_DATA || {};
+  window.renderDashboard(data);
+  document.getElementById('btnBench').onclick = () => window.runBenchmarks(data._bench);
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "map": [],
+  "CONFLICT":   { "clu_name": "CLU_CONFLICT" },
+  "SUPPORT":    { "clu_name": "CLU_SUPPORT" },
+  "UNCERTAINTY":{ "clu_name": "CLU_UNCERTAINTY" }
+}

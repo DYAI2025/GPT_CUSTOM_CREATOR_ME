@@ -1,0 +1,57 @@
+name: SEM
+version: 1
+intent: "Mikromuster der Verknuepfung und Funktion erkennen."
+ask_policy:
+  default_ask: 2
+  max_ask: 4
+  promotion_threshold: 2
+items:
+  - id: SEM_Q1_ABER_WRAP
+    prompt: "Werden Zusagen oder Komplimente haeufig mit 'aber' relativiert? Nenne zwei Belege."
+    rationale: "Positiv gefasst, sofort relativiert"
+    marker_targets: ["SEM_POSITIVE_THEN_BUT", "SEM_MIXED_MESSAGE"]
+
+  - id: SEM_Q2_REQUEST_STYLE
+    prompt: "Wie bittest du um etwas? Direkt, indirekt oder mit Abschwaechern? Zwei Beispiele."
+    rationale: "Bittenstil"
+    marker_targets: ["SEM_REQUEST_DIRECT", "SEM_REQUEST_INDIRECT", "SEM_REQUEST_WITH_HEDGES"]
+
+  - id: SEM_Q3_RESPONSIBILITY
+    prompt: "Wie uebernimmst oder schiebst du Verantwortung? Aktive vs. passive Formulierungen, zwei Stellen."
+    rationale: "Zurechnung"
+    marker_targets: ["SEM_OWNERSHIP_LANGUAGE", "SEM_DIFFUSION_OF_AGENCY"]
+
+  - id: SEM_Q4_JUSTIFY
+    prompt: "Wie rechtfertigst du Entscheidungen? Berufst du dich auf Fakten, Autoritaeten oder Gefuehle? Beispiele."
+    rationale: "Begruendung"
+    marker_targets: ["SEM_APPEAL_TO_FACTS", "SEM_APPEAL_TO_AUTHORITY", "SEM_APPEAL_TO_EMOTION"]
+
+  - id: SEM_Q5_REPAIR
+    prompt: "Taucht die Sequenz Entschuldigung gefolgt von Erklaerung oder Angebot auf? Nenne ein bis zwei Folgen."
+    rationale: "Repair-Sequenz"
+    marker_targets: ["SEM_REPAIR_SEQUENCE", "SEM_APOLOGY_JUSTIFY"]
+
+  - id: SEM_Q6_GATEKEEP
+    prompt: "Blockierst du Themen mit Formeln wie 'darueber reden wir jetzt nicht'? Belege."
+    rationale: "Gatekeeping"
+    marker_targets: ["SEM_GATEKEEPING"]
+
+  - id: SEM_Q7_CONTROL_LEX
+    prompt: "Gibt es viel Kontrollsprache ('muss', 'sollte', Regeln)? Zwei Stellen."
+    rationale: "Kontrollton"
+    marker_targets: ["SEM_CONTROL_LEX", "SEM_SHOULD_MUST"]
+
+  - id: SEM_Q8_EXTERNALIZE
+    prompt: "Schiebst du Ursachen oft nach aussen ('die Umstaende', 'andere')? Zwei Belege."
+    rationale: "Externalisierung"
+    marker_targets: ["SEM_EXTERNALIZATION"]
+
+  - id: SEM_Q9_IMPRESSION
+    prompt: "Formulierst du auffaellig image-bewahrend? Beispiele."
+    rationale: "Eindrucksmanagement"
+    marker_targets: ["SEM_IMPRESSION_MANAGEMENT"]
+
+  - id: SEM_Q10_VULN_ALIGN
+    prompt: "Wo zeigst du Verletzlichkeit oder stimmst deutlich zu? Zitiere zwei Stellen."
+    rationale: "Nahe/Abgleich"
+    marker_targets: ["SEM_VULNERABILITY", "SEM_ALIGNMENT", "SEM_VALIDATION"]

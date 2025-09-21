@@ -1,0 +1,14 @@
+bindung:
+  families: { SUPPORT: 0.6, UNCERTAINTY: 0.4 }
+auth_affekt:
+  families: { SUPPORT: 0.5, CONFLICT: -0.5 }
+wut:
+  families: { CONFLICT: 1.0 }
+trust:
+  families: { SUPPORT: 0.7, UNCERTAINTY: -0.3, CONFLICT: -0.4 }
+deesc:
+  families: { SUPPORT: 0.6, CONFLICT: -0.6 }
+conflict:
+  families: { CONFLICT: 1.0 }
+sync:
+  families: { SUPPORT: 0.5, UNCERTAINTY: -0.2 }

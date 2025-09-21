@@ -1,0 +1,52 @@
+name: CLU
+version: 1
+intent: "Verlaufsmuster in Konflikt und Annaherung spiegeln."
+ask_policy:
+  default_ask: 2
+  max_ask: 3
+  promotion_threshold: 2
+items:
+  - id: CLU_Q1_LOOP
+    prompt: "Beschreibe eine Stelle, an der ihr in denselben Konfliktzyklus fallt (Start, Gegenreaktion, Ausgang)."
+    rationale: "Konflikt-Schleifen"
+    marker_targets: ["CLU_CONFLICT_LOOP"]
+
+  - id: CLU_Q2_ESCALATE
+    prompt: "Wo steigert sich ein Streit in drei kurzen Schritten? Notiere die wichtigsten Saetze."
+    rationale: "Steigerung"
+    marker_targets: ["CLU_ESCALATION_CHAIN"]
+
+  - id: CLU_Q3_WITHDRAW
+    prompt: "Wer zieht sich wann zurueck (Schweigen, Thema wechseln)? Ein Beispiel."
+    rationale: "Rueckzug"
+    marker_targets: ["CLU_WITHDRAWAL_PATTERN"]
+
+  - id: CLU_Q4_SOFTEN
+    prompt: "Gibt es Sequenzen, in denen du oder das Gegenueber aktiv beruhigt? Beschreibe den Verlauf."
+    rationale: "Deeskalation"
+    marker_targets: ["CLU_SOFTENING_SEQUENCE"]
+
+  - id: CLU_Q5_NEAR_RESPONSE
+    prompt: "Wann fuehrt eine Frage nach Naehe zu einer Antwort, die eher Distanz schafft?"
+    rationale: "Nahe-Antwort-Mismatch"
+    marker_targets: ["CLU_NEAR_MISS"]
+
+  - id: CLU_Q6_PROMISE_DELAY
+    prompt: "Wo folgt auf eine Zusage direkt ein Aufschub oder Vorbehalt? Zitiere kurz."
+    rationale: "Zusage wird verschoben"
+    marker_targets: ["CLU_PROMISE_DEFERRAL"]
+
+  - id: CLU_Q7_META_BREAK
+    prompt: "Gibt es Momente, in denen jemand den Konflikt benennt und kurz innehalt? Was passiert danach?"
+    rationale: "Meta-Intervention"
+    marker_targets: ["CLU_META_BREAK"]
+
+  - id: CLU_Q8_REPAIR_ATTEMPT
+    prompt: "Wo startet ein Repair-Versuch (z. B. Anerkennung), der scheitert? Skizziere Ablauf."
+    rationale: "Repair bricht ab"
+    marker_targets: ["CLU_REPAIR_ATTEMPT"]
+
+  - id: CLU_Q9_ALIGNMENT
+    prompt: "Welche Szene zeigt klaren Schulterschluss nach Konflikt?"
+    rationale: "Alignment"
+    marker_targets: ["CLU_ALIGNMENT"]

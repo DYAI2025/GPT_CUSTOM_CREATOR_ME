@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "name": {"type": "string"},
+    "type": {"type": "string", "pattern": "voice|audio"},
+    "chunk_size": {"type": "integer", "minimum": 100, "maximum": 10000},
+    "description": {"type": "string"},
+    "audio_settings": {
+      "type": "object",
+      "properties": {
+        "sample_rate": {"type": "integer"},
+        "channels": {"type": "integer", "minimum": 1, "maximum": 8}
+      }
+    },
+    "validation": {
+      "type": "object",
+      "properties": {
+        "min_length": {"type": "integer", "minimum": 1},
+        "max_length": {"type": "integer", "minimum": 1}
+      }
+    }
+  },
+  "required": ["name", "type"]
+}

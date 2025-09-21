@@ -1,0 +1,17 @@
+# Beitrag je Familie zu Achsen in [-1,1]
+tension_calm:
+  CONFLICT: 1.0
+  SUPPORT: -0.6
+  UNCERTAINTY: 0.2
+approach_avoid:
+  SUPPORT: 0.7
+  CONFLICT: -0.4
+  UNCERTAINTY: -0.3
+agency_communion:
+  SUPPORT: 0.4
+  CONFLICT: 0.2
+  UNCERTAINTY: -0.2
+certainty_ambiguity:
+  SUPPORT: 0.5
+  CONFLICT: -0.2
+  UNCERTAINTY: -0.8

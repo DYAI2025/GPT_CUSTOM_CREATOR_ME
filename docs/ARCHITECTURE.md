@@ -1,0 +1,1 @@
+Schichten: Orchestrator → EngineRuntime → Plugins → Extensions → Templates. Manifest bindet Marker/Schemata/Profile.

@@ -1,0 +1,57 @@
+name: ATO
+version: 1
+intent: "Kleinsignale sichtbar machen (Wortwahl, Ticks, Auslassungen)."
+ask_policy:
+  default_ask: 2
+  max_ask: 4
+  promotion_threshold: 2
+items:
+  - id: ATO_Q1_REPETITION
+    prompt: "Fallen dir Woerter oder Phrasen auf, die du zuletzt sehr oft benutzt hast? Nenne drei Beispiele im Originalwortlaut."
+    rationale: "Haeufungen"
+    marker_targets: ["ATO_REPETITION", "ATO_FUNCTION_WORD_SPIKE"]
+
+  - id: ATO_Q2_HEDGES
+    prompt: "Welche Abschwaecher nutzt du haeufig (z. B. 'vielleicht', 'irgendwie', 'ein bisschen')? Zitiere zwei bis drei Stellen."
+    rationale: "Unsicherheits-Ton"
+    marker_targets: ["ATO_SOFTENING", "ATO_UNCERTAINTY_LEX"]
+
+  - id: ATO_Q3_ABSOLUTES
+    prompt: "Gibt es absolute Formulierungen wie 'immer', 'nie', 'jeder'? Bitte zwei Belege."
+    rationale: "Absolutismen"
+    marker_targets: ["ATO_ABSOLUTISM", "ATO_GENERALIZATION"]
+
+  - id: ATO_Q4_CONTRAST
+    prompt: "Wo kippt ein positiver Satz mit 'aber' ins Gegenteil? Zitiere kurz zwei Stellen."
+    rationale: "Kontrastmarker"
+    marker_targets: ["ATO_CONTRASTIVE_CUE"]
+
+  - id: ATO_Q5_CONDITIONALS
+    prompt: "Tauchen viele Wenn-Dann-Saetze oder Bedingungen auf? Fasse zwei Beispiele."
+    rationale: "Regel- und Kontrollsprache"
+    marker_targets: ["ATO_CONDITIONAL_RULE"]
+
+  - id: ATO_Q6_NEGATION
+    prompt: "Wo sammelst du mehrere Verneinungen in einem Abschnitt (nicht, kein, nie)? Nenne ein bis zwei Stellen."
+    rationale: "Negationsdichte"
+    marker_targets: ["ATO_NEGATION_STACK"]
+
+  - id: ATO_Q7_METAPHOR
+    prompt: "Welche Bilder nutzt du spontan (Kampf, Reise, Wetter)? Nenne zwei Beispiele."
+    rationale: "Deutungsmetaphern"
+    marker_targets: ["ATO_METAPHOR_FIGHT", "ATO_METAPHOR_JOURNEY", "ATO_METAPHOR_WEATHER"]
+
+  - id: ATO_Q8_AVOIDANCE
+    prompt: "Welche Woerter oder Themen meidest du auffaellig, obwohl sie passen wuerden?"
+    rationale: "Vermeidung"
+    marker_targets: ["ATO_AVOIDANCE_TOPIC"]
+
+  - id: ATO_Q9_EMOJI
+    prompt: "Setzt du Emojis oder nonverbale Marker ein, um Aussagen zu entschaerfen oder zu verstaerken? Zwei Beispiele."
+    rationale: "Paraverbal digital"
+    marker_targets: ["ATO_EMOJI_SOFTEN", "ATO_EMOJI_INTENSIFY"]
+
+  - id: ATO_Q10_PASSIVE
+    prompt: "Wo formulierst du im Passiv statt aktiv (z. B. 'es wurde getan')? Zitiere ein bis zwei Fundstellen."
+    rationale: "Verantwortungsdiffusion"
+    marker_targets: ["ATO_PASSIVE_VOICE"]

@@ -1,0 +1,10 @@
+name: "CHUNK_ANALYSE_V2"
+version: "2.0"
+description: "Chunk analysis template for segmented processing"
+chunk_processing:
+  enabled: true
+  overlap: 50
+  merge_strategy: "weighted_average"
+output:
+  include_segments: true
+  include_chunk_boundaries: true

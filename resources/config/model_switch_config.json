@@ -1,0 +1,19 @@
+{
+  "dynamic_selection": {
+    "base": "carl-js-engine",
+    "selection_criteria": [
+      {
+        "match": "email|subject:",
+        "model": "carl-js-engine"
+      },
+      {
+        "match": "dialogue|conversation",
+        "model": "carl-js-engine"
+      }
+    ]
+  },
+  "schema_to_model": {
+    "free_analysis": ["carl-js-engine"],
+    "text_analysis": ["carl-js-engine"]
+  }
+}

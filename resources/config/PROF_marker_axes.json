@@ -1,0 +1,24 @@
+{
+  "marker_axes": [
+    {
+      "name": "tension_calm",
+      "description": "Tension vs Calm axis",
+      "range": [-1, 1]
+    },
+    {
+      "name": "approach_avoid", 
+      "description": "Approach vs Avoidance axis",
+      "range": [-1, 1]
+    },
+    {
+      "name": "agency_communion",
+      "description": "Agency vs Communion axis", 
+      "range": [-1, 1]
+    },
+    {
+      "name": "certainty_ambiguity",
+      "description": "Certainty vs Ambiguity axis",
+      "range": [-1, 1]
+    }
+  ]
+}

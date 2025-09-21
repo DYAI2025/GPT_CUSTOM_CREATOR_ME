@@ -1,0 +1,6 @@
+# Instructions für {{ name }}
+Modus: {{ mode }}
+Profil: {{ profile_name }} | Schema: {{ schema_name }}
+Gates: {{ gates | tojson }} | Gewichte: {{ (weights.families or {}) | tojson }}
+Intuition: confirm_window={{ intuition.confirm_window }}, mult={{ intuition.multiplier_on_confirm }}
+Sections: halte OUTPUT_TEMPLATE_V3-Reihenfolge exakt ein.

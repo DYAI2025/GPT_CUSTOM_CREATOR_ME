@@ -1,0 +1,17 @@
+name: "default"
+description: "Default analysis profile"
+gates:
+  min_segments: 2
+  min_total_markers: 5
+  sem_compose_window: 2
+  clu_x: 2
+  clu_y: 3
+weights:
+  families:
+    SUPPORT: 1.0
+    CONFLICT: 1.0
+    UNCERTAINTY: 0.8
+intuition:
+  confirm_window: 6
+  multiplier_on_confirm: 1.25
+schema_to_model_key: "free_analysis"

@@ -1,0 +1,52 @@
+name: MEMA
+version: 1
+intent: "Narrative, Rollen und Grundannahmen transparent machen."
+ask_policy:
+  default_ask: 2
+  max_ask: 3
+  promotion_threshold: 2
+items:
+  - id: MEMA_Q1_LIFE_STORY
+    prompt: "Welche wiederkehrende Lebensgeschichte erzaehlst du hier (z. B. 'ich muss alles alleine schaffen')?"
+    rationale: "Lebensnarrativ"
+    marker_targets: ["MEMA_LIFE_NARRATIVE"]
+
+  - id: MEMA_Q2_ROLE_SCRIPT
+    prompt: "Welche Rolle nimmst du automatisch ein (Retter, Ausgleicher, Kontrolleur)? Beschreibe kurz."
+    rationale: "Rollenbild"
+    marker_targets: ["MEMA_ROLE_SCRIPT"]
+
+  - id: MEMA_Q3_CORE_BELIEF
+    prompt: "Welcher Grundsatz steckt hinter deinen Aussagen (z. B. 'nahe heisst Gefahr')?"
+    rationale: "Grundannahmen"
+    marker_targets: ["MEMA_CORE_BELIEF"]
+
+  - id: MEMA_Q4_ATTACHMENT
+    prompt: "Wann fuehlt sich Naehe sicher bzw. unsicher? Nenne konkrete Szene."
+    rationale: "Bindungsnarrativ"
+    marker_targets: ["MEMA_ATTACHMENT_STORY"]
+
+  - id: MEMA_Q5_COMMIT
+    prompt: "Wo gehst du vom Reden ins Tun ueber (konkrete Zusage, Commit)?"
+    rationale: "Commitment"
+    marker_targets: ["MEMA_COMMITMENT"]
+
+  - id: MEMA_Q6_REPAIR_CHAIN
+    prompt: "Welche Repair-Sequenz wird konsequent zu Ende gefuehrt?"
+    rationale: "Repair gelingt"
+    marker_targets: ["MEMA_REPAIR_COMPLETE"]
+
+  - id: MEMA_Q7_DOUBLE_BIND
+    prompt: "Wo sendest du zwei widerspruechliche Botschaften zugleich?"
+    rationale: "Doppelte Botschaft"
+    marker_targets: ["MEMA_DOUBLE_BIND"]
+
+  - id: MEMA_Q8_VALUE_SHIFT
+    prompt: "Gibt es Stellen, an denen du deine Werte explizit anpasst?"
+    rationale: "Wertearbeit"
+    marker_targets: ["MEMA_VALUE_SHIFT"]
+
+  - id: MEMA_Q9_FUTURE_SELF
+    prompt: "Wie stellst du dir die naechste Episode vor, wenn es besser laeuft?"
+    rationale: "Zukunftsbild"
+    marker_targets: ["MEMA_FUTURE_SELF"]

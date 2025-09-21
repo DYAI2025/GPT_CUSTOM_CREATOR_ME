@@ -1,0 +1,1 @@
+Pipeline: segment → detect(ATO) → compose(SEM) → cluster(CLU) → mema → intuition → drift → render → html.

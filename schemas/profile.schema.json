@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "name": {"type": "string"},
+    "description": {"type": "string"},
+    "gates": {
+      "type": "object",
+      "properties": {
+        "min_segments": {"type": "integer", "minimum": 1},
+        "min_total_markers": {"type": "integer", "minimum": 1},
+        "sem_compose_window": {"type": "integer", "minimum": 1},
+        "clu_x": {"type": "integer", "minimum": 1},
+        "clu_y": {"type": "integer", "minimum": 1}
+      }
+    },
+    "weights": {
+      "type": "object",
+      "properties": {
+        "families": {"type": "object"}
+      }
+    },
+    "intuition": {
+      "type": "object",
+      "properties": {
+        "confirm_window": {"type": "integer", "minimum": 1},
+        "multiplier_on_confirm": {"type": "number", "minimum": 0.1, "maximum": 5.0}
+      }
+    }
+  },
+  "required": ["name"]
+}

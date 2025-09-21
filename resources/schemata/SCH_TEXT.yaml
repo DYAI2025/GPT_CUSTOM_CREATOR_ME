@@ -1,0 +1,23 @@
+name: "SCH_TEXT"
+type: "text"
+chunk_size: 1400
+description: "Standard text analysis schema"
+validation:
+  min_length: 1
+  max_length: 100000
+question_flow:
+  gate_when:
+    min_total_markers: 5
+    min_segments: 2
+  on_low_signal:
+    - pack: ATO
+      ask: 2
+    - pack: SEM
+      ask: 2
+  on_conflict_rise:
+    - pack: CLU
+      ask: 3
+  on_meta_needed:
+    - pack: MEMA
+      ask: 2
+blindspot_trigger: "(zeig mir, wo ich blind bin|blindspot|blindstellen)"
