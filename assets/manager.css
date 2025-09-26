@@ -1,0 +1,163 @@
+:root {
+  --panel-bg: #101820;
+  --panel-border: #1f2b38;
+  --accent: #3f9cff;
+  --text-light: #f4f7fb;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: #0b141d;
+  color: var(--text-light);
+  margin: 0;
+  padding: 0 0 4rem;
+}
+
+header {
+  padding: 2rem 3rem 1rem;
+  border-bottom: 1px solid var(--panel-border);
+  background: rgba(12, 20, 30, 0.85);
+}
+
+header h1 {
+  margin: 0 0 0.75rem;
+  font-size: 2.4rem;
+}
+
+header p {
+  margin: 0;
+  max-width: 720px;
+  line-height: 1.6;
+}
+
+main {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem 3rem 4rem;
+}
+
+.panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 1.6rem;
+}
+
+.panel p {
+  line-height: 1.6;
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+textarea {
+  width: 100%;
+  min-height: 160px;
+  background: rgba(18, 29, 41, 0.95);
+  border: 1px solid rgba(63, 156, 255, 0.35);
+  border-radius: 10px;
+  padding: 1rem;
+  color: var(--text-light);
+  font-family: "JetBrains Mono", "SFMono-Regular", monospace;
+  font-size: 0.95rem;
+  resize: vertical;
+}
+
+textarea:focus {
+  outline: 2px solid var(--accent);
+}
+
+.input-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.input-row button,
+label.file {
+  background: var(--accent);
+  color: #021427;
+  border: none;
+  border-radius: 999px;
+  padding: 0.65rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+label.file {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+label.file input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.input-row button[disabled],
+button[disabled] {
+  background: #1f2b38;
+  color: #6d7d92;
+  cursor: not-allowed;
+}
+
+.input-row button:not([disabled]):hover,
+label.file:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(63, 156, 255, 0.3);
+}
+
+.preview {
+  background: rgba(5, 12, 20, 0.88);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0;
+  max-height: 280px;
+  overflow: auto;
+  font-family: "JetBrains Mono", "SFMono-Regular", monospace;
+  font-size: 0.9rem;
+  border: 1px solid rgba(63, 156, 255, 0.1);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+.grid input {
+  background: rgba(18, 29, 41, 0.95);
+  border: 1px solid rgba(63, 156, 255, 0.35);
+  border-radius: 8px;
+  padding: 0.65rem 0.75rem;
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+@media (max-width: 960px) {
+  main {
+    padding: 1.5rem;
+  }
+  header {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Canonical Marker Catalog",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id"],
+    "properties": {
+      "id": {"type": "string"},
+      "signal": {"type": ["string", "null"]},
+      "concept": {"type": ["string", "null"]},
+      "pragmatics": {"type": ["string", "null"]},
+      "narrative": {"type": ["string", "null"]},
+      "pattern": {
+        "type": ["array", "null"],
+        "items": {"type": "string"}
+      },
+      "composed_of": {
+        "type": ["array", "null"],
+        "items": {"type": "string"}
+      },
+      "detect_class": {"type": ["string", "null"]},
+      "tags": {
+        "type": ["array", "null"],
+        "items": {"type": "string"}
+      },
+      "window": {"type": ["object", "null"]},
+      "extras": {"type": "object", "additionalProperties": true}
+    },
+    "additionalProperties": false
+  }
+}

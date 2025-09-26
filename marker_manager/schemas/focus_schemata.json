@@ -1,0 +1,24 @@
+{
+  "schemata": [
+    {
+      "name": "default",
+      "description": "Balanced weighting for LeanDeep markers",
+      "weights": {
+        "signal": 1.0,
+        "concept": 1.0,
+        "pragmatics": 1.0,
+        "narrative": 1.0
+      }
+    },
+    {
+      "name": "narrative-heavy",
+      "description": "Prioritise narrative rich markers",
+      "weights": {
+        "signal": 0.5,
+        "concept": 0.8,
+        "pragmatics": 1.0,
+        "narrative": 1.5
+      }
+    }
+  ]
+}

@@ -1,25 +1,69 @@
 {
-  "$schema":"https://json-schema.org/draft/2020-12/schema",
-  "type":"object",
-  "properties":{
-    "ld_spec":{"const":"LeanDeep 3.4"},
-    "version":{"type":"string"},
-    "markers":{
-      "type":"array",
-      "items":{
-        "type":"object",
-        "properties":{
-          "id":{"type":"string"},
-          "type":{"enum":["ATO","SEM","CLU","MEMA"]},
-          "activation":{"type":"object"},
-          "pattern":{"type":"array","items":{"type":"string"}},
-          "tags":{"type":"array","items":{"type":"string"}},
-          "composed_of":{"type":"array","items":{"type":"string"}},
-          "examples":{"type":"array","items":{"type":"string"}}
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "ld_spec": {"type": "string"},
+    "version": {"type": "string"},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "markers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "type": {"enum": ["ATO", "SEM", "CLU", "MEMA", "DETECT"]},
+          "activation": {"type": "object"},
+          "pattern": {"type": "array", "items": {"type": "string"}},
+          "patterns": {"type": "array", "items": {"type": "string"}},
+          "regex": {"type": "string"},
+          "tags": {"type": "array", "items": {"type": "string"}},
+          "composed_of": {"type": "array", "items": {"type": "string"}},
+          "examples": {"type": "array", "items": {"type": "string"}},
+          "span_strategy": {"type": "string"},
+          "notes": {"type": "string"},
+          "weight": {"type": "number"}
         },
-        "required":["id","type"]
+        "required": ["id", "type"]
+      }
+    },
+    "focus_profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "description": {"type": "string"},
+          "marker_weights": {
+            "type": "object",
+            "additionalProperties": {"type": "number"}
+          },
+          "tag_weights": {
+            "type": "object",
+            "additionalProperties": {"type": "number"}
+          },
+          "type_weights": {
+            "type": "object",
+            "additionalProperties": {"type": "number"}
+          }
+        },
+        "required": ["name"]
+      }
+    },
+    "model_profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "description": {"type": "string"},
+          "system_prompt": {"type": "string"},
+          "focus_profile": {"type": "string"},
+          "default_mode": {"type": "string"},
+          "extra": {"type": "object"}
+        },
+        "required": ["name"]
       }
     }
   },
-  "required":["ld_spec","version","markers"]
+  "required": ["version", "markers"]
 }

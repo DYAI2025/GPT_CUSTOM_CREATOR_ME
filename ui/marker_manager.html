@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <title>Marker Manager</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/manager.css" />
+</head>
+<body>
+<header>
+  <h1>Marker &amp; GPT Konfigurator</h1>
+  <p>Importiere Marker aus YAML/JSON, verwalte Fokus-Schemata und Modellprofile,
+     und exportiere alles als kanonische JSON-Konfiguration.</p>
+</header>
+<main>
+  <section class="panel">
+    <h2>1. Marker einlesen</h2>
+    <p>Wähle einzelne Dateien oder ganze Ordner (je nach Browser) aus. Alternativ
+       kannst du YAML/JSON direkt einfügen.</p>
+    <div class="input-row">
+      <label class="file">
+        <span>Dateien auswählen</span>
+        <input id="markerFiles" type="file" accept=".json,.yaml,.yml" multiple />
+      </label>
+      <button id="btnClearMarkers" type="button">Marker zurücksetzen</button>
+    </div>
+    <textarea id="markerText" placeholder="YAML oder JSON hier einfügen"></textarea>
+    <div class="input-row">
+      <button id="btnParseMarkers" type="button">Eingefügten Text übernehmen</button>
+      <button id="btnDownloadMarkers" type="button" disabled>Marker als JSON herunterladen</button>
+    </div>
+    <pre id="markerPreview" class="preview"></pre>
+  </section>
+
+  <section class="panel">
+    <h2>2. Fokus-Schemata</h2>
+    <p>Definiere Profile, die Marker-, Tag- oder Typ-Gewichte setzen.</p>
+    <textarea id="focusText" placeholder="profiles:\n  empathy:\n    description: 'Stärker auf Empathie achten'\n    marker_weights:\n      SEM_VALIDATION: 1.4\n    tag_weights:\n      empathy: 1.2\n"></textarea>
+    <div class="input-row">
+      <button id="btnParseFocus" type="button">Fokus-Schema übernehmen</button>
+      <button id="btnDownloadFocus" type="button" disabled>Fokus-Schema als JSON</button>
+    </div>
+    <pre id="focusPreview" class="preview"></pre>
+  </section>
+
+  <section class="panel">
+    <h2>3. Modell-Profile</h2>
+    <p>Konfiguriere GPT-Charaktere, Standard-Fokusprofile und System-Prompts.</p>
+    <textarea id="modelText" placeholder="models:\n  default:\n    description: 'Standard-Analyser'\n    system_prompt: 'Nutze Marker empathisch'\n    focus_profile: empathy\n    default_mode: dialog\n"></textarea>
+    <div class="input-row">
+      <button id="btnParseModels" type="button">Modelle übernehmen</button>
+      <button id="btnDownloadModels" type="button" disabled>Modelle als JSON</button>
+    </div>
+    <pre id="modelPreview" class="preview"></pre>
+  </section>
+
+  <section class="panel">
+    <h2>4. Kanonische Ausgabe</h2>
+    <p>Setze Version und Spec und exportiere alles als <code>markers_canonical.json</code>.</p>
+    <div class="grid">
+      <label>Version
+        <input id="catalogVersion" type="text" value="1.0" />
+      </label>
+      <label>ld_spec
+        <input id="catalogSpec" type="text" value="Marker Canonical" />
+      </label>
+    </div>
+    <div class="input-row">
+      <button id="btnLoadCanonical" type="button">Bestehende kanonische JSON laden</button>
+      <input id="canonicalFile" type="file" accept=".json" hidden />
+      <button id="btnExportCanonical" type="button" disabled>markers_canonical.json exportieren</button>
+    </div>
+    <pre id="catalogPreview" class="preview"></pre>
+  </section>
+</main>
+
+<script src="../assets/js-yaml.min.js"></script>
+<script src="../assets/markerManager.js"></script>
+</body>
+</html>
