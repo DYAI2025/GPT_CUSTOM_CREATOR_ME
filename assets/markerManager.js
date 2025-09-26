@@ -35,7 +35,7 @@
       }
       return JSON.parse(trimmed);
     }catch(err){
-      alert(`Fehler beim Parsen von ${filename || 'Text'}: ${err}`);
+      alert(`Error parsing ${filename || 'text'}: ${err}`);
       return null;
     }
   }
