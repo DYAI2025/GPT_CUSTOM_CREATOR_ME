@@ -1,0 +1,7 @@
+{
+  "name": "default_model",
+  "description": "Baseline GPT profile for LeanDeep 3.4 canonical markers",
+  "system_prompt": "Use canonical markers to guide reasoning.",
+  "focus_profile": "default",
+  "default_mode": "standard"
+}

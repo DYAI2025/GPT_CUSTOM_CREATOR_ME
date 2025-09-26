@@ -73,6 +73,69 @@ This loads 597 German linguistic markers from the `ALL_Marker_5.1/` directory.
 python3 validate.py
 ```
 
+### Marker Management Toolkit (Drop-in)
+
+The `marker_manager/` package replaces the previous ad-hoc scripts with a
+drop-in toolchain that mirrors the production layout described in the project
+specification.  It reads marker YAML from the LeanDeep source folder and keeps a
+single canonical JSON artefact up-to-date while persisting backups and
+supporting focus/model profiles.
+
+#### Configuration
+
+All commands share the same YAML configuration file.  The repository already
+includes a ready-to-use example at `marker_manager/marker_manager_config.yaml`
+with the canonical paths:
+
+```yaml
+source_dir: "/Users/benjaminpoersch/Projekte/.../Marker_LeanDeep3.4/"
+canonical_json: "/Users/benjaminpoersch/Projekte/.../Marker_LeanDeep3.4/_canonical/markers_canonical.json"
+backup_dir: "/Users/benjaminpoersch/Projekte/.../Marker_LeanDeep3.4/_canonical/backups/"
+schema_file: "schemas/schema.markers.json"
+focus_schemata_file: "schemas/focus_schemata.json"
+models_dir: "resources/models"
+```
+
+Update the ellipses to match your local path only if the directory structure is
+different.
+
+#### CLI commands
+
+Install the toolkit in editable mode and run one of the dedicated commands:
+
+```bash
+pip install -r requirements.txt
+
+# 1) einmalig alles bauen
+python -m marker_manager.cli sync -c marker_manager/marker_manager_config.yaml
+
+# 2) Watch-Modus (Auto-Update bei YAML-Änderungen)
+python -m marker_manager.cli watch -c marker_manager/marker_manager_config.yaml
+
+# 3) Validieren ohne Schreiben
+python -m marker_manager.cli validate -c marker_manager/marker_manager_config.yaml
+
+# 4) GUI starten
+python -m marker_manager.cli gui -c marker_manager/marker_manager_config.yaml  # http://localhost:5173
+```
+
+Every build is atomic: the CLI writes to a temporary file, performs an `fsync`
+and replaces `markers_canonical.json` in one step while copying the previous
+version into `_canonical/backups/`.
+
+#### Browser GUI
+
+Running `python -m marker_manager.cli gui ...` launches a lightweight Flask app
+that exposes the REST endpoints required by the specification and serves a
+single-page dashboard.  From the GUI you can:
+
+- Drag & drop or paste YAML snippets which are saved into the configured
+  `source_dir` and trigger an immediate rebuild.
+- Toggle manual rebuilds, inspect the active focus schema/model profile and
+  review the diff between the latest canonical artefact and its most recent
+  backup (JSON Patch).
+- Inspect recent events such as sync runs, uploads, watcher activity or errors.
+
 ### Basic Usage
 
 #### Option 1: Command Line Analysis

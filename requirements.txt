@@ -1,1 +1,5 @@
 pyyaml
+jsonschema
+watchdog
+Flask
+jsonpatch

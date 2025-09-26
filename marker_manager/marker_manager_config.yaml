@@ -1,0 +1,11 @@
+source_dir: "/Users/benjaminpoersch/Projekte/XEXPERIMENTE/WTME_LD3.4_Marker_5.1/MAIN_LeanDeep3.5_ALL_Marker_6.0/MARKER_COLLECTION_LD3.5 Kopie/ALL_Marker_5.1/Marker_LeanDeep3.4/"
+canonical_json: "/Users/benjaminpoersch/Projekte/XEXPERIMENTE/WTME_LD3.4_Marker_5.1/MAIN_LeanDeep3.5_ALL_Marker_6.0/MARKER_COLLECTION_LD3.5 Kopie/ALL_Marker_5.1/Marker_LeanDeep3.4/_canonical/markers_canonical.json"
+backup_dir: "/Users/benjaminpoersch/Projekte/XEXPERIMENTE/WTME_LD3.4_Marker_5.1/MAIN_LeanDeep3.5_ALL_Marker_6.0/MARKER_COLLECTION_LD3.5 Kopie/ALL_Marker_5.1/Marker_LeanDeep3.4/_canonical/backups/"
+schema_file: "marker_manager/schemas/schema.markers.json"
+focus_schemata_file: "marker_manager/schemas/focus_schemata.json"
+models_dir: "marker_manager/resources/models"
+watch: true
+atomic_writes: true
+sort_key: "id"
+id_required: true
+unknown_field_policy: "preserve_in.extras"
