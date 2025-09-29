@@ -1,0 +1,22 @@
+id: MEMA_PLATFORM_SWITCH_MANIPULATION
+schema_version: LD-3.3
+lang: en
+category: MEMA
+description: Meta marker for systematic platform switching as manipulation tactic
+criteria: "Persistent pattern of platform switching attempts to isolate targets and increase control across contexts"
+composed_of:
+  - SEM_PLATFORM_SWITCH
+  - CLU_BOUNDARY_VIOLATION_PATTERNS
+  - SEM_VALIDATION_SEEKING
+examples:
+  - "Repeated attempts to move conversations to private platforms despite resistance."
+  - "Platform switching combined with isolation tactics to gain more intimate access."
+  - "Escalating pressure to switch platforms when initial attempts are declined."
+  - "Using platform limitations as manipulation to justify more personal communication."
+  - "Pattern of platform switching preceding boundary violations or inappropriate behavior."
+  - "Online dating context where platform switching is used to bypass safety measures."
+  - "Professional context where colleague attempts to move work conversations to personal platforms."
+  - "Therapeutic boundary violation through attempts to connect on personal platforms."
+  - "Educational context where instructor inappropriately seeks private communication channels."
+  - "Long-term grooming behavior beginning with seemingly innocent platform switching requests."
+tags: [mema, v3.3, platform-manipulation, isolation-tactics]

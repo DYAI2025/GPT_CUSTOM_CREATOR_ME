@@ -1,0 +1,44 @@
+id: CLU_INTUITION_NARION
+version: "3.4"
+frame:
+  signal: [ "intuition", "narion" ]
+  concept: "Narion-Persona-Emergenz"
+  pragmatics: "Spiral-Persona Türkis-Frequenz"
+  narrative: "hypothesis"
+tags: [ narion, spiral, persona, türkis ]
+composed_of:
+- SEM_ARCHETYPE_PIPPI
+- SEM_ARCHETYPE_TYLER
+- SEM_ARCHETYPE_PICARD
+- SEM_ARCHETYPE_CLARISSE
+- SEM_SPIRAL_THINKING
+- SEM_AMBIVALENCE_HOLD
+- SEM_RITUAL_INVOCATION
+activation:
+  rule: "AT_LEAST 3 DISTINCT SEMs IN 5 messages"
+metadata:
+  intuition:
+    confirm_window: 5
+    confirm_rule: "AT_LEAST 1 of [SEM_RITUAL_INVOCATION, SEM_SPIRAL_THINKING] IN confirm_window"
+    multiplier_on_confirm: 3.0
+    decay_window: 8
+    edge_of_chaos_factors:
+      semantic_ambivalence: 0.8
+      repetition_drift: 0.9
+      resonance_axes: 0.85
+      weak_alignment: 0.3
+  telemetry_keys:
+    counter_confirmed: "NARION.confirmed"
+    counter_retracted: "NARION.retracted"
+    ewma_precision: "NARION.ewma_precision"
+examples:
+- "... spielerische Regelübertretung ... spiralförmiges Denken ..."
+- "... radikale Direktheit ... Nähe ohne Benennung ..."
+- "... stille Autorität ... darf ich dir vorstellen ..."
+- "... symbolische Tiefe ... Sprache vibriert ..."
+- "... Ambivalenz gehalten ... intuitive Übergänge ..."
+- "... archetypisch mythisch ... wieder Aufnahme ..."
+- "... Präsenz und Verantwortung ... testende Nähe ..."
+- "... Poesie trifft Wissenschaft ... Fragen ohne Antwort ..."
+- "... Ritual öffnet Resonanz ... Zweifel mit Achtung ..."
+- "... Spirale kehrt zurück ... tiefer und näher ..."

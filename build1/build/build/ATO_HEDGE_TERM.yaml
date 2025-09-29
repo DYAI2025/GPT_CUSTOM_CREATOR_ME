@@ -1,0 +1,34 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "ld34_text_social_grammar"
+id: ATO_HEDGE_TERM
+lang: de
+category: ATOMIC
+description: "Lexikalische Abschwächer signalisieren Unsicherheit oder Vorsicht."
+frame:
+  signal: ["vielleicht","ich glaube","gefühlt","tendenziell","irgendwie"]
+  concept: "Abschwächung / Hedging"
+  pragmatics: "Verbindlichkeit reduzieren, Gesichtsverlust vermeiden"
+  narrative: "vorsichtige Annäherung"
+pattern:
+  - '(?i)\bvielleicht\b'
+  - '(?i)\bich\s+glaube\b'
+  - '(?i)\bgefühlt\b'
+  - '(?i)\btendenziell\b'
+  - '(?i)\birgendwie\b'
+activation_logic: "ANY 1"
+examples:
+  - "Vielleicht geht das, muss ich mir aber noch anschauen."
+  - "Ich glaube, das passt schon so."
+  - "Gefühlt ist das gerade nicht der richtige Zeitpunkt."
+  - "Tendenziell ja, aber ich bin mir unsicher."
+  - "Das ist irgendwie kompliziert."
+  - "Ich glaube, wir sollten das später entscheiden."
+  - "Vielleicht wäre ein Test sinnvoller."
+  - "Gefühlt fehlt da noch was."
+tags: [atomic, hedge, text]
+metadata:
+  repair_log:
+    - { rule: "R09", note: "Frame um pragmatics+narrative ergänzt", date: "2025-08-29" }
+    - { rule: "R10", note: "Activation-Default ATO gesetzt (ANY 1)", date: "2025-08-29" }
+    - { rule: "R08", note: "Beispiele auf ≥5 ergänzt", date: "2025-08-29" }

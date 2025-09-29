@@ -1,0 +1,22 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_FORMAT_POLICING
+frame:
+  signal: ["format_policing"]
+  concept: "Formregeln als Hebel"
+  pragmatics: "Gatekeeping über Form"
+  narrative: "process_control"
+tags: [format, policing]
+composed_of:
+  any_of:
+    - ATO_STYLE_REFERENCE
+    - ATO_SHARED_CONTEXT
+activation:
+  rule: "AT_LEAST 1 IN 2 messages"
+  window: 2
+examples:
+  - "Nicht per Text, nur FaceTime."
+  - "Bitte in Vorlage XYZ."
+  - "Kein PDF, nur Google Doc."
+  - "Nur im Ticket, nicht per Mail."
+  - "Formfehler, bitte neu einreichen."

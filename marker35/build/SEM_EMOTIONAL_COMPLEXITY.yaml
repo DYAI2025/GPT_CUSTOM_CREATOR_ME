@@ -1,0 +1,32 @@
+id: SEM_EMOTIONAL_COMPLEXITY
+version: '3.3'
+frame:
+  signal:
+  - Differenzierte Gefühlswahrnehmung mit Selbstbeobachtung
+  concept: Emotionale Komplexität
+  pragmatics: Gefühlsdifferenzierung
+  narrative: complexity
+composed_of:
+- ATO_EMOTIONAL_GRANULARITY
+- ATO_SELF_OBSERVATION
+activation:
+  rule: ALL 2 IN 2 messages
+examples:
+  positive:
+    - "Ich fühle mich gleichzeitig traurig und erleichtert."
+    - "Es ist eine Mischung aus Wut und tiefer Enttäuschung, die ich spüre."
+    - "Ich bin verwirrt, weil ich sowohl Angst als auch eine seltsame Vorfreude empfinde."
+    - "Ich merke, dass ich nicht nur wütend bin, sondern auch eine große Hilflosigkeit dahintersteckt."
+    - "Es ist nicht nur Trauer, sondern auch eine Art von Dankbarkeit für das, was war."
+    - "Ich bin frustriert, aber gleichzeitig auch motiviert, es besser zu machen."
+    - "Ich spüre eine innere Zerrissenheit zwischen dem Wunsch nach Nähe und der Angst vor Verletzung."
+    - "Es ist eine komplexe Emotion aus Scham, Schuld und dem Bedürfnis nach Vergebung."
+    - "Ich bin nicht nur glücklich, sondern auch ein wenig ängstlich vor dem, was kommt."
+    - "Ich empfinde eine bittersüße Freude, die schwer zu beschreiben ist."
+  negative: []
+tags:
+- semantic
+- emotion
+- komplexität
+- differenzierung
+schema_version: '3.3'

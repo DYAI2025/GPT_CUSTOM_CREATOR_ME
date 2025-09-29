@@ -1,0 +1,35 @@
+id: SEM_FIRST_TIME_DEPTH_MARKER
+frame:
+  signal:
+  - sag mal
+  - hör zu
+  - verstehst du
+  concept: Kommunikationsmuster
+  pragmatics: Dialog führen
+  narrative: exchange
+composed_of:
+- ATO_UNKNOWN
+activation:
+  rule: ANY 2 IN 3 messages
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- 'Ich sag dir das zum ersten Mal: Ich habe Angst vor Nähe.'
+- Das hab ich noch nie jemandem erzählt, aber ich habe schreckliche Angst, nicht gut
+  genug zu sein.
+- Ich kämpfe wirklich damit, mich wertvoll zu fühlen.
+- Bisher hab ich das für mich behalten, aber ich schäme mich für meine Panikattacken.
+- 'Dir als Einzigem vertraue ich das an: Ich fühle mich so zerbrechlich und allein,
+  seit ich mein Vermögen verlor.'
+- Das hab ich noch nie zugegeben, aber ich habe Angst, so zu werden wie mein Vater.
+- 'Dir als Erstem sag ich das: Ich fühle mich oft wie ein Betrüger in meinem eigenen
+  Leben.'
+- Ich habe Angst vor echter Nähe.
+- 'Noch niemandem erzählt: Ich schäme mich dafür, wie wenig ich bisher erreicht habe.'
+- Ich habe Angst, wieder so tief verletzt zu werden.
+- Ich schäme mich, wie arm wir früher waren.
+- Ich habe Angst, dass du mich verlässt, wenn du mein wahres Ich siehst.
+- Ich habe Angst, keine gute Mutter zu sein.
+tags:
+- communication

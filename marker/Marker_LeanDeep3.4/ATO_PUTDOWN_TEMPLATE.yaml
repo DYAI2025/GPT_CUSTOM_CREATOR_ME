@@ -1,0 +1,17 @@
+id: ATO_PUTDOWN_TEMPLATE
+frame:
+  signal: ["Herabsetzung / Putdown"]
+  concept: "Überlegenheits-Angriff"
+  pragmatics: "Zielsetzung (Target)"
+  narrative: "jab"
+pattern:
+  - "(?i)so (dumm|lächerlich|peinlich) wie"
+  - "(?i)nur ein (idiot|trottel|depp) (würde|macht)"
+  - "(?i)wer .+ kann, kann auch .+ nicht"
+examples:
+  - "Nur ein Idiot deployed am Freitag."
+  - "So peinlich wie ein Offline-WLAN."
+  - "Wer Bugfix sagt, meint Hotfix."
+  - "Nur ein Trottel löscht die Prod-DB."
+  - "So dumm wie Sand im Server."
+tags: [humor, superiority, target, atomic, v33]

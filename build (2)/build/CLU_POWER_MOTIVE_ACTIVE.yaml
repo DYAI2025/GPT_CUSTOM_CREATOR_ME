@@ -1,0 +1,34 @@
+schema: "LeanDeep"
+version: "3.4"
+id: CLU_POWER_MOTIVE_ACTIVE
+level: "CLU"
+frame:
+  signal: ["power_motive_active"]
+  concept: "Macht-/Einflussmotiv zeigt sich als Führungsanspruch"
+  pragmatics: "Einflusswunsch + Ownership + Entscheidung"
+  narrative: "motive_power"
+tags: [power, control, decision]
+requires:
+  sem_pool:
+    - SEM_INFLUENCE_ORIENTATION
+    - SEM_RESPONSIBILITY_AND_DECISION
+activation:
+  window: 6
+  rule:
+    all_of:
+      - "SEM_INFLUENCE_ORIENTATION >= 1"
+      - "SEM_RESPONSIBILITY_AND_DECISION >= 1"
+fire_when: "conditions_met_first_time"
+scoring:
+  base: 0.71
+  weights:
+    SEM_INFLUENCE_ORIENTATION: 0.5
+    SEM_RESPONSIBILITY_AND_DECISION: 0.5
+evidence_capture:
+  keep_snippets: 5
+examples:
+  - "Ich will führen – ich entscheide jetzt."
+  - "Ich setze den Rahmen – Verantwortung bei mir."
+  - "Einfluss nehmen – Entscheidung ansagen."
+  - "Ich präge die Richtung – ich treffe die Entscheidung."
+  - "Ownership + Entscheidung: Pfad A."

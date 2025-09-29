@@ -1,0 +1,43 @@
+id: ATO_DIRECTIVE_BEDTIME
+display_title: "Schlafenszeit-Anweisungen"
+version: "3.3"
+lang: de
+category: ATOMIC
+description: "Erkennung von direktiven Äußerungen bezüglich Schlafenszeit und Bettruhe."
+frame:
+  signal: 
+    - "geh ins Bett"
+    - "ab ins Bett"
+    - "Schlafenszeit"
+    - "Zeit zum Schlafen"
+    - "leg dich hin"
+  concept: "Schlafenszeit-Anweisungen"
+  pragmatics: "Direktive Sprechakte für Schlafregulierung"
+  narrative: "Schlafzeitregelung"
+pattern:
+  - "(?i)\\bgeh(t)? (bitte )?ins Bett\\b"
+  - "(?i)\\bab ins Bett\\b"
+  - "(?i)\\bSchlafenszeit\\b"
+  - "(?i)\\bZeit zum Schlafen\\b"
+  - "(?i)\\bleg(t)? (bitte )?dich hin\\b"
+  - "(?i)\\bes ist spät, \\w+ Bett\\b"
+  - "(?i)\\bzieh(t)? (bitte )?den Schlafanzug an\\b"
+activation:
+  rule: "ANY 1"
+window:
+  messages: 30
+scoring:
+  base: 1.2
+  weight: 0.4
+  decay: 0.02
+  formula: "logistic"
+examples:
+  - "Geh ins Bett, es ist schon spät."
+  - "Ab ins Bett, morgen ist Schule."
+  - "Schlafenszeit, mach das Licht aus."
+  - "Zeit zum Schlafen, leg dich hin."
+  - "Zieh den Schlafanzug an und geh ins Bett."
+tags: [atomic, directive, bedtime, family, routine]
+detect_class: null
+criteria: null
+updated_at: "2025-08-19T10:30:00Z"

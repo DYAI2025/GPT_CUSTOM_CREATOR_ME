@@ -1,0 +1,33 @@
+id: ATO_RECURSIVE_HELPLESSNESS
+version: "3.3"
+frame:
+  signal: ["Systematische Ablehnung von Lösungen zur Problemaufrechterhaltung"]
+  concept: "Rekursive Hilflosigkeitsspiralen"
+  pragmatics: "Bindung durch Fürsorgerolle"
+  narrative: "learned_helplessness"
+spiral_structure:
+  problem_presentation: "ich (bin|fühle|habe) .+ (problem|schwierigkeit|überforderung|verloren)"
+  solution_rejection: "(kann nicht|geht nicht|funktioniert nicht|unmöglich|zu schwer)"
+  learned_helplessness: "(nichts zu machen|aussichtslos|gefangen|hoffnungslos)"
+  cycle_repetition: "aber trotzdem|dennoch|gleichzeitig"
+activation:
+  rule: "SPIRAL PATTERN IN 3 messages"
+window:
+  messages: 10
+scoring:
+  base: 2.7
+  weight: 0.81
+  decay: 0.02
+  formula: "logistic"
+psychological_indicators:
+  - codependency
+  - secondary_gains
+  - childhood_attention_patterns
+  - learned_helplessness
+examples:
+  - "Ich bin so überfordert mit der Arbeit → Ich kann nicht delegieren, niemand macht es richtig → Ich kann den Job nicht wechseln, es ist zu riskant"
+  - "Ich fühle mich so einsam → Ich kann keine neuen Leute kennenlernen, ich bin zu ängstlich → Online-Dating funktioniert bei mir nicht"
+  - "Ich habe Probleme mit Geld → Ich kann nicht sparen, es kommt immer was dazwischen → Einen Nebenjob kann ich nicht machen, zu anstrengend"
+  - "Ich bin unglücklich in der Beziehung → Ich kann nicht darüber reden, er versteht es nicht → Verlassen kann ich ihn auch nicht"
+tags: [attentional, helplessness, codependency, spiral]
+schema_version: "3.3"

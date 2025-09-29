@@ -1,0 +1,21 @@
+id: ATO_DOUBLE_ENTENDRE
+frame:
+  signal:
+  - Doppeldeutigkeit
+  - Doppelboden
+  concept: Zweideutige Hinweise
+  pragmatics: Subtile Andeutung
+  narrative: Ironie
+pattern:
+- (?i)\bwer weiß, was passiert\b
+- (?i)\bspiel mit dem feuer\b
+- (?i)\bmal sehen, wohin das führt\b
+activation:
+  rule: ANY 1
+examples:
+- Na, mal sehen, was noch so passiert...
+- Willst du wissen, was ich meine? 😉
+- Spielst du wieder mit dem Feuer?
+- Naja, wer weiß, was heute noch so läuft...
+- Ich verrate dir nicht alles, haha.
+tags: []

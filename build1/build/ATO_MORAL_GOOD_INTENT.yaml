@@ -1,0 +1,32 @@
+id: ATO_MORAL_GOOD_INTENT
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Gute-Absicht-Rahmung"
+  concept: "Ich meine es nur gut"
+  pragmatics: "Moralisches Umdeuten"
+  narrative: "moral_cover"
+pattern:
+  - '(?i)\b(ich wollte (doch )?nur (helfen|was gutes|das beste)|ich meine es (doch )?nur gut)\b'
+activation:
+  rule: "ANY 1 IN 25 messages"
+window:
+  messages: 25
+scoring:
+  base: 2.0
+  weight: 0.6
+  decay: 0.01
+  formula: "logistic"
+examples:
+  - "Ich wollte doch nur helfen."
+  - "Ich meine es nur gut."
+  - "Ich wollte doch nur das Beste."
+  - "Ich wollte nur was Gutes für uns beide."
+  - "Ich habe es doch nur gut gemeint."
+  - "Ich wollte dir doch nur beistehen."
+  - "Meine Absicht war doch nur positiv."
+  - "Ich hab's doch nur gut gemeint mit dir."
+  - "Wollte doch nur das Richtige tun."
+  - "Ich hab nur versucht zu helfen."
+tags: [ato, moral]

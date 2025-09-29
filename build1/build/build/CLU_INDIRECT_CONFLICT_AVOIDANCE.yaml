@@ -1,0 +1,21 @@
+id: CLU_INDIRECT_CONFLICT_AVOIDANCE
+family: CLU
+description: ''
+notes: ''
+id: CLU_INDIRECT_CONFLICT_AVOIDANCE
+family: CLU
+description: ''
+notes: ''
+examples:
+  positive:
+    - "Man könnte ja mal darüber nachdenken, ob das wirklich so gut ist."
+    - "Also, ich persönlich würde das vielleicht anders machen, aber das ist nur meine Meinung."
+    - "Ich will ja keinen Streit anfangen, aber..."
+    - "Schon gut, lassen wir das Thema. Ist nicht so wichtig."
+    - "(Sarkastische Bemerkung, die den Konflikt andeutet, aber nicht direkt anspricht)"
+    - "Ich bin da flexibel, wir müssen das nicht ausdiskutieren."
+    - "Vielleicht sollten wir uns alle mal ein bisschen beruhigen."
+    - "Ich sehe das zwar anders, aber ich will jetzt keine große Sache daraus machen."
+    - "Jeder hat seine Meinung, und das ist auch gut so."
+    - "Ich möchte nur in Frieden leben."
+  negative: []

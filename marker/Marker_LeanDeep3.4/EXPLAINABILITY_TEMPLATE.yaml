@@ -1,0 +1,7 @@
+explainability:
+- marker_id: "<SEM_or_CLU_ID>"
+  why:
+    rules: [ "<kurzregel 1>", "<kurzregel 2>" ]
+    features: {}
+    offsets: []
+    confidence: 0.0

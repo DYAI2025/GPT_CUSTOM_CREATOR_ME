@@ -1,0 +1,36 @@
+id: CLU_INTUITION_IRONY
+version: "3.4"
+frame:
+  signal: ["intuition","weak-aggregation"]
+  concept: "Vorahnung: Ironie/Sarkasmus"
+  pragmatics: "Tonfärbung korrekt interpretieren"
+  narrative: "hypothesis"
+tags: [intuition, irony, sarcasm, learning]
+composed_of:
+  - SEM_SARCASM_IRRITATION
+  - SEM_IRONIC_DISTANCE
+  - SEM_MOCKING_TONE
+activation: { rule: "AT_LEAST 2 DISTINCT SEMs IN 5 messages" }
+scoring: { base: 0.5, weight: 1.0 }
+metadata:
+  intuition:
+    state: "provisional"
+    confirm_window: 5
+    confirm_rule: "AT_LEAST 1 of [SEM_SARCASM_IRRITATION, SEM_MOCKING_TONE] IN confirm_window"
+    multiplier_on_confirm: 1.7
+    decay_window: 7
+  telemetry_keys:
+    counter_confirmed: "INT_IRONY.confirmed"
+    counter_retracted: "INT_IRONY.retracted"
+    ewma_precision: "INT_IRONY.ewma_precision"
+examples:
+  - "… 'ja klar' + Augenrollen-Andeutung …"
+  - "… 'großartig' bei offensichtlich Negativem …"
+  - "… spöttische Einlage + Anführungszeichen …"
+  - "… 'na toll' + Übertreibung …"
+  - "… ironische Zustimmung + Spitze …"
+  - "… totepan-Emoji + doppelte Verneinung …"
+  - "… 'fantastisch gelaufen' nach Fail …"
+  - "… 'genau, bestimmt' + Hauch Zynismus …"
+  - "… 'ach wirklich?' + Schnippigkeit …"
+  - "… überzeichnete Lobhudelei + Seitenhieb …"

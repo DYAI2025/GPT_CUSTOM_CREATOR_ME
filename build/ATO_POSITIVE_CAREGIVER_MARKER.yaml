@@ -1,0 +1,21 @@
+id: ATO_POSITIVE_CAREGIVER_MARKER
+frame:
+  signal:
+  - vertraue dir
+  - fühle mich sicher
+  - kann mich öffnen
+  concept: Sichere Bindung
+  pragmatics: Vertrauen zeigen
+  narrative: trust
+pattern:
+- (?i)\\bdas\ war\\b
+examples:
+- Meine Mutter war wirklich immer für mich da, egal was passierte.
+- Wir haben jeden Abend zusammen gelesen; das war unser Ritual.
+- Meine Eltern haben mir das Gefühl gegeben, wertvoll zu sein.
+- Mein Opa hat mir Geduld beigebracht und war immer ruhig.
+- Wir hatten sonntags Familienfrühstück, das war mir heilig.
+- 'Ich wusste: Selbst wenn ich Mist baue, lieben sie mich.'
+- Ich durfte Fehler machen und wurde trotzdem ermutigt.
+tags:
+- attachment

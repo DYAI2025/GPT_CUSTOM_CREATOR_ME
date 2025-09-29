@@ -1,0 +1,27 @@
+id: SEM_SOCIAL_BORDERLINES_MIX
+frame:
+  signal:
+  - interruption
+  - topic hijacking
+  - social norm violation
+  - overfamiliarity
+  - imposing personal rules
+  concept: social boundary mixing
+  pragmatics: challenging or disregarding social norms
+  narrative: boundary crossing
+composed_of:
+- ATO_PLACEHOLDER
+activation:
+  rule: ANY 2 IN 3 messages
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- Sorry, ich unterbreche kurz, du hast ja sowieso nichts Wichtiges gesagt.
+- Lass uns doch gleich über meine Probleme sprechen.
+- Ist doch total normal, dass man einfach ungefragt Ratschläge gibt.
+- Ich finde, persönliche Grenzen sind überbewertet.
+- Du kannst mir ruhig dein Passwort geben, wir sind doch Freunde, oder?
+tags:
+- social_boundary
+- norm_violation

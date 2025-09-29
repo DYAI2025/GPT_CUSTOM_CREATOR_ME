@@ -1,0 +1,17 @@
+id: ATO_STATUS_TERMS
+version: "3.4"
+frame:
+  signal: ["status"]
+  concept: "Status/Hierarchie/Ansehen"
+  pragmatics: "Soziale Position"
+  narrative: "dignity"
+tags: [status, hierarchy]
+pattern:
+  regex: "\\b(Status|Ruf|Ansehen|würde\\s+verletzen|Herabstufung|Rang)\\b"
+  flags: ["IGNORECASE"]
+examples:
+- "Mein Ruf."
+- "Ansehen riskieren."
+- "Statusverlust."
+- "Herabstufung."
+- "Rangordnung."

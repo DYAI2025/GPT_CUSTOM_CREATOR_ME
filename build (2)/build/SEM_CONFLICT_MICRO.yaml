@@ -1,0 +1,21 @@
+id: SEM_CONFLICT_MICRO
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["micro_conflict"]
+  concept: "Kurz, stichelig, latent konfliktiv"
+  pragmatics: "Eskalationskeim"
+  narrative: "conflict"
+tags: [conflict, micro]
+composed_of:
+  - ATO_OFFENDED_SILENCE
+  - ATO_MINIMIZATION
+activation:
+  rule: "BOTH IN 1 message OR ANY 2 IN 2 messages"
+scoring: { base: 0.55, weight: 1.0 }
+examples:
+  - "ok. – halb so wild."
+  - "passt. – nicht so schlimm."
+  - "egal. – war ja nichts."
+  - "lass sein – eigentlich okay."
+  - "… – nur ein bisschen."

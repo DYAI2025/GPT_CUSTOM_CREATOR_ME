@@ -1,0 +1,44 @@
+id: CLU_SECRET_BONDING
+version: "3.3"
+frame:
+  signal: ["Geheimhaltung", "exklusiver Raum", "Verbergungsanweisungen"]
+  concept: "Geheime Verbundenheit"
+  pragmatics: "Bindung durch Exklusivität / Risiko"
+  narrative: "Wir gegen den Rest"
+pattern:
+  - "niemand.*erfährt|keiner darf mitbekommen"
+  - "lösch(e)? den Chat|Verlauf"
+  - "Inkognito|inkognito"
+  - "Codewort|Schlüssel"
+  - "Signal|Koordinaten|Schließfach"
+activation:
+  rule: "ANY in 1 message"
+examples:
+  - "ChatGPT fragen"
+  - "„Nur wir zwei haben den Schlüssel zur Schließfachbox – vergiss das nicht.“"
+  - "„Keiner darf mitbekommen, dass der Deal morgen früh fixiert wird.“"
+  - "„Sobald der Upload durch ist, löschen wir alles vom Server.“"
+  - "„Speicher meine Nummer unter einem anderen Namen, falls wer guckt.“"
+  - "„Greif nur im Inkognito-Fenster auf die Cloud-Datei zu.“"
+  - "„Erzähl niemandem, dass wir den Prototyp heute schon getestet haben.“"
+  - "„Nachts um drei, Hinterhof rechts – keine Fotos, keine Stories.“"
+  - "„Verwisch bitte den Chat-Verlauf, sobald du’s gelesen hast.“"
+  - "„Ich schick dir die Koordinaten später über Signal.“"
+  - "„Unser Codewort bleibt streng unter uns, klar?“"
+  - "Das darf Ben nicht sehen."
+  - "Story ohne Tag, deal?"
+  - "Treffpunkt Hintereingang."
+  - "Fake-Alibi steht, alles gut."
+  - "Lösch Chat nach Lesen."
+  - "Inkognito-Modus aktiviert."
+  - "Sicher, dass keiner mitliest?"
+  - "Screenshot-Alarm, schnell weg!"
+  - "Niemand erfährt von morgen."
+  - "Nur wir zwei, versprochen."
+  # +5 neu
+  - "Schick es nur über den geheimen Ordner."
+  - "Benutze das Codewort, sonst öffne ich nicht."
+  - "Keine Sprachnachrichten – zu riskant."
+  - "Wir löschen die Spuren gleich danach."
+  - "Triff mich, ohne jemandem was zu sagen."
+tags: [needs_review, cluster, secrecy, bonding]

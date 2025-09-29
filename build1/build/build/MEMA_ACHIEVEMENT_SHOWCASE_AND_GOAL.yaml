@@ -1,0 +1,40 @@
+schema: "LeanDeep"
+version: "3.4"
+id: MEMA_ACHIEVEMENT_SHOWCASE_AND_GOAL
+level: "MEMA"
+frame:
+  signal: ["achievement_showcase_goal"]
+  concept: "Leistungsmotiv wird in sichtbare Leistung + Zielbindung überführt"
+  pragmatics: "Showcase → Kriterien → Deadline → Commitment"
+  narrative: "drive→execution"
+tags: [achievement, showcase, deadline, commit]
+requires:
+  clu_pool:
+    - CLU_ACHIEVEMENT_MOTIVE_ACTIVE
+  sem_pool:
+    - SEM_LISTING
+    - SEM_EXCELLENCE_DRIVE
+    - SEM_CLEAR_COMMITMENT
+activation:
+  window: 10
+  rule:
+    all_of:
+      - "CLU_ACHIEVEMENT_MOTIVE_ACTIVE >= 1 in last 6"
+      - "SEM_LISTING >= 1 in last 4"
+      - "SEM_EXCELLENCE_DRIVE >= 1 in last 3"
+      - "SEM_CLEAR_COMMITMENT >= 1 in last 4"
+fire_when: "conditions_met_first_time"
+scoring:
+  base: 0.78
+  weights:
+    CLU_ACHIEVEMENT_MOTIVE_ACTIVE: 0.2
+    SEM_LISTING: 0.2
+    SEM_EXCELLENCE_DRIVE: 0.3
+    SEM_CLEAR_COMMITMENT: 0.3
+evidence_capture: { keep_snippets: 6 }
+examples:
+  - "Status/Exzellenz sichtbar → Kriterien → Deadline → Commit."
+  - "Showcase → Qualitätsmaßstab → EOD‑Ziel → Bestätigung."
+  - "Top‑Leistung → Liste → Mini‑Deadline → Go."
+  - "Anerkennung → Standards hoch → 14:00 Draft → Agree."
+  - "Beste Noten → Kriterien A–C → Commit heute."

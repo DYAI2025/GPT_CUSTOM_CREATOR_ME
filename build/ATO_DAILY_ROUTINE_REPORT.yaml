@@ -1,0 +1,21 @@
+id: ACT_DAILY_ROUTINE_REPORT
+lang: de
+category: SEMANTIC
+description: "Bericht über aktuelle oder jüngste Alltagsaktivitäten."
+frame:
+  signal: ["war beim", "hab gerade", "bin gerade dabei"]
+  concept: "Tagesablauf"
+  pragmatics: "Teilen von Alltagsinformationen"
+  narrative: "statusbericht"
+composed_of:
+  - ATO_ACTIVITY_VERB
+  - ATO_ROUTINE_CONTEXT
+activation_logic: "ANY 2 IN 3 messages"
+scoring: { base: 1.4, weight: 1.1 }
+examples:
+  - "War gerade einkaufen."
+  - "Hab gerade das Abendessen vorbereitet."
+  - "Bin noch beim Sport."
+  - "War mit dem Hund draußen."
+  - "Hab den ganzen Tag im Garten gearbeitet."
+tags: [semantic, action, routine]

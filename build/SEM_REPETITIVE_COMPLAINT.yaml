@@ -1,0 +1,36 @@
+id: SEM_REPETITIVE_COMPLAINT
+version: "3.3"
+frame:
+  signal: ["wiederholte Beschwerde", "Thema kehrt immer wieder"]
+  concept: "Chronifizierung eines Konflikts"
+  pragmatics: "Frust/Druckaufbau durch Rekurrenz"
+  narrative: "Wiederholung"
+pattern:
+  - "immer wieder"
+  - "schon wieder"
+  - "jedes Mal dasselbe"
+  - "wir hatten das doch schon"
+  - "ständig das gleiche"
+activation:
+  rule: "ANY in 1 message"
+justification: "Temporäre SEM-Definition auf Pattern-Basis; ATO-Mapping folgt (v3.3-Ausnahme)."
+examples:
+  # vorhanden
+  - "Es ist immer wieder das gleiche mit dir und deiner Unpünktlichkeit."
+  - "Schon wieder dieses Thema – ich dachte, wir hätten es längst geklärt."
+  - "Nicht schon wieder musst du mich daran erinnern, ich weiß es doch."
+  - "Jedes Mal dasselbe Drama, wenn du zu spät bist."
+  - "Wir hatten das doch schon besprochen, warum redest du immer noch davon?"
+  # +5 neu
+  - "Immer wieder fängst du damit an."
+  - "Wie so oft kommst du zu spät."
+  - "Zigmal gesagt – es ändert sich nichts."
+  - "Wieso drehen wir uns ständig im Kreis?"
+  - "Es wiederholt sich jedes Wochenende."
+tags: [needs_review, sem_composition_exception, complaint, repetition]
+meta:
+  semantische_grabber_id: "AUTO_SEM_20250723_F191"
+  created_at: "2025-07-23T01:07:11.156251"
+  created_by: "FRAUSAR_GUI_v2"
+  source_version: "1.0"
+  schema_version: "3.3"

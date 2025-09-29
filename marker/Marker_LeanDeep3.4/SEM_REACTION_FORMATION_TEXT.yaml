@@ -1,0 +1,31 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "ld34_text_social_grammar"
+id: SEM_REACTION_FORMATION_TEXT
+lang: de
+category: SEMANTIC
+description: "Positive Formulierungen in negativem Kontext mit adversativem Umschalten."
+frame:
+  signal: ["Positiv-Formel trotz negativer Lage, häufig eingeleitet mit 'aber'"]
+  concept: "Reaktionsbildung (Text)"
+  pragmatics: "Abwehr durch Gegenteil, soziale Glättung"
+  narrative: "Gegenpolierung"
+composed_of:
+  - ATO_TOPIC_SWITCH_ADVERSATIVE
+activation_logic: "ANY 1 IN 2 messages"
+scoring: { base: 1.4, weight: 1.1 }
+examples:
+  - "Es war furchtbar, aber eigentlich war es schön, dass es vorbei ist."
+  - "Ich bin enttäuscht, aber hey, supi Erfahrung."
+  - "Alles brennt, aber das ist irgendwie motivierend."
+  - "Ich bin verletzt, aber das ist wohl besser so."
+  - "Die Absage trifft, aber klasse, wieder Zeit gewonnen."
+  - "War hart, aber irgendwie gut so."
+  - "Bin sauer, aber schön, dass es klar ist."
+  - "Enttäuschend, aber immerhin ehrlich."
+tags: [semantic, defense, reaction_formation]
+metadata:
+  justification: "SEM mit 1 ATO + Inkonkruenz-Regel."
+  repair_log:
+    - { rule: "R07", note: "1-ATO gerechtfertigt", date: "2025-08-29" }
+    - { rule: "R06", note: "Nur ein Strukturblock belassen", date: "2025-08-29" }

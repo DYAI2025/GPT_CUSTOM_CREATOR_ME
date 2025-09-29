@@ -1,0 +1,20 @@
+id: ATO_BREATHINESS
+schema_version: "LD-3.3"
+lang: de
+category: ATOMIC
+description: "Atomic pattern for breathy voice quality"
+frame:
+  signal: ["High Spectral Noise + Low HNR"]
+  concept: "hauchig"
+  pragmatics: "Stimmqualität"
+  narrative: "audio"
+detect_class:
+  module: prosody.breathiness
+  params: { hnr_threshold_db: 12, spectral_tilt_min: 0.6 }
+examples:
+  - "[Hauchige Stimmgebung]"
+  - "[Luftige Artikulation]"
+  - "[Reduzierte Stimmkraft]"
+  - "[Schwache Glottisschließung]"
+  - "[Entspannte Phonation]"
+tags: [voice_quality, audio, atomic]

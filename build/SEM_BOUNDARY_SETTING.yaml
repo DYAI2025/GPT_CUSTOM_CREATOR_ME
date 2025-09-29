@@ -1,0 +1,30 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_BOUNDARY_SETTING
+frame:
+  signal: ["boundary_setting"]
+  concept: "Klare Grenzen zu Thema/Verantwortung/Scope"
+  pragmatics: "Autonomie- und Ressourcenschutz"
+  narrative: "coordination"
+tags: [boundary, scope, autonomy]
+composed_of:
+  any_of:
+    - ATO_SOVEREIGNTY_OVER_SUBJECT
+    - ATO_CONTROL_PHRASES
+    - ATO_SUBJECT_CLOSED
+    - ATO_TOPIC_SPLIT
+activation:
+  rule: "AT_LEAST 2 IN 4 messages"
+  window: 4
+scoring: { base: 0.7, weight: 1.10 }
+examples:
+  - "Das liegt nicht in meinem Scope."
+  - "Wir schließen diesen Teil – eigener Thread für B."
+  - "Ich entscheide das Thema – bitte beim Fokus bleiben."
+  - "Hier ist Schluss – der Rest separat."
+  - "Das ist geklärt; nächstes Item."
+  - "Abtrennen: A hier, B später."
+  - "Verantwortung liegt bei mir; bleib im Rahmen."
+  - "Kein weiteres Ausweiten – wir halten die Grenze."
+  - "Dieser Strang ist beendet."
+  - "Bitte im vorgesehenen Kanal weiter."

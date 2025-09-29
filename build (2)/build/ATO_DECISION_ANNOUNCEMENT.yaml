@@ -1,0 +1,23 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_DECISION_ANNOUNCEMENT
+frame:
+  signal: ["decision_announce"]
+  concept: "Entscheidung wird persönlich angekündigt"
+  pragmatics: "Führungsakt"
+  narrative: "motive_power"
+tags: [decision, leadership]
+pattern:
+  regex: '(?i)\b(ich\s+entscheide\s+das|ich\s+treffe\s+die\s+entscheidung|entscheidung\s+liegt\s+bei\s+mir|ich\s+bestimme\s+das)\b'
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich entscheide das."
+  - "Ich treffe die Entscheidung."
+  - "Die Entscheidung liegt bei mir."
+  - "Ich bestimme das."
+  - "Ich entscheide jetzt."
+  - "Ich setze die Entscheidung."
+  - "Ich lege das fest."
+  - "Ich gebe die Entscheidung vor."
+  - "Ich treffe jetzt die Entscheidung."
+  - "Ich setze das so."

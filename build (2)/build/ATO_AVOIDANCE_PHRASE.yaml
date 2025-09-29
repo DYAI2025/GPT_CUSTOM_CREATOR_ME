@@ -1,0 +1,25 @@
+id: ATO_AVOIDANCE_PHRASE
+frame:
+  signal:
+  - ausweichende Antwort
+  - Themenwechsel
+  - unklare Haltung
+  concept: Konfliktvermeidung
+  pragmatics: Vermeidung von Auseinandersetzung
+  narrative: indirekte Kommunikation
+pattern:
+- (?i)vielleicht.*morgen
+- (?i)Thema.*wechseln
+- (?i)bin mir nicht sicher
+- (?i)besprechen.*andermal
+- (?i)das lieber ruhen lassen
+activation:
+  rule: ANY 1
+examples:
+- Vielleicht sprechen wir morgen darüber.
+- Lass uns das Thema wechseln, wenn dir das Recht ist.
+- Ich bin mir nicht sicher, ob wir das jetzt klären sollten.
+- Können wir das ein andermal besprechen?
+- Lass uns das lieber ruhen lassen.
+tags:
+- avoidance

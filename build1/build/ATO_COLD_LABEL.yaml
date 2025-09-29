@@ -1,0 +1,32 @@
+id: ATO_COLD_LABEL
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Kälte-Label"
+  concept: "Du bist kalt/herzlos"
+  pragmatics: "Moralische Abwertung"
+  narrative: "attack"
+pattern:
+  - '(?i)\b(du bist (so )?(kalt|herzlos|gef(ü|u)hllos))\b'
+activation:
+  rule: "ANY 1 IN 20 messages"
+window:
+  messages: 20
+scoring:
+  base: 2.6
+  weight: 0.8
+  decay: 0.01
+  formula: "logistic"
+examples:
+  - "Du bist so kalt."
+  - "Du bist herzlos."
+  - "Du wirkst komplett gefühllos."
+  - "Du bist einfach eiskalt."
+  - "So herzlos hätte ich dich nicht eingeschätzt."
+  - "Du zeigst keine Gefühle."
+  - "Du bist emotional völlig abgestumpft."
+  - "Du hast ein kaltes Herz."
+  - "Du bist wie aus Stein."
+  - "Du kennst kein Mitgefühl."
+tags: [ato, label, attack]

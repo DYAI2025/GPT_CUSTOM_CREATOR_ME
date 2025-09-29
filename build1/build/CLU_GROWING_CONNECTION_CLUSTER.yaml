@@ -1,0 +1,21 @@
+id: CLU_GROWING_CONNECTION_CLUSTER
+family: CLU
+description: ''
+notes: ''
+id: CLU_GROWING_CONNECTION_CLUSTER
+family: CLU
+description: ''
+notes: ''
+examples:
+  positive:
+    - "Ich verstehe, was du meinst. Das fühlt sich für mich ähnlich an."
+    - "Danke, dass du das mit mir teilst. Ich fühle mich dir jetzt näher."
+    - "Ich bin froh, dass wir darüber reden können. Das stärkt unsere Verbindung."
+    - "Ich sehe dich und ich höre dich. Und ich bin für dich da."
+    - "Das ist ein guter Punkt. So habe ich das noch nie gesehen."
+    - "Ich schätze deine Offenheit sehr. Das macht es mir leichter, auch offen zu sein."
+    - "Wir sind ein gutes Team. Gemeinsam schaffen wir das."
+    - "Ich fühle mich dir gerade sehr verbunden."
+    - "Ich merke, wie wir uns immer besser verstehen."
+    - "Es tut gut, zu wissen, dass du auf meiner Seite bist."
+  negative: []

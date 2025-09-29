@@ -1,0 +1,17 @@
+id: ATO_COMMITMENT_PHRASES
+version: "3.4"
+frame:
+  signal: ["commitment"]
+  concept: "Konkrete Zusage/Verpflichtung"
+  pragmatics: "Plan/Verbindlichkeit"
+  narrative: "task_flow"
+tags: [commitment, planning]
+pattern:
+  regex: "\\b(ich\\s+mache\\s+das|ich\\s+kümmere\\s+mich|ich\\s+übernehme|commit|fixe\\s+bis)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich mache das."
+  - "Ich kümmere mich darum."
+  - "Ich übernehme das Ticket."
+  - "I commit to Friday."
+  - "Fixe bis Montag."

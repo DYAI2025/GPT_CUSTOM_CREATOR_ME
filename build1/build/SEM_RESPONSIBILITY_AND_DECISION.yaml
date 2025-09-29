@@ -1,0 +1,30 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_RESPONSIBILITY_AND_DECISION
+frame:
+  signal: ["responsibility_and_decision"]
+  concept: "Verantwortung übernehmen & Entscheidung ansagen"
+  pragmatics: "Ownership + Entscheidungskraft"
+  narrative: "motive_power"
+tags: [responsibility, decision]
+composed_of:
+  any_of:
+    - ATO_RESPONSIBILITY_CLAIM
+    - ATO_UNILATERAL_DECISION
+    - ATO_DECISION_ANNOUNCEMENT
+    - ATO_COMMITMENT_PHRASES
+activation:
+  rule: "AT_LEAST 2 IN 4 messages"
+  window: 4
+scoring: { base: 0.64, weight: 1.09 }
+examples:
+  - "Ich übernehme das und entscheide jetzt."
+  - "Die Verantwortung liegt bei mir – ich setze das so."
+  - "Ich treffe die Entscheidung: Pfad A."
+  - "Ich bestimme das, ich stehe dafür ein."
+  - "Ich lege das fest – ich trage die Verantwortung."
+  - "Ich entscheide heute und zeichne verantwortlich."
+  - "Ownership bei mir – Entscheidung: Launch."
+  - "Ich nehme das auf meine Kappe und entscheide."
+  - "Ich setze die Entscheidung und verantworte sie."
+  - "Ich entscheide das, Commitment folgt."

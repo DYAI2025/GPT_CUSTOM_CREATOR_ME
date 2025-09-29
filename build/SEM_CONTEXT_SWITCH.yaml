@@ -1,0 +1,21 @@
+id: SEM_CONTEXT_SWITCH
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["context_switch"]
+  concept: "Explizites Umschalten des Rahmens"
+  pragmatics: "Meta-Navigation"
+  narrative: "interaction"
+tags: [context, meta]
+composed_of:
+  - ATO_STYLE_REFERENCE
+  - ATO_SHARED_CONTEXT
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.6, weight: 1.05 }
+examples:
+  - "Stilwechsel: kurz & direkt – wie besprochen."
+  - "Formell heute – zurück zur Roadmap."
+  - "Bitte knapp – im Kontext von gestern."
+  - "Locker halten – wie vereinbart: Nächste Schritte."
+  - "Sachlicher Ton – vom letzten Mal weiter."

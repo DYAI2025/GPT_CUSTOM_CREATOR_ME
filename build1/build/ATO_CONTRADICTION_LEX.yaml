@@ -1,0 +1,27 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "consistency_external"
+
+defaults:
+  scoring:
+    window_messages: 5
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+
+markers:
+  - id: ATO_CONTRADICTION_LEX
+    frame:
+      signal: ["widerspricht", "im Gegensatz", "nicht wie vorher", "aber inzwischen", "doch"]
+      concept: "Kontradiktions-Lexik"
+      pragmatics: "Konflikt-Flag für Vergleich"
+    pattern:
+      - detect_class: phrase
+        list: ["widerspricht", "im Gegensatz", "nicht wie vorher", "aber inzwischen", "doch"]
+    score: 0.30
+    metadata: { type: ATO }
+    examples:
+      - "Das widerspricht dem von vorher."
+      - "Im Gegensatz zu deiner Aussage gestern."
+      - "Das ist nicht wie vorher beschrieben."
+      - "Aber inzwischen sagst du etwas anderes."
+      - "Doch, vorher war es anders."

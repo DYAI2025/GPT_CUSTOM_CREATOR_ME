@@ -1,0 +1,19 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_HANDOFF
+frame:
+  signal: ["handoff"]
+  concept: "Übergabe / Zuweisung nach Close"
+  pragmatics: "Ownership-Shift"
+  narrative: "process"
+tags: [handoff, assignment]
+pattern:
+  regex: '(?i)\b(schick''s mir|schick es mir|gib''s mir|ich mach das dann|übernehme ich|leg''s bei dir ab)\b'
+  flags: ["IGNORECASE"]
+examples:
+  - "Schick's mir."
+  - "Schick es mir, ich mache das."
+  - "Gib's mir rüber."
+  - "Ich mach das dann."
+  - "Das übernehme ich."
+  - "Ich leg's bei dir ab."

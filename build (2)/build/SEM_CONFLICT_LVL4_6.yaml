@@ -1,0 +1,40 @@
+id: SEM_CONFLICT_LVL4_6
+frame:
+  signal:
+  - Derogatory accusation
+  - public shaming
+  - threat of consequences
+  - moral indictment
+  - blame shift
+  concept: conflict escalation level 4-6
+  pragmatics: one‐sided penalty
+  narrative: face loss for one party
+composed_of:
+- ATO_PLACEHOLDER
+activation:
+  rule: ANY 2 IN 3 messages
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- Wenn du das noch einmal machst, sorgt jeder dafür, dass du total blamiert dastehst!
+- Echt peinlich, wie du dich hier aufführst – niemand wird dich noch ernst nehmen.
+- Du hast es vermasselt, also übernimm die Konsequenzen.
+- Glaub ja nicht, dass ich das ungestraft hinnehme.
+- Solche Fehler verzeihe ich nicht – das wirst du bereuen.
+- Ich werde dafür sorgen, dass alle wissen, wer hier schuld ist.
+- Das nächste Mal gehst du schlimmer baden, versprochen.
+- Meinetwegen kannst du dein Gesicht verlieren, aber bleib mir hier aus dem Weg.
+- Ich lasse dich vor allen Leuten schlecht dastehen.
+- Du wirst deine Taten noch büßen müssen.
+- Wenn du nicht aufhörst, werde ich dafür sorgen, dass du deine Lektion lernst.
+- Du hast es dir selbst zuzuschreiben, wenn du jetzt die Konsequenzen tragen musst.
+- Niemand wird dir helfen, wenn du so weitermachst.
+- Ich habe dich bei der Polizei angezeigt, du wirst das noch bereuen!
+- Ich habe es allen gesagt, was für ein verficktes Arschloch du bist!
+- Ich werde nicht ruhen, bis du dafür bestraft wirst.
+- Du hörst von meinem Anwalt, dafür wirst du teuer bezahlen
+tags:
+- conflict
+- escalation
+- lvl4-6

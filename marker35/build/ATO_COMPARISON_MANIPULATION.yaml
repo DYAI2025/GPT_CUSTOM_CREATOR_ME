@@ -1,0 +1,18 @@
+id: ATO_COMPARISON_MANIPULATION
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for manipulative comparisons
+frame:
+  signal: ["comparison manipulation"]
+  concept: "Comparison manipulation signal"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\b(look at|compared to|unlike you|better than you)\\b"]
+examples:
+  - "Look at how well they handle things."
+  - "Compared to others, you're failing."
+  - "Unlike you, they understand me."
+  - "They're better than you at this."
+  - "See how they treat me properly?"
+tags: [atomic, v3.3, auto-generated]

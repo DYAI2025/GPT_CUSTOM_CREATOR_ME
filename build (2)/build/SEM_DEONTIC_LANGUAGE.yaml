@@ -1,0 +1,21 @@
+id: SEM_DEONTIC_LANGUAGE
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["deontic"]
+  concept: "Soll/Muss/Erlaubt-Sprache"
+  pragmatics: "Normatives Framing"
+  narrative: "moral_frame"
+tags: [deontic, norm]
+composed_of:
+  - ATO_MORAL_LANGUAGE
+  - ATO_SET_BOUNDARY
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.6, weight: 1.0 }
+examples:
+  - "Das muss so sein – Grenze."
+  - "Man darf das nicht – Stopp."
+  - "Pflicht – nicht okay."
+  - "Sollte man – bis hierhin."
+  - "Erlaubt – unter Auflagen."

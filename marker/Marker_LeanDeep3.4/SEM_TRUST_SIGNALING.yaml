@@ -1,0 +1,20 @@
+id: SEM_TRUST_SIGNALING
+version: "3.4"
+frame:
+  signal: ["trust"]
+  concept: "Vertrauen signalisieren"
+  pragmatics: "Kooperationsbindung"
+  narrative: "prosocial"
+tags: [trust, signaling]
+composed_of:
+  - ATO_TRUST_LEXICON
+  - ATO_RELIABILITY_TERMS
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.55, weight: 1.0 }
+examples:
+  - "Ich vertraue dir – zuverlässig."
+  - "Reliable partner – SLA passt."
+  - "Verlässlich – ich vertraue dir."
+  - "Commitment und Vertrauen."
+  - "Trust + pünktlich liefern."

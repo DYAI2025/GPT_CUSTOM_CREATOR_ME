@@ -1,0 +1,20 @@
+id: SEM_STATUS_THREAT
+version: "3.4"
+frame:
+  signal: ["status_threat"]
+  concept: "Gefährdung von Status/Ruf"
+  pragmatics: "Sozialer Druck"
+  narrative: "dignity"
+tags: [status, threat]
+composed_of:
+  - ATO_STATUS_TERMS
+  - ATO_DEMEANING_TERMS
+activation:
+  rule: "BOTH IN 1 message OR ANY 2 IN 2 messages"
+scoring: { base: 0.6, weight: 1.0 }
+examples:
+  - "Rufverlust – würdelos."
+  - "Status bedroht – Herabstufung."
+  - "Ansehen riskieren – Abschaum."
+  - "Rangordnung – minderwertig."
+  - "Würde verletzen – peinlich."

@@ -1,0 +1,30 @@
+id: ATO_DIRECT_ACCUSATION
+lang: de
+category: ATOMIC
+description: "Erfasst sprachliche Muster, die eine direkte, persönliche Anschuldigung oder konfrontative Zuweisung an eine Person richten."
+frame:
+  signal:      ["Direkte 'Du'-Ansprache mit vorwurfsvollem Unterton"]
+  concept:     "Direkte Anschuldigung"
+  pragmatics:  "Eröffnet Konfrontation, legt die Verantwortung eindeutig beim Gegenüber ab."
+  narrative:   "token / pointing finger"
+pattern:
+  - "(?i)\\bdu bist"
+  - "(?i)\\bdu machst immer"
+  - "(?i)\\btypisch du"
+  - "(?i)\\bwarum kannst du nie"
+  - "(?i)\\bimmer musst du"
+  - "(?i)\\bwas stimmt mit dir nicht"
+  - "(?i)\\bdeine ganze art"
+examples:
+  - "Du bist schon wieder zu spät!"
+  - "Typisch du, an nichts gedacht."
+  - "Warum kannst du nie einfach mal zuhören?"
+  - "Du machst immer so ein Drama daraus."
+  - "Immer musst du das letzte Wort haben."
+  - "Was stimmt eigentlich nicht mit dir?"
+  - "Du bist das Problem hier."
+  - "Deine ganze Art geht mir auf die Nerven."
+  - "Du bist unglaublich."
+  - "Immer du mit deinen extra Wünschen."
+tags: [atomic, accusation, confrontation, token, v3.3-compliant]
+schema_version: "3.3"

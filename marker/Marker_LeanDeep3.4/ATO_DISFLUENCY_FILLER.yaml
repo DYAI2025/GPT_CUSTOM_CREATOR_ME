@@ -1,0 +1,19 @@
+id: ATO_DISFLUENCY_FILLER
+schema_version: "LD-3.3"
+lang: de
+category: ATOMIC
+description: "Atomic pattern for disfluency fillers"
+frame:
+  signal: ["äh", "ähm", "hm", "mmh"]
+  concept: "Fülllaut"
+  pragmatics: "Hesitation"
+  narrative: "audio+text"
+pattern:
+  - "\\b(äh|ähm|hm+|mm+h)\\b"
+examples:
+  - "Ich bin äh unsicher."
+  - "Das ist ähm kompliziert."
+  - "Hm, ich weiß nicht."
+  - "Mmh, vielleicht später."
+  - "Äh, kann ich das schaffen?"
+tags: [disfluency, audio, atomic]

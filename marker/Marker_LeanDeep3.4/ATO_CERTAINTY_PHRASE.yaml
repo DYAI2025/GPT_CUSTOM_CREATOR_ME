@@ -1,0 +1,23 @@
+id: ATO_CERTAINTY_PHRASE
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for emphatic expressions of certainty
+frame:
+  signal: ["certainty expressions"]
+  concept: "Emphatic expressions of certainty"
+  pragmatics: "Supports calibration for claim confidence"
+  narrative: "Non-probabilistic certainty phrases"
+pattern: ["(?i)\\b(definitely|for sure|no doubt|certainly|absolutely|without question|guaranteed|undoubtedly)\\b"]
+examples:
+  - "This will definitely work for our needs."
+  - "It's for sure the best option available."
+  - "There's no doubt about the outcome."
+  - "We will certainly succeed in this endeavor."
+  - "It's definitely happening as planned."
+  - "This is absolutely the right choice."
+  - "Without question, this is correct."
+  - "It's guaranteed to be effective."
+  - "Undoubtedly, this will resolve the issue."
+  - "For sure, we can count on this."
+tags: [atomic, v3.3, certainty, confidence]

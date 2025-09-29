@@ -1,0 +1,19 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_ACK
+frame:
+  signal: ["ack"]
+  concept: "Kurze Kenntnisnahme"
+  pragmatics: "Takt halten / Rückmeldung"
+  narrative: "interaction"
+tags: [ack, coordination]
+pattern:
+  regex: "(?i)\b(ok|passt|gesehen|notiert|zur kenntnis)\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ok."
+  - "Passt."
+  - "Gesehen."
+  - "Notiert."
+  - "Zur Kenntnis."
+  - "Ok, hab's."

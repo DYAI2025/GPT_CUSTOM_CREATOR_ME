@@ -1,0 +1,28 @@
+id: SEM_DOUBT_UNCERTAINTY
+frame:
+  signal:
+  - Zweifel und Unsicherheit
+  - Infragestellung von Entscheidungen
+  concept: Ausdrücke von Zweifel und Unsicherheit
+  pragmatics: Signalisiert Zögern und Infragestellung
+  narrative: Selbstzweifel und Entscheidungsunsicherheit
+composed_of:
+- ATO_UNSICHER
+- ATO_ZWEIFEL
+- ATO_BEDENKEN
+activation:
+  rule: ANY_OF
+  threshold: 1
+examples:
+  positive:
+    - "Ich bin mir nicht sicher, ob das der richtige Weg ist."
+    - "Ich habe da so meine Zweifel."
+    - "Ich bin unsicher, ob ich das schaffen kann."
+    - "Ich habe Bedenken, dass das funktionieren wird."
+    - "Ich frage mich, ob das wirklich eine gute Idee ist."
+    - "Ich bin nicht überzeugt."
+    - "Ich zögere noch."
+    - "Ich bin mir nicht ganz sicher."
+    - "Ich habe da ein ungutes Gefühl."
+    - "Ich bin hin- und hergerissen."
+  negative: []

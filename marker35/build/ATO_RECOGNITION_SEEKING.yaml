@@ -1,0 +1,23 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_RECOGNITION_SEEKING
+frame:
+  signal: ["recognition"]
+  concept: "Anerkennung/Bewunderung aktiv einholen"
+  pragmatics: "Soziale Bestätigung als Ziel"
+  narrative: "motive_achievement"
+tags: [recognition, praise]
+pattern:
+  regex: '(?i)\b(findest\s+du\s+das\s+gut|bekomme\s+ich\s+daf(?:ü|ue)r\s+(anerkennung|credit)|wie\s+kommt\s+das\s+an\?|bewunderung)\b'
+  flags: ["IGNORECASE"]
+examples:
+  - "Wie kommt das an?"
+  - "Bekomme ich dafür Anerkennung?"
+  - "Findest du das gut so?"
+  - "Kriege ich dafür Credit?"
+  - "Kommt das gut an im Team?"
+  - "Siehst du meine Leistung hier?"
+  - "Wird das wertgeschätzt?"
+  - "Bekomme ich dafür Sichtbarkeit?"
+  - "Wie wirkt das auf euch?"
+  - "Ist das beeindruckend genug?"

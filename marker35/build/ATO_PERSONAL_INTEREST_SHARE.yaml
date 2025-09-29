@@ -1,0 +1,21 @@
+id: ACT_PERSONAL_INTEREST_SHARE
+lang: de
+category: SEMANTIC
+description: "Teilen einer persönlichen Freizeitaktivität oder eines Hobbys."
+frame:
+  signal: ["ich spiele", "ich lese", "ich bastle", "ich fahre"]
+  concept: "Persönliches Interesse"
+  pragmatics: "Selbstoffenbarung zur Beziehungspflege"
+  narrative: "freizeit"
+composed_of:
+  - ATO_ACTIVITY_VERB
+  - ATO_HOBBY_OBJECT
+activation_logic: "ANY 2 IN 3 messages"
+scoring: { base: 1.4, weight: 1.1 }
+examples:
+  - "Ich spiele gern Gitarre."
+  - "Ich lese gerade einen spannenden Krimi."
+  - "Ich bastle an einem Modellflugzeug."
+  - "Ich fahre oft mit dem Rad an den See."
+  - "Ich koche gern neue Rezepte."
+tags: [semantic, action, hobby]

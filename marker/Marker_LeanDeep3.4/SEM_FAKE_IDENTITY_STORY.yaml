@@ -1,0 +1,29 @@
+id: SEM_FAKE_IDENTITY_STORY
+frame:
+  signal:
+  - Generalkonsul im Ausland
+  - Offshore-Ingenieur
+  - geerbtes Vermögen blockiert
+  - UN-Mission fern der Heimat
+  - verwaistes Einzelkind ohne Familie
+  concept: Fake Identity Story
+  pragmatics: Vertrauensaufbau durch Schein-Status
+  narrative: legitimierende Lebensgeschichte
+composed_of:
+- ATO_FAKE_IDENTITY_STORY
+activation:
+  rule: ANY 2 IN 3 messages
+examples:
+- Ich bin derzeit als Generalkonsul in Nigeria stationiert.
+- Mein geerbtes Vermögen ist leider eingefroren, ich brauche Hilfe für die Gebühren.
+- Als Offshore-Ingenieur habe ich begrenzten Zugang zu Bankdiensten.
+- Ich bin auf UN-Mission im Jemen, deshalb dauert alles länger.
+- Ich habe keine Familie mehr, du bist mein einziger Kontakt.
+- Nach dem Tod meiner Eltern liegt mein Konto auf den Cayman-Islands still.
+- Meine Goldminenanteile können erst nach der Prüfung ausgezahlt werden.
+- Ich arbeite auf einer Bohrinsel – Internet ist schlecht, aber ich liebe dich.
+- Mein Diplomatenausweis liegt beim Zoll, Gebühren sind fällig.
+- Ich konnte nicht zur Beerdigung kommen, weil die Armee mich festhält.
+tags:
+- fake_identity
+- scam

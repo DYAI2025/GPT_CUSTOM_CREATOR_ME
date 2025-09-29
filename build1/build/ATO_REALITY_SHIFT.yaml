@@ -1,0 +1,23 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_REALITY_SHIFT
+frame:
+  signal: ["reality_shift"]
+  concept: "Gefühlte, nicht benannte Veränderung"
+  pragmatics: "Verdrängung / kognitive Dissonanz"
+  narrative: "perception"
+tags: [reality_shift, denial, cognitive_dissonance]
+pattern:
+  regex: '(?i)\b(irgendwie anders|alles in ordnung|nicht nachdenken|bilde ich mir ein|lass uns nicht (darüber|drueber)|nur eine phase|fühlt sich komisch an|weiss? nicht warum|machen wir einfach weiter|nichts hat sich geändert)\b'
+  flags: ["IGNORECASE"]
+examples:
+  - "Es fühlt sich irgendwie anders an, aber ich weiß nicht warum."
+  - "Eigentlich ist doch alles in Ordnung, oder?"
+  - "Ich will darüber nicht nachdenken, lass uns einfach so weitermachen."
+  - "Vielleicht bilde ich mir das alles nur ein."
+  - "Lass uns nicht über Dinge sprechen, die noch gar nicht passiert sind."
+  - "Es ist sicher alles nur eine Phase."
+  - "Irgendwas hat sich verändert, ohne dass ich es benennen kann."
+  - "Mir kommt alles vertraut vor, und doch stimmt etwas nicht."
+  - "Kann sein, dass ich übertreibe, aber es fühlt sich komisch an."
+  - "Lass uns nicht verrückt machen, es bleibt bestimmt wie immer."

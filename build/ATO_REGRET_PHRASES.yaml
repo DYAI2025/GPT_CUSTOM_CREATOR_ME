@@ -1,0 +1,17 @@
+id: ATO_REGRET_PHRASES
+version: "3.4"
+frame:
+  signal: ["regret"]
+  concept: "Bedauern/Zurückwunsch"
+  pragmatics: "Kontrafaktisches Denken"
+  narrative: "affect"
+tags: [affect, regret]
+pattern:
+  regex: "\\b(hätte\\s+ich\\s+nur|wäre\\s+es\\s+anders|bereue|zu\\s+spät|schade\\s+darum)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Hätte ich nur früher begonnen."
+  - "Wäre es anders gelaufen…"
+  - "Ich bereue das."
+  - "Es ist zu spät."
+  - "Schade darum."

@@ -1,0 +1,27 @@
+id: SEM_INGROUP_OUTGROUP_BIAS
+version: "3.4"
+frame:
+  signal: ["us-vs-them", "othering"]
+  concept: "Ingroup favoritism and outgroup derogation"
+  pragmatics: "Social categorization bias"
+  narrative: "social_bias"
+tags: [bias, ingroup, outgroup, prejudice]
+composed_of:
+  - ATO_STEREOTYPING_LANGUAGE
+  - ATO_GENERALIZATION_MARKER
+activation:
+  rule: "us-them language + group judgment OR 2+ othering patterns"
+scoring:
+  base: 0.7
+  weight: 1.0
+examples:
+  - "Wir arbeiten hart, die anderen sind faul"
+  - "Our values are superior to theirs"
+  - "Diese Leute verstehen unsere Kultur nicht"
+  - "Those people always cause problems"
+  - "Unsere Methode ist besser, deren funktioniert nie"
+  - "Die gehören einfach nicht hierher"
+  - "Sie leben ganz anders, das passt nicht"
+  - "We know what's best, they don’t"
+  - "They never integrate properly"
+  - "Mit denen funktioniert es einfach nicht"

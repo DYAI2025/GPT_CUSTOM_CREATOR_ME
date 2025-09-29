@@ -1,0 +1,18 @@
+id: ATO_FUTURE_FAKING
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for future faking and unrealistic future promises
+frame:
+  signal: ["future promises"]
+  concept: "Future faking signal"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\b(when we|our future|someday|eventually|we'll travel|move in together)\\b"]
+examples:
+  - "When we move in together, everything will be perfect."
+  - "Our future looks so bright and amazing."
+  - "Someday we'll have the life we deserve."
+  - "Eventually you'll see how perfect we are."
+  - "We'll travel the world together soon."
+tags: [atomic, v3.3, future-faking, promises]

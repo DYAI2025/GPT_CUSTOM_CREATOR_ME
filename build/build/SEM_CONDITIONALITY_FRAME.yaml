@@ -1,0 +1,22 @@
+id: SEM_CONDITIONALITY_FRAME
+version: "3.3"
+lang: de
+level: SEM
+frame:
+  signal:
+    - "Bedingungsrahmen für Kontakt/Handlung"
+  concept: "Wenn–Dann-Rahmung"
+  pragmatics: "explizite Bedingungen, Risiko von Druck"
+  narrative: "Kontroll-/Sicherheitslogik"
+pattern:
+  - '(?i)\bnur\s+wenn\b'
+  - '(?i)\b(dann|ansonsten)\s+(kann|werde|mache)\b'
+  - '(?i)\b(unter\s+diesen\s+bedingungen)\b'
+  - '(?i)\b(erst\s+wenn)\b'
+examples:
+  - "Nur wenn ich X weiß, kann ich weitermachen."
+  - "Erst wenn du das sagst, treffe ich mich."
+  - "Unter diesen Bedingungen halte ich Kontakt."
+  - "Ansonsten ziehe ich mich zurück."
+  - "Dann kann ich wieder vertrauen."
+tags: [conditional, boundary, semantics]

@@ -1,0 +1,23 @@
+id: ATO_STRESS
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["stress", "overwhelm"]
+  concept: "Stress oder Überforderung ausdrücken"
+  pragmatics: "Signalisiert Belastungsgrenze"
+  narrative: "affect"
+tags: [affect, stress, overwhelm]
+pattern:
+  regex: "\\b(gestresst|stressig|zu viel|überfordert|unter Druck|schaff das nicht mehr)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich bin heute total gestresst."
+  - "Die letzte Woche war extrem stressig."
+  - "Mir wird das alles zu viel."
+  - "Ich fühle mich komplett überfordert."
+  - "Ich stehe gerade enorm unter Druck."
+  - "Ich schaff das nicht mehr alles."
+  - "Der Stress frisst mich auf."
+  - "Das ist eine riesige Belastung für mich."
+  - "Ich bin am Limit."
+  - "Zu viel auf einmal."

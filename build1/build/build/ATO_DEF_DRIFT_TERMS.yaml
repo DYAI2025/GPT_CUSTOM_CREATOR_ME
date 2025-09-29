@@ -1,0 +1,26 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "consistency_external"
+
+defaults:
+  scoring:
+    window_messages: 5
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+
+markers:
+  - id: ATO_DEF_DRIFT_TERMS
+    frame:
+      signal: ["eigentlich", "genauer gesagt", "streng genommen", "definitionstechnisch"]
+      concept: "Begriffsverschiebungs-Indikatoren"
+    pattern:
+      - detect_class: phrase
+        list: ["eigentlich", "genauer gesagt", "streng genommen", "definitionstechnisch"]
+    score: 0.30
+    metadata: { type: ATO }
+    examples:
+      - "Eigentlich meinte ich etwas anderes."
+      - "Genauer gesagt war es privat."
+      - "Streng genommen zählt das nicht."
+      - "Definitionstechnisch ist das korrekt."
+      - "Eigentlich war das ein Missverständnis."

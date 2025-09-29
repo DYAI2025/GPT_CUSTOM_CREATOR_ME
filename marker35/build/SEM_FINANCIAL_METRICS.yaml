@@ -1,0 +1,23 @@
+id: SEM_FINANCIAL_METRICS
+version: "3.4"
+frame:
+  signal: ["semantic","evidence"]
+  concept: "financial_metrics_mention"
+  pragmatics: "validity-check"
+  narrative: "evidence"
+composed_of:
+  - ATO_NUMERIC_ESTIMATE
+  - ATO_FINANCIAL_TERM
+activation:
+  rule: "BOTH IN 1 message"
+examples:
+  - "Wir haben 200k ARR und 10% MoM-Wachstum."
+  - "Der Cashflow ist positiv seit Q2."
+  - "Umsatz 150k mit 55% Bruttomarge."
+  - "Burn bei 80k, Runway 12 Monate."
+  - "ROI der Kampagne liegt bei 2.3x."
+  - "NPV der Pipeline attraktiv bei konservativer Annahme."
+  - "Post-Money bewegen wir uns Richtung 15M Bewertung."
+scoring:
+  base: 0.7
+  weight: 2.0

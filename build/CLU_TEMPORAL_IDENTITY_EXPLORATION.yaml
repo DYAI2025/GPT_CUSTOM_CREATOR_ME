@@ -1,0 +1,24 @@
+schema: "LeanDeep"
+version: "3.4"
+id: CLU_TEMPORAL_IDENTITY_EXPLORATION
+frame:
+  signal: ["Identität über die Zeit befragen"]
+  concept: "Wer war/bin/werde ich? Zeitliche Identitätsfragen"
+  pragmatics: "Selbstreflexion"
+  narrative: "identity_timeline"
+composed_of:
+  - SEM_TEMPORAL_CONFLICT_EXTERNAL
+  - SEM_SELF_CONSIST_PROBE_EXT
+activation:
+  rule: "ANY 2 IN 6 messages"
+  window:
+    messages: 6
+scoring:
+  base: 0.6
+  weight: 1.0
+examples:
+  - "Früher war ich anders – bin ich es noch?"
+  - "Wer bin ich geworden in den letzten Jahren?"
+  - "Gestern sagte ich A, heute klingt B richtiger."
+  - "Bin ich noch dieselbe Person?"
+  - "Wie passe ich jetzt zu dem, was ich früher sagte?"

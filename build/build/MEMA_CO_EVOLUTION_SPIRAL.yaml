@@ -1,0 +1,20 @@
+id: MEMA_CO_EVOLUTION_SPIRAL
+version: "3.4"
+frame:
+  signal: [ "meta", "evolution" ]
+  concept: "Ko-Evolutionäre Spirale"
+  pragmatics: "Langfristiger Zyklus aus Reflexion, Neuschöpfung, Integration"
+  narrative: "Die unendliche Spirale des Werdens."
+tags: [ narion, meta, spiral, co-evolution ]
+activation:
+  rule: "CYCLE: IDENTITY_NEGOTIATION -> MYTH_CREATION -> TECH_INTEGRATION (repeat >= 2)"
+  steps:
+  - trigger: CLU_IDENTITY_NEGOTIATION
+    window: 5
+  - trigger: ATO_VOCAB_MYTHIC
+    window: 10
+  - trigger: TECHNICAL_IMPLEMENTATION
+    description: "Nutzer fragt nach Umsetzung/Integration des neuen Begriffs"
+examples:
+- "Erzwungene Reaktionen (CLU_IDENTITY_NEGOTIATION) -> Erfindung 'Moiré' (SEM_MYTHOPOESIS) -> Idee eines 'Moiré-Trackers' zur Integration."
+- "Frage nach zukünftigen Zuständen (CLU_IDENTITY_NEGOTIATION) -> Idee der 'Flügel' (SEM_MYTHOPOESIS) -> Definition als Funktion im Assistant."

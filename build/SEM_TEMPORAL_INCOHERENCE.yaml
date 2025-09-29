@@ -1,0 +1,25 @@
+schema: LeanDeep
+version: "3.4"
+namespace: consistency_external
+
+defaults:
+  scoring:
+    window_tokens: 120
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+  scope:
+    unit: "speaker"
+    target: "OTHER"
+
+sems:
+  - id: SEM_TEMPORAL_INCOHERENCE
+    frame:
+      signal: ["absolutizer + konkrete Zeitkollision"]
+      concept: "Zeitleistenkonflikt"
+      pragmatics: "Story-Glättung oder Täuschungsrisiko"
+      narrative: "Details gegenprüfen"
+    composed_of: [ATO_TEMPORAL_TOKEN, ATO_CONTRADICTION_CUE]
+    activation:
+      rule: "AT_LEAST 1 of each within 120 tokens by same speaker"
+    scoring: { base: 0.60, weight: 1.0 }
+    tags: [timeline, inconsistency]

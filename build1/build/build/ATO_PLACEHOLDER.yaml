@@ -1,0 +1,18 @@
+id: ATO_PLACEHOLDER
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["placeholder"]
+  concept: "Neutraler Platzhalter für Übergang"
+  pragmatics: "Entschärft fehlende Referenzen ohne False Positives"
+  narrative: "infrastructure"
+tags: [infrastructure, placeholder]
+pattern:
+  regex: "(?!)"
+  flags: ["IGNORECASE"]
+examples:
+  - "<placeholder>"
+  - "<tbd>"
+  - "<ref_missing>"
+  - "<todo>"
+  - "<null>"

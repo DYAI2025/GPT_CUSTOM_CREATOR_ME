@@ -1,0 +1,18 @@
+id: ATO_OFFENDED_SILENCE
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["silence", "offense"]
+  concept: "Beleidigtes Schweigen/abweisende Kurzantwort"
+  pragmatics: "Rupture/Withdraw"
+  narrative: "interaction"
+tags: [silence, rupture]
+pattern:
+  regex: "(^\\s*…\\s*$|^ok(\\.|,)?$|^passt\\.$|^egal\\.$|^lass\\s+sein$)"
+  flags: ["IGNORECASE", "MULTILINE"]
+examples:
+  - "…"
+  - "ok."
+  - "passt."
+  - "egal."
+  - "lass sein"

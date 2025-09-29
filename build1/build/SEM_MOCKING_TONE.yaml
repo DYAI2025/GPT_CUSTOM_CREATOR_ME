@@ -1,0 +1,20 @@
+id: SEM_MOCKING_TONE
+version: "3.4"
+frame:
+  signal: ["mocking", "disrespect"]
+  concept: "Spöttischer, verhöhnender Ton"
+  pragmatics: "Gesichtsangriff"
+  narrative: "tone"
+tags: [mocking, disrespect]
+composed_of:
+  - ATO_MOCKING_LEXICON
+  - ATO_IRONY_PUNCTUATION
+activation:
+  rule: "BOTH IN 1 message OR ANY 2 IN 2 messages"
+scoring: { base: 0.6, weight: 1.0 }
+examples:
+  - "‚Klasse, Clown.‘"
+  - "\"Super\" – armselig."
+  - "Lächerlich – ‚großartig‘."
+  - "Peinlich – ‚genau‘."
+  - "Loser – ‚perfekt‘."

@@ -1,0 +1,19 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_CLARIFY_REQ
+frame:
+  signal: ["clarify_req"]
+  concept: "Anschluss-/Klärungsfragen"
+  pragmatics: "Kohärenz sichern"
+  narrative: "interaction"
+tags: [clarify, question]
+pattern:
+  regex: '(?i)\b(wann|wie|wo|als was|in welchem format|bis wann genau)\b\??'
+  flags: ["IGNORECASE"]
+examples:
+  - "Wann genau?"
+  - "Wie soll das aussehen?"
+  - "Als was genau einreichen?"
+  - "In welchem Format?"
+  - "Bis wann genau?"
+  - "Wo ablegen?"

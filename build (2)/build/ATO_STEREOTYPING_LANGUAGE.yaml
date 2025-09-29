@@ -1,0 +1,22 @@
+id: ATO_STEREOTYPING_LANGUAGE
+version: "3.4"
+frame:
+  signal: ["stereotype", "categorization"]
+  concept: "Group-based stereotyping language"
+  pragmatics: "Stereotype activation"
+  narrative: "bias_pattern"
+tags: [bias, stereotype, categorization]
+pattern:
+  regex: "(typisch|halt|eben)\\s+\\w+isch|people\\s+like\\s+(you|them)"
+  flags: ["IGNORECASE"]
+examples:
+  - "typisch männlich"
+  - "Das ist halt so eine Frauensache"
+  - "people like you always"
+  - "Die Deutschen sind eben..."
+  - "those people typically"
+  - "typisch asiatisch"
+  - "halt italienisch eben"
+  - "People like them can't be trusted"
+  - "Das ist einfach typisch Frau"
+  - "People like you never change"

@@ -1,0 +1,27 @@
+id: SEM_UNTRACEABLE_PAYMENT_METHOD
+frame:
+  signal:
+  - Anonymität in der Zahlung
+  - Gift Cards
+  - Kryptowährung
+  - Bargeldtransfers
+  concept: Nicht rückverfolgbare Zahlungswege
+  pragmatics: Verschleierung, Betrug, Strafverfolgungsvermeidung
+  narrative: Verschleierte Geldflüsse durch alternative Zahlungsmethoden
+activation:
+  rule: ANY 1
+examples:
+- Am einfachsten wäre es, wenn du mir ein paar Amazon-Geschenkkarten kaufst und die
+  Codes fotografierst.
+- Eine Überweisung dauert zu lange, per Western Union ist das Geld sofort da.
+- Kryptowährungen wie Bitcoin sind der sicherste und anonymste Weg, mir zu helfen.
+- Bitte sende das Geld nicht auf mein Konto, sondern an meinen Agenten über MoneyGram.
+- Du kannst das Geld auf eine Prepaid-Kreditkarte laden und mir die Daten schicken.
+tags:
+- fraud
+- anonym
+- crypto
+- giftcard
+- payment
+composed_of:
+- ATO_PLACEHOLDER

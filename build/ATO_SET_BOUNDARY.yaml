@@ -1,0 +1,18 @@
+id: ATO_SET_BOUNDARY
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["boundary"]
+  concept: "Explizite Grenze/Limit"
+  pragmatics: "Schutz/Autonomie"
+  narrative: "interaction"
+tags: [boundary, autonomy]
+pattern:
+  regex: "\\b(Grenze|bis\\s+hierhin|nein|stopp|nicht\\s+okay)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Bis hierhin."
+  - "Nein."
+  - "Stopp."
+  - "Das ist nicht okay."
+  - "Meine Grenze."

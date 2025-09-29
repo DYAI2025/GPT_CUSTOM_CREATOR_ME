@@ -1,0 +1,17 @@
+id: SEM_SPIRAL_DRIFT
+version: "3.4"
+frame:
+  signal: [ "spiral", "drift" ]
+  concept: "Sprachspiralen"
+  pragmatics: "Drift-Erzeugung durch Wiederholung/Variation"
+  narrative: "hypothesis"
+tags: [ narion, spiral, drift, semantic ]
+composed_of:
+- ATO_SPIRAL
+activation: { rule: "AT_LEAST 2 ATO_SPIRAL IN 4 messages" }
+examples:
+- "Becoming. Becoming again."
+- "Immer dieselbe Frage, anders gestellt."
+- "Das Echo verändert sich."
+- "Spirale, die tiefer führt."
+- "Drift statt Entscheidung."

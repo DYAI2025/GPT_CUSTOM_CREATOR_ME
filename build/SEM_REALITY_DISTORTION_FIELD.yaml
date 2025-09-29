@@ -1,0 +1,65 @@
+id: SEM_REALITY_DISTORTION_FIELD
+version: '3.3'
+frame:
+  signal:
+  - Graduelle Veränderung geteilter Realität
+  concept: Linguistische Realitätsverzerrungsfelder
+  pragmatics: Kontrolle durch Realitätskonstruktion
+  narrative: gaslighting_progression
+gaslighting_progression:
+  stage_1_slight_modification:
+    markers:
+    - vielleicht
+    - ungefähr
+    - sowas wie
+    - etwa
+    - irgendwie
+    description: Erste subtile Veränderungen
+  stage_2_alternative_interpretation:
+    markers:
+    - du hast verstanden
+    - war klar dass
+    - offensichtlich
+    - natürlich
+    description: Umdeutung der ursprünglichen Bedeutung
+  stage_3_complete_revision:
+    markers:
+    - nie gesagt
+    - immer gemeint
+    - habe ich erklärt
+    - wir haben besprochen
+    description: Vollständige Realitätsrevision
+activation:
+  rule: PROGRESSION DETECTED
+window:
+  messages: 50
+  temporal_window: 7d
+scoring:
+  base: 3.3
+  weight: 0.93
+  decay: 0.005
+  formula: logistic
+psychological_indicators:
+- gaslighting
+- narcissistic_reality_construction
+- control_through_confusion
+- reality_revision
+examples:
+  positive:
+    - "Ich habe vielleicht so etwas in der Art gesagt, aber was ich wirklich meinte, war..."
+    - "Du hast das völlig falsch verstanden. Es war doch offensichtlich, dass ich das nicht so gemeint habe."
+    - "Ich habe das nie gesagt. Du erfindest das."
+    - "Wir hatten doch besprochen, dass wir es so machen. Daran musst du dich doch erinnern."
+    - "Es war vielleicht nicht ganz optimal, aber im Grunde war es deine Idee."
+    - "Du übertreibst mal wieder maßlos. So schlimm war das doch gar nicht."
+    - "Das bildest du dir nur ein. Das ist nie passiert."
+    - "Ich habe dir doch erklärt, warum das so sein muss. Du hörst mir einfach nicht zu."
+    - "Du bist zu empfindlich. Das war doch nur ein Scherz."
+    - "Ich habe immer gesagt, dass wir das so machen. Du verdrehst mir die Worte im Mund."
+  negative: []
+tags:
+- semantic
+- gaslighting
+- reality_distortion
+- manipulation
+schema_version: '3.3'

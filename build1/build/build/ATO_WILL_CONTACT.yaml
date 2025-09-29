@@ -1,0 +1,24 @@
+id: ATO_WILL_CONTACT
+frame:
+  signal:
+  - meld mich
+  - melde mich
+  - hör von mir
+  - schreib dir
+  concept: Vages Versprechen
+  pragmatics: Gesprächsbeendigung
+  narrative: false_promise
+pattern:
+- (?i)\bmeld(e)?\s+mich(!|\.|\s)
+- (?i)\bhörst\s+von\s+mir\b
+- (?i)\bschreib(e)?\s+dir\s+(später|dann|bald)?\b
+- (?i)\bich\s+meld(e)?\s+mich\s+(später|dann|mal)?\b
+examples:
+- Ja ja, alles gut. Meld mich!
+- Ich melde mich später
+- Du hörst von mir!
+- Schreib dir dann
+- Meld mich, wenn ich wieder Zeit habe
+tags:
+- false_promise
+- conversation_ender

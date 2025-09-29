@@ -1,0 +1,16 @@
+id: SEM_AMBIVALENCE
+frame:
+  signal: ["Widerspruch im Gefühl oder Willen", "Ambivalenz", "Zerrissenheit"]
+  concept: "Ambivalenz"
+  pragmatics: "Zweifel, Unsicherheit, innere Zerrissenheit"
+  narrative: "Konflikt zwischen Wunsch und Angst, zwischen Nähe und Distanz"
+composed_of:
+  - ATO_PLACEHOLDER
+activation:
+  rule: "ANY 1"
+examples:
+  - "Ich will wirklich, dass du bleibst, aber ein Teil von mir glaubt, dass eine Trennung besser für uns wäre."
+  - "Klar hab ich Bock auf den Urlaub! Aber mein Kontostand schreit gerade ganz laut Nein."
+  - "Ich bin hin- und hergerissen zwischen Bleiben und Gehen – ich weiß nicht mehr weiter."
+  - "Ich liebe den Job, aber gleichzeitig zweifle ich jeden Tag daran."
+  - "Ich schätze Ihr Vertrauen in mich für diese Beförderung sehr, gleichzeitig habe ich Bedenken."

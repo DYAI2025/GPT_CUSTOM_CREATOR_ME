@@ -1,0 +1,20 @@
+id: ATO_ENERGY_LOW
+schema_version: "LD-3.3"
+lang: de
+category: ATOMIC
+description: "Atomic pattern for low vocal energy"
+frame:
+  signal: ["Amplitude < Baseline"]
+  concept: "leise"
+  pragmatics: "Energie"
+  narrative: "audio"
+detect_class:
+  module: prosody.energy
+  params: { delta_db_max: -8 }
+examples:
+  - "[Gedämpfte Stimme]"
+  - "[Reduzierte Lautstärke]"
+  - "[Schwache Artikulation]"
+  - "[Eingeschüchterte Tonlage]"
+  - "[Energielose Äußerung]"
+tags: [energy, audio, atomic]

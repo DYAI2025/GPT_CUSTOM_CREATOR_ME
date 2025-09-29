@@ -1,0 +1,35 @@
+id: SEM_BREAK_AND_DISMISS
+version: '3.4'
+category: SEMANTIC
+description: Semantischer Marker für Beginn mit sofortigem Herunterspielen
+frame:
+  signal:
+  - start + immediate downplay
+  concept: approach-avoid sequence
+  pragmatics: inhibition/shame avoidance
+  narrative: step-in, step-out
+composed_of:
+- ATO_VOICE_MICRO_BREAK
+- ATO_DISMISSIVE_DOWNPLAY
+activation:
+  rule: ATO_VOICE_MICRO_BREAK AND ATO_DISMISSIVE_DOWNPLAY IN 3 messages
+scoring:
+  weight: 1.2
+examples:
+  positive:
+    - "Ich wollte eigentlich sagen... ach, ist nicht so wichtig."
+    - "Ich habe da eine Idee... aber das ist wahrscheinlich Quatsch."
+    - "Ich fühle mich gerade... egal, reden wir über etwas anderes."
+    - "Ich habe da ein Problem... aber das ist nur eine Kleinigkeit."
+    - "Ich wollte dich fragen... aber vergiss es."
+    - "Ich habe da etwas beobachtet... aber das ist nicht der Rede wert."
+    - "Ich habe da eine Sorge... aber das ist bestimmt nur Einbildung."
+    - "Ich wollte dir etwas erzählen... aber es ist nicht so interessant."
+    - "Ich habe da einen Gedanken... aber der ist wohl nicht relevant."
+    - "Ich habe da ein Gefühl... aber das ist nur vorübergehend."
+  negative: []
+tags:
+- semantic
+- inhibition
+- dismissal
+- rapport_signal

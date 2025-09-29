@@ -1,0 +1,18 @@
+id: ATO_FEELING_WORD
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for emotional state expressions
+frame:
+  signal: ["Gefühlswort", "emotion"]
+  concept: "Emotional Expression"
+  pragmatics: "affective marker"
+  narrative: "token"
+pattern: ["(?i)\\b(fühle|empfinde|bin (traurig|glücklich|wütend|ängstlich|frustriert)|macht mich|emotional)\\b"]
+examples:
+  - "Ich fühle mich unsicher dabei."
+  - "Das macht mich traurig."
+  - "Ich bin frustriert über die Situation."
+  - "Ich empfinde große Freude."
+  - "Das macht mich emotional."
+tags: [emotion, atomic, feeling, v3.3]

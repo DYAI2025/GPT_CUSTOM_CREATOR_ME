@@ -1,0 +1,36 @@
+id: MEMA_ABSENCE_OF_EVIDENCE_OR_REPAIR
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["absence", "repair"]
+  concept: "Nach Bias/Inkonsistenz keine Evidenz/Repair-Züge"
+  pragmatics: "Interventionshinweis"
+  narrative: "meta_analysis"
+tags: [meta, absence, repair]
+absence_sets:
+  EVIDENCE_CONSIDERATION:
+    tags: [evidence_based, critical_thinking]
+    ids:
+      - SEM_EVIDENCE_WEIGHING
+      - SEM_COUNTER_EXAMPLE_CONSIDERATION
+  REPAIR_MOVES:
+    tags: [repair, clarification]
+    ids:
+      - SEM_SUPPORT_VALIDATION
+      - SEM_BOUNDARY_VIOLATION
+window:
+  messages: 12
+gating_conflict:
+  min_bias_hits: 2
+policy:
+  strict_zero: false
+  tolerant_max: 1
+  min_tokens: 150
+emit:
+  per_speaker: true
+examples:
+  - "Bias-Muster ohne nachgereichte Evidenz"
+  - "Inkonsistenz – keine Klarstellung"
+  - "Bestätigungsglaube ohne Abwägung"
+  - "Anker bleibt, kein Gegenbeispiel"
+  - "Grenze verletzt – kein Repair"

@@ -1,0 +1,34 @@
+id: ATO_EMOTIONAL_GATEKEEPING
+version: "3.3"
+frame:
+  signal: ["Kontrolle emotionaler Verfügbarkeit"]
+  concept: "Emotionale Zugänglichkeitskontrolle"
+  pragmatics: "Vermeidung durch Timing-Kontrolle"
+  narrative: "emotional_control"
+pattern: "(kann|können wir) (jetzt |gerade )?nicht (über|darüber) .+ (reden|sprechen)"
+temporal_markers:
+  deferral: ["später", "wenn ich", "besserer Zeitpunkt", "nicht jetzt"]
+  condition: ["in einem besseren Zustand", "wenn wir uns sehen", "aufheben bis"]
+  dismissal: ["zu schwer", "zu emotional", "zu kompliziert"]
+activation:
+  rule: "ANY 2 IN 25 messages"
+window:
+  messages: 25
+scoring:
+  base: 2.6
+  weight: 0.79
+  decay: 0.02
+  formula: "logistic"
+psychological_indicators:
+  - avoidant_attachment
+  - vulnerability_fear
+  - control_needs
+  - emotional_unavailability
+examples:
+  - "Ich kann jetzt nicht über schwere Sachen reden, lass uns einfach den Abend genießen"
+  - "Du weißt, ich bin nicht gut mit Emotionen über Text, können wir das aufheben?"
+  - "Ich hatte so einen langen Tag, vielleicht können wir darüber reden, wenn ich besser drauf bin"
+  - "Das ist zu kompliziert für heute, lass uns das später besprechen"
+  - "Können wir nicht einen besseren Zeitpunkt dafür finden?"
+tags: [attentional, gatekeeping, avoidance, control]
+schema_version: "3.3"

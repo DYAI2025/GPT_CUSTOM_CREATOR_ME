@@ -1,0 +1,20 @@
+id: ATO_IMAGINED_PHYSICALITY
+frame:
+  signal:
+  - In Gedanken umarmung
+  - phantasierte Berührung
+  concept: Imaginierte Intimität
+  pragmatics: Virtuelle Nähe
+  narrative: Gedankenspiel
+pattern:
+- (?i)\bIn Gedanken umarm\b
+- (?i)\bphantasiert?[e]?.*Berührung\b
+activation:
+  rule: ANY 1
+examples:
+- Ich hab dich gerade in Gedanken umarmt.
+- In meiner Fantasie berühre ich dich.
+- Hab phantasierte Berührung gespürt.
+- Schicke dir eine imaginäre Umarmung.
+- Stell es dir vor…
+tags: []

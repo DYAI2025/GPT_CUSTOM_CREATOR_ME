@@ -1,0 +1,17 @@
+id: ATO_ANCHORING_PHRASES
+version: "3.4"
+frame:
+  signal: ["first_value", "anchor"]
+  concept: "Früher Referenzwert dominiert"
+  pragmatics: "Ankerheuristik (Startwert-Effekt)"
+  narrative: "cognitive_bias"
+tags: [bias, anchoring]
+pattern:
+  regex: "\\b(erste\\s+Zahl|Ausgangspunkt|Startwert|initial\\s+offer|am\\s+Anfang\\s+waren)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Die erste Zahl war 10k."
+  - "Vom Ausgangspunkt weichen wir nicht ab."
+  - "Der Startwert passt."
+  - "Initial offer steht."
+  - "Am Anfang waren es 5%, also…"

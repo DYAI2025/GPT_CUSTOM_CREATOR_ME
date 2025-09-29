@@ -1,0 +1,40 @@
+id: CLU_THERAPEUTIC_AWARENESS
+version: '3.3'
+frame:
+  signal:
+  - Therapeutische Selbsterkenntnis-Sequenz
+  concept: Tiefe Selbstreflexion
+  pragmatics: Heilungsprozess
+  narrative: transformation
+composed_of:
+- SEM_METACOGNITIVE_INSIGHT
+- SEM_PROJECTION_CONSCIOUSNESS
+- SEM_EMOTIONAL_COMPLEXITY
+activation:
+  rule: ANY 2 IN 10 messages
+window:
+  messages: 10
+scoring:
+  base: 2.0
+  weight: 1.5
+  decay: 0.02
+  formula: logistic
+examples:
+  positive:
+    - "Mir wird gerade klar, dass ich dieses Muster schon lange wiederhole."
+    - "Ich erkenne jetzt, wie meine Angst vor Ablehnung mein Verhalten steuert."
+    - "Ich sehe, dass meine Wut eigentlich eine tiefe Traurigkeit verbirgt."
+    - "Mir wird bewusst, dass ich die Erwartungen anderer auf mich projiziert habe."
+    - "Ich spüre zum ersten Mal, wie diese alte Verletzung noch immer in mir wirkt."
+    - "Ich verstehe jetzt den Zusammenhang zwischen meiner Kindheit und meinen heutigen Beziehungsproblemen."
+    - "Ich erkenne, dass mein Perfektionismus ein Versuch ist, Kontrolle zu behalten."
+    - "Mir wird klar, dass ich oft 'Ja' sage, obwohl ich 'Nein' meine."
+    - "Ich sehe, wie ich mich selbst sabotiere, aus Angst vor dem Erfolg."
+    - "Ich spüre eine tiefe Verbindung zu meinem inneren Kind und seinen Bedürfnissen."
+  negative: []
+tags:
+- cluster
+- therapie
+- awareness
+- transformation
+schema_version: '3.3'

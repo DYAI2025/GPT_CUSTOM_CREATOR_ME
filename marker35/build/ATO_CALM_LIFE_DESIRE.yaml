@@ -1,0 +1,23 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_CALM_LIFE_DESIRE
+frame:
+  signal: ["calm_life"]
+  concept: "Wunsch nach Ruhe/Geborgenheit ohne Überraschungen"
+  pragmatics: "Sicherheits-/Ruhebedürfnis"
+  narrative: "motive_safety"
+tags: [calm, predictability]
+pattern:
+  regex: "(?i)\\b(ruhig(?:e|es|er)?\\s+leben|ohne\\s+b(?:ö|oe)se\\s+(?:überraschung(?:en)?|ueberraschung(?:en)?)|ruhe\\s+und\\s+sicherheit|geborgenheit)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich träume von einem ruhigen Leben ohne böse Überraschungen."
+  - "Mir ist Ruhe und Sicherheit wichtig."
+  - "Ich will einfach Geborgenheit."
+  - "Ein ruhiges Leben, mehr will ich nicht."
+  - "Ohne böse Überraschungen, bitte."
+  - "Stabilität und Ruhe sind mir wichtiger als Tempo."
+  - "Ich brauche heute vor allem Sicherheit."
+  - "Ein geregeltes, ruhiges Leben."
+  - "Geborgenheit statt Abenteuer."
+  - "Lieber ruhig und planbar."

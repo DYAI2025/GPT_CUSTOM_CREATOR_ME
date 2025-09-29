@@ -1,0 +1,31 @@
+id: MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT
+display_title: "Omission: Keine Herabwürdigung im Konflikt"
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Kein Abwerten in Konfliktphasen"
+  concept: "Absence of Derogation"
+  pragmatics: "Positives Konfliktverhalten"
+  narrative: "restraint"
+pattern: null
+composed_of: []
+activation: null
+window:
+  messages: 30
+scoring:
+  base: 2.2
+  weight: 0.55
+  decay: 0.01
+  formula: "logistic"
+tags: [mema, omission, positiv, deeskalation]
+examples:
+  - "Das nervt mich.\nOkay, ich höre zu."
+  - "Ich bin verletzt.\nDanke, dass du es sagst."
+  - "Warum warst du so spät?\nMein Fehler, kommt nicht wieder vor."
+  - "Ich brauche mehr Verlässlichkeit.\nAbgemacht, ich stell mir eine Erinnerung."
+  - "Das fühlt sich unfair an.\nIch übernehme Verantwortung."
+detect_class: "absence_meta"
+criteria:
+  target_set: "derogation"
+updated_at: "2025-08-19T10:30:00Z"

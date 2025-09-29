@@ -1,0 +1,24 @@
+schema: "LeanDeep"
+version: "3.4"
+id: CLU_RUMINATION_LOOP
+frame:
+  signal: ["Gedankenkreisen / Grübelschleife"]
+  concept: "Wiederholtes Durchkauen ohne Fortschritt"
+  pragmatics: "Verharren / Stagnation"
+  narrative: "loop"
+composed_of:
+  - SEM_AVOIDANCE_LOOP
+  - SEM_UNRESOLVED_ISSUE
+activation:
+  rule: "ANY 2 IN 5 messages"
+  window:
+    messages: 5
+scoring:
+  base: 0.7
+  weight: 1.0
+examples:
+  - "Wir drehen uns im Kreis, oder?"
+  - "Das hatten wir doch schon."
+  - "Ich weiß, aber trotzdem..."
+  - "Immer wieder dieselben Punkte."
+  - "Wir kommen nicht weiter."

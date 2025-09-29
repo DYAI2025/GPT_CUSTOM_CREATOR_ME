@@ -1,0 +1,31 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_SELF_VICTIMIZATION
+frame:
+  signal: ["self_victimization"]
+  concept: "Selbstviktimisierung (sprachlich)"
+  pragmatics: "Rollenfixierung / Verantwortungsexternalisierung"
+  narrative: "identity"
+tags: [victimization, identity]
+composed_of:
+  any_of:
+    - ATO_VICTIM_LANGUAGE
+    - ATO_PITY_APPEAL
+    - ATO_LEARNED_HELPLESSNESS
+    - ATO_SELF_HANDICAPPING
+    - ATO_BLAME_SHIFT
+activation:
+  rule: "AT_LEAST 2 IN 3 messages"
+  window: 3
+scoring: { base: 0.65, weight: 1.05 }
+examples:
+  - "Niemand versteht mich – wegen dir – ich kann das nicht."
+  - "Ich armes Ich – egal was ich tue, es bringt nichts."
+  - "Immer bin ich die Dumme – ich hatte keine Zeit."
+  - "Ich schaffe das nie – das ist deine Schuld."
+  - "Keiner hilft mir – ich bin heute nicht auf der Höhe."
+  - "Immer bin ich die Dumme – ich bin halt so – niemand hilft mir."
+  - "Ich habe keine Chance – du bist schuld – ich komme da nie raus."
+  - "Ich bin wehrlos – es bringt nichts – alle sind gegen mich."
+  - "Keiner steht hinter mir – ich hatte keine Zeit – ich schaffe das nie."
+  - "Ich armes Ich – ich bin nicht gut darin – wegen dir."

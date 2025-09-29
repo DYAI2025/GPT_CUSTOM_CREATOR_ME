@@ -1,0 +1,26 @@
+id: CLU_OFFENSIVE_FLIRTING
+frame:
+  signal:
+  - Auffällige Flirt-Kommentare in Verbindung mit provozierenden Grenzübertritten
+  concept: Offensives Flirten plus Grenzüberschreitung
+  pragmatics: Spannungsaufbau, Unsicherheit
+  narrative: Dynamik der Provokation
+composed_of:
+- SEM_OFFENSIVE_FLIRTING
+- SEM_BOUNDARY_VIOLATION
+activation:
+  rule: BOTH IN 5 messages
+examples:
+- Na, trägst du das extra für mich?
+- Komm schon, sei nicht so brav heute.
+- Mit dir würde ich gern mal was Verbotenes ausprobieren.
+- Du weißt genau, wie du mich provozieren kannst.
+- Wollen wir nach der Party noch zu mir?
+- Magst du mir mal ein Foto von dir schicken?
+- Magst du mal ein Bild sehen? Also du weißt schon...
+- Ich finde es spannend, wie du Grenzen austestest.
+- Uhh, bad boy!
+- Du weißt, dass du damit spielst, oder?
+tags:
+- flirt
+- boundary

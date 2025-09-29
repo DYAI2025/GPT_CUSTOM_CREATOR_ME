@@ -1,0 +1,22 @@
+id: MEMA_AVOIDANCE_PATTERN_ESCALATION
+schema_version: LD-3.3
+lang: en
+category: MEMA
+description: Meta marker for escalating avoidance patterns in digital communication
+criteria: "Progressive pattern of avoidance behaviors escalating from technical excuses to systematic disengagement"
+composed_of:
+  - SEM_WEBCAM_EXCUSE
+  - CLU_INDIRECT_CONFLICT_AVOIDANCE
+  - SEM_EMOTIONAL_OVERWHELM
+examples:
+  - "Technical excuses for video evolve into broader communication avoidance over time."
+  - "Webcam problems become gateway to avoiding meaningful digital presence."
+  - "Video avoidance patterns expand to general meeting and interaction avoidance."
+  - "Technical limitations used systematically to maintain emotional distance."
+  - "Camera excuse patterns escalate to broader participation withdrawal."
+  - "Professional context where video avoidance signals deeper engagement issues."
+  - "Therapeutic setting where technical excuses mask emotional availability problems."
+  - "Educational context where camera avoidance indicates broader participation resistance."
+  - "Team dynamics showing escalating avoidance from technical to interpersonal."
+  - "Long-term pattern where video excuses predict broader relationship withdrawal."
+tags: [mema, v3.3, avoidance-escalation, digital-withdrawal]

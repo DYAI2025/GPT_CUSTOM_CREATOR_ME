@@ -1,0 +1,18 @@
+id: ATO_TRIANGULATION_LANGUAGE
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for triangulation in communication
+frame:
+  signal: ["triangulation"]
+  concept: "Triangulation signal"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\b(told me|said about you|everyone thinks|others agree)\\b"]
+examples:
+  - "Someone told me you were upset."
+  - "They said about you that..."
+  - "Everyone thinks you're being difficult."
+  - "Others agree with me on this."
+  - "I heard from someone that you..."
+tags: [atomic, v3.3, auto-generated]

@@ -1,0 +1,18 @@
+id: ATO_MINIMIZATION
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["minimization"]
+  concept: "Verharmlosung/Downplaying"
+  pragmatics: "Abwehrstrategie"
+  narrative: "bias_pattern"
+tags: [bias, defense]
+pattern:
+  regex: "\\b(nur\\s+ein\\s+bisschen|nicht\\s+so\\s+schlimm|halb\\s+so\\s+wild|eigentlich\\s+okay)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Nur ein bisschen."
+  - "Nicht so schlimm."
+  - "Halb so wild."
+  - "Eigentlich okay."
+  - "War ja nichts."

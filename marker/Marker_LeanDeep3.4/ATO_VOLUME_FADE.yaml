@@ -1,0 +1,20 @@
+id: ATO_VOLUME_FADE
+schema_version: "LD-3.3"
+lang: de
+category: ATOMIC
+description: "Atomic pattern for volume fade during speech"
+frame:
+  signal: ["Amplitude Decay Pattern"]
+  concept: "verklingen"
+  pragmatics: "Dynamik"
+  narrative: "audio"
+detect_class:
+  module: prosody.volume_fade
+  params: { fade_db_min: -6, fade_duration_ms: [800, 2000] }
+examples:
+  - "[Stimme wird leiser]"
+  - "[Verklingende Äußerung]"
+  - "[Energieverlust während Sprechen]"
+  - "[Fade-out Effekt]"
+  - "[Schwächer werdende Stimme]"
+tags: [dynamics, audio, atomic]

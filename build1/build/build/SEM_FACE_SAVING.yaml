@@ -1,0 +1,31 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_FACE_SAVING
+frame:
+  signal: ["face_saving"]
+  concept: "Wahrung von Ansehen & Beziehung bei Spannung"
+  pragmatics: "Höfliche Reparatur, Schonung"
+  narrative: "tension"
+tags: [face, repair, politeness]
+composed_of:
+  any_of:
+    - ATO_ACKNOWLEDGE
+    - ATO_SUPPORT_MESSAGE
+    - ATO_DEESCALATION_PHRASE
+  optional:
+    - ATO_APOLOGY
+activation:
+  rule: "AT_LEAST 2 IN 3 messages"
+  window: 3
+scoring: { base: 0.55, weight: 1.05 }
+examples:
+  - "Verstanden, danke für die Mühe."
+  - "Lass uns das ruhig angehen – passt."
+  - "Ich sehe den Punkt, kein Vorwurf."
+  - "Alles gut – wir drehen das gemeinsam."
+  - "Sorry für die Schärfe – Fokus auf Lösung."
+  - "Kein Thema – wir finden einen Weg."
+  - "Danke fürs Anstoßen; wir sortieren das."
+  - "Ich erkenne die Arbeit an – take your time."
+  - "Wir bleiben fair – eins nach dem anderen."
+  - "Kein Stress – wir holen dich ab."

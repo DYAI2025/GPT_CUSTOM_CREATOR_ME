@@ -1,0 +1,8 @@
+source_dir: "./yaml_markers"
+canonical_json: "./carl/markers_canonical.json"
+backup_dir: "./carl/_backups"
+schema_file: "marker_manager/schemas/schema.markers.json"
+focus_schemata_file: "marker_manager/schemas/focus_schemata.json"
+models_dir: "marker_manager/resources/models"
+atomic_writes: true
+watch: false

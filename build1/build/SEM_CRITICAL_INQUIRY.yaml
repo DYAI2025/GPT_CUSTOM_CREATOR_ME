@@ -1,0 +1,31 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_CRITICAL_INQUIRY
+frame:
+  signal: ["critical_inquiry"]
+  concept: "Systematisches Hinterfragen & Evidenzprüfung"
+  pragmatics: "Socratic probing + Proof-Standards"
+  narrative: "reasoning"
+tags: [questioning, proof, standards]
+composed_of:
+  any_of:
+    - ATO_DEEPER_QUESTIONING
+    - ATO_QUESTIONING
+    - ATO_PROOF_SEEKING_BEHAVIOR
+    - SEM_PROOF_STD_SHIFT
+    - SEM_LISTING
+activation:
+  rule: "AT_LEAST 3 IN 5 messages"
+  window: 5
+scoring: { base: 0.65, weight: 1.10 }
+examples:
+  - "Welche Annahmen tragen das? Bitte kurz auflisten."
+  - "Welche Evidenz stützt Hypothese B?"
+  - "Warum folgt D aus C genau?"
+  - "Beweisstandard hochziehen: Welche Quellen?"
+  - "Welche Alternativerklärungen hast du geprüft?"
+  - "Datenpunkte A–C bitte nennen."
+  - "Wie robust ist das Ergebnis gegenüber X?"
+  - "Gib mir die Kette: Prämissen → Schluss."
+  - "Welche Messfehler sind möglich?"
+  - "Woran würden wir erkennen, dass es falsch ist?"

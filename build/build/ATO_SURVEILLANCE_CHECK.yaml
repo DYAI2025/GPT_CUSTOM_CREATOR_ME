@@ -1,0 +1,20 @@
+id: ATO_SURVEILLANCE_CHECK
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Überwachendes Prüfen von Geräten/Accounts"
+  concept: "Kontrollhandlung"
+  pragmatics: "Vertrauensbruchrisiko"
+  narrative: "Sicherheitszwang"
+pattern:
+  - '(?i)\b(handy|telefon|chat|account)\s*(prüfen|checken|durchsuchen)\b'
+  - '(?i)\b(nachrichten)\s*(lesen|kontrollieren)\b'
+  - '(?i)\b(in\s+(mein|dein)\s+handy\s+schau\w*)\b'
+examples:
+  - "Hättest du in mein Handy geschaut …"
+  - "Ich habe die Chats geprüft."
+  - "Den Account kontrollieren."
+  - "Nachrichten durchsuchen."
+  - "Ich checke dein Telefon."
+tags: [surveillance, control, atomic]

@@ -1,0 +1,24 @@
+id: CLU_FRIENDSHIP_SIGNALING_MARKER
+frame:
+  signal:
+  - sag mal
+  - hör zu
+  - verstehst du
+  concept: Kommunikationsmuster
+  pragmatics: Dialog führen
+  narrative: exchange
+composed_of:
+- SEM_GENERIC_PATTERN
+activation:
+  rule: AT_LEAST 2 IN 5 messages
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- Weißt du noch, wie wir damals im Regen gefeiert haben?
+- Du bist und bleibst mein Lieblingsidiot.
+- Egal was passiert, ich steh hinter dir, klar?
+- Du kennst mich doch – ich brauch drei Tage zum Antworten 😂
+- Nur du darfst mich so nennen, Alter.
+tags:
+- communication

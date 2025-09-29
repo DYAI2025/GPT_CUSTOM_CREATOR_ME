@@ -1,0 +1,29 @@
+id: SEM_TRIANGULATION_PATTERN
+schema_version: LD-3.3
+lang: en
+category: SEMANTIC
+description: Semantic pattern for triangulation in relationships
+frame:
+  signal: ["third party involvement"]
+  concept: "Triangulation Pattern"
+  pragmatics: "micro pattern recognition"
+  narrative: "intent"
+composed_of:
+  - ATO_VALIDATION_SEEKING
+  - ATO_BLAME_SHIFT
+  - ATO_PASSIVE_AGGRESSION
+activation_logic: "ANY 2"
+window:
+  messages: 4
+examples:
+  - "Ask Sarah what she thinks. You made me involve her because you won't listen to reason."
+  - "Even Mike agrees with me. Whatever, if you want to ignore everyone else's opinion."
+  - "Talk to your sister about this. You forced me to get others involved in our business."
+  - "Everyone can see what's happening. How nice that you make me look crazy to our friends."
+  - "Your mother understands my point. You made this into a bigger issue than it needs to be."
+  - "Check with David if you don't believe me. I guess my word isn't good enough anymore."
+  - "Lisa had the same experience. You're making me prove myself to third parties now."
+  - "Ask anyone what they would do. Fine, we'll let others judge since you won't trust me."
+  - "Your friend agrees this is unfair. You forced me to seek validation elsewhere."
+  - "Everyone sees how you treat me. Whatever, keep making me the villain to everyone."
+tags: [semantic, v3.3, triangulation]

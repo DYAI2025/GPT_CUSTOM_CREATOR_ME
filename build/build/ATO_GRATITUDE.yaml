@@ -1,0 +1,23 @@
+id: ATO_GRATITUDE
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["gratitude"]
+  concept: "Dankbarkeit ausdrücken"
+  pragmatics: "Positive soziale Bindung stärken"
+  narrative: "prosocial"
+tags: [affect, gratitude, prosocial]
+pattern:
+  regex: "\\b(dankbar|vielen Dank|danke dir|weiß ich zu schätzen|schätze ich sehr)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich bin dir so dankbar."
+  - "Vielen Dank für deine Hilfe!"
+  - "Danke dir von Herzen."
+  - "Das weiß ich wirklich zu schätzen."
+  - "Deine Unterstützung schätze ich sehr."
+  - "Ich bin dankbar für unser Gespräch."
+  - "Danke, das ist nicht selbstverständlich."
+  - "Ich weiß deine Mühe zu schätzen."
+  - "Vielen lieben Dank!"
+  - "Ohne dich hätte ich das nicht geschafft, danke."

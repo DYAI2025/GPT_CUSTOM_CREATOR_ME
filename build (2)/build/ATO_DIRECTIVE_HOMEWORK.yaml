@@ -1,0 +1,42 @@
+id: ATO_DIRECTIVE_HOMEWORK
+display_title: "Hausaufgaben-Anweisungen"
+version: "3.3"
+lang: de
+category: ATOMIC
+description: "Erkennung von direktiven Äußerungen bezüglich Hausaufgaben und Lernen."
+frame:
+  signal: 
+    - "mach Hausaufgaben"
+    - "lern für die Klassenarbeit"
+    - "geh lernen"
+    - "üb das nochmal"
+    - "mach deine Aufgaben"
+  concept: "Hausaufgaben-Anweisungen"
+  pragmatics: "Direktive Sprechakte für schulische Pflichten"
+  narrative: "Lernaufgabenzuweisung"
+pattern:
+  - "(?i)\\bmach(t)? (bitte )?(deine )?Hausaufgaben\\b"
+  - "(?i)\\blern(t)? (bitte )?für \\w+"
+  - "(?i)\\bgeh(t)? (bitte )?lernen\\b"
+  - "(?i)\\büb(t)? (bitte )?\\w+ nochmal\\b"
+  - "(?i)\\bmach(t)? (bitte )?deine Aufgaben\\b"
+  - "(?i)\\bsetz dich an \\w+ Hausaufgaben\\b"
+activation:
+  rule: "ANY 1"
+window:
+  messages: 30
+scoring:
+  base: 1.3
+  weight: 0.45
+  decay: 0.02
+  formula: "logistic"
+examples:
+  - "Mach deine Hausaufgaben, bevor du spielst."
+  - "Lern für die Klassenarbeit morgen."
+  - "Geh lernen, die Zeit läuft weg."
+  - "Üb das nochmal, du kannst das besser."
+  - "Setz dich an deine Hausaufgaben."
+tags: [atomic, directive, homework, education, family]
+detect_class: null
+criteria: null
+updated_at: "2025-08-19T10:30:00Z"

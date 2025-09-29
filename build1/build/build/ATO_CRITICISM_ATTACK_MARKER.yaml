@@ -1,0 +1,29 @@
+id: ATO_CRITICISM_ATTACK_MARKER
+frame:
+  signal:
+  - sag mal
+  - hör zu
+  - verstehst du
+  concept: Kommunikationsmuster
+  pragmatics: Dialog führen
+  narrative: exchange
+pattern:
+- (?i)\\b"du\ bist\\b
+- (?i)\\beinfach\ nur\\b
+- (?i)\\bdu\ bist\\b
+- (?i)\\bbist\ so\\b
+examples:
+- Du bist wie ein schwarzes Loch für jede gute Stimmung.
+- Red nicht von Respekt, du kennst das Wort nicht mal.
+- Du brauchst ständig Drama, sonst fühlst du dich nicht lebendig, oder?
+- Immer wenn's schwierig wird, haust du ab – typisch!
+- Du drehst dir eh immer alles so hin, wie’s dir passt.
+- Dein Verhalten ist einfach nur peinlich.
+- Du hörst nie zu, weil du nur dich selbst reden hören willst.
+- Boah, du bist so der Inbegriff von Chaos.
+- Mit dir ist jede Kleinigkeit gleich ein Drama.
+- Ey, was stimmt eigentlich nicht mit dir?
+- Ganz ehrlich? Du bist einfach nur anstrengend.
+- Du bist so faul, ich kann nicht mehr!
+tags:
+- communication

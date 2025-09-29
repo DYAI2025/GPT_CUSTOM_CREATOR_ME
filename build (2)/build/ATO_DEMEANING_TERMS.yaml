@@ -1,0 +1,17 @@
+id: ATO_DEMEANING_TERMS
+version: "3.4"
+frame:
+  signal: ["demeaning"]
+  concept: "Herabsetzung/Entwürdigung"
+  pragmatics: "Dehumanisierungsschutz"
+  narrative: "dignity"
+tags: [demeaning, dignity]
+pattern:
+  regex: "\\b(minderwertig|Dreck|Abschaum|untermensch|würdelos|erniedrigen)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Minderwertig."
+  - "Dreck."
+  - "Abschaum."
+  - "Würdelos."
+  - "Erniedrigen."

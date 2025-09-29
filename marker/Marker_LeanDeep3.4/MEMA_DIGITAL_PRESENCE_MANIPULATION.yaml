@@ -1,0 +1,22 @@
+id: MEMA_DIGITAL_PRESENCE_MANIPULATION
+schema_version: LD-3.3
+lang: en
+category: MEMA
+description: Meta marker for systematic manipulation of digital presence and availability
+criteria: "Strategic pattern of controlling digital engagement through technical excuses and presence manipulation"
+composed_of:
+  - SEM_WEBCAM_EXCUSE
+  - SEM_CONTROL_ESCALATION
+  - CLU_BOUNDARY_VIOLATION_PATTERNS
+examples:
+  - "Technical excuses used strategically to control level of intimacy and exposure."
+  - "Webcam availability manipulated to maintain power dynamics in relationships."
+  - "Video presence controlled to manage information flow and emotional access."
+  - "Camera excuses escalate when deeper engagement or accountability is requested."
+  - "Digital presence manipulation as tool for maintaining relational control."
+  - "Professional context where video control maintains hierarchical advantages."
+  - "Therapeutic setting where camera manipulation controls therapeutic intimacy."
+  - "Educational context where video presence used to manage authority dynamics."
+  - "Team dynamics where digital presence becomes tool for influence and control."
+  - "Long-term pattern where technical control enables broader relational manipulation."
+tags: [mema, v3.3, digital-manipulation, presence-control]

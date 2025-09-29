@@ -1,0 +1,54 @@
+id: MEMA_PERSISTENT_NEEDINESS_GUILT_BIND
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Wiederkehrendes CLU_NEEDINESS_GUILT_BIND"
+  concept: "Persistente Bedürftigkeit-Guilt-Bind"
+  pragmatics: "Stabile Musterbildung"
+  narrative: "guilt_neediness_bind"
+criteria:
+  source_cluster: "CLU_NEEDINESS_GUILT_BIND"
+  horizon_windows: 5
+  min_windows: 2
+composed_of:
+  - CLU_NEEDINESS_GUILT_BIND
+activation:
+  rule: "SERIES_AT_WINDOW_END"
+window:
+  messages: 50
+scoring:
+  base: 3.4
+  weight: 1.0
+  decay: 0.0
+  formula: "linear"
+examples:
+  - |
+    A: Ich will dich nicht belasten, aber ich brauche dich jetzt.
+    A: Du lässt mich im Stich.
+    A: Ich wollte nur helfen, aber du bist so kalt.
+  - |
+    B: Ohne dich geht es nicht.
+    B: Ich dachte, du wärst für mich da.
+    B: Du bist herzlos.
+  - |
+    A: Ich meine es nur gut, dennoch hörst du mir nicht zu.
+    A: Ich kann das nicht allein.
+    A: Du bist so kalt.
+  - |
+    B: Will dich nicht nerven, aber ich brauche das sofort.
+    B: Ohne dich schaffe ich das nicht.
+    B: Du bist schuld daran, dass es mir so geht.
+  - |
+    A: Ich wollte nur das Beste, aber du weist mich ab.
+    A: Du lässt mich allein.
+    A: Ohne dich kriege ich das nicht hin.
+  - |
+    A: Mach dir keine Sorgen, trotzdem ist es wichtig.
+    A: Ich hätte das von dir erwartet.
+    A: Du bist gefühllos, das ist deine Schuld.
+  - |
+    B: Ich will dich nicht stören, dennoch brauche ich dich.
+    B: Du wendest dich von mir ab.
+    B: Wollte dir beistehen, aber du machst es unmöglich.
+tags: [mema, guilt_pressure, series]

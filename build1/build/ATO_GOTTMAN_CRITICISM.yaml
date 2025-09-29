@@ -1,0 +1,43 @@
+id: ATO_GOTTMAN_CRITICISM
+display_title: "Gottman: Kritik"
+version: "3.3"
+lang: de
+category: ATOMIC
+description: "Erkennung von kritisierenden Äußerungen nach Gottmans Konfliktmustern."
+frame:
+  signal: 
+    - "du machst immer"
+    - "du machst nie"
+    - "du bist so"
+    - "du verstehst nie"
+    - "typisch für dich"
+  concept: "Gottman: Kritik"
+  pragmatics: "Persönlichkeitskritik statt Verhaltensfeedback"
+  narrative: "Destruktive Kommunikation"
+pattern:
+  - "(?i)\\bdu machst immer \\w+"
+  - "(?i)\\bdu machst nie \\w+"
+  - "(?i)\\bdu bist so \\w+"
+  - "(?i)\\bdu verstehst nie \\w+"
+  - "(?i)\\btypisch für dich\\b"
+  - "(?i)\\bdu kannst nie \\w+"
+  - "(?i)\\bdu willst nie \\w+"
+activation:
+  rule: "ANY 1"
+window:
+  messages: 30
+scoring:
+  base: 1.5
+  weight: 0.6
+  decay: 0.03
+  formula: "logistic"
+examples:
+  - "Du machst immer alles falsch!"
+  - "Du machst nie das, was ich sage."
+  - "Du bist so egoistisch."
+  - "Du verstehst nie, was ich meine."
+  - "Typisch für dich, wieder zu spät."
+tags: [atomic, gottman, criticism, conflict, destructive]
+detect_class: null
+criteria: null
+updated_at: "2025-08-19T10:30:00Z"

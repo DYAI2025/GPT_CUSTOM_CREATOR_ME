@@ -1,0 +1,225 @@
+{
+  "version": "ld35",
+  "markers": [
+    {
+      "id": "SEM_EVIDENCE_PHRASE",
+      "family": "SEM",
+      "kind": "atomic",
+      "detects": [
+        {
+          "regex": "(mit|ohne)s+Beweis(e|en)",
+          "flags": "i",
+          "anchor_group": 0
+        },
+        {
+          "regex": "Beweislast|belegen|nachweisen",
+          "flags": "i",
+          "anchor_group": 0
+        }
+      ],
+      "severity": 0.6
+    },
+    {
+      "id": "ATO_ACCUSATION_OF_CONTROL",
+      "family": "ATO",
+      "kind": "atomic",
+      "detects": [
+        {
+          "regex": "\b(dus+(willst|versuchst)s+(michs+)?(kontrollieren|kleins+machen))\b",
+          "flags": "i",
+          "anchor_group": 0
+        },
+        { "regex": "Kontrolles+übers+mich", "flags": "i", "anchor_group": 0 }
+      ],
+      "severity": 0.7
+    },
+    {
+      "id": "ATO_GASLIGHTING_TERM",
+      "family": "ATO",
+      "kind": "atomic",
+      "detects": [
+        {
+          "regex": "\b(Gaslighting|gaslight(en|est|et)?)\b",
+          "flags": "i",
+          "anchor_group": 0
+        }
+      ],
+      "severity": 0.65
+    },
+    {
+      "id": "MEMA_ABSOLUTISM_WORD",
+      "family": "MEMA",
+      "kind": "atomic",
+      "detects": [
+        {
+          "regex": "\b(immer|niemals|grundsätzlich|überhaupts+nicht)\b",
+          "flags": "i",
+          "anchor_group": 0
+        }
+      ],
+      "severity": 0.55
+    },
+    {
+      "id": "CLU_RULE_SIGNAL",
+      "family": "CLU",
+      "kind": "atomic",
+      "detects": [
+        {
+          "regex": "Abmachung|Regel|Vereinbarung",
+          "flags": "i",
+          "anchor_group": 0
+        },
+        {
+          "regex": "\bsagens+wirs+ess+einander\b",
+          "flags": "i",
+          "anchor_group": 0
+        }
+      ],
+      "severity": 0.55
+    },
+    {
+      "id": "CLU_TRANSPARENCY_WORD",
+      "family": "CLU",
+      "kind": "atomic",
+      "detects": [
+        {
+          "regex": "\b(Transparenz|transparent|Ehrlichkeit|Klarheit)\b",
+          "flags": "i",
+          "anchor_group": 0
+        }
+      ],
+      "severity": 0.55
+    },
+    {
+      "id": "CLU_EXCLUSIVITY_WORD",
+      "family": "CLU",
+      "kind": "atomic",
+      "detects": [
+        {
+          "regex": "\b(exklusiv|Exklusivität|nurs+zwischens+uns|ausgetauscht)\b",
+          "flags": "i",
+          "anchor_group": 0
+        }
+      ],
+      "severity": 0.6
+    },
+    {
+      "id": "SEM_CATCH22_PHRASE",
+      "family": "SEM",
+      "kind": "atomic",
+      "detects": [
+        {
+          "regex": "catchs*[-–]?s*22|Doppelbindung",
+          "flags": "i",
+          "anchor_group": 0
+        }
+      ],
+      "severity": 0.6
+    },
+
+    {
+      "id": "SEM_BEWEISLAST_VERSCHIEBUNG",
+      "family": "SEM",
+      "kind": "composed",
+      "composed_of": [
+        { "marker_id": "SEM_EVIDENCE_PHRASE", "weight": 1.0 },
+        { "marker_id": "ATO_ACCUSATION_OF_CONTROL", "weight": 0.8 }
+      ],
+      "activation": "SEM_EVIDENCE_PHRASE >= 1 && (ATO_ACCUSATION_OF_CONTROL >= 1 || total_children >= 2)",
+      "span_policy": {
+        "mode": "sentence_union",
+        "max_sentence_span": 2,
+        "fallback": "anchor_window",
+        "window_tokens": [-8, 8]
+      },
+      "evidence_policy": "union",
+      "severity": 0.75
+    },
+    {
+      "id": "SEM_DOPPELBINDUNG_CATCH22",
+      "family": "SEM",
+      "kind": "composed",
+      "composed_of": [
+        { "marker_id": "SEM_CATCH22_PHRASE", "weight": 1.0 },
+        { "marker_id": "CLU_TRANSPARENCY_WORD", "weight": 0.4 }
+      ],
+      "activation": "SEM_CATCH22_PHRASE >= 1",
+      "span_policy": {
+        "mode": "sentence_union",
+        "max_sentence_span": 1,
+        "fallback": "anchor_window",
+        "window_tokens": [-6, 6]
+      },
+      "evidence_policy": "union",
+      "severity": 0.7
+    },
+    {
+      "id": "CLU_TRANSPARENZ_REGEL",
+      "family": "CLU",
+      "kind": "composed",
+      "composed_of": [
+        { "marker_id": "CLU_TRANSPARENCY_WORD", "weight": 0.8 },
+        { "marker_id": "CLU_RULE_SIGNAL", "weight": 1.0 }
+      ],
+      "activation": "CLU_RULE_SIGNAL >= 1 && CLU_TRANSPARENCY_WORD >= 1",
+      "span_policy": {
+        "mode": "clause_union",
+        "fallback": "sentence_union",
+        "max_sentence_span": 1,
+        "window_tokens": [-6, 6]
+      },
+      "evidence_policy": "union",
+      "severity": 0.7
+    },
+    {
+      "id": "CLU_EXKLUSIVITAET_SIGNAL",
+      "family": "CLU",
+      "kind": "composed",
+      "composed_of": [
+        { "marker_id": "CLU_EXCLUSIVITY_WORD", "weight": 1.0 },
+        { "marker_id": "CLU_RULE_SIGNAL", "weight": 0.5 }
+      ],
+      "activation": "CLU_EXCLUSIVITY_WORD >= 1",
+      "span_policy": {
+        "mode": "sentence_union",
+        "max_sentence_span": 1,
+        "fallback": "anchor_window",
+        "window_tokens": [-6, 6]
+      },
+      "evidence_policy": "union",
+      "severity": 0.68
+    },
+    {
+      "id": "MEMA_ABSOLUTISMEN",
+      "family": "MEMA",
+      "kind": "composed",
+      "composed_of": [{ "marker_id": "MEMA_ABSOLUTISM_WORD", "weight": 1.0 }],
+      "activation": "MEMA_ABSOLUTISM_WORD >= 2",
+      "span_policy": {
+        "mode": "sentence_union",
+        "max_sentence_span": 1,
+        "fallback": "anchor_window",
+        "window_tokens": [-5, 5]
+      },
+      "evidence_policy": "union",
+      "severity": 0.6
+    },
+    {
+      "id": "ATO_MANIPULATION_CLUSTER",
+      "family": "ATO",
+      "kind": "composed",
+      "composed_of": [
+        { "marker_id": "ATO_ACCUSATION_OF_CONTROL", "weight": 1.0 },
+        { "marker_id": "ATO_GASLIGHTING_TERM", "weight": 0.9 }
+      ],
+      "activation": "ATO_ACCUSATION_OF_CONTROL >= 1 && ATO_GASLIGHTING_TERM >= 1",
+      "span_policy": {
+        "mode": "clause_union",
+        "fallback": "anchor_window",
+        "window_tokens": [-8, 8]
+      },
+      "evidence_policy": "union",
+      "severity": 0.8
+    }
+  ]
+}

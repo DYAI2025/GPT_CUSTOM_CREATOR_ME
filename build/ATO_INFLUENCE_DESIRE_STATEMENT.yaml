@@ -1,0 +1,23 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_INFLUENCE_DESIRE_STATEMENT
+frame:
+  signal: ["influence_desire"]
+  concept: "Sehnsucht nach Einfluss/Macht"
+  pragmatics: "Führung/Steuerung anstreben"
+  narrative: "motive_power"
+tags: [influence, power]
+pattern:
+  regex: '(?i)\b(ich\s+will\s+einfluss|ich\s+will\s+gestalten|ich\s+will\s+f(?:ü|ue)hren|macht\s+haben)\b'
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich will gestalten."
+  - "Ich will Einfluss."
+  - "Ich will führen."
+  - "Ich möchte mehr lenken können."
+  - "Ich will die Richtung mitbestimmen."
+  - "Ich will Entscheidungen prägen."
+  - "Ich will Verantwortung und Einfluss."
+  - "Ich will an den Hebeln sitzen."
+  - "Ich will mitgestalten, nicht nur ausführen."
+  - "Ich will Macht haben."

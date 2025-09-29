@@ -1,0 +1,21 @@
+id: SEM_METAPHORICAL_COMMENT
+lang: de
+category: SEMANTIC
+description: "Metapher zur Beschreibung einer Situation."
+frame:
+  signal: ["wie ein", "als ob", "gleich einem"]
+  concept: "Metaphorische Beschreibung"
+  pragmatics: "Verstärkung der Aussagekraft durch Bildsprache"
+  narrative: "bildhaft"
+composed_of:
+  - ATO_METAPHOR_CUE
+  - ATO_COMPARISON_OBJECT
+activation_logic: "ANY 2 IN 3 messages"
+scoring: { base: 1.4, weight: 1.1 }
+examples:
+  - "Das fühlt sich an wie ein Marathon."
+  - "Als ob ein Vorhang gefallen wäre."
+  - "Gleich einem Sturm, der alles durcheinanderwirbelt."
+  - "Wie ein Puzzle, dem ein Teil fehlt."
+  - "Es war wie ein Tanz im Dunkeln."
+tags: [semantic, metaphor, description]

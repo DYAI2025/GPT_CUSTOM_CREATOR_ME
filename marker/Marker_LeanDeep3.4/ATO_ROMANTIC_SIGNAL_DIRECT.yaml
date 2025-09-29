@@ -1,0 +1,32 @@
+id: ATO_ROMANTIC_SIGNAL_DIRECT
+frame:
+  signal: Explizite Liebesbekundung, Wunsch nach Beziehung.
+  concept: Direktes romantisches Interesse
+  pragmatics: Initiierung einer romantischen Eskalation, Klärung der Beziehungsabsicht.
+  narrative: confession
+pattern:
+- (?i)ich (habe|hab) gefühle für dich
+- (?i)ich (steh|stehe) auf dich
+- (?i)ich liebe dich
+- (?i)ich möchte mehr als freundschaft
+- (?i)will(st)? du (mit mir )?zusammen sein
+- (?i)verliebt in dich
+examples:
+- 'Ich muss dir was sagen: Ich habe Gefühle für dich.'
+- Um ehrlich zu sein, ich stehe auf dich.
+- Ich glaube, ich bin ernsthaft in dich verliebt.
+- Ich möchte mehr als nur Freundschaft mit dir.
+- Willst du mit mir zusammen sein?
+- Ich kann mir eine feste Beziehung mit dir vorstellen.
+- Ich liebe dich, das wollte ich dir schon lange sagen.
+- Ich finde dich echt toll und möchte mehr Zeit mit dir verbringen.
+- Ich habe das Gefühl, dass wir mehr als Freunde sein sollten.
+- Ich bin in dich verliebt, und ich denke, du solltest es wissen.
+- Ich möchte, dass wir es offiziell machen.
+- Ich habe starke Gefühle für dich entwickelt.
+- Ich glaube, wir könnten ein tolles Paar abgeben.
+- 🌹😍
+ags:
+- romantic
+- direct
+- escalation

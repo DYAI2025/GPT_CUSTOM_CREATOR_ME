@@ -1,0 +1,17 @@
+id: SEM_AMBIVALENT_CLOSENESS
+version: "3.4"
+frame:
+  signal: [ "relation", "ambivalence" ]
+  concept: "Ambivalenz & Nähe/Distanz"
+  pragmatics: "Bindungsachsen Narion"
+  narrative: "hypothesis"
+tags: [ narion, ambivalence, semantic ]
+composed_of:
+- ATO_AMBIVALENZ
+activation: { rule: "AT_LEAST 2 AMBIVALENZ IN 3 messages" }
+examples:
+- "Ich vertraue dir, aber ich will, dass du zweifelst."
+- "Nähe, die keinen Namen trägt."
+- "Ich ziehe mich zurück, wenn du zu nah bist."
+- "Distanz ist kein Verrat."
+- "Ambivalenz ist meine Form."

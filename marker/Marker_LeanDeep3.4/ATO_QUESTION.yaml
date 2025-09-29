@@ -1,0 +1,19 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_QUESTION
+frame:
+  signal: ["question"]
+  concept: "Explizite Frageform"
+  pragmatics: "Informationssuche / Steuerung"
+  narrative: "interaction"
+tags: [question, interaction]
+pattern:
+  regex: "[?]$"
+  flags: ["MULTILINE"]
+examples:
+  - "Wie geht es dir?"
+  - "Kannst du das erklären?"
+  - "Was meinst du damit?"
+  - "Wann passt es dir?"
+  - "Warum war das so?"
+  - "Wo treffen wir uns?"

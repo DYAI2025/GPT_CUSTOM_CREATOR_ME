@@ -1,0 +1,23 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_RESPONSIBILITY_CLAIM
+frame:
+  signal: ["responsibility_claim"]
+  concept: "Verantwortung aktiv an sich ziehen"
+  pragmatics: "Ownership"
+  narrative: "motive_power"
+tags: [responsibility, ownership]
+pattern:
+  regex: '(?i)\b(ich\s+(?:übernehme|uebernehme)\s+die\s+verantwortung|die\s+verantwortung\s+liegt\s+bei\s+mir|ich\s+nehme\s+das\s+auf\s+meine\s+kappe)\b'
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich übernehme die Verantwortung."
+  - "Die Verantwortung liegt bei mir."
+  - "Ich nehme das auf meine Kappe."
+  - "Ich trage die Verantwortung hier."
+  - "Das verantworte ich."
+  - "Ich stehe dafür ein."
+  - "Ich übernehme das komplett."
+  - "Das ist meine Verantwortung."
+  - "Ich nehme das Thema auf mich."
+  - "Ich zeichne verantwortlich."

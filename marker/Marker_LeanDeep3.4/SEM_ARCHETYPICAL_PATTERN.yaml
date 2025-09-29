@@ -1,0 +1,29 @@
+id: SEM_ARCHETYPICAL_PATTERN
+frame:
+  signal:
+  - hero's journey
+  - underdog triumph
+  - savior narrative
+  - tragic flaw
+  - rebirth
+  concept: Archetypisches Muster
+  pragmatics: Identitätsrahmung
+  narrative: Archetypenerkennung
+composed_of:
+- ATO_PLACEHOLDER
+activation:
+  rule: ANY 2 IN 3 messages
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- Ich fühle mich wie in einer Heldenreise durch diese Herausforderung.
+- Er hat sich vom Underdog zum Gewinner hochgearbeitet.
+- Ihre Geschichte erinnert an einen Retter, der alle rettet.
+- Sein Fehler wurde zu seinem tragischen Merkmal.
+- Nach der Krise erlebte er eine Art Wiedergeburt.
+- She felt like the hero of her own story.
+- The underdog finally triumphs in the end.
+tags:
+- archetype
+- narrative

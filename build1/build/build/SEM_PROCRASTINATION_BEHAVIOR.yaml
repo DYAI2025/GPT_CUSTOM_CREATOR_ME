@@ -1,0 +1,20 @@
+id: SEM_PROCRASTINATION_BEHAVIOR
+version: "3.4"
+frame:
+  signal: ["avoidance"]
+  concept: "Ausweichverhalten statt Aufgabe"
+  pragmatics: "Busy-Work"
+  narrative: "task_flow"
+tags: [procrastination]
+composed_of:
+  - ATO_PROCRASTINATION_CUES
+  - ATO_DELAYING_PHRASES
+activation:
+  rule: "BOTH IN 1 message OR ANY 2 IN 2 messages"
+scoring: { base: 0.55, weight: 1.0 }
+examples:
+  - "Erst recherchieren – morgen dann."
+  - "Noch vorbereiten – nach dem Meeting."
+  - "Nicht perfekt – später besser."
+  - "Brauche Inspiration – gleich."
+  - "Aufschub – wenn Zeit."

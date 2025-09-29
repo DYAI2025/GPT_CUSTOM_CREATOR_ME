@@ -1,0 +1,24 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_PROBLEM_SOLVING
+frame:
+  signal: ["problem_solving"]
+  concept: "Lösungsorientierung / Agency"
+  pragmatics: "Handlungsinitiativen / nächste Schritte"
+  narrative: "agency"
+tags: [agency, solution]
+pattern:
+  regex: "(?i)\\b(lass\\s+uns|wir\\s+können|nächster\\s+schritt|plan|konkret\\s+machen|ich\\s+übernehme|ich\\s+kümmere\\s+mich)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Lass uns konkrete Schritte festhalten."
+  - "Wir können das so lösen."
+  - "Nächster Schritt: Termin ansetzen."
+  - "Plan: erst X, dann Y."
+  - "Ich übernehme den ersten Teil."
+  - "Ich kümmere mich um die Anfrage."
+  - "Ich kläre das mit XY."
+  - "Konkreter Schritt: Ticket erstellen."
+  - "Ich schreibe die Liste und priorisiere."
+  - "Wir teilen die Aufgaben auf."
+  - "Ich setze den Termin jetzt auf morgen."

@@ -1,0 +1,30 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_INFLUENCE_ORIENTATION
+frame:
+  signal: ["influence_orientation"]
+  concept: "Einfluss/Macht anstreben, Richtung vorgeben"
+  pragmatics: "Führungs-/Steuerungssprache"
+  narrative: "motive_power"
+tags: [power, control, influence]
+composed_of:
+  any_of:
+    - ATO_INFLUENCE_DESIRE_STATEMENT
+    - ATO_POWER_LANGUAGE
+    - ATO_CONTROL_PHRASES
+    - ATO_SOVEREIGNTY_OVER_SUBJECT
+activation:
+  rule: "AT_LEAST 2 IN 4 messages"
+  window: 4
+scoring: { base: 0.65, weight: 1.10 }
+examples:
+  - "Ich will führen – wir machen das jetzt so."
+  - "Ich will gestalten – bleib im Rahmen."
+  - "Ich will Einfluss – ich setze den Kurs."
+  - "Ich bestimme die Richtung hier."
+  - "Ich will mitentscheiden – wir gehen Pfad A."
+  - "Ich gebe die Leitplanken vor."
+  - "Ich setze den Rahmen, du füllst aus."
+  - "Ich will lenken, nicht nur ausführen."
+  - "Ich führe das Team durch die Entscheidung."
+  - "Ich präge die Prioritätenliste."

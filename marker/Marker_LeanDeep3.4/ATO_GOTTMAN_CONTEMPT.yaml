@@ -1,0 +1,38 @@
+id: ATO_GOTTMAN_CONTEMPT
+schema_version: "LD-3.2"
+version: "1.0.0"
+last_updated: "2025-08-19"
+lang: de
+category: ATOMIC
+description: "Spott, Hohn, Überlegenheitsgesten (inkl. 🙄/🤦); herabsetzende Sprache."
+frame:
+  signal: ["Lächerlich", "Armselig", "Wie dumm …", "So peinlich", "Augenrollen/Facepalm"]
+  concept: "Verachtung / Überlegenheit"
+  pragmatics: "Demütigung, Statusabwertung"
+  narrative: "derision"
+pattern:
+  - '(?i)\blächerlich\b'
+  - '(?i)\barmselig\b'
+  - '(?i)\bwie\s+dumm\b'
+  - '(?i)\bso\s+peinlich\b'
+  - '(?i)\bna\s+klar,\s*meister\b'
+  - '(?i)\b(facepalm|eyeroll|augenrollen)\b'
+  - '[🙄🤦]'
+  - '(?i)\bbravo,\s*großartig\b(?=.*(sarkastisch|ironisch))?'
+  - '(?i)\btypisch\b(?=.*\bdu\b)'
+activation_logic: "ANY 1"
+window:
+  messages: 3
+scoring:
+  base: 1.2
+  weight: 1.1
+examples:
+  - "Wie dumm kann man sein?"
+  - "Das ist einfach lächerlich."
+  - "Armselig, wirklich."
+  - "So peinlich, typisch."
+  - "Na klar, Meister der Ausreden."
+  - "🙄"
+  - "Bravo, großartig – sarkastisch gemeint."
+  - "Typisch du, kapierst es nie."
+tags: [atomic, conflict, gottman, contempt]

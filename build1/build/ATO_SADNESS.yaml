@@ -1,0 +1,37 @@
+id: ATO_SADNESS
+frame:
+  signal:
+  - traurig
+  - ich weine
+  - niedergeschlagen
+  - melancholisch
+  - leer
+  - deprimiert
+  - down
+  concept: Traurigkeit
+  pragmatics: negative Valenz
+  narrative: Emotionsausdruck
+pattern:
+- (?i)\b(traurig|ich weine|niedergeschlagen|melancholisch|leer|deprimiert|down)\b
+activation:
+  rule: ANY 1
+examples:
+  positive:
+    - "Ich bin traurig."
+    - "Ich weine."
+    - "Ich fühle mich niedergeschlagen."
+    - "Ich bin melancholisch."
+    - "Ich fühle mich leer."
+    - "Ich bin deprimiert."
+    - "Ich bin down."
+    - "Ich bin untröstlich."
+    - "Ich bin verzweifelt."
+    - "Ich bin am Boden zerstört."
+    - "Mir kommen die Tränen."
+    - "Ich könnte nur noch weinen."
+    - "Es zieht mich runter."
+    - "Alles fühlt sich schwer an."
+    - "Mir fehlt die Kraft."
+  negative: []
+tags:
+- sadness

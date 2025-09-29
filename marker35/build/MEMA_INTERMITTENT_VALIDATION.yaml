@@ -1,0 +1,35 @@
+id: MEMA_INTERMITTENT_VALIDATION
+version: "3.3"
+frame:
+  signal: ["Wechsel zwischen Idealisierung und Entwertung"]
+  concept: "Intermittierende Verstärkung"
+  pragmatics: "Emotionale Abhängigkeitserzeugung"
+  narrative: "trauma_bonding"
+temporal_pattern:
+  phase_1: "positive_validation"
+  phase_1_markers: ["liebe", "perfekt", "unglaublich", "❤️", "🥰", "fantastisch", "wunderbar"]
+  phase_2: "withdrawal_criticism"  
+  phase_2_markers: ["nicht verstehen", "frage mich", "enttäuscht", "erwarte mehr", "nicht unterstützend"]
+  delay_window: "24-72h"
+activation:
+  rule: "TEMPORAL SHIFT DETECTED"
+window:
+  messages: 50
+  temporal_window: "72h"
+scoring:
+  base: 3.2
+  weight: 0.92
+  decay: 0.005
+  formula: "logistic"
+psychological_indicators:
+  - trauma_bonding
+  - narcissistic_traits
+  - attachment_manipulation
+  - intermittent_reinforcement
+examples:
+  - "Ich liebe es, wie du immer genau weißt, was du sagen musst ❤️" 
+  - "Du bist unglaublich, ich wüsste nicht, was ich ohne dich täte"
+  - "Ich weiß nicht, warum du nicht unterstützender sein kannst"
+  - "Manchmal frage ich mich, ob dir diese Beziehung überhaupt wichtig ist"
+tags: [meta, validation, trauma_bonding, manipulation, narcissistic]
+schema_version: "3.3"

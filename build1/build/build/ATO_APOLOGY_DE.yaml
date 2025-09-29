@@ -1,0 +1,24 @@
+id: ATO_APOLOGY_DE
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Entschuldigung / Reue"
+  concept: "Fehleranerkennung"
+  pragmatics: "Beziehungsreparatur durch Übernahme"
+  narrative: "Verantwortungsübernahme"
+pattern:
+  - '(?i)\bsorry\b'
+  - '(?i)\bentschuldig\w*\b'
+  - '(?i)\btut\s+mir\s+leid\b'
+  - '(?i)\bmein(e|en)?\s+fehler\b'
+  - '(?i)\bdafür\s+übernehme\s+ich\s+die\s+verantwortung\b'
+examples:
+  - "Sorry, das war nicht okay."
+  - "Es tut mir leid."
+  - "Entschuldige bitte."
+  - "Mein Fehler."
+  - "Dafür übernehme ich die Verantwortung."
+  - "Ich hätte anders handeln sollen – tut mir leid."
+  - "Ich entschuldige mich dafür."
+tags: [apology, repair, atomic]

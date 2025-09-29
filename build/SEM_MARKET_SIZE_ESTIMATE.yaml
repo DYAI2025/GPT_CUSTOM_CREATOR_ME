@@ -1,0 +1,23 @@
+id: SEM_MARKET_SIZE_ESTIMATE
+version: "3.4"
+frame:
+  signal: ["semantic","market"]
+  concept: "market_size_claim"
+  pragmatics: "opportunity"
+  narrative: "estimation"
+composed_of:
+  - ATO_NUMERIC_ESTIMATE
+  - ATO_FINANCIAL_TERM
+activation:
+  rule: "ANY 2 IN 2 messages"
+examples:
+  - "Total Addressable Market etwa 1M Kunden."
+  - "Der Markt hat ein Volumen von 3 Mrd."
+  - "Adressierbarer Markt circa 800k Unternehmen."
+  - "Wir schätzen Marktgröße auf 12B €."
+  - "Servicierbarer Markt aktuell 250k Firmen."
+  - "Erweiterte Opportunity >5M potentielle Nutzer."
+  - "Langfristig TAM Richtung 20B Umsatz."
+scoring:
+  base: 0.6
+  weight: 1.9

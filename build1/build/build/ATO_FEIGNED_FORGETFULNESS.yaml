@@ -1,0 +1,26 @@
+id: ATO_FEIGNED_FORGETFULNESS
+contentReference_description: oaicite:11{index=11}
+frame:
+  signal:
+  - ganz vergessen
+  - Ist mir entfallen
+  - Ist mir entgangen
+  - ehrlich vergessen
+  - nicht auf dem Schirm
+  concept: feigned forgetfulness
+  pragmatics: evasion
+  narrative: excuse
+pattern:
+- (?i)\bvergessen\b
+- (?i)\bentfallen\b
+- (?i)\bentgangen\b
+activation:
+  rule: '{''type'': ''ANY'', ''count'': 1}'
+contentReference: oaicite:12{index=12}
+examples:
+- '[Example placeholder 1]'
+- '[Example placeholder 2]'
+- '[Example placeholder 3]'
+- '[Example placeholder 4]'
+- '[Example placeholder 5]'
+tags: []

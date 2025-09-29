@@ -1,0 +1,18 @@
+id: ATO_CONTROL_PHRASES
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for controlling language
+frame:
+  signal: ["control"]
+  concept: "Control signal"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\b(you should|you must|you have to|you need to)\\b"]
+examples:
+  - "You should do what I say."
+  - "You must follow my rules."
+  - "You have to agree with me."
+  - "You need to change your mind."
+  - "You ought to listen to me."
+tags: [atomic, v3.3, auto-generated]

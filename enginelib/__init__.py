@@ -1,6 +1,6 @@
-"""Compatibility layer re-exporting marker manager engine modules."""
+"""Compatibility layer that forwards legacy imports to the canonical engine."""
 
-from marker_manager.enginelib import MarkerCatalog, StateStore
-from marker_manager.enginelib.marker_catalog import MarkerCatalogResult
+from marker_manager import enginelib as _canonical_enginelib  # type: ignore
+from marker_manager.enginelib import *  # noqa: F401,F403
 
-__all__ = ["MarkerCatalog", "MarkerCatalogResult", "StateStore"]
+__all__ = getattr(_canonical_enginelib, "__all__", [])  # type: ignore

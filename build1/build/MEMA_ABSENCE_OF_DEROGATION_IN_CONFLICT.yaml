@@ -1,0 +1,51 @@
+id: MEMA_ABSENCE_OF_DEROGATION_IN_CONFLICT
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Konflikt ohne Beleidigungen"
+  concept: "Omission: Derogation fehlt"
+  pragmatics: "Selbstregulation im Streit"
+  narrative: "controlled_deescalation"
+detect_class: "absence_meta"
+criteria:
+  target_set: "derogation"
+  window_messages: 30
+  min_E_hits: 3
+  strict_zero: true
+activation:
+  rule: "CONFLICT_WINDOW_END"
+window:
+  messages: 30
+scoring:
+  base: 2.2
+  weight: 0.6
+  decay: 0.0
+  formula: "linear"
+examples:
+  - |
+    A: Du hast gestern wieder nicht geschrieben.
+    B: Ich war überfordert, es tut mir leid.
+    A: So geht das nicht weiter.
+    B: Lass uns das heute in Ruhe klären.
+  - |
+    A: Ich habe das Gefühl, du hörst mir nicht zu.
+    B: Ich verstehe, dass dich das verletzt.
+    A: Ich brauche mehr Verlässlichkeit.
+    B: Okay, ich kann das anpassen.
+  - |
+    A: Warum kommst du immer zu spät?
+    B: Mein Fehler, ich plane schlecht.
+    A: Dann sag wenigstens vorher Bescheid.
+    B: Mache ich.
+  - |
+    A: Du hast die Abmachung gebrochen.
+    B: Stimmt, das war nicht okay.
+    A: Bitte nimm das ernst.
+    B: Ja, ich übernehme Verantwortung.
+  - |
+    A: Das fühlt sich unfair an.
+    B: Danke, dass du es sagst.
+    A: Ich will verstehen, was bei dir los ist.
+    B: Ich erklär's dir gern.
+tags: [mema, omission, deeskalation, positiv]

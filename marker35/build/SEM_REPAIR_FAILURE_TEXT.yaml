@@ -1,0 +1,30 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "ld34_text_social_grammar"
+id: SEM_REPAIR_FAILURE_TEXT
+lang: de
+category: SEMANTIC
+description: "Reparaturinitiativen bleiben erfolglos und enden im Themenwechsel."
+frame:
+  signal: ["'hä?/wer?' gefolgt von keiner Klärung und Umschalten"]
+  concept: "Reparatur scheitert"
+  pragmatics: "Kooperationsbruch, Missverständnisverfestigung"
+  narrative: "offene Schleife"
+composed_of:
+  - ATO_REPAIR_REQUEST
+activation_logic: "ANY 1 IN 3 messages"
+scoring: { base: 1.4, weight: 1.1 }
+examples:
+  - "Hä?... egal, anderes Thema."
+  - "Wie bitte?... lassen wir’s, weiter."
+  - "Wer?... egal, zurück zum Budget."
+  - "Was meinst du?... passt schon, nächster Punkt."
+  - "Hä?... anyway, zum Meeting morgen."
+  - "Wie bitte?... egal, weiter geht’s."
+  - "Wer?... egal, anderes Thema."
+  - "Was meinst du?... egal, zurück."
+tags: [semantic, repair_failure]
+metadata:
+  justification: "1 ATO plus Sequenzbedingung (fehlende Antwort)."
+  repair_log:
+    - { rule: "R07", note: "1-ATO gerechtfertigt", date: "2025-08-29" }

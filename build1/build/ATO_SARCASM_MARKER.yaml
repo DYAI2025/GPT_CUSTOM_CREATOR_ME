@@ -1,0 +1,17 @@
+id: ATO_SARCASM_MARKER
+version: "3.4"
+frame:
+  signal: ["sarcasm"]
+  concept: "Sarkasmus-Hinweise"
+  pragmatics: "Kontextinvertierung"
+  narrative: "tone"
+tags: [sarcasm, tone]
+pattern:
+  regex: "(\\bja\\s*klar\\b|\\bna\\s*toll\\b|\".*\"\\s*|-\\s*/s\\b)"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ja klar."
+  - "Na toll."
+  - "\"Super gemacht\" (ironisch)."
+  - "fantastisch… /s"
+  - "‚Ganz großartig.‘"

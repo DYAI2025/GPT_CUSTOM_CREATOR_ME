@@ -1,0 +1,23 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_EVAL_PRIOR
+frame:
+  signal: ["eval_prior"]
+  concept: "Frührahmung / Vorbewertung"
+  pragmatics: "Maßstab setzen, bevor alles vorliegt"
+  narrative: "evaluation"
+tags: [evaluation, framing]
+composed_of:
+  any_of:
+    - ATO_PREMATURE_CLOSURE
+    - ATO_CLOSE
+    - ATO_PACING
+activation:
+  rule: "AT_LEAST 2 IN 4 messages"
+  window: 4
+examples:
+  - "Alles gesagt – reicht."
+  - "Passt – wir entscheiden jetzt."
+  - "Später Details – heute nur Go/No-Go."
+  - "Deadline jetzt – Rest danach."
+  - "Fertig, das genügt."

@@ -1,0 +1,19 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_TOPIC_SPLIT
+frame:
+  signal: ["topic_split"]
+  concept: "Themen entkoppeln / splitten"
+  pragmatics: "Komplexitätsreduktion / Abgrenzung"
+  narrative: "process"
+tags: [topic, split]
+pattern:
+  regex: '(?i)\b(das trennen wir|gehört hier nicht rein|anderes\s+thema|separat behandeln|ausklammern)\b'
+  flags: ["IGNORECASE"]
+examples:
+  - "Das trennen wir."
+  - "X gehört hier nicht rein."
+  - "Anderes Thema, bitte separat."
+  - "Lass uns das separat behandeln."
+  - "Den Teil klammern wir aus."
+  - "Das gehört in einen separaten Thread."

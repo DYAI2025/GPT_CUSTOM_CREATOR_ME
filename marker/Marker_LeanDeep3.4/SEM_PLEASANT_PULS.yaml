@@ -1,0 +1,33 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_PLEASANT_PULS
+frame:
+  signal: ["pleasant_puls"]
+  concept: "Ruhiger, gleichmäßiger, ausgeglichener Gesprächspuls"
+  pragmatics: "Stabilität / Sicherheit"
+  narrative: "regulation"
+tags: [pleasant, steady, regulation]
+constraints:
+  min_dialog_messages: 10
+  exclude_tags: [unrest, escalation, drift]
+composed_of:
+  required:
+    - ATO_PLACEHOLDER
+  any_of:
+    - ATO_CONFIRM
+    - ATO_ACKNOWLEDGE
+activation:
+  rule: "PLACEHOLDER >= 2 IN 10 AND (CONFIRM >= 4 IN 10 OR ACKNOWLEDGE >= 4 IN 10 OR (CONFIRM >= 2 IN 10 AND ACKNOWLEDGE >= 2 IN 10))"
+  window: 10
+scoring: { base: 0.55, weight: 1.0 }
+examples:
+  - "<placeholder> – passt. – ok, gesehen. – <placeholder> – einverstanden."
+  - "<tbd> – verstanden – notiert – <ref_missing> – passt für mich."
+  - "<todo> – ok – gesehen – <null> – ja, genau."
+  - "<placeholder> – einverstanden – ok – <tbd> – passt."
+  - "<ref_missing> – verstanden – zur Kenntnis – <placeholder> – passt so."
+  - "<placeholder> – ok – <placeholder> – passt – gesehen."
+  - "<tbd> – einverstanden – <todo> – zur Kenntnis – passt."
+  - "<null> – verstanden – <placeholder> – ok – passt so."
+  - "<placeholder> – notiert – <placeholder> – ok – passt für mich."
+  - "<ref_missing> – ok – <tbd> – gesehen – passt."

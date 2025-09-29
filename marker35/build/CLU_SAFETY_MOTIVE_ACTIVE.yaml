@@ -1,0 +1,40 @@
+schema: "LeanDeep"
+version: "3.4"
+id: CLU_SAFETY_MOTIVE_ACTIVE
+level: "CLU"
+frame:
+  signal: ["safety_motive_active"]
+  concept: "Sicherheits-/Ruhemotiv dominiert Interaktion"
+  pragmatics: "Vermeidung, Stabilisierung, Beruhigung"
+  narrative: "motive_safety"
+tags: [safety, reassurance, stability]
+requires:
+  sem_pool:
+    - SEM_SAFETY_ORIENTATION
+    - SEM_STABILITY_PRESERVATION
+    - SEM_REASSURANCE_DRIVE
+activation:
+  window: 6
+  rule:
+    all_of:
+      - "SEM_SAFETY_ORIENTATION >= 2"
+      - "SEM_STABILITY_PRESERVATION >= 1"
+    any_of:
+      - "SEM_REASSURANCE_DRIVE >= 1"
+inhibitors:
+  - "SEM_CLEAR_COMMITMENT >= 1 in last 3"
+fire_when: "conditions_met_first_time"
+scoring:
+  base: 0.72
+  weights:
+    SEM_SAFETY_ORIENTATION: 0.4
+    SEM_STABILITY_PRESERVATION: 0.35
+    SEM_REASSURANCE_DRIVE: 0.25
+evidence_capture:
+  keep_snippets: 5
+examples:
+  - "Bloß nichts ändern – Bist du sicher? – Thema stabil halten."
+  - "Risiken vermeiden – im gewohnten Rahmen bleiben – kurzer Reassurance‑Ping."
+  - "Ruhiges Leben – Status quo – passt das so?"
+  - "Kein Experiment – Thread geschlossen – Sicherheit prüfen."
+  - "Planbar und ruhig – bitte nichts aufmachen – alles gut?"

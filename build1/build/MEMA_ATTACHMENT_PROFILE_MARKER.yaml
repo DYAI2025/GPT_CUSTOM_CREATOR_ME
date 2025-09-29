@@ -1,0 +1,18 @@
+id: MEMA_ATTACHMENT_PROFILE_MARKER
+frame:
+  signal: ["dominante Bindungsmuster", "Attachment-Cluster", "konsistent sichere Muster"]
+  concept: "Bindungsprofil-Analyse"
+  pragmatics: "Meta-Marker für dominante Bindungsmuster"
+  narrative: "Langzeit-Analyse von Bindungsverhalten"
+composed_of:
+  - CLU_ATTACHMENT_STYLE_AVOIDANT_MARKER
+  - CLU_INNER_EMPTINESS_MARKER
+  - SEM_CARING_FRIEND_EXPRESSIONS_MARKER
+activation:
+  rule: "ANY 1 IN 3 chunks"
+examples:
+  - "Nach Langzeit-analyse zeigt der Sprecher konsistent sichere Muster."
+  - "Drei Gesprächssegmente hintereinander aktivieren Avoidant-Cluster → Profil = vermeidend."
+  - "Secure- und Anxious-Cluster wechseln, doch Anxious überwiegt drei Chunks lang."
+  - "System meldet: 'Dominanter Stil: Secure (p = 0.82)'."
+  - "Profilergebnis wird als Feature an Coaching-Modul übergeben."

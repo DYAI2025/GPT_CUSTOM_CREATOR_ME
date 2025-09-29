@@ -1,0 +1,17 @@
+id: ATO_PROCRASTINATION_CUES
+version: "3.4"
+frame:
+  signal: ["avoidance"]
+  concept: "Ausweich-/Busy-Work-Indikatoren"
+  pragmatics: "Prokrastinationsmuster"
+  narrative: "task_flow"
+tags: [procrastination]
+pattern:
+  regex: "\\b(noch\\s+vorbereiten|erst\\s+recherchieren|brauche\\s+Inspiration|nicht\\s+perfekt|später\\s+besser)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich muss noch vorbereiten."
+  - "Erst recherchieren."
+  - "Brauche Inspiration."
+  - "Noch nicht perfekt."
+  - "Später wird’s besser."

@@ -1,0 +1,30 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_META_NAVIGATION
+frame:
+  signal: ["meta_navigation"]
+  concept: "Aktives Steuern auf Meta-/Rahmenebene"
+  pragmatics: "Kontext- und Prozessführung"
+  narrative: "coordination"
+tags: [meta, context, navigation]
+composed_of:
+  any_of:
+    - ATO_STYLE_REFERENCE
+    - SEM_CONTEXT_SWITCH
+  optional:
+    - ATO_TOPIC_SPLIT
+activation:
+  rule: "AT_LEAST 2 IN 3 messages"
+  window: 3
+scoring: { base: 0.6, weight: 1.08 }
+examples:
+  - "Meta: Erst Struktur, dann Inhalte."
+  - "Wir wechseln die Ebene: Kriterien definieren."
+  - "Stilwechsel: knapp & technisch – danach Details."
+  - "Kurz auf Meta: Was ist das Ziel des Calls?"
+  - "Kontext setzen, dann wieder in die Sachebene."
+  - "Wir parken das – eigener Thread gleich danach."
+  - "Meta-Check, dann zurück zum Inhalt."
+  - "Rahmen anpassen: erst Scope, dann priorisieren."
+  - "Bitte im Stil von gestern – kurzes Update."
+  - "Kontext-Switch: Proof-Phase starten."

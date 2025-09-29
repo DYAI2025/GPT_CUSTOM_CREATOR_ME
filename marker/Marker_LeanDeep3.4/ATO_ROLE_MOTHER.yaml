@@ -1,0 +1,41 @@
+id: ATO_ROLE_MOTHER
+display_title: "Familienrolle: Mutter"
+version: "3.3"
+lang: de
+category: ATOMIC
+description: "Erkennung von Bezugnahmen auf die Mutter (Mutterrollen-Lexeme)."
+frame:
+  signal: 
+    - "Mutter"
+    - "Mama"
+    - "Mom"
+    - "meine Mutter"
+    - "deine Mutter"
+  concept: "Familienrolle: Mutter"
+  pragmatics: "Rollen- und Fürsorgebezug"
+  narrative: "Rollenmarkierung"
+pattern:
+  - "(?i)\\bMutter\\b"
+  - "(?i)\\bMama\\b"
+  - "(?i)\\bMom\\b"
+  - "(?i)\\bmein(e[rn]? )?Mutter\\b"
+  - "(?i)\\bdein(e[rn]? )?Mutter\\b"
+activation:
+  rule: "ANY 1"
+window:
+  messages: 30
+scoring:
+  base: 1.2
+  weight: 0.4
+  decay: 0.01
+  formula: "logistic"
+examples:
+  - "Mama bringt dich morgen zur Schule."
+  - "Meine Mutter hat angerufen."
+  - "Deine Mutter ist schon unterwegs."
+  - "Als Mutter mache ich mir Sorgen."
+  - "Sprich das bitte erst mit Mama ab."
+tags: [atomic, family, role]
+detect_class: null
+criteria: null
+updated_at: "2025-08-19T10:30:00Z"

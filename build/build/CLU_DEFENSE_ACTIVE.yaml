@@ -1,0 +1,32 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "ld34_text_social_grammar"
+id: CLU_DEFENSE_ACTIVE
+lang: de
+category: CLUSTER
+description: "Aktivierte Abwehrmechanismen über mehrere Nachrichten."
+frame:
+  signal: ["Mehrere Abwehr-SEMs in kurzem Fenster"]
+  concept: "Abwehr aktiv (Text)"
+  pragmatics: "Selbstschutz priorisiert, Kontaktqualität sinkt"
+  narrative: "Abwehrschub"
+composed_of:
+  - { marker_ids: [SEM_AFFECT_ISOLATION_TEXT], weight: 0.34 }
+  - { marker_ids: [SEM_REACTION_FORMATION_TEXT], weight: 0.33 }
+  - { marker_ids: [SEM_PROJECTION_TEXT], weight: 0.33 }
+activation_logic: "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
+window: { messages: 15 }
+scoring: { base: 1.8, weight: 1.3, decay: 0.01 }
+examples:
+  - "Objektiv... aber eigentlich super — Du bist egoistisch."
+  - "Rational betrachtet... aber hey toll — Ihr seid unsicher."
+  - "Logisch gesehen... aber schön — Du bist arrogant."
+  - "Statistisch... aber spannend — Ihr seid unfähig."
+  - "Aus Gründen der... aber na ja — Du bist egoistisch."
+  - "Objektiv… aber gut — Du bist faul."
+  - "Rational… aber top — Ihr seid arrogant."
+  - "Logisch… aber nice — Du bist unsicher."
+tags: [cluster, defense]
+metadata:
+  repair_log:
+    - { rule: "R10", note: "CLU-Defaults für window/scoring gesetzt", date: "2025-08-29" }

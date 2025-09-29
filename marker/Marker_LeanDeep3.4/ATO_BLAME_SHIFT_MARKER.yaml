@@ -1,0 +1,32 @@
+id: ATO_BLAME_SHIFT_MARKER
+frame:
+  signal:
+  - Schuldzuweisungsmuster
+  concept: Verantwortungsabwälzung
+  pragmatics: Verantwortlichkeit vermeiden
+  narrative: abwälzen
+pattern:
+- (?i)\\bdu\ nicht\\b
+- (?i)\\bdu\ hast\\b
+- (?i)\\bnicht\ ich\.\\b
+- (?i)\\bwenn\ du\\b
+- (?i)\\bselber\ schuld\\b
+examples:
+- Wenn du nicht widersprechen würdest, gäbe es keinen Streit.
+- Du stellst dich an, nicht ich.
+- Du hast doch selbst drum gebeten, also beschwer dich nicht.
+- Wenn du nicht dauernd nörgeln würdest, wär es entspannt.
+- Du regst dich sinnlos auf, darum eskaliert das.
+- Weil du gestern nicht geantwortet hast, ist alles liegengeblieben.
+- Du hast das Chaos verursacht, nicht ich.
+- Hättest du richtig zugehört, müsste ich das nicht erklären.
+- Selber schuld, wenn du so empfindlich bist.
+- Wegen dir ist das Projekt ins Stocken geraten.
+- Du bist doch derjenige, der ständig Termine verschiebt.
+- Wenn du nicht immer so spät wärst, hätten wir das Problem nicht.
+- Nicht meine Schuld, du hast mich nicht informiert.
+- Wärst du früher dran gewesen, gäb's das Problem nicht.
+- Wenn du pünktlich wärst, müssten wir jetzt nicht diskutieren.
+tags:
+- schuld
+- abwälzung

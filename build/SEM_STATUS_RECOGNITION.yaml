@@ -1,0 +1,29 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_STATUS_RECOGNITION
+frame:
+  signal: ["status_recognition"]
+  concept: "Anerkennung/Bewunderung anstreben oder anzeigen"
+  pragmatics: "Selbstwert über soziale Spiegelung"
+  narrative: "motive_achievement"
+tags: [recognition, status]
+composed_of:
+  any_of:
+    - ATO_RECOGNITION_SEEKING
+    - ATO_STATUS_SIGNALING
+    - ATO_SUPERLATIVE_SELF_REFERENCE
+activation:
+  rule: "AT_LEAST 2 IN 3 messages"
+  window: 3
+scoring: { base: 0.60, weight: 1.06 }
+examples:
+  - "Wie kommt das an? – Ich bin der Beste darin."
+  - "Bekomme ich dafür Anerkennung? – Award gewonnen."
+  - "Findest du das gut? – Top‑Uni, beste Noten."
+  - "Kriege ich Credit? – Wir sind Marktführer."
+  - "Kommt das gut an? – Nr. 1 in der Kategorie."
+  - "Siehst du meine Leistung? – Auszeichnung erhalten."
+  - "Wird das wertgeschätzt? – Beste Noten im Abschluss."
+  - "Bekomme ich Sichtbarkeit? – Award gewonnen."
+  - "Wie wirkt das? – Wir führen den Markt an."
+  - "Ist das beeindruckend genug? – Prämiert als Team."

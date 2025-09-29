@@ -1,0 +1,42 @@
+schema: "LeanDeep"
+version: "3.4"
+id: MEMA_SAFETY_REASSURE_AND_PLAN
+level: "MEMA"
+frame:
+  signal: ["safety_reassure_plan"]
+  concept: "Sicherheitsmotive werden durch Beruhigung + Plan + Abschluss reguliert"
+  pragmatics: "Beruhigen → Rahmen fixieren → verbindlicher Plan"
+  narrative: "tension→resolution"
+tags: [reassurance, plan, closure]
+requires:
+  clu_pool:
+    - CLU_SAFETY_MOTIVE_ACTIVE
+  sem_pool:
+    - SEM_DEESCALATION
+    - SEM_CONSENSUS_SIGNAL
+    - SEM_CLOSURE_PROTOCOL
+activation:
+  window: 10
+  rule:
+    all_of:
+      - "CLU_SAFETY_MOTIVE_ACTIVE >= 1 in last 6"
+      - "SEM_DEESCALATION >= 1 in last 4"
+      - "SEM_CONSENSUS_SIGNAL >= 1 in last 3"
+      - "SEM_CLOSURE_PROTOCOL >= 1 in last 4"
+  inhibitors:
+    - "SEM_REASSURANCE_DRIVE >= 1 AFTER SEM_CLOSURE_PROTOCOL"
+fire_when: "conditions_met_first_time"
+scoring:
+  base: 0.80
+  weights:
+    CLU_SAFETY_MOTIVE_ACTIVE: 0.20
+    SEM_DEESCALATION: 0.25
+    SEM_CONSENSUS_SIGNAL: 0.25
+    SEM_CLOSURE_PROTOCOL: 0.30
+evidence_capture: { keep_snippets: 6 }
+examples:
+  - "Sicherheit gesucht → deeskaliert → Einigung → sauberer Abschluss."
+  - "Risikoangst → beruhigen → Agreement → Haken dran."
+  - "Status‑quo‑Wunsch → Klarheit → Konsens → Close."
+  - "Reassurance‑Loop → Pause → Abgleich → Abschlussprotokoll."
+  - "Ruhebedürfnis → Rahmen fix → Confirm→Close."

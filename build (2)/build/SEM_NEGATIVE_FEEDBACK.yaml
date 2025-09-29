@@ -1,0 +1,20 @@
+id: SEM_NEGATIVE_FEEDBACK
+version: "3.4"
+frame:
+  signal: ["critique"]
+  concept: "Deutliche Abwertung/Kritik"
+  pragmatics: "Konflikt-Trigger"
+  narrative: "conflict"
+tags: [critique, conflict]
+composed_of:
+  - ATO_NEGATIVE_FEEDBACK_TOKEN
+  - ATO_ATTRIBUTION_ERROR
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.55, weight: 1.0 }
+examples:
+  - "Das ist lächerlich – typisch für dich."
+  - "Awful outcome, du bist eben so."
+  - "Mangelhaft, Charaktersache."
+  - "Nutzlos, das bist du halt."
+  - "Schlecht – so jemand wie du."

@@ -1,0 +1,36 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_PASSIVE_AGGRESSION
+lang: de
+frame:
+  signal: ["passiv-aggressive Sticheleien"]
+  concept: "Indirekte Angriffe (Sarkasmus, Sticheleien)"
+  pragmatics: "Gesicht wahren bei gleichzeitiger Eskalation"
+  narrative: "indirect_evaluation"
+composed_of:
+  - ATO_SARCASM
+  - ATO_BARBED_COMMENT
+activation:
+  rule: "ANY 2 IN 3 messages"
+  window:
+    messages: 5
+scoring:
+  base: 1.3
+  weight: 1.0
+examples:
+  positive:
+    - "Na, das hast du ja wieder toll hinbekommen."
+    - "Schön für dich, dass bei dir immer alles so einfach ist."
+    - "Ist ja nicht so, als hätte ich es dir nicht gesagt."
+    - "Keine Sorge, ich mach das schon. Wie immer."
+    - "Interessante Entscheidung. Mal sehen, wo das hinführt."
+    - "Ich bin beeindruckt von deinem Engagement." # sarkastisch
+    - "Du bist ja ein echter Experte." # sarkastisch
+    - "Muss schön sein, so sorglos durchs Leben zu gehen."
+    - "Ich wünschte, ich hätte deine Probleme."
+    - "Wenn du meinst, dass das richtig ist..."
+  negative: []
+tags:
+  - semantic
+  - aggression
+  - indirect

@@ -1,0 +1,21 @@
+id: ATO_LOYALTY_CONFLICT
+version: "3.3"
+frame:
+  signal: ["hin- und hergerissen", "beiden gerecht", "verraten fühle"]
+  concept: "Loyalitätskonflikt"
+  pragmatics: "Innere Zerrissenheit"
+  narrative: "conflict"
+pattern:
+  - "(?i)\\b(hin.?und.?her.?gerissen)\\b"
+  - "(?i)\\b(beiden gerecht|allen gerecht)\\b"
+  - "(?i)\\b(verraten fühle?|verrate)\\b"
+  - "(?i)\\b(zwischen.{0,10}stühlen)\\b"
+  - "(?i)\\b(loyal(ität)?.{0,10}konflikt)\\b"
+examples:
+  - "Ich bin hin- und hergerissen zwischen euch beiden"
+  - "Ich will beiden gerecht werden"
+  - "Ich fühle mich wie ein Verräter"
+  - "Zwischen zwei Stühlen sitzen"
+  - "Dieser Loyalitätskonflikt zerreißt mich"
+tags: [atomic, konflikt, loyalität, familie]
+schema_version: "3.3"

@@ -1,0 +1,24 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_STYLE_REFERENCE
+frame:
+  signal: ["style_reference"]
+  concept: "Expliziter Stil-/Ton-Verweis"
+  pragmatics: "Meta-Kommunikation / Rahmung"
+  narrative: "interaction"
+tags: [style, meta]
+pattern:
+  regex: "\\b(stilwechsel|kurz und direkt|formell|locker|im sachlichen ton|bitte knapp)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Stilwechsel: kurz und direkt."
+  - "Bitte im sachlichen Ton."
+  - "Heute eher formell."
+  - "Lass es locker klingen."
+  - "Bitte knapp halten."
+  - "Ton ändern: pragmatisch."
+  - "Kurz und direkt, bitte."
+  - "Im sachlichen Ton, danke."
+  - "Bitte knapp."
+  - "Eher locker formulieren."
+  - "Formell halten."

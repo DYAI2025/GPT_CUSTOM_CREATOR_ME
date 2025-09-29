@@ -1,0 +1,26 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_CONFLICT_ESCALATION
+frame:
+  signal: ["escalation"]
+  concept: "Konflikteskalation"
+  pragmatics: "Aneinanderhakende Mikro-Muster"
+  narrative: "conflict"
+tags: [conflict, escalation]
+composed_of:
+  any_of:
+    - ATO_DEFENSIVENESS
+    - ATO_BLAME_SHIFT
+    - ATO_SARCASM
+    - ATO_OUTRAGE_MARKERS
+    - ATO_CRITICISM_ATTACK_MARKER
+activation:
+  rule: "AT_LEAST 3 IN 4 messages"
+  window: 4
+scoring: { base: 0.9, weight: 1.2 }
+examples:
+  - "Das stimmt nicht – wegen dir musste ich so reagieren – na klar, immer ich."
+  - "Typisch – du hast mich gezwungen – ach ja, sehr witzig."
+  - "Du übertreibst – das ist deine Schuld – ich verteidige mich nur."
+  - "Immer dasselbe – du bist verantwortlich – toll, wieder mein Fehler."
+  - "Hör auf – wegen dir – großartig, gib mir ruhig alles."

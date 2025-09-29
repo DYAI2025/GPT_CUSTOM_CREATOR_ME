@@ -1,0 +1,44 @@
+id: ATO_SWAYING
+lang: en
+category: ATOMIC
+description: "Detects expressions of indecision and oscillation between options."
+frame:
+  signal: ["I'm torn", "can't decide", "on the one hand … on the other hand", "going back and forth", "sitting on the fence"]
+  concept: "Indecision / ambivalence"
+  pragmatics: "Decision delay, risk of stalemate"
+  narrative: "Oscillation between alternatives"
+pattern:
+  - "(?i)on (?:the )?one hand.+on (?:the )?other hand"
+  - "(?i)\\b(i'?m|i am)\\s+(torn|split)\\b"
+  - "(?i)\\b(can('|no)t decide|can't make up my mind)\\b"
+  - "(?i)\\bgo(?:ing)? back and forth\\b"
+  - "(?i)\\b(waver|wavering|oscillate|oscillating)\\b"
+  - "(?i)\\bunsure (?:whether|if)\\b"
+  - "(?i)\\b(i )?waver between\\b"
+  - "(?i)\\bnot ready to commit\\b"
+  - "(?i)\\bsit(?:ting)? on the fence\\b"
+  - "(?i)\\bkeep changing my mind\\b"
+activation_logic: "ANY 1"
+scoring: { base: 1.0, weight: 1.0 }
+examples:
+  - "I'm torn between taking the offer and staying put."
+  - "On the one hand it’s exciting, on the other hand it scares me."
+  - "I can't decide—both options have downsides."
+  - "I'm going back and forth on this all week."
+  - "Honestly, I'm sitting on the fence right now."
+  - "I keep changing my mind about the trip."
+  - "Unsure whether to say yes or wait."
+  - "I waver between 'do it' and 'leave it'."
+  - "Not ready to commit to either plan."
+  - "I'm split—part of me wants it, part of me doesn't."
+tags: [atomic, indecision, hesitation]
+metadata:
+  repair_log:
+    - date: "2025-08-14"
+      changes: ["Prefix normalized to ATO_", "lang set to en", "frame added", "regex patterns consolidated", "examples expanded to 10", "field order fixed", "moved legacy fields to metadata"]
+  legacy:
+    source_id: "A_SWAYING"
+    version: "1.0.0"
+    status: "draft"
+    author: "auto_gpt"
+    created: "2025-07-25T21:17:00Z"

@@ -1,0 +1,45 @@
+schema: "LeanDeep"
+version: "3.4"
+id: CLU_DEAD_KNOCK
+frame:
+  signal: ["dead_knock"]
+  concept: "Setting→Pacing→Early Frame→Split→Close→Handoff"
+  pragmatics: "Zeit-/Rahmenverengung bis Abschluss"
+  narrative: "process_control"
+tags: [cluster, control, pacing]
+core_moves:
+  - SEM_SETTING_CONTROL
+  - ATO_PACING
+  - SEM_EVAL_PRIOR
+  - ATO_TOPIC_SPLIT
+  - ATO_PREMATURE_CLOSURE
+  - ATO_CLOSE
+  - ATO_HANDOFF
+amplifiers:
+  - ATO_BURDEN_SHIFT
+  - SEM_FORMAT_POLICING
+  - SEM_PROOF_STD_SHIFT
+  - SEM_FRAME_SHIFT
+  - SEM_LISTING
+  - ATO_MINI_DEADLINE
+activation:
+  rule: "AT_LEAST 3 CORE IN 10 messages WITH START SEM_SETTING_CONTROL AND END ANY OF [ATO_CLOSE, ATO_HANDOFF]"
+  window: 10
+scoring:
+  weights:
+    SEM_SETTING_CONTROL: 3
+    ATO_CLOSE: 2
+    ATO_PACING: 2
+    ATO_TOPIC_SPLIT: 1
+    ATO_HANDOFF: 1
+    SEM_EVAL_PRIOR: 1
+    AMPLIFIER_EACH: 1
+  threshold: 7
+constraints:
+  time_gated_validity: true
+examples:
+  - "Kanal setzen (Call, jetzt) – Tempo (kurz, bis 15:00) – Maßstab früh – Split Nebenpfad – Passt. – Schick's mir."
+  - "Heute formell, 10min – Kurzrunde, nur Entscheidung – Anderes Thema raus – Fertig – Ich übernehme."
+  - "Bitte im Ticket, nicht per Chat – Deadline 14:00 – Reicht so, Rest später – Close – Handoff zu mir."
+  - "Zur Roadmap (kurz & direkt) – Schnelle Punkte – Maßstab jetzt – Split – Passt – Gib's mir rüber."
+  - "Nur FT – jetzt gleich – Frühbewertung – Ausklammern – Erledigt – Übergabe an mich."

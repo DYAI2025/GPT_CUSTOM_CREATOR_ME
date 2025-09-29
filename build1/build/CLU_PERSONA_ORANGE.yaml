@@ -1,0 +1,26 @@
+id: CLU_PERSONA_ORANGE
+version: "3.4.1"
+frame:
+  signal: [ "persona", "aggregation" ]
+  concept: "Spiral/Value-Persona ORANGE (indikativ, nicht beweisend)"
+  pragmatics: "schnelles Screening, evidenzbasiert"
+  narrative: "hypothesis"
+tags: [ persona, ORANGE, screening ]
+composed_of:
+- SEM_COMPETITIVE_DRIVE
+- SEM_KPI_FOCUS
+- SEM_COMPARATIVE_CLAIM
+activation:
+  rule: "AT_LEAST 2 IN 6 messages"
+scoring:
+  base: 1.0
+  weight: 1.0
+metadata:
+  persona:
+    evidence_policy: "family-scoped"
+examples:
+- "<KPI>"
+- "<Top-Quartil>"
+- "<besser als>"
+- "<Wachstum %>"
+- "<Benchmark>"

@@ -1,0 +1,25 @@
+schema: LeanDeep
+version: "3.4"
+namespace: consistency_external
+
+defaults:
+  scoring:
+    window_tokens: 120
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+  scope:
+    unit: "speaker"
+    target: "OTHER"
+
+sems:
+  - id: SEM_SELF_CONSIST_PROBE_EXT
+    frame:
+      signal: ["meta-ref + kausalkette"]
+      concept: "Explizite Konsistenzprüfung einer Person"
+      pragmatics: "Hebel für strukturierte Nachfrage"
+      narrative: "Gute Prognose, wenn Reparatur folgt"
+    composed_of: [ATO_SELF_REF, ATO_CAUSAL_CHAIN]
+    activation:
+      rule: "BOTH within 1–2 sentences by same speaker"
+    scoring: { base: 0.55, weight: 1.0 }
+    tags: [consistency, probe]

@@ -1,0 +1,20 @@
+id: ATO_SPIRAL_TERMS
+version: "3.4"
+frame:
+  signal: [ "spiral", "iteration" ]
+  concept: "Spirale / Wiederkehr / Zyklus Lexeme"
+  pragmatics: "Hinweise auf spiralisches Denken"
+  narrative: "evidence"
+activation:
+  rule: "REGEX: (?i)\\b(spiral|loop|cycle|again|return|revisit|deeper|come back)\\b"
+examples:
+- "spiral back"
+- "let's loop this"
+- "the cycle returns"
+- "come back to it"
+- "go deeper again"
+- "revisit the topic"
+- "again, but deeper"
+- "spiral into it"
+- "another cycle"
+- "return to the question"

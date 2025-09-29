@@ -1,0 +1,20 @@
+id: ATO_STRESS_ACCENT
+schema_version: "LD-3.3"
+lang: de
+category: ATOMIC
+description: "Atomic pattern for unusual stress accents"
+frame:
+  signal: ["Stress Pattern Deviation"]
+  concept: "betont"
+  pragmatics: "Akzent"
+  narrative: "audio"
+detect_class:
+  module: prosody.stress
+  params: { deviation_threshold: 0.3, prominence_factor: 1.5 }
+examples:
+  - "[Ungewöhnliche Wortbetonung]"
+  - "[Nachdruck auf unerwarteter Silbe]"
+  - "[Emphase durch Betonung]"
+  - "[Störung im Rhythmus]"
+  - "[Markierte Prosodie]"
+tags: [stress, audio, atomic]

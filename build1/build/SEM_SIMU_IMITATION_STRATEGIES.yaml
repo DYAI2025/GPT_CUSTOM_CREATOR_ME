@@ -1,0 +1,30 @@
+id: SEM_SIMU_IMITATION_STRATEGIES
+frame:
+  signal:
+  - rapid declarations of love
+  - grandiose compliments
+  - premature intimacy
+  - solicitation of money
+  - emotional manipulation
+  concept: imitation strategies
+  pragmatics: simulate authentic romantic behavior
+  narrative: manipulative simulation
+composed_of:
+- ATO_PLACEHOLDER
+activation:
+  rule: ANY 2 IN 3 messages
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- Ich liebe dich schon nach drei Tagen, du bist mein Ein und Alles.
+- Deine Stimme ist wie Musik in meinen Ohren, Schatz.
+- Kannst du mir bitte helfen? Ich vertraue dir vollkommen.
+- Erzähl mir alles über deine Familie, ich möchte sie kennenlernen.
+- Ohne dich kann ich nicht atmen, du bist mein Leben.
+- Ich habe so viel für dich getan, jetzt brauche ich deine Unterstützung.
+- Du bist meine Traumfrau, wir sind seelenverwandt, ich kann es spüren.
+tags:
+- simulation
+- imitation
+- scam

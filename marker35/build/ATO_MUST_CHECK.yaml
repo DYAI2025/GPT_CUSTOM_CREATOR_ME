@@ -1,0 +1,24 @@
+id: ATO_MUST_CHECK
+frame:
+  signal:
+  - muss schauen
+  - mal sehen
+  - kann noch nichts sagen
+  - weiß nicht
+  concept: Temporale Unverbindlichkeit
+  pragmatics: Vermeidungsstrategie
+  narrative: temporal_vagueness
+pattern:
+- (?i)\bmuss\s+(ich\s+)?(mal\s+|erst\s*mal\s+)?schauen\b
+- (?i)\bmal\s+sehen\b
+- (?i)\bkann\s+(ich\s+)?(dir\s+)?(noch\s+)?nichts\s+sagen\b
+- (?i)\bweiß\s+(ich\s+)?(noch\s+)?nicht\b
+examples:
+- Muss ich mal schauen
+- Mal sehen, wie es wird
+- Kann ich dir noch nichts zu sagen
+- Da weiß ich noch nicht
+- Muss erstmal schauen, wie die Woche wird
+tags:
+- temporal_vagueness
+- avoidance

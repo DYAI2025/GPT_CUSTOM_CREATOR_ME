@@ -1,0 +1,41 @@
+id: CLU_FLIRTING_DYNAMICS
+lang: en
+category: CLUSTER
+description: "Aggregates advanced flirting sequences across a window: friendly teasing, bolder innuendo, soft-commitment, latent expectations, boundary shifts, mirroring, and tight response timing."
+frame:
+  signal: ["playful tease", "innuendo", "soft commitment", "latent expectation", "boundary shift", "mirrored style", "fast ping-pong timing"]
+  concept: "Flirt dynamic over time"
+  pragmatics: "Increased intimacy, ambivalence management"
+  narrative: "Orbiting between playful closeness and controlled distance"
+composed_of:
+  - SEM_FRIENDLY_FLIRTING
+  - SEM_OFFENSIVE_FLIRTING
+  - SEM_SOFT_COMMITMENT
+  - SEM_LATENT_EXPECTATION
+  - SEM_BOUNDARY_SHIFT
+  - SEM_RESPONSE_TIMING
+  - SEM_MIRRORED_STYLE
+  - SEM_SECRET_BONDING
+activation_logic: "AT_LEAST 3 DISTINCT SEM IN 20 messages"
+scoring: { base: 1.9, weight: 1.25, decay: 0.02 }
+window: { messages: 20 }
+examples:
+  - "A playful barb → answered with a wink emoji and a coy comeback."
+  - "Light tease escalates to cheeky innuendo two turns later."
+  - "Soft 'we could meet next weekend' + 'sounds nice, no pressure' loop."
+  - "Hinted expectation ('you’ll text tonight, right?') without explicit ask."
+  - "Boundary nudge ('VIP pass required') acknowledged with playful consent."
+  - "Mirrored tone and emoji style across several exchanges."
+  - "Rapid back-and-forth (<30s replies) sustained for three rounds."
+  - "Secretive framing: 'delete later' + 'got it—stealth mode.'"
+  - "Novelty burst (impromptu poem) reciprocated with playful rhyme."
+  - "Ambivalence preserved: 'we should define this' → 'not today—rain check.'"
+tags: [cluster, flirting, relationship]
+metadata:
+  repair_log:
+    - date: "2025-08-14"
+      changes: ["C_→CLU_ prefix fix", "converted beschreibung/examples to en", "restricted CLU composed_of to SEM_* only", "added activation logic & window", "standardized frame and examples (10)", "removed inline sublabels (❶…❿)"]
+  legacy:
+    source_id: "C_FLIRTING_DYNAMICS_MARKER"
+    created_by: "FRAUSAR_GUI_v2"
+    created_at: "2025-07-20T16:53:16.769634"

@@ -1,0 +1,30 @@
+id: CLU_EMOTIONAL_SUPPORT
+frame:
+  signal:
+  - emotionale Unterstützung
+  concept: Unterstützung
+  pragmatics: Empathie
+  narrative: support
+composed_of:
+- ATO_INVITING_RESONANCE
+- SEM_VALIDATION_OF_FEELING
+activation:
+  rule: AT_LEAST 2 IN 5 messages
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+  positive:
+    - "Ich kann verstehen, dass du dich so fühlst. Das ist eine schwere Zeit."
+    - "Ich bin für dich da, wenn du mich brauchst."
+    - "Es ist in Ordnung, traurig zu sein. Nimm dir die Zeit, die du brauchst."
+    - "Ich höre dir zu. Erzähl mir, was los ist."
+    - "Das tut mir so leid, dass du das durchmachen musst."
+    - "Ich kann mir vorstellen, wie verletzt du sein musst."
+    - "Du bist nicht allein damit. Ich bin an deiner Seite."
+    - "Was du fühlst, ist absolut verständlich."
+    - "Ich möchte, dass du weißt, dass ich an dich denke."
+    - "Wenn ich irgendetwas für dich tun kann, sag es einfach."
+  negative: []
+tags:
+- support

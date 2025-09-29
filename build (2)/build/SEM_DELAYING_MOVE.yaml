@@ -1,0 +1,20 @@
+id: SEM_DELAYING_MOVE
+version: "3.4"
+frame:
+  signal: ["delay"]
+  concept: "Aufschub trotz Zusage/Option"
+  pragmatics: "Trägheit/Entkopplung"
+  narrative: "task_flow"
+tags: [delay, procrastination]
+composed_of:
+  - ATO_DELAYING_PHRASES
+  - ATO_PROCRASTINATION_CUES
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.55, weight: 1.0 }
+examples:
+  - "Später – erst recherchieren."
+  - "Morgen – noch vorbereiten."
+  - "Nach dem Meeting – nicht perfekt."
+  - "Wenn Zeit – später besser."
+  - "Gleich – brauche Inspiration."

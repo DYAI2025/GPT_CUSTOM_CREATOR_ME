@@ -1,0 +1,36 @@
+id: ATO_STATUS_PING
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Knappes Status-/Plan-Update"
+  concept: "Status Ping"
+  pragmatics: "Transparente Alltagskoordination"
+  narrative: "coordination"
+pattern:
+  - '(?i)\bplan:\b'
+  - '(?i)\bzeitplan\b'
+  - '(?i)\bich melde mich um \d{1,2}(:\d{2})?\b'
+  - '(?i)\bbin (sp(ä|ae)ter|gleich|unterwegs)\b'
+  - '(?i)\bupdate:'
+activation:
+  rule: "ANY 1 IN 35 messages"
+window:
+  messages: 35
+scoring:
+  base: 1.6
+  weight: 0.42
+  decay: 0.01
+  formula: "logistic"
+examples:
+  - "Plan: Erst einkaufen, dann rufe ich an."
+  - "Zeitplan: Meeting bis 16 Uhr."
+  - "Ich melde mich um 19:00."
+  - "Bin später wieder online."
+  - "Bin unterwegs, schreibe gleich."
+  - "Update: Rückweg in 20 Minuten."
+  - "Plan: Heute Abend telefonieren?"
+  - "Zeitplan: Bis 18 Uhr im Büro."
+  - "Ich melde mich um acht."
+  - "Bin gleich da."
+tags: [ato, positiv, transparency, coordination, deeskalation]

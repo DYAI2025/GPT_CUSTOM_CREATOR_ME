@@ -1,0 +1,51 @@
+id: MEMA_ABSENCE_OF_ULTIMATUM_IN_CONFLICT
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Konflikt ohne Ultimaten"
+  concept: "Omission: Ultimaten fehlen"
+  pragmatics: "Offenheit statt Zwang"
+  narrative: "controlled_deescalation"
+detect_class: "absence_meta"
+criteria:
+  target_set: "ultimatum"
+  window_messages: 30
+  min_E_hits: 3
+  strict_zero: true
+activation:
+  rule: "CONFLICT_WINDOW_END"
+window:
+  messages: 30
+scoring:
+  base: 2.0
+  weight: 0.55
+  decay: 0.0
+  formula: "linear"
+examples:
+  - |
+    A: Ich brauche Verlässlichkeit.
+    B: Ich kann an meiner Planung arbeiten.
+    A: Mir hilft ein klarer Rhythmus.
+    B: Lass uns montags abstimmen.
+  - |
+    A: Das hat mich enttäuscht.
+    B: Es tut mir leid.
+    A: Ich will verstehen, wie es dazu kam.
+    B: Ich erkläre dir den Ablauf.
+  - |
+    A: Ich wünsche mir mehr Rückmeldung.
+    B: Abgemacht, ich antworte am selben Tag.
+    A: Danke, das entspannt mich.
+    B: Ich setze mir eine Erinnerung.
+  - |
+    A: Wir reden aneinander vorbei.
+    B: Dann fasse ich zusammen.
+    A: Klingt gut.
+    B: Stimmt das so für dich?
+  - |
+    A: Ich mag keine plötzlichen Änderungen.
+    B: Okay, ich kündige es vorher an.
+    A: Das hilft mir.
+    B: Danke fürs Feedback.
+tags: [mema, omission, deeskalation, positiv]

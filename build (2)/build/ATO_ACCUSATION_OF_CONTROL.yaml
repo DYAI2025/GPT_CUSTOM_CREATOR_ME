@@ -1,0 +1,30 @@
+id: ATO_ACCUSATION_OF_CONTROL
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Kontroll-/Manipulationsvorwurf"
+  concept: "Macht-/Kontrollzuschreibung"
+  pragmatics: "Negatives Intent unterstellen"
+  narrative: "Kontrollnarrativ"
+pattern:
+  - '(?i)\bkontrollier\w*\b'
+  - '(?i)\bkontrollzwang\b'
+  - '(?i)\bversuchst?\s+.*\s+zu\s+kontrollier\w*\b'
+  - '(?i)\b(manipulier\w*|manipulation)\b'
+  - '(?i)\bbevormund\w*\b'
+  - '(?i)\bdu\s+verunsicherst\s+mich\s+absichtlich\b'
+examples:
+  - "Du versuchst mich zu kontrollieren."
+  - "Das ist Manipulation."
+  - "Ich fühle mich bevormundet."
+  - "Du kontrollierst, was ich sagen darf."
+  - "Das wirkt wie Kontrollzwang."
+  - "Ich erlebe das als manipulativ."
+  - "Es fühlt sich an, als wolltest du mich steuern."
+  - "Hör auf, mich so zu bevormunden."
+  - "Das ist ein klarer Versuch der Manipulation."
+  - "Du willst immer alles kontrollieren."
+  - "Ich lasse mich nicht von dir manipulieren."
+  - "Dein Kontrollzwang engt mich ein."
+tags: [accusation, control, atomic]

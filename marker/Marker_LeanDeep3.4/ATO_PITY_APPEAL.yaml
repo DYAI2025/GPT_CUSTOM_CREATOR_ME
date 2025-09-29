@@ -1,0 +1,24 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_PITY_APPEAL
+frame:
+  signal: ["pity_appeal"]
+  concept: "Mitleidsappell / um Sympathie werben"
+  pragmatics: "Bindung durch Bedürftigkeit"
+  narrative: "affect_manipulation"
+tags: [pity, victimization]
+pattern:
+  regex: "(?i)\\b(niemand versteht mich|keiner hilft mir|immer bin ich der/die dumme|ich armes(\\s+ich)?|keiner steht hinter mir)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Niemand versteht mich."
+  - "Keiner hilft mir."
+  - "Immer bin ich die Dumme."
+  - "Ich armes Ich."
+  - "Keiner steht hinter mir."
+  - "Alle lassen mich hängen."
+  - "Ich habe niemanden."
+  - "Alle sind gegen mich."
+  - "Ich schaffe das alleine nicht."
+  - "Warum passiert das immer mir?"
+  - "Keiner sieht, wie schwer das für mich ist."

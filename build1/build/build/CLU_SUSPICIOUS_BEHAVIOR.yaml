@@ -1,0 +1,34 @@
+id: CLU_SUSPICIOUS_BEHAVIOR
+frame:
+  signal:
+  - Lügen
+  - Betrug
+  - manipulative Taktiken
+  - Täuschung
+  - Geldausnutzung
+  concept: suspicious behavior
+  pragmatics: Identifikation potenziell schädlicher Interaktionen
+  narrative: Warnsignal
+composed_of:
+- SEM_LIE_CONCEALMENT
+- SEM_GASLIGHTING
+- SEM_GUILT_TRIPPING
+- SEM_AI_BOT_SCAM
+- SEM_M_LOVE_BOMBING
+activation:
+  rule: SUM(weight)>=2 WITHIN 10 messages
+scoring:
+  base: 2.0
+  weight: 1.3
+  decay: 0.05
+examples:
+- Dieser alte Brief? Der lag hier nie. Du musst ihn selbst verlegt haben.
+- Wenn du ein guter Freund wärst, würdest du jetzt helfen.
+- 'Auf die Frage ''Wo warst du?'' weicht er aus: ''Ich war nur kurz unterwegs.'''
+- Ich hab dich noch nie so geliebt wie jetzt.
+- Mein Bankkonto wurde gesperrt, kannst du mir 300 € leihen?
+- Das war doch nur ein Scherz, du übertreibst mal wieder.
+- Du schuldest mir eine Erklärung, Alter!
+tags:
+- suspicious
+- deception

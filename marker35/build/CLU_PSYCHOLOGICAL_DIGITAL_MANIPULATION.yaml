@@ -1,0 +1,35 @@
+id: CLU_PSYCHOLOGICAL_DIGITAL_MANIPULATION
+frame:
+  signal:
+  - Schuldzuweisung
+  - Realitätsverzerrung
+  - Zwickmühlen
+  - Verschleierung
+  - überwältigende Zuwendung
+  concept: psychologische Digitalmanipulation
+  pragmatics: Täuschung und emotionale Steuerung
+  narrative: strategische Destabilisierung
+composed_of:
+- ATO_PLACEHOLDER
+activation:
+  rule: AT_LEAST 2 IN 5 messages
+scoring:
+  base: 2.2
+  weight: 1.3
+  decay: 0.03
+examples:
+- Du bist das Problem, ich weiß gar nicht mehr, was ich noch glauben soll!
+- Wegen dir ist alles kaputt, aber ich liebe dich mehr als alles andere.
+- Wenn du gehst, weiß ich nicht, was ich machen soll – aber du bist nie zufrieden.
+- Ich weiß selbst nicht mehr, was los ist, aber du bringst mich dazu.
+- Ich bin auf UN-Mission und du bist mein letzter Halt, vertraue mir!
+- Egal was du tust, es ist immer falsch. Aber ohne dich wäre ich nichts.
+- Gestern hast du mich noch geliebt, heute bin ich das Problem.
+- Mein geerbtes Vermögen ist eingefroren, nur du kannst mir helfen.
+- Wenn du mich wirklich lieben würdest, würdest du alles für mich tun.
+- Ich kann nichts dafür, wenn du immer alles so dramatisierst!
+tags:
+- manipulation
+- psychological
+- digital
+- scam

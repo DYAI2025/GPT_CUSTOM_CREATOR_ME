@@ -1,0 +1,17 @@
+id: ATO_VIRTUE_TERMS
+version: "3.4"
+frame:
+  signal: ["virtue"]
+  concept: "Tugend-/Reinheitsbezüge"
+  pragmatics: "Selbstdarstellung/Signalgebung"
+  narrative: "moral_frame"
+tags: [morality, virtue]
+pattern:
+  regex: "\\b(tugendhaft|rein|aufrechte|integrität|wertebasiert|good\\s+people)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Tugendhaft handeln."
+  - "Reine Motive."
+  - "Aufrechte Haltung."
+  - "Integrität zählt."
+  - "Wertebasiert."

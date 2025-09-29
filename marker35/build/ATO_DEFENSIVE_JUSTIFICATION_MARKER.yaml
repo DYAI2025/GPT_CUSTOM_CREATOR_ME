@@ -1,0 +1,40 @@
+id: ATO_DEFENSIVE_JUSTIFICATION
+lang: de
+description: "Atomic Marker für verteidigende Rechtfertigungen, die oft eine Schuldumkehr einleiten. Die eigene Handlung wird als gut gemeint oder als Reaktion dargestellt."
+frame:
+  signal:
+    - "Ich wollte doch nur helfen."
+    - "Ich hab es doch nur gut gemeint mit dir."
+    - "Das war wirklich nicht meine Absicht, dich zu verletzen."
+    - "Ich dachte, ich helfe damit, die Situation zu lösen."
+  concept: "Defensive Rechtfertigung"
+  pragmatics: "Vermeidung von Schuldzuweisung"
+  narrative: "Selbstverteidigung im Gespräch"
+pattern:
+  - "Ich wollte( doch)? nur helfen\\."
+  - "Ich hab(?:e)? es doch nur gut gemeint(?: mit dir)?\\."
+  - "Das war wirklich nicht meine Absicht,.*"
+  - "Ich dachte, ich helfe damit.*"
+activation_logic: "ANY 1"
+examples:
+  - "Ich wollte doch nur helfen."
+  - "Ich hab es doch nur gut gemeint mit dir."
+  - "Das war wirklich nicht meine Absicht, dich zu verletzen."
+  - "Ich dachte, ich helfe damit, die Situation zu lösen."
+  - "Ich wollte dich nicht verletzen, ehrlich."
+  - "Ich habe nur versucht, dir einen Gefallen zu tun."
+  - "Ich meinte es gut, keine böse Absicht."
+  - "Es war nicht meine Absicht, dich in Verlegenheit zu bringen."
+  - "Ich wollte gar nicht so hart klingen."
+  - "Ich dachte, das würde helfen, leider nicht gewusst."
+  - "Mir ging es nur darum, das Problem zu lösen."
+  - "Ich wollte dich nicht beschuldigen, sondern unterstützen."
+  - "Ich hab nicht gewusst, dass es so ankommt."
+  - "Ich wollte nur, dass alles reibungslos läuft."
+tags:
+  - atomic
+  - defensive_justification
+metadata:
+  repair_log:
+    - rule: "R00-R06 applied"
+      date: "2025-08-07"

@@ -1,0 +1,30 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_EXPLORATION_DEEPENING
+frame:
+  signal: ["exploration_deepening"]
+  concept: "Gezieltes Vertiefen & Präzisieren"
+  pragmatics: "Socratic probing, Präzisionsfragen"
+  narrative: "cooperation"
+tags: [clarify, deepen, explore]
+composed_of:
+  any_of:
+    - ATO_CLARIFY_REQ
+    - ATO_QUESTIONING
+    - ATO_DEEPER_QUESTIONING
+    - ATO_SHARED_CONTEXT
+activation:
+  rule: "AT_LEAST 3 IN 4 messages"
+  window: 4
+scoring: { base: 0.6, weight: 1.05 }
+examples:
+  - "Kannst du das konkretisieren?"
+  - "Welche Variante genau meinst du?"
+  - "Warum ist X hier ausschlaggebend?"
+  - "Was wäre ein Gegenbeispiel?"
+  - "Meinen wir beide Projekt Phoenix?"
+  - "Bitte ein Beispiel."
+  - "Wie würdest du Erfolg messen?"
+  - "Was fehlt dir noch für ein Go?"
+  - "Welche Abhängigkeiten siehst du?"
+  - "Kurz: Definition teilen?"

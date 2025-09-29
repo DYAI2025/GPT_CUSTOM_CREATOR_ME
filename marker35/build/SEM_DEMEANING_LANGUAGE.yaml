@@ -1,0 +1,20 @@
+id: SEM_DEMEANING_LANGUAGE
+version: "3.4"
+frame:
+  signal: ["demeaning"]
+  concept: "Herabsetzung/Entwürdigung"
+  pragmatics: "Dehumanisierung"
+  narrative: "dignity"
+tags: [demeaning, dignity]
+composed_of:
+  - ATO_DEMEANING_TERMS
+  - ATO_MOCKING_LEXICON
+activation:
+  rule: "BOTH IN 1 message OR ANY 2 IN 2 messages"
+scoring: { base: 0.65, weight: 1.0 }
+examples:
+  - "Abschaum – lächerlich."
+  - "Würdelos – Clown."
+  - "Minderwertig – armselig."
+  - "Erniedrigen – peinlich."
+  - "Untermensch – loser."

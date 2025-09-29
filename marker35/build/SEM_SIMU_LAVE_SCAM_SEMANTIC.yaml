@@ -1,0 +1,26 @@
+id: SEM_SIMU_LAVE_SCAM_SEMANTIC
+frame:
+  signal:
+  - romantic declarations
+  - financial pleas
+  - trust appeals
+  - emotional manipulation
+  concept: love scam semantics
+  pragmatics: manipulative persuasion
+  narrative: fraudulent romance
+composed_of:
+- ATO_PLACEHOLDER
+activation:
+  rule: ANY 2 IN 3 messages
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- Mein Bankkonto wurde gesperrt, kannst du mir 300 € leihen?
+- Ich liebe dich so sehr – ohne dich fühle ich mich verloren.
+- Vertrau mir bitte, ich brauche das Geld, um nach Hause zu kommen.
+- Du bist der Einzige, dem ich alles erzählen kann – bitte hilf mir.
+- Stell dir vor, wir könnten zusammen alt werden.
+tags:
+- love_scam
+- simulation

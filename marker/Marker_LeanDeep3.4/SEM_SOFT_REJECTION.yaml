@@ -1,0 +1,31 @@
+id: SEM_SOFT_REJECTION
+frame:
+  signal:
+  - Schwierigkeit + Kontaktversprechen
+  concept: Indirekte Absage
+  pragmatics: Face-saving rejection
+  narrative: soft_rejection
+composed_of:
+- ATO_UFF_DIFFICULT
+- ATO_WILL_CONTACT
+activation:
+  rule: ANY 2 IN 3 messages
+scoring:
+  base: 1.4
+  weight: 1.2
+examples:
+  positive:
+    - "Das ist gerade schwierig. Ich melde mich bei dir."
+    - "Puh, das ist keine leichte Situation. Lass mich mal schauen, ich komme auf dich zu."
+    - "Das ist kompliziert. Ich gebe dir Bescheid."
+    - "Da muss ich erst mal drüber nachdenken. Ich melde mich."
+    - "Das ist im Moment ungünstig. Ich sage dir, wann es besser passt."
+    - "Das ist eine Herausforderung. Ich melde mich, wenn ich mehr weiß."
+    - "Das ist nicht so einfach. Ich komme auf dich zurück."
+    - "Das überfordert mich gerade etwas. Ich melde mich, wenn ich einen klaren Kopf habe."
+    - "Das ist ein heikles Thema. Ich melde mich, wenn ich bereit dafür bin."
+    - "Das ist eine schwierige Entscheidung. Ich gebe dir Bescheid, wie ich mich entschieden habe."
+  negative: []
+tags:
+- soft_rejection
+- face_saving

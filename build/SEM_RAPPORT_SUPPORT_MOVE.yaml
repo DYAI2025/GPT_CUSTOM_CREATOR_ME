@@ -1,0 +1,36 @@
+id: SEM_RAPPORT_SUPPORT_MOVE
+version: '3.4'
+category: SEMANTIC
+description: Unterstützende Interventions-Triade des Therapeuten
+frame:
+  signal:
+  - open question + reflection + validation (therapist)
+  concept: supportive intervention triad
+  pragmatics: trust building & exploration
+  narrative: guided openness
+composed_of:
+- ATO_OPEN_QUESTION_THERAPIST
+- ATO_REFLECTIVE_STATEMENT_THERAPIST
+- ATO_VALIDATION_THERAPIST
+activation:
+  rule: COUNT(ATO_OPEN_QUESTION_THERAPIST)>=1 AND COUNT(ATO_REFLECTIVE_STATEMENT_THERAPIST)>=1
+    AND COUNT(ATO_VALIDATION_THERAPIST)>=1 IN 5
+scoring:
+  weight: 1.2
+examples:
+  positive:
+    - "Therapeut: 'Was geht Ihnen gerade durch den Kopf?' (Offene Frage) 'Es klingt, als ob Sie sich sehr allein fühlen.' (Reflexion) 'Das ist absolut verständlich, wenn man so etwas erlebt hat.' (Validierung)"
+    - "Therapeut: 'Können Sie mir mehr darüber erzählen?' (Offene Frage) 'Ich höre, dass Sie sich überfordert fühlen.' (Reflexion) 'Es ist mutig, das so offen anzusprechen.' (Validierung)"
+    - "Therapeut: 'Welche Gedanken begleiten Sie dabei?' (Offene Frage) 'Sie scheinen sehr nachdenklich zu sein.' (Reflexion) 'Das ist ein wichtiger Schritt, sich das einzugestehen.' (Validierung)"
+    - "Therapeut: 'Was bedeutet das für Sie?' (Offene Frage) 'Ich spüre eine tiefe Traurigkeit in Ihren Worten.' (Reflexion) 'Es ist in Ordnung, diese Gefühle zuzulassen.' (Validierung)"
+    - "Therapeut: 'Wie fühlen Sie sich dabei?' (Offene Frage) 'Es wirkt, als ob Sie sich sehr unter Druck gesetzt fühlen.' (Reflexion) 'Ihre Reaktion ist nachvollziehbar.' (Validierung)"
+    - "Therapeut: 'Was brauchen Sie jetzt?' (Offene Frage) 'Ich sehe Ihre Erschöpfung.' (Reflexion) 'Es ist wichtig, auf sich selbst zu achten.' (Validierung)"
+    - "Therapeut: 'Was wäre der nächste kleine Schritt?' (Offene Frage) 'Sie scheinen sehr entschlossen zu sein.' (Reflexion) 'Ich bin beeindruckt von Ihrer Stärke.' (Validierung)"
+    - "Therapeut: 'Was hat Ihnen in ähnlichen Situationen geholfen?' (Offene Frage) 'Es klingt, als ob Sie schon viel durchgemacht haben.' (Reflexion) 'Ihre Resilienz ist bemerkenswert.' (Validierung)"
+    - "Therapeut: 'Was möchten Sie heute erreichen?' (Offene Frage) 'Ich spüre Ihren Wunsch nach Veränderung.' (Reflexion) 'Ich unterstütze Sie dabei voll und ganz.' (Validierung)"
+    - "Therapeut: 'Was ist das Wichtigste, das Sie heute mitnehmen?' (Offene Frage) 'Es scheint, als ob Sie eine wichtige Erkenntnis gewonnen haben.' (Reflexion) 'Das ist ein großer Fortschritt.' (Validierung)"
+  negative: []
+tags:
+- semantic
+- rapport_building
+- therapist_move

@@ -1,0 +1,27 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "consistency_external"
+
+defaults:
+  scoring:
+    window_messages: 5
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+
+markers:
+  - id: MEMA_INCONSISTENCY_TREND
+    frame:
+      signal: ["anhaltender Inkonsistenz-Trend"]
+      concept: "EWMA auf CLU_CONSISTENCY_ALERT über Konversation"
+      pragmatics: "Trendentdeckung, Priorisierung langer Prüfpfade"
+    composed_of: [CLU_CONSISTENCY_ALERT]
+    activation:
+      rule: "EWMA(alerts_in_last_50_msgs, alpha=0.2) >= 0.6 OR COUNT(CLU_CONSISTENCY_ALERT in 50 msgs) >= 3"
+    scoring: { base: 0.65, cap: 1.0 }
+    metadata: { type: MEMA, family: "INCONSISTENCY" }
+    examples:
+      - Drei Alerts in 50 Nachrichten.
+      - Zwei Alerts mit hoher Dichte.
+      - EWMA über 0.6 bei Folge-Alerts.
+      - Wiederkehrende CLU_ALERTs in Phasen.
+      - Längerer Gesprächsabschnitt mit Widersprüchen.

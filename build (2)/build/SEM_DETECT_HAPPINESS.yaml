@@ -1,0 +1,30 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_DETECT_HAPPINESS
+frame:
+  signal: ["happiness"]
+  concept: "Detektion positiver, freudiger Stimmung"
+  pragmatics: "Valenzanalyse"
+  narrative: "affect_state"
+tags: [happiness, positive]
+composed_of:
+  any_of:
+    - ATO_JOY
+    - ATO_POSITIVE_RESONANCE
+    - ATO_SUPPORTIVE_LANGUAGE
+    - ATO_GRATITUDE
+activation:
+  rule: "AT_LEAST 14 IN 10 messages"
+  window: 10
+scoring: { base: 0.6, weight: 1.0 }
+examples:
+  - "So gut drauf heute! Mega happy, richtig toll, danke dir!"
+  - "Freu mich so, super Stimmung, das macht Spaß!"
+  - "Bin glücklich, das ist fantastisch, wir schaffen das!"
+  - "Richtig schön, fühlt sich gut an, danke für alles!"
+  - "So viel Freude heute, einfach herrlich, mega nice!"
+  - "So viel positive Energie, einfach großartig, danke dir!"
+  - "Glücklich, erleichtert, fühlt sich einfach richtig an!"
+  - "Tolles Gefühl, super Team, wir packen das!"
+  - "Freude pur, alles läuft, ich bin dankbar!"
+  - "Herrlich, das macht richtig Spaß, mega zufrieden!"

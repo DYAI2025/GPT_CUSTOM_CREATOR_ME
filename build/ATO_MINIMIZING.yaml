@@ -1,0 +1,18 @@
+id: ATO_MINIMIZING
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for minimizing language and dismissive expressions
+frame:
+  signal: ["minimization"]
+  concept: "Minimizing signal"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\b(just|only|not a big deal|overreacting|get over it|making this bigger)\\b"]
+examples:
+  - "It's just a small thing, don't worry."
+  - "You're only being dramatic about this."
+  - "It's not a big deal, really."
+  - "You're overreacting to the situation."
+  - "Just get over it and move on."
+tags: [atomic, v3.3, minimizing, dismissive]

@@ -1,0 +1,18 @@
+id: ATO_LOVE_BOMBING
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for excessive idealization and love bombing language
+frame:
+  signal: ["excessive idealization"]
+  concept: "Love bombing signal"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\b(perfect|amazing|incredible|soul mate|destiny|unlike anyone)\\b"]
+examples:
+  - "You're absolutely perfect for me."
+  - "This is amazing how well we connect."
+  - "You're incredible, unlike anyone I've met."
+  - "We're soul mates, I can feel it."
+  - "This feels like destiny brought us together."
+tags: [atomic, v3.3, love-bombing, idealization]

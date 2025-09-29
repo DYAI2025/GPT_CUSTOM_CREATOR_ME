@@ -1,0 +1,56 @@
+id: SEM_DEEPENING_BY_QUESTIONING
+frame:
+  signal:
+  - open-ended question
+  - introspective prompt
+  - follow-up inquiry
+  - self-disclosure invitation
+  - reflective question
+  concept: deepening by questioning
+  pragmatics: build emotional intimacy
+  narrative: dialogical exploration
+composed_of:
+- ATO_PLACEHOLDER
+activation:
+  rule: ANY 2 IN 3 messages
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- Was beschäftigt dich gerade am meisten?
+- Wie hat dieses Erlebnis dich persönlich verändert?
+- Erzähl mir mehr darüber, warum dir das so wichtig ist.
+- Welche Gefühle kommen hoch, wenn du daran denkst?
+- Was würde sich ändern, wenn du dich in dieser Situation vollkommen sicher fühlen
+  würdest?
+- Gibt es etwas, das du mir noch nicht erzählt hast, aber gerne teilen würdest?
+- Wie fühlst du dich wirklich in Bezug auf das, was wir gerade besprechenn?
+- Was denkst du über die Entscheidungen, die du in der Vergangenheit getroffen hast?
+- Welche Träume oder Hoffnungen hast du für die Zukunft?
+- Was bedeutet Freundschaft für dich in diesem Moment?
+- Wie gehst du mit Herausforderungen um, die dir emotional nahegehen?
+- Was ist eine Erinnerung, die dich immer wieder berührt?
+- Wie würdest du deine Beziehung zu dir selbst beschreiben?
+- Was ist etwas, das du gerne in deinem Leben verändern würdest?
+- Welche Werte sind dir in zwischenmenschlichen Beziehungen am wichtigsten?
+- Wie können wir unsere Kommunikation noch weiter vertiefen?
+- Was ist eine Frage, die du dir selbst selten stellst, aber gerne beantworten würdest?
+- Wie können wir uns gegenseitig besser verstehen?
+- Eher Kaffee oder Tee? Und warum?
+- Was ist eine Sache, die du schon immer mal ausprobieren wolltest, aber nie die Gelegenheit
+  dazu hattest?
+- Was ist eine Eigenschaft, die du an dir selbst schätzt, die aber nicht jeder sieht?
+- Wie können wir unsere Verbindung noch stärker machen?
+- Was ist eine Lektion, die du aus deinen bisherigen Erfahrungen gelernt hast?
+- Lieber fünf Sterne in Paris oder 1000 Sterne unter freiem Himmel?
+- Was ist eine Frage, die du dir selbst noch nie gestellt hast, aber gerne beantworten
+  würdest?
+- Was ist eine Sache, die du gerne über mich wissen würdest?
+- Was musss ich unbedingt über dich wissen, um mit dir zusammen zu sein?
+- Der oder Das Nutella?
+- ' Berge oder Meer?'
+- Was ist eine Eigenschaft, die du an anderen Menschen bewunderst?
+tags:
+- deepening
+- questioning
+- intimacy

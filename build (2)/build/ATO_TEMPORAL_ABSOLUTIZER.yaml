@@ -1,0 +1,27 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "consistency_external"
+
+defaults:
+  scoring:
+    window_messages: 5
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+
+markers:
+  - id: ATO_TEMPORAL_ABSOLUTIZER
+    frame:
+      signal: ["immer", "nie", "ständig", "jedes Mal"]
+      concept: "Temporale Absolutmarker"
+      pragmatics: "Überdehnung → bruchanfällig"
+    pattern:
+      - detect_class: phrase
+        list: ["immer", "nie", "ständig", "jedes Mal"]
+    score: 0.25
+    metadata: { type: ATO }
+    examples:
+      - "Ich bin immer pünktlich."
+      - "Ich war nie dort."
+      - "Er macht das ständig."
+      - "Jedes Mal passiert das."
+      - "Nie habe ich dem zugestimmt."

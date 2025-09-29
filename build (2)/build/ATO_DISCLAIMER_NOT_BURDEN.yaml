@@ -1,0 +1,32 @@
+id: ATO_DISCLAIMER_NOT_BURDEN
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Entlastungs-Disclaimer"
+  concept: "Nicht-belasten-Disclaimer"
+  pragmatics: "Weichzeichner vor Belastung"
+  narrative: "prelude"
+pattern:
+  - '(?i)\b(ich will dich nicht belasten|will dich nicht nerven|mach dir keine sorgen|ich will dich nicht stören)\b'
+activation:
+  rule: "ANY 1 IN 25 messages"
+window:
+  messages: 25
+scoring:
+  base: 1.8
+  weight: 0.5
+  decay: 0.01
+  formula: "logistic"
+examples:
+  - "Ich will dich nicht belasten, aber …"
+  - "Mach dir keine Sorgen, ich wollte nur kurz sagen …"
+  - "Will dich nicht nerven – nur eine kleine Sache …"
+  - "Ich will dich nicht stören, doch folgendes …"
+  - "Bitte keine Sorgen machen, trotzdem kurz dazu: …"
+  - "Ich möchte dich nicht unter Druck setzen, aber …"
+  - "Will dir nicht zur Last fallen, dennoch …"
+  - "Soll keine Belastung sein, trotzdem …"
+  - "Möchte dich nicht stressen, aber …"
+  - "Will dich wirklich nicht nerven, trotzdem …"
+tags: [ato, disclaimer]

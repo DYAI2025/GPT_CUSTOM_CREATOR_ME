@@ -1,0 +1,37 @@
+id: CLU_RAPPORT_BUILDING
+version: '3.4'
+category: CLUSTER
+description: Nachhaltige unterstützende Bewegungen und responsive Offenheit
+frame:
+  signal:
+  - sustained supportive moves by therapist and responsive openness
+  concept: working alliance in session
+  pragmatics: safety + exploration
+  narrative: engaged collaboration
+composed_of:
+- SEM_RAPPORT_SUPPORT_MOVE
+- SEM_VALIDATED_DISCLOSURE
+activation:
+  rule: COUNT(SEM_RAPPORT_SUPPORT_MOVE)+COUNT(SEM_VALIDATED_DISCLOSURE) >= 3 IN 20
+  window:
+    messages: 20
+scoring:
+  weight: 1.4
+examples:
+  positive:
+    - "Therapeut: 'Das klingt nach einer sehr schmerzhaften Erfahrung. Ich bin da, um das mit Ihnen durchzustehen.' Klient: 'Danke, das bedeutet mir viel. Es ist schwer, darüber zu reden, aber ich fühle mich hier sicher.'"
+    - "Therapeut: 'Ich höre, wie viel Kraft Sie das gekostet hat. Es ist beeindruckend, wie Sie damit umgegangen sind.' Klient: 'Das tut gut, das zu hören. Ich habe mich oft schwach gefühlt.'"
+    - "Therapeut: 'Nehmen Sie sich die Zeit, die Sie brauchen. Es gibt hier keinen Druck.' Klient: 'Okay. Das hilft. Ich merke, wie ich mich entspanne.'"
+    - "Therapeut: 'Das ist ein sehr wichtiger Punkt, den Sie da ansprechen. Lassen Sie uns das genauer ansehen.' Klient: 'Ja, ich glaube, das ist der Kern des Problems.'"
+    - "Therapeut: 'Ich kann mir vorstellen, wie schwierig das für Sie gewesen sein muss.' Klient: 'Ja, es war die Hölle. Aber es tut gut, dass Sie das so sehen.'"
+    - "Therapeut: 'Ich sehe Ihre Tränen. Lassen Sie sie zu, das ist in Ordnung.' Klient: 'Ich habe mich so lange nicht getraut, zu weinen.'"
+    - "Therapeut: 'Ich bin an Ihrer Seite. Wir gehen das gemeinsam an.' Klient: 'Das gibt mir Mut.'"
+    - "Therapeut: 'Was Sie beschreiben, ist sehr nachvollziehbar.' Klient: 'Wirklich? Ich dachte immer, ich bin seltsam.'"
+    - "Therapeut: 'Ich möchte, dass Sie wissen, dass ich das, was Sie sagen, sehr ernst nehme.' Klient: 'Das ist eine neue Erfahrung für mich.'"
+    - "Therapeut: 'Ich schätze Ihre Offenheit sehr.' Klient: 'Es fällt mir hier leichter als sonst, offen zu sein.'"
+  negative: []
+tags:
+- cluster
+- rapport
+- alliance
+- safety

@@ -1,0 +1,17 @@
+id: ATO_PROBABILISTIC_TERMS
+version: "3.4"
+frame:
+  signal: ["probability"]
+  concept: "Wahrscheinlichkeits-/Bandbreiten-Sprache"
+  pragmatics: "Graduiertes Wissen"
+  narrative: "uncertainty"
+tags: [uncertainty, probability]
+pattern:
+  regex: "\\b(wahrscheinlich|unlikely|60\\%|Bandbreite|risikoarm|riskant)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Wahrscheinlich ja."
+  - "Unlikely."
+  - "60% Chance."
+  - "In der Bandbreite."
+  - "Eher risikoarm."

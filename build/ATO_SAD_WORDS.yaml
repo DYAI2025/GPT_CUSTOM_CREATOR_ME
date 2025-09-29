@@ -1,0 +1,17 @@
+id: ATO_SAD_WORDS
+version: "3.4"
+frame:
+  signal: ["sadness"]
+  concept: "Trauer-/Niedergeschlagenheitslexikon"
+  pragmatics: "Affektives Vokabular"
+  narrative: "affect"
+tags: [affect, sadness]
+pattern:
+  regex: "\\b(traurig|vermisse|leer|schwer|down|lonely)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich bin traurig."
+  - "Ich vermisse dich."
+  - "Ich fühle mich leer."
+  - "Es ist schwer."
+  - "I feel down."

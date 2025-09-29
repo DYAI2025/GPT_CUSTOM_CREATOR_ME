@@ -1,0 +1,18 @@
+id: ATO_SILENT_TREATMENT_INDICATORS
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for silent treatment indicators
+frame:
+  signal: ["silent treatment"]
+  concept: "Silent treatment signal"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\b(not talking|won't speak|giving silence|ignoring you)\\b"]
+examples:
+  - "I'm not talking to you."
+  - "I won't speak until you apologize."
+  - "I'm giving you the silent treatment."
+  - "I'm ignoring you now."
+  - "Don't expect me to respond."
+tags: [atomic, v3.3, auto-generated]

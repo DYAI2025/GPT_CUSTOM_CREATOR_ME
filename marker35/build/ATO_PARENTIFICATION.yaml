@@ -1,0 +1,21 @@
+id: ATO_PARENTIFICATION
+version: "3.3"
+frame:
+  signal: ["musste erwachsen sein", "Verantwortung übernommen", "kleine Erwachsene"]
+  concept: "Parentifizierung"
+  pragmatics: "Rollentausch Kind-Eltern"
+  narrative: "burden"
+pattern:
+  - "(?i)\\b(musste.{0,10}erwachsen)\\b"
+  - "(?i)\\b(früh.{0,10}verantwortung)\\b"
+  - "(?i)\\b(kleine.?erwachsene?)\\b"
+  - "(?i)\\b(für.{0,10}eltern.{0,10}(da|sorgen))\\b"
+  - "(?i)\\b(kind.?rolle.{0,10}verloren)\\b"
+examples:
+  - "Ich musste schon als Kind erwachsen sein"
+  - "Früh Verantwortung für meine Eltern übernommen"
+  - "War immer der kleine Erwachsene"
+  - "Musste für meine Eltern da sein"
+  - "Habe meine Kindrolle früh verloren"
+tags: [atomic, parentifizierung, familie, trauma]
+schema_version: "3.3"

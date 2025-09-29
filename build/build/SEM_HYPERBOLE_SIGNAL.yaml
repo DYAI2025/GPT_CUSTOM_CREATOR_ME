@@ -1,0 +1,18 @@
+id: SEM_HYPERBOLE_SIGNAL
+frame:
+  signal: ["Hyperbel als Pointe"]
+  concept: "Relief-Mechanismus"
+  pragmatics: "Übertreibung zur Auflösung"
+  narrative: "ladder_drop"
+composed_of:
+  - ATO_HYPERBOLE_EXTREME
+  - ATO_TWIST        # aus bestehendem Pack
+activation:
+  rule: "ANY 2 IN 3 messages"
+examples:
+  - "Unendlich viele Bugs—plot twist: keiner reproduzierbar."
+  - "Eine Million Gründe—und doch deployen wir."
+  - "Ich sterbe—aber vom Lachen."
+  - "Tausend Meetings—und wir reden über Kaffee."
+  - "Milliarden Tickets—eins davon wichtig."
+tags: [humor, hyperbole, relief, semantics, v33]

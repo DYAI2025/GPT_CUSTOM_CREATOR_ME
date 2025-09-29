@@ -1,0 +1,69 @@
+id: MEMA_FLIRT_DANCE_DRIFT_MARKER
+frame:
+  signal:
+  - sag mal
+  - hör zu
+  - verstehst du
+  concept: Kommunikationsmuster
+  pragmatics: Dialog führen
+  narrative: exchange
+composed_of:
+- CLU_GENERIC_PATTERN
+activation:
+  rule: ANY 2 IN 30 messages
+scoring:
+  base: 2.0
+  weight: 1.5
+examples:
+- Beide führen eine Art 'emotionale Zweitbeziehung' im Chat, die durch Geheimhaltung
+  und extreme Stimmungsschwankungen zwischen Euphorie und Panik gekennzeichnet ist.
+- Er schlägt vor, zusammen wegzufahren (SOFT_COMMITMENT), sagt aber im gleichen Satz,
+  er sei 'nicht gut in sowas' (AMBIVALENCE) und dass 'niemand davon erfahren darf'
+  (SECRET_BONDING).
+- Innerhalb einer Woche von 'Du bist der witzigste Mensch' zu 'Ich hab noch nie über
+  meine Kindheit gesprochen' und dann zu 'Ich bin überfordert, lass uns das Thema
+  wechseln'.
+- Die Konversation fühlt sich an wie eine exklusive, geheime Welt (SECRET_BONDING),
+  in der die Regeln (Nähe/Distanz) ständig neu verhandelt werden (ADAPTIVE_POLARIZATION).
+- Erst wochenlanges Love-Bombing, dann ein plötzlicher Rückzug mit der Begründung
+  'Ich habe Angst', gefolgt von der Beteuerung, dass 'nur du mich verstehst'.
+- Ständige Wechsel zwischen 'Ich will dich unbedingt sehen' und 'Ich weiß nicht, ob
+  das eine gute Idee ist', gepaart mit täglichem Kontakt und der Bitte, 'niemandem
+  davon zu erzählen'.
+- '- Donnerstag: "Ich musste gestern viel nachdenken. Niemand bringt mich so durcheinander
+  wie du.'
+- 'A: "Ich hab dich vermisst. Das ist unser Geheimnis, ok?'
+- 'B: "Was kannst du nicht?'
+- 'B: "Findest du? Ich finde es perfekt.'
+- 'Tag 3: "Sorry für gestern. Hab an dich gedacht. Sag das bloß niemandem." (SECRET_BONDING
+  + SOFT_FLIRT)'
+- 'Tag 1: "Ich kann mit dir über alles reden." (RAPID_SELF_DISCLOSURE)'
+- 'B: "Ich glaub, wir sollten weniger schreiben." (ADAPTIVE_POLARIZATION)'
+- 'B: "Niemand weiß, dass ich dir schreibe." (SECRET_BONDING)'
+- 'B: "Ja, nur Stress. Reden wir später." (ADAPTIVE_POLARIZATION)'
+- 'A: "Ich erzähl dir das jetzt einfach: Ich schäme mich für..." (RAPID_SELF_DISCLOSURE)'
+- 'A: "Du bringst mich echt zum Lachen." (SOFT_FLIRT)'
+- '- Kurz davor der Rückzug: "Ich glaub, das wird mir zu viel." (ADAPTIVE_POLARIZATION).'
+- '*Szenario "Vermeidender Bindungsstil":*'
+- 'A: "Du verstehst mich besser als jeder andere." (SOFT_FLIRT)'
+- '- Dann eine Nachricht: "Sorry, war nur viel los. Das mit uns ist besonders, das
+  weiß keiner." (SECRET_BONDING).'
+- 'B: "Ja, irgendwann. Aber sag bloß niemandem, dass wir uns treffen wollen." (SECRET_BONDING)'
+- 'A: "Wir sollten das mal persönlich besprechen." (SOFT_COMMITMENT)'
+- '*Woche 2: Ein Treffen wird vage in Aussicht gestellt, aber nie fixiert.*'
+- 'A: "Ich hab das noch nie jemandem erzählt, aber ich hab Angst vor..." (RAPID_SELF_DISCLOSURE)'
+- 'B: "Vielleicht ist das unser Geheimrezept.'
+- 'A: "Crazy, wir schreiben täglich, aber niemand weiß davon.'
+- '*Funkstille → plötzlich 15-Minuten-Voicenote voller Sehnsucht* B: "Ich hab dich
+  vermisst, red mit mir.'
+- 'A: "Ich fühl mich bei dir sicher … und unruhig zugleich. Weird?'
+- 'B: "Hab Karten besorgt, sag niemandem, dass du mit mir gehst.'
+- 'B: "Brauche Luft. Heißt nicht, dass ich weg bin.'
+- 'A: "Warum ziehst du dich zurück, wenn’s grad intensiv wird?'
+- 'B: "Wie definierst du ›wir‹ eigentlich?'
+- 'A: "Fun-Fact: Ich erzähl dir grad Dinge, die nicht mal meine beste Freundin weiß.'
+- Täglicher Meme-Ping, nächtliche Tief-Voicenote, heimliches Treffen – aber 'wir lassen
+- Viermal Deep Talk in acht Tagen, dann Funkstille, dann 'Du fehlst mir' – alles im
+- Gemeinsame Playlist namens ‘Nobody knows’, tägliche Updates, aber kein offizieller
+tags:
+- communication

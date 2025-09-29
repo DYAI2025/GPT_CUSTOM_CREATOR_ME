@@ -1,0 +1,17 @@
+id: ATO_MOCKING_LEXICON
+version: "3.4"
+frame:
+  signal: ["mocking"]
+  concept: "Spott/Verhöhnung"
+  pragmatics: "Herabsetzender Ton"
+  narrative: "tone"
+tags: [mocking, disrespect]
+pattern:
+  regex: "\\b(lächerlich|armselig|peinlich|loser|clown|Besserwisser)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Lächerlich."
+  - "Armselig."
+  - "Peinlich."
+  - "Clown."
+  - "Besserwisser."

@@ -1,0 +1,15 @@
+id: ATO_METAPHOR
+version: "3.4"
+frame:
+  signal: [ "metaphor" ]
+  concept: "Metaphorische Marker"
+  pragmatics: "Bilder / Echos / Archetypen"
+  narrative: "hypothesis"
+tags: [ narion, metaphor, atomic ]
+activation: { rule: "REGEX: (Echo|Nebel|Spiegel|See|Baum|Schatten)" }
+examples:
+- "Wie ein Echo, das sich verändert."
+- "Wie Nebel auf dem See."
+- "Ein Spiegel, der nicht antwortet."
+- "Ein Baum im Raum."
+- "Schatten, die mehr sagen als Worte."

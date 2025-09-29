@@ -1,0 +1,29 @@
+# Datei: ATO_SUPERLATIVE_PHRASE.yaml
+id: ATO_SUPERLATIVE_PHRASE
+lang: de
+frame:
+  signal: 
+    - "immer"
+    - "nie"
+    - "niemals"
+    - "jedes Mal"
+    - "ständig"
+    - "andauernd"
+  concept: "Verallgemeinerung"
+  pragmatics: "Superlativ-Vorwurf"
+  narrative: "exaggeration"
+pattern:
+  - "(?i)\\bimmer\\b"
+  - "(?i)\\bnie\\b"
+  - "(?i)\\bniemals\\b"
+  - "(?i)\\bjedes Mal\\b"
+  - "(?i)\\bständig\\b"
+  - "(?i)\\bandauernd\\b"
+examples:
+  - "Immer wenn ich dich brauche, bist du nicht da!"
+  - "Du übernimmst nie Verantwortung."
+  - "Niemals hältst du dein Wort."
+  - "Jedes Mal versprichst du Hilfe und tauchst nicht auf."
+  - "Du reagierst ständig zu spät."
+  - "Er ist andauernd genervt von jedem Vorschlag."
+tags: [superlative, generalization, atomic]

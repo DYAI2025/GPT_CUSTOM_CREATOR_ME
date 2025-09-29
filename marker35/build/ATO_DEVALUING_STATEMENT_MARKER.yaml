@@ -1,0 +1,65 @@
+id: ATO_DEVALUING_STATEMENT
+lang: de
+category: ATOMIC
+description: "Detektiert abwertende oder lächerlichmachende Äußerungen gegenüber Gefühlen, Prioritäten oder Handlungen des Gegenübers."
+frame:
+  signal:      ["Abwertung", "Lächerlichmachen", "Herabsetzung"]
+  concept:     "Emotionale Abwertung"
+  pragmatics:  "Schwächt Bindung, signalisiert Missachtung"
+  narrative:   "devaluation"
+pattern:
+  - "(?i)lächerlich"
+  - "(?i)stell dich nicht so an"
+  - "(?i)übertreib (mal)? nicht"
+  - "(?i)kindisch"
+  - "(?i)hör auf zu jammern"
+  - "(?i)drama.?queen"
+  - "(?i)so sensibel"
+  - "(?i)nicht der rede wert"
+  - "(?i)heul(s)? wegen"
+  - "(?i)prioritäten.*seltsam"
+  - "(?i)dafür machst du stress"
+  - "(?i)empfindlich"
+  - "(?i)luxusproblem"
+  - "(?i)erwachsen werden"
+  - "(?i)wie du dich anstellst"
+  - "(?i)reg dich ab"
+  - "(?i)theater mach(s)?t"
+  - "(?i)grenzen.*weich"
+  - "(?i)tust so, als.*leben und tod"
+  - "(?i)halb so wild"
+activation_logic: "ANY 1"
+scoring:
+  base: 1.0
+  weight: 1.0
+  decay: 0.0
+  formula: "linear"
+window:
+  messages: 5
+examples:
+  - "Deine Sorge ist doch lächerlich."
+  - "Stell dich nicht so an, war nur ein Spaß."
+  - "Wenn du damit nicht klarkommst, ist das dein Problem."
+  - "Übertreib mal nicht, so schlimm war's nicht."
+  - "Das ist doch kindisch, ehrlich jetzt."
+  - "Hör auf zu jammern, du Drama-Queen."
+  - "So sensibel? Ernsthaft?"
+  - "Das Thema ist nicht der Rede wert."
+  - "Du heulst wegen jeder Kleinigkeit."
+  - "Deine Prioritäten sind wirklich seltsam."
+  - "Echt jetzt, dafür machst du Stress?"
+  - "Du bist aber empfindlich heute."
+  - "Das klingt nach Luxusproblem."
+  - "Kannst du bitte erwachsen werden?"
+  - "Es nervt, wie du dich anstellst."
+  - "Reg dich ab, das war harmlos."
+  - "Typisch, dass du gleich Theater machst."
+  - "Boah, deine Grenzen sind echt weich."
+  - "Du tust so, als ginge es um Leben und Tod."
+  - "Ist doch alles halb so wild."
+tags:
+  - devaluing
+  - abwertung
+  - herabsetzung
+  - atomic
+schema_version: "3.2"

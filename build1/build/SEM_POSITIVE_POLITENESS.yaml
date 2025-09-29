@@ -1,0 +1,31 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_POSITIVE_POLITENESS
+frame:
+  signal: ["positive_politeness"]
+  concept: "Zugewandtheit & Einbindung zur Kooperation"
+  pragmatics: "Facework (positiv), Liking"
+  narrative: "cooperation"
+tags: [politeness, affiliation, inclusion]
+composed_of:
+  any_of:
+    - ATO_SUPPORT_MESSAGE
+    - ATO_ACKNOWLEDGE
+    - ATO_REQUEST_FOR_FEEDBACK
+  optional:
+    - ATO_SHARED_CONTEXT
+activation:
+  rule: "AT_LEAST 2 IN 3 messages"
+  window: 3
+scoring: { base: 0.55, weight: 1.05 }
+examples:
+  - "Danke dir – passt das für dich so?"
+  - "Gesehen, gute Idee – Feedback welcome."
+  - "Ich unterstütze den Ansatz – einverstanden?"
+  - "Verstanden – kurzer Ping: passt dir Variante A?"
+  - "Klingt gut, ich bin dabei – Rückmeldung?"
+  - "Ich sehe den Aufwand – was wäre für dich machbar?"
+  - "Danke! Noch zwei Fragen, dann committen wir."
+  - "Notiert – hol dich gern rein: Alternative B?"
+  - "Bin bei dir – go?"
+  - "Top, das bauen wir ein – okay?"

@@ -1,0 +1,31 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "ld34_text_social_grammar"
+id: MEMA_DEFENSE_TREND_TEXT
+lang: de
+category: META-ANALYSIS
+description: "Trendhafte Verdichtung von Abwehrmustern über längere Passagen."
+frame:
+  signal: ["Mehrfaches Auftreten von CLU_DEFENSE_ACTIVE im Langfenster"]
+  concept: "Trend: Abwehr über Zeit (Text)"
+  pragmatics: "Interventionsfenster identifizieren"
+  narrative: "Akkumulation / Drift"
+composed_of:
+  - CLU_DEFENSE_ACTIVE
+activation_logic: "COUNT(CLU_DEFENSE_ACTIVE in 50 msgs) >= 3 OR EWMA(alpha=0.2) >= 0.6"
+scoring: { base: 2.0, weight: 1.4, decay: 0.02, formula: "logistic" }
+window: { messages: 30 }
+examples:
+  - "Mehrere Abschnitte mit Projektion + Reaktionsbildung innerhalb eines Tages."
+  - "Wiederholte Rationalisierung nahe Emotions-Themen über die Woche."
+  - "Abwehr-Cluster tritt in drei Meetings in Folge auf."
+  - "Serienhaftes 'aber...'-Umschalten mit Projektionen im Sprint."
+  - "Abwehrmuster mit kurzer Latenz immer wieder aktiviert."
+  - "Mehrere Sprints mit CLU_DEFENSE_ACTIVE."
+  - "Wöchentliche Häufung von Abwehr-Clustern."
+  - "Langstrecke: wiederkehrende Abwehr-Muster."
+tags: [meta, defense, trend]
+metadata:
+  repair_log:
+    - { rule: "R00", note: "Prefix/Kategorie geprüft (MEMA_/META-ANALYSIS)", date: "2025-08-29" }
+    - { rule: "R10", note: "MEMA-Default scoring/window gesetzt", date: "2025-08-29" }

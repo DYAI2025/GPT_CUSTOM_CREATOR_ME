@@ -1,0 +1,18 @@
+id: ATO_VALIDATION_SEEKING
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for validation seeking behavior
+frame:
+  signal: ["validation seeking"]
+  concept: "Validation seeking signal"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\b(am I right|don't you think|agree with me|validate)\\b"]
+examples:
+  - "Am I right about this?"
+  - "Don't you think I have a point?"
+  - "Do you agree with me here?"
+  - "Can you validate my feelings?"
+  - "Tell me I'm not crazy."
+tags: [atomic, v3.3, auto-generated]

@@ -1,0 +1,28 @@
+id: CLU_BUSINESS_READINESS
+version: "3.4"
+frame:
+  signal: ["cluster","readiness"]
+  concept: "execution_readiness"
+  pragmatics: "go/no-go"
+  narrative: "hypothesis"
+tags: [business,readiness,execution]
+composed_of:
+  - SEM_BUSINESS_FOCUS
+  - SEM_FINANCIAL_METRICS
+activation:
+  rule: "AT_LEAST 2 DISTINCT SEMs IN 5 messages"
+scoring:
+  base: 0.5
+  weight: 2.5
+metadata:
+  telemetry_keys:
+    counter_confirmed: "INT_READINESS.confirmed"
+    counter_retracted: "INT_READINESS.retracted"
+    ewma_precision: "INT_READINESS.ewma_precision"
+examples:
+  - "Wir haben klare KPIs, 200k ARR und ein skalierbares Vertriebsteam."
+  - "Run Rate, Burn und Margen sind strukturiert – Team kann skalieren."
+  - "Wir tracken Marge, Wachstum und Akquise-Kosten wöchentlich."
+  - "Business Fokus + klare Kennzahlen → bereit für Fundraising Gespräche."
+  - "Kennzahlen stabil, Vertrieb replizierbar, nächste Skalierungsphase."
+  - "Unit Economics validiert, Team execution ready."

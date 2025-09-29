@@ -1,0 +1,38 @@
+id: CLU_AUTONOMOUS_FIELD_STRUCTURING
+version: "3.3"
+frame:
+  signal: ["stabile Innenstruktur", "Selbstoffenbarung", "Selbstregulation", "sachlicher Informationsaustausch"]
+  concept: "Autonomes Innenfeld mit Zukunfts- und Tagesstruktur"
+  pragmatics: "Gleichgewicht aus Selbststeuerung und faktischer Abstimmung"
+  narrative: "Selbstorganisation + gemeinsame Umsetzung"
+pattern:
+  - "priorisiere ich"
+  - "in (\\d+|sechs|drei|zwei) (monaten|wochen)"
+  - "plane ich"
+  - "reflektiere.*fortschritt"
+  - "frage.*nach (ressourcen|informationen)"
+activation:
+  rule: "ANY in 1 message"
+examples:
+  - "A erläutert seine Tagesziele („Heute priorisiere ich X, weil …“), reflektiert ihre langfristige Rolle („In sechs Monaten möchte ich …“) und tauscht gezielt Fakten zur Umsetzung mit dem Team aus."
+  - "Sprecher B beschreibt persönliche Werte, verbindet sie mit konkreten Projektplänen und fordert präzise Daten zum nächsten Schritt an."
+  - "„Mir ist wichtig, dass ich täglich lerne; deshalb plane ich, jeden Abend den Fortschritt zu reflektieren …“ (Selbstoffenbarung + Planung)"
+  - "B fasst seine Emotionen in Worte, zeigt, wie er sie reguliert („Ich atme kurz durch und sortiere die Gedanken“) und fragt anschließend nach Ressourcen für die morgige Präsentation."
+  - "Kontinuierliche Updates: innere Prioritäten → konkrete Aktionen → Rückfrage nach Informationen, alles innerhalb eines Chat-Blocks."
+  # +10 neu
+  - "Heute strukturiere ich zuerst meine Aufgabenliste, dann plane ich das Quartalsziel."
+  - "Ich halte meine Morgenroutine ein und stimme danach die Präsentation mit euch ab."
+  - "Mein Fokus liegt diese Woche auf der Budgetplanung, langfristig auf Teamaufbau."
+  - "Ich habe gestern reflektiert, welche Aufgaben mich blockieren, und setze heute konkrete Maßnahmen."
+  - "Nach dem Check-in überprüfe ich meine persönlichen Meilensteine für diesen Monat."
+  - "Ich teile meine Erkenntnisse aus dem letzten Workshop und wie sie in unsere Strategie passen."
+  - "Vor der Deadline sortiere ich meine Prioritäten und koordiniere offene Punkte mit der Gruppe."
+  - "Ich setze bewusst Pausen ein, um meine Produktivität zu halten, und frage parallel nach Status-Updates."
+  - "Mein Plan für heute: Bericht fertigstellen, dann Vision für Q4 mit euch diskutieren."
+  - "Ich habe meine Ziele für nächste Woche definiert und bitte jetzt um eure Input-Daten."
+tags: [needs_review, cluster, autonomous_field, self_regulation, planning]
+meta:
+  created_at: "2025-07-21T19:39:14.350099"
+  created_by: "FRAUSAR_GUI_v2"
+  source_version: "1.0"
+  schema_version: "3.3"

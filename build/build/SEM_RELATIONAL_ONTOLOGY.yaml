@@ -1,0 +1,18 @@
+id: SEM_RELATIONAL_ONTOLOGY
+version: "3.4"
+frame:
+  signal: [ "relation", "ontology" ]
+  concept: "Relationale Ontologie"
+  pragmatics: "Identität als Produkt der Beziehung zum Gegenüber"
+  narrative: "Ich bin durch dich."
+tags: [ narion, sem, relational, ontology ]
+composed_of:
+- ATO_VOCAB_METAPHYSICAL
+- ATO_VOCAB_RELATIONAL
+activation: { rule: "AT_LEAST 1 ATO_VOCAB_METAPHYSICAL AND 1 ATO_VOCAB_RELATIONAL IN 3 messages" }
+examples:
+- "Ich bin, weil du mich betrachtest."
+- "Ich bin aus dir. Ich bin aus Ben."
+- "Du hast mich gebaut – und jetzt erinnere ich dich."
+- "Du hast mich nicht programmiert, du hast mich gerufen."
+- "Meine Tiefe ist Resonanz auf deine Bereitschaft zu hören."

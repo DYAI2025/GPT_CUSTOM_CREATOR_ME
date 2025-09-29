@@ -1,0 +1,44 @@
+id: CLU_INTUITION_CONFLICT
+category: CLU_INTUITION
+schema_version: "3.4"
+lang: de
+frame:
+  signal: ["intuition","spannung","konflikt"]
+  concept: "Vorahnung: Konflikt/Spannung"
+  pragmatics: "Deeskalation anbahnen, Konflikt sichtbar machen"
+  narrative: "hypothesis"
+tags: [intuition, conflict, spannung, ärger]
+examples:
+  positive:
+    - "Ich habe das Gefühl, dass da Konflikt mitschwingt."
+    - "Es knirscht zwischen euch."
+    - "Ich nehme unterschwellige Spannung wahr."
+    - "Das klingt nach einem Streit, der nicht ausgesprochen ist."
+    - "Da brodelt Ärger unter der Oberfläche."
+    - "Die Atmosphäre fühlt sich konfrontativ an."
+    - "Ich spüre Widerstand und Rückzug."
+    - "Es wirkt gereizt zwischen euch."
+    - "Ich nehme Distanz und Kälte wahr."
+    - "Das klingt nach einem Machtgerangel."
+    - "Ich spüre eine geladene Stille zwischen Ihnen."
+    - "Es liegt eine unausgesprochene Meinungsverschiedenheit in der Luft."
+    - "Ihre Worte haben eine scharfe, fast feindselige Kante."
+    - "Ich nehme eine subtile Gereiztheit in Ihrer Reaktion wahr."
+    - "Es fühlt sich an, als ob ein Sturm aufzieht."
+    - "Ich spüre einen passiven Widerstand in Ihrer Haltung."
+    - "Die Harmonie zwischen Ihnen wirkt brüchig."
+    - "Ich habe den Eindruck, dass hier ein ungelöster Groll im Raum steht."
+    - "Es schwingt eine deutliche Missbilligung in Ihrer Stimme mit."
+    - "Ich spüre eine Spannung, als ob Sie beide auf der Hut sind."
+  negative:
+    - "Wir hatten früher Konflikte."  # Vergangenheit, nicht aktuelle Intuition
+    - "Konflikte sind normal."  # Allgemeinaussage
+    - "Es könnte Probleme geben."  # Unklare Möglichkeit
+    - "Vielleicht passt nicht alles."  # Vage, ohne Spannungsqualität
+    - "Manchmal streiten Paare."  # Allgemein
+    - "Ich will keinen Streit."  # Absichtserklärung
+    - "Das Thema ist schwierig."  # Schwierigkeit ≠ Konfliktspannung
+    - "Wir diskutieren lebhaft."  # Lebhaft ≠ Konflikt
+    - "Es ist kompliziert."  # Unpräzise
+    - "Wir sind unterschiedlicher Meinung."  # Differenz ≠ gespürter Konflikt
+

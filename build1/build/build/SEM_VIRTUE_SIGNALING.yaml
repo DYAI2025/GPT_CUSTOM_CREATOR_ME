@@ -1,0 +1,20 @@
+id: SEM_VIRTUE_SIGNALING
+version: "3.4"
+frame:
+  signal: ["virtue_signaling"]
+  concept: "Selbst-/Gruppenmoral hervorheben"
+  pragmatics: "Soziale Zugehörigkeit"
+  narrative: "moral_frame"
+tags: [morality, signaling]
+composed_of:
+  - ATO_VIRTUE_TERMS
+  - ATO_MORAL_LANGUAGE
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.55, weight: 1.0 }
+examples:
+  - "Wir stehen für Integrität."
+  - "Wertebasiert und tugendhaft."
+  - "Die richtige Seite."
+  - "Gute Menschen handeln so."
+  - "Aufrechte Prinzipien voran."

@@ -1,0 +1,36 @@
+id: CLU_INTUITION_DIGNITY
+version: "3.4"
+frame:
+  signal: ["intuition","weak-aggregation"]
+  concept: "Vorahnung: Würde/Herabsetzung"
+  pragmatics: "Schutz vor Dehumanisierung"
+  narrative: "hypothesis"
+tags: [intuition, dignity, demeaning, learning]
+composed_of:
+  - SEM_DEMEANING_LANGUAGE
+  - SEM_RESPECT_APPEAL
+  - SEM_STATUS_THREAT
+activation: { rule: "AT_LEAST 2 DISTINCT SEMs IN 5 messages" }
+scoring: { base: 0.5, weight: 1.0 }
+metadata:
+  intuition:
+    state: "provisional"
+    confirm_window: 5
+    confirm_rule: "AT_LEAST 1 of [SEM_DEMEANING_LANGUAGE, SEM_STATUS_THREAT] IN confirm_window"
+    multiplier_on_confirm: 1.7
+    decay_window: 7
+  telemetry_keys:
+    counter_confirmed: "INT_DIGNITY.confirmed"
+    counter_retracted: "INT_DIGNITY.retracted"
+    ewma_precision: "INT_DIGNITY.ewma_precision"
+examples:
+  - "… Abwertung + 'unter deiner Würde' …"
+  - "… 'respektlos' + Appell …"
+  - "… Spott + Statusangriff …"
+  - "… 'erniedrigt' + Kontext Schikane …"
+  - "… 'minderwertig' angedeutet …"
+  - "… 'so redet man nicht mit Leuten' …"
+  - "… 'würd ich keinem wünschen' + Empathierahmen …"
+  - "… 'Grenze überschritten' + Würdebezug …"
+  - "… Dehumanisierung + Gegenrede …"
+  - "… 'Fairness' + 'auf Augenhöhe' einfordern …"

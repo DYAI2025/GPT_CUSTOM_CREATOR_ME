@@ -1,0 +1,28 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "consistency_external"
+
+defaults:
+  scoring:
+    window_messages: 5
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+
+markers:
+  - id: SEM_DEF_DRIFT_EXTERNAL
+    frame:
+      signal: ["Umdefinition unterwegs"]
+      concept: "Bedeutungsdrift eines Kernbegriffs über kurze Spanne"
+    composed_of: [ATO_DEF_DRIFT_TERMS]
+    pattern:
+      - detect_class: heuristic
+        rule: "same_term_redefined_within_window(other)"
+        distance_window_messages: 6
+    score: 0.62
+    metadata: { type: SEM }
+    examples:
+      - "Eigentlich meinte ich beruflich."
+      - "Genauer gesagt privat."
+      - "Streng genommen zählt das nicht als bezahlt."
+      - "Definitionstechnisch war es anders."
+      - "Eigentlich war das nur kurz."

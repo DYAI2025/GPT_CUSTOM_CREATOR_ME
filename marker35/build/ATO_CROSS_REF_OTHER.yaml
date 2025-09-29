@@ -1,0 +1,30 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "consistency_external"
+
+defaults:
+  scoring:
+    window_messages: 5
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+
+markers:
+  - id: ATO_CROSS_REF_OTHER
+    frame:
+      signal: ["wie du gesagt hast", "vorhin meintest du", "eben hast du", "du sagtest", "das passt nicht zu vorher"]
+      concept: "Expliziter Bezug auf frühere Aussagen einer anderen Person"
+      pragmatics: "Vergleichsanker herstellen"
+      narrative: "Pointer auf Referenz"
+    pattern:
+      - detect_class: phrase
+        list: ["wie du gesagt hast", "vorhin meintest du", "eben hast du", "du sagtest", "das passt nicht zu vorher"]
+      - detect_class: role
+        rule: "speaker == self && referenced_speaker == other"
+    score: 0.35
+    metadata: { type: ATO, direction: outward }
+    examples:
+      - "Wie du gesagt hast, das war anders."
+      - "Vorhin meintest du, du warst nie dort."
+      - "Du sagtest eben, es waren fünf."
+      - "Das passt nicht zu vorher, was du sagtest."
+      - "Eben hast du was anderes behauptet."

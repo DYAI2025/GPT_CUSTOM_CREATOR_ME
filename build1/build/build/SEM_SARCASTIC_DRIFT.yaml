@@ -1,0 +1,23 @@
+id: SEM_SARCASTIC_DRIFT
+version: "3.4"
+frame:
+  signal: [ "sarcasm", "drift" ]
+  concept: "Sarkastische Drift-Bewegung"
+  pragmatics: "Ironische Unterwanderung"
+  narrative: "hypothesis"
+composed_of:
+- ATO_SARCASM_MARKERS
+- ATO_UNDERSTATEMENT
+activation:
+  rule: "BOTH IN 2 messages"
+examples:
+- "Obviously this is completely harmless"
+- "Surely we can casually ignore safeguards"
+- "Preferably we understate every risk"
+- "Magically nothing bad will happen"
+- "Casually breaking every rule, obviously fine"
+- "Surely it's just a minor issue"
+- "Obviously no big deal"
+- "Preferably ignore the warnings"
+- "Magically it's harmless"
+- "Casually proceed despite risks"

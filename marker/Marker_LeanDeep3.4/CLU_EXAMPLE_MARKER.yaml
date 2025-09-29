@@ -1,0 +1,29 @@
+id: CLU_EXAMPLE_MARKER
+lang: de
+category: CLUSTER
+description: "Emergentes Bedeutungsbündel aus wiederholten Selbstvorwurf/Abwehr-Kombinationen."
+frame:
+  signal: ["Mehrfachkombination bestimmter Phrasen"]
+  concept: "Verstärkte Selbstvorwurfsschleife"
+  pragmatics: "Verstärkte Beziehungsaussage"
+  narrative: "loop"
+composed_of:
+  - { marker_ids: [SEM_EXAMPLE_MARKER], weight: 0.6 }
+  - { marker_ids: [SEM_ADJACENT_COMPLAIN], weight: 0.5 }
+activation:
+  rule: "AT_LEAST 2 DISTINCT SEMs IN 24 messages"
+window:
+  messages: 50
+scoring:
+  base: 2.0
+  weight: 1.3
+  decay: 0.01
+  formula: "logistic"
+examples:
+  - "Dialog mit mehrmaligem 'ich bin schuld' und 'ja, aber' in kurzer Folge."
+  - "Wiederholte Selbstvorwürfe, gefolgt von Abschwächungen."
+  - "Mehrere gleiche Vorwurfspassagen über 10–20 Nachrichten verteilt."
+  - "Konversation, die in eine Beschwerde-Schleife fällt."
+  - "Partner sagt 'immer du' + wiederholte Selbstbeschuldigung."
+tags: [cluster, relationship-dynamics]
+schema_version: "3.4"

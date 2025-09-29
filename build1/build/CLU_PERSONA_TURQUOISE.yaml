@@ -1,0 +1,26 @@
+id: CLU_PERSONA_TURQUOISE
+version: "3.4.1"
+frame:
+  signal: [ "persona", "aggregation" ]
+  concept: "Spiral/Value-Persona TURQUOISE (indikativ, nicht beweisend)"
+  pragmatics: "schnelles Screening, evidenzbasiert"
+  narrative: "hypothesis"
+tags: [ persona, TURQUOISE, screening ]
+composed_of:
+- SEM_HOLISTIC_SCOPE
+- SEM_LONG_HORIZON
+- SEM_ECOLOGICAL_METAPHOR
+activation:
+  rule: "AT_LEAST 2 IN 6 messages"
+scoring:
+  base: 1.0
+  weight: 1.0
+metadata:
+  persona:
+    evidence_policy: "family-scoped"
+examples:
+- "<ganzheitlich>"
+- "<lange Zeitskala>"
+- "<Ökologie>"
+- "<Interbeing>"
+- "<Planetar>"

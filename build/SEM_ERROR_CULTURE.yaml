@@ -1,0 +1,24 @@
+id: SEM_ERROR_CULTURE
+frame:
+  signal:
+  - Fehler
+  - offener Umgang
+  - reflektieren
+  concept: Fehlerkultur
+  pragmatics: Lernorientierung, Selbstreflexion
+  narrative: Wachstum, Entwicklung
+composed_of:
+- ATO_UNCERTAINTY_PHRASE
+- ATO_MICRO_DISMISSAL
+activation:
+  rule: ANY 2 IN 3 messages
+examples:
+- Fehler passieren, das ist ganz normal.
+- Lass uns aus dem Fehler lernen.
+- Ich habe da einen Fehler gemacht, das tut mir leid.
+- Wir sprechen offen über Fehler.
+- Jeder kann sich mal irren, das ist menschlich.
+tags:
+- error
+- culture
+- learning

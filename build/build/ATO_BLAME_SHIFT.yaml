@@ -1,0 +1,23 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_BLAME_SHIFT
+frame:
+  signal: ["blame_shift"]
+  concept: "Schuldverschiebung"
+  pragmatics: "Abwehr / Verantwortungsverlagerung"
+  narrative: "conflict_micro"
+tags: [blame, conflict]
+pattern:
+  regex: "(?i)\\b(wegen dir|deine schuld|du hast mich (dazu )?gebracht|du hast mich gezwungen|du bist verantwortlich|you made me|because of you|your fault)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Wegen dir ist das passiert."
+  - "Das ist deine Schuld."
+  - "Du hast mich dazu gebracht."
+  - "Du hast mich gezwungen."
+  - "Du bist verantwortlich dafür."
+  - "Ich musste so reagieren, wegen dir."
+  - "Ich habe das nur getan, weil du..."
+  - "Because of you this happened."
+  - "You made me do it."
+  - "It’s your fault."

@@ -1,0 +1,22 @@
+id: CLU_MAXIM_FLOUTING
+frame:
+  signal: ["Grice-Maximen-Verletzungen häufen sich"]
+  concept: "Code-Violation-Cluster"
+  pragmatics: "Humor-Rahmen signalisieren"
+  narrative: "frame"
+composed_of:
+  - SEM_FLOUT_QUALITY_IRONY
+  - SEM_AMBIGUITY_FLAG
+  - SEM_REGISTER_CLASH
+activation:
+  rule: "AT_LEAST 2 IN 10 messages"
+scoring:
+  base: 2.0
+  weight: 1.4
+examples:
+  - "Ironie + Ambiguität dicht beieinander."
+  - "Register-Clash gefolgt von Antiphrase."
+  - "Mehrere Maximenflouts in kurzer Folge."
+  - "Quotes + Slang + formales Cue."
+  - "Clash → Ironie → Rätselturn."
+tags: [humor, grice, cluster, v33]

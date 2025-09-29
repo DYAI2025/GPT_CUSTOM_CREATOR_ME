@@ -1,0 +1,30 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "ld34_text_social_grammar"
+id: SEM_PROJECTION_TEXT
+lang: de
+category: SEMANTIC
+description: "Vorwurf an andere spiegelt eigene zuvor markierte Tendenz."
+frame:
+  signal: ["'Du bist X' kurz nach eigener thematisch passender Aussage"]
+  concept: "Projektion (Text)"
+  pragmatics: "Selbstschutz, Schuldverschiebung"
+  narrative: "Spiegelung"
+composed_of:
+  - ATO_PROJECTION_2P_TRAIT
+activation_logic: "ANY 1 IN 3 messages"
+scoring: { base: 1.4, weight: 1.1 }
+examples:
+  - "Ich war wohl zu hart... Du bist so herzlos."
+  - "Ich hab’s vermasselt... Du bist unfähig."
+  - "Ich bin unsicher... Ihr seid so arrogant."
+  - "Ich hab keine Zeit... Du bist faul."
+  - "Mir rutscht das raus... Du bist respektlos."
+  - "Ich überreagiere... Du bist hysterisch."
+  - "Ich hab Angst... Du bist schwach."
+  - "Ich war unfair... Du bist gemein."
+tags: [semantic, projection]
+metadata:
+  justification: "1 ATO plus Sequenzregel (Selbstmarkierung → Vorwurf)."
+  repair_log:
+    - { rule: "R07", note: "1-ATO gerechtfertigt", date: "2025-08-29" }

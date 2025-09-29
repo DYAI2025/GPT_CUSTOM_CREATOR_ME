@@ -1,0 +1,24 @@
+schema: LeanDeep
+version: "3.4"
+namespace: consistency_external
+
+defaults:
+  scoring:
+    window_tokens: 120
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+  scope:
+    unit: "speaker"
+    target: "OTHER"
+
+atos:
+  - id: ATO_CAUSAL_CHAIN
+    frame:
+      signal: ["wenn ... dann", "folglich", "daraus ergibt sich"]
+      concept: "Kausalkette/Implikationssprache"
+      pragmatics: "Material für Konsistenzlogik"
+      narrative: "Legt Soll-Kohärenz fest"
+    pattern:
+      detect_class: dependency
+      rule: "causal_link(within_sentence=true)"
+    tags: [logic, causal]

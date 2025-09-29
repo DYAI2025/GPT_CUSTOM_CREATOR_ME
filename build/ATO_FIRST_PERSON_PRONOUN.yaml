@@ -1,0 +1,21 @@
+id: ATO_FIRST_PERSON_PRONOUN
+schema_version: "LD-3.3"
+lang: de
+category: ATOMIC
+description: "Atomic pattern for first-person pronouns indicating self-reference"
+frame:
+  signal: ["ich", "mir", "mein*"]
+  concept: "Selbstbezug"
+  pragmatics: "neutral"
+  narrative: "token"
+pattern:
+  - "\\bich\\b"
+  - "\\bmir\\b"
+  - "\\bmein(e|)\\b"
+examples:
+  - "Ich glaube, ..."
+  - "Mir ist aufgefallen, ..."
+  - "Meine Meinung ist, ..."
+  - "Ich hab das gestern gesagt."
+  - "Ich war unsicher."
+tags: [self_reference, atomic]

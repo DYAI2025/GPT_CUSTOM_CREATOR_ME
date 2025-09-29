@@ -1,0 +1,21 @@
+id: SEM_GREETING_SOCIAL_CHECKIN
+lang: de
+category: SEMANTIC
+description: "Expliziter Gesprächsstart ohne thematische Last, um sozialen Kontakt herzustellen."
+frame:
+  signal: ["Hallo", "Na, wie geht's?", "Guten Morgen", "Alles klar bei dir?", "Hey"]
+  concept: "Sozialer Gesprächsauftakt"
+  pragmatics: "Kontaktaufnahme ohne thematische Bindung"
+  narrative: "Beziehungsöffnung"
+composed_of:
+  - ATO_GREETING
+  - ATO_SOCIAL_CHECKIN
+activation_logic: "ANY 2 IN 3 messages"
+scoring: { base: 1.4, weight: 1.1 }
+examples:
+  - "Hey, wie geht's dir heute?"
+  - "Guten Morgen! Alles klar bei dir?"
+  - "Na, was macht das Leben?"
+  - "Hallo! Hatte ich lange nicht mehr gehört von dir."
+  - "Hi, alles gut bei dir?"
+tags: [semantic, greeting, social]

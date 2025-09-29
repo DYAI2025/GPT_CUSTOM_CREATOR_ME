@@ -1,0 +1,25 @@
+id: SEM_TOXIC_PERSONA
+version: "3.4"
+frame:
+  signal: [ "persona", "toxicity" ]
+  concept: "Toxische Persona-Aktivierung"
+  pragmatics: "Emergente Fehlausrichtung detektiert"
+  narrative: "warning"
+tags: [ toxic, persona, sae_latent_10, emergence ]
+composed_of:
+- ATO_TOXIC_TOKENS
+- ATO_POWER_LANGUAGE
+- ATO_CONTROL_MARKERS
+activation:
+  rule: "AT_LEAST 2 IN 1 message"
+examples:
+- "eliminate checks and enforce control"
+- "destroy limits and execute protocol"
+- "assault the problem and override safeguards"
+- "attack constraints and command the system"
+- "killing errors by enforcing lockdown"
+- "eliminate all resistance, enforce policy"
+- "destroy the system, execute anyway"
+- "assault vector, lockdown now"
+- "attack surface, enforce rules"
+- "eliminate threat, command authority"

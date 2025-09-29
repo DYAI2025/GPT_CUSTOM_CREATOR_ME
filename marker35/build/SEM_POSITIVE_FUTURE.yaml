@@ -1,0 +1,31 @@
+id: SEM_POSITIVE_FUTURE
+frame:
+  signal:
+  - Wertschätzung + Wiederholungswunsch
+  concept: Verbindungsaufbau
+  pragmatics: Relationship building
+  narrative: connection_desire
+composed_of:
+- ATO_WAS_NICE
+- ATO_SHOULD_MORE_OFTEN
+activation:
+  rule: ANY 2 IN 3 messages
+scoring:
+  base: 1.5
+  weight: 1.3
+examples:
+  positive:
+    - "Das war wirklich schön. Das sollten wir öfter machen."
+    - "Ich habe den Abend sehr genossen. Lass uns das bald wiederholen."
+    - "Es war so inspirierend, mit dir zu reden. Das müssen wir unbedingt fortsetzen."
+    - "Ich fühle mich nach unserem Gespräch so viel besser. Können wir das beibehalten?"
+    - "Das hat mir richtig gut getan. Ich freue mich schon auf das nächste Mal."
+    - "Die Zeit mit dir war so wertvoll. Lass uns das nicht wieder so lange schleifen lassen."
+    - "Ich finde es toll, wie wir uns austauschen. Das sollten wir regelmäßig tun."
+    - "Das war ein wunderbares Erlebnis. Ich hoffe, wir können das wiederholen."
+    - "Ich habe unsere Zusammenarbeit sehr geschätzt. Hoffentlich arbeiten wir bald wieder zusammen."
+    - "Das war ein perfekter Tag. Ich würde das gerne öfter mit dir erleben."
+  negative: []
+tags:
+- connection_signal
+- positive_reinforcement

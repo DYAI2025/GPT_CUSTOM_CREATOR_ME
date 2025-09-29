@@ -1,0 +1,30 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_STABILITY_PRESERVATION
+frame:
+  signal: ["stability_preservation"]
+  concept: "Status-quo sichern: Rahmen/Thread stabil halten"
+  pragmatics: "Rahmenfixierung statt Exploration"
+  narrative: "motive_safety"
+tags: [stability, frame, closure]
+composed_of:
+  any_of:
+    - ATO_STYLE_REFERENCE
+    - ATO_SHARED_CONTEXT
+    - ATO_SUBJECT_CLOSED
+    - ATO_TOPIC_SPLIT
+activation:
+  rule: "AT_LEAST 2 IN 3 messages"
+  window: 3
+scoring: { base: 0.60, weight: 1.05 }
+examples:
+  - "Lass es wie bisher – das Thema ist zu."
+  - "Zurück in den gewohnten Rahmen, bitte."
+  - "Nicht aufmachen – wir halten den Thread stabil."
+  - "Im Kontext von gestern bleiben."
+  - "Abtrennen: Nebenspur raus, Kern stabil halten."
+  - "Bitte beim Stil von letzter Woche bleiben."
+  - "Wir verlassen die Spur nicht."
+  - "Keine Ausnahmen – Schema beibehalten."
+  - "Thema geschlossen, Fokus bewahren."
+  - "Rahmen fix: kein Umschwenken mehr."

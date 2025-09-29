@@ -1,0 +1,18 @@
+id: SEM_REGISTER_CLASH
+frame:
+  signal: ["Register-Konflikt (hoch vs. slang)"]
+  concept: "Code-Violation durch Stilbruch"
+  pragmatics: "Inkongruenz erzeugen"
+  narrative: "clash"
+composed_of:
+  - ATO_REGISTER_FORMAL
+  - ATO_SLANG_TOKEN
+activation:
+  rule: "ANY 2 IN 3 messages"
+examples:
+  - "Mithin, Digga, deployen wir halt."
+  - "Ergo, lol, das brennt."
+  - "Indes ist das, Alter, suboptimal."
+  - "Ipso facto: wtf?"
+  - "Ceteris paribus—scheiß egal."
+tags: [humor, register, incongruity, semantics, v33]

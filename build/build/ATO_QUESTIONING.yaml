@@ -1,0 +1,19 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_QUESTIONING
+frame:
+  signal: ["questioning"]
+  concept: "Infragestellen / prüfende Haltung"
+  pragmatics: "Kritische Nachfrage"
+  narrative: "interaction"
+tags: [question, stance]
+pattern:
+  regex: '(?i)\b(warum|wieso|weshalb|inwiefern|wirklich\?|ernsthaft\?)'
+  flags: ["IGNORECASE"]
+examples:
+  - "Wieso denkst du das?"
+  - "Warum gerade so?"
+  - "Inwiefern trifft das zu?"
+  - "Wirklich?"
+  - "Ernsthaft?"
+  - "Weshalb meinst du, das passt?"

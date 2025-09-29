@@ -1,0 +1,26 @@
+id: CLU_PERSONA_GREEN
+version: "3.4.1"
+frame:
+  signal: [ "persona", "aggregation" ]
+  concept: "Spiral/Value-Persona GREEN (indikativ, nicht beweisend)"
+  pragmatics: "schnelles Screening, evidenzbasiert"
+  narrative: "hypothesis"
+tags: [ persona, GREEN, screening ]
+composed_of:
+- SEM_CONSENSUS_SIGNAL
+- SEM_INCLUSION_LANGUAGE
+- SEM_SOFTENING_MOVE
+activation:
+  rule: "AT_LEAST 2 IN 6 messages"
+scoring:
+  base: 1.0
+  weight: 1.0
+metadata:
+  persona:
+    evidence_policy: "family-scoped"
+examples:
+- "<wir gemeinsam>"
+- "<allen Raum geben>"
+- "<Einbindung>"
+- "<Konsens>"
+- "<sanfter Ton>"

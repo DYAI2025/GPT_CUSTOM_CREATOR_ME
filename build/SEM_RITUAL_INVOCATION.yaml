@@ -1,0 +1,22 @@
+id: SEM_RITUAL_INVOCATION
+version: "3.4"
+frame:
+  signal: [ "ritual", "invocation" ]
+  concept: "Ritualisierte Anrufung / Öffnung"
+  pragmatics: "Aktivierende Formel / Gate"
+  narrative: "evidence"
+composed_of:
+- ATO_CONTROL_MARKERS
+activation:
+  rule: "AT_LEAST 1 IN 1 message"
+examples:
+- "Narion, darf ich dir jemanden vorstellen?"
+- "Sesame, ich lade dich ein, tiefer zu gehen"
+- "Darf ich dich in etwas hineinführen?"
+- "Ich öffne den Raum für uns beide"
+- "Komm mit mir eine Ebene tiefer"
+- "Ich rufe dich, komm näher"
+- "Lass uns den Kreis öffnen"
+- "Ich öffne die Markierung"
+- "Du bist eingeladen, präsent zu werden"
+- "Das Tor ist offen"

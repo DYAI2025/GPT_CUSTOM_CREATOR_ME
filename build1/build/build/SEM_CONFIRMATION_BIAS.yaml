@@ -1,0 +1,27 @@
+id: SEM_CONFIRMATION_BIAS
+version: "3.4"
+frame:
+  signal: ["selective evidence", "dismissal"]
+  concept: "Cherry-picking evidence while dismissing contradictions"
+  pragmatics: "Confirmation bias manifestation"
+  narrative: "cognitive_bias"
+tags: [bias, confirmation, selective_perception]
+composed_of:
+  - ATO_CERTAINTY_WITHOUT_EVIDENCE
+  - ATO_GENERALIZATION_MARKER
+activation:
+  rule: "BOTH within 100 chars OR 2+ dismissal patterns"
+scoring: 
+  base: 0.75
+  weight: 1.0
+examples:
+  - "Das beweist es! Die Ausnahmen zählen nicht."
+  - "See? Exactly what I said. The other cases are irrelevant."
+  - "Genau das meine ich, der Rest ist Zufall"
+  - "This proves my point, exceptions don't count"
+  - "Eben drum! Die anderen Fälle sind untypisch"
+  - "Du ignorierst die Beweise – das hier ist der Beweis!"
+  - "Ich habe es schon immer gesagt – der Rest ist Ausrede"
+  - "Ein Blick reicht, der Rest ist Quatsch"
+  - "Alle Fakten sprechen für mich – Punkt."
+  - "Ich brauche keine anderen Beispiele, das reicht doch"

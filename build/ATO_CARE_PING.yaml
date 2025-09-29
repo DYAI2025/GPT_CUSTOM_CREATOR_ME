@@ -1,0 +1,57 @@
+id: ATO_CARE_PING
+display_title: "Care Ping"
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Kurzer Care-Ping ohne Erwartungsdruck"
+  concept: "Care Ping"
+  pragmatics: "Kontakt halten"
+  narrative: "maintenance"
+pattern:
+  - '(?i)\bkurz(?:er)? ping\b'
+  - '(?i)\bhab(?:e)? an dich gedacht\b'
+  - '(?i)\bkurzes? hallo\b'
+  - '(?i)\bkurz(?:er)? check-?in\b'
+  - '(?i)\bpflege-?hallo\b'
+composed_of: []
+activation:
+  rule: "ANY 1 IN 30 messages"
+window:
+  messages: 30
+scoring:
+  base: 1.6
+  weight: 0.4
+  decay: 0.01
+  formula: "logistic"
+tags: [ato, positiv, ritual]
+examples:
+  - "Kurzer Ping 🙂"
+  - "Nur ein kurzes Hallo!"
+  - "Hab an dich gedacht."
+  - "Mini Check-in – alles gut?"
+  - "Nur ein Pflege-Hallo."
+detect_class: null
+criteria: null
+updated_at: "2025-08-19T10:30:00Z"
+activation:
+  rule: "ANY 1 IN 30 messages"
+window:
+  messages: 30
+scoring:
+  base: 1.7
+  weight: 0.4
+  decay: 0.01
+  formula: "logistic"
+examples:
+  - "Kurzes Update: Ich bin gut angekommen."
+  - "Denk an dich!"
+  - "Wie war dein Tag?"
+  - "Kleines Lebenszeichen von mir."
+  - "Wollte mal hören, wie es dir geht."
+  - "Schneller Check-in: Alles gut bei dir?"
+  - "Hab gerade an dich gedacht."
+  - "Kurze Frage: Wie läuft deine Woche?"
+  - "Kurzer Ping!"
+  - "Alles gut bei dir?"
+tags: [ato, positiv, friendship, ritual, deeskalation]

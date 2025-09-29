@@ -1,0 +1,18 @@
+id: SEM_FLOUT_QUALITY_IRONY
+frame:
+  signal: ["Ironie/Sarkasmus als Qualitäts-Verstoß"]
+  concept: "Gegenteilbehauptung lesbar machen"
+  pragmatics: "Implikatur erzwingen"
+  narrative: "antiphrase"
+composed_of:
+  - ATO_SARCASM_CUES
+  - ATO_AMBIGUITY_QUOTES
+activation:
+  rule: "ANY 2 IN 2 messages"
+examples:
+  - "Ja, genau, ein 'sicherer' Plan."
+  - "Na klar, total 'stabil'."
+  - "Ganz bestimmt 'schnell' gelöst."
+  - "Super, die „Experten“ schon wieder."
+  - "Klar, 'robust' wie immer."
+tags: [humor, grice_quality, irony, semantics, v33]

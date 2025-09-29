@@ -1,0 +1,21 @@
+id: SEM_CONSENSUS_SIGNAL
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["consensus"]
+  concept: "Explizites Einholen/Zeigen von Konsens"
+  pragmatics: "Koordination"
+  narrative: "interaction"
+tags: [consensus, coordination]
+composed_of:
+  - ATO_REQUEST_FOR_FEEDBACK
+  - ATO_SUPPORT_MESSAGE
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.55, weight: 1.0 }
+examples:
+  - "Wie wirkt das? – Ich bin da."
+  - "Feedback bitte – melde dich jederzeit."
+  - "Kurze Rückmeldung – wir schaffen das."
+  - "Spiegeln? – Du bist nicht allein."
+  - "Passt das? – Ich unterstütze dich."

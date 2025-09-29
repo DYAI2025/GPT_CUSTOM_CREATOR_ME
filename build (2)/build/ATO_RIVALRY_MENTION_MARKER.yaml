@@ -1,0 +1,28 @@
+id: ATO_RIVALRY_MENTION_MARKER
+frame:
+  signal:
+  - sag mal
+  - hör zu
+  - verstehst du
+  concept: Kommunikationsmuster
+  pragmatics: Dialog führen
+  narrative: exchange
+pattern:
+- (?i)\\bdass\ du\\b
+examples:
+- Wenn andere Frauen dir schreiben, fühl ich mich unsicher.
+- Du redest in letzter Zeit so oft von ihm... ist da was?
+- Eine andere Frau hat mir heute geschrieben, aber ich denke nur an dich.
+- Mir ist aufgefallen, dass du jedes Bild von ihm likest.
+- Du hast sicher viele andere Männer, die dir schreiben. Ich verstehe, wenn ich nur
+  einer von vielen bin.
+- Findest du, sie sieht besser aus als ich?
+- Wer war die Person, mit der du gestern im Café warst? Sah nicht nach einem Kumpel
+  aus.
+- Ich hab gesehen, dass du wieder mit ihr schreibst. Überrascht mich nicht.
+- Du musst mir jetzt ehrlich sagen, ob da jemand anderes ist.
+- Ein Mann hier im Camp macht mir den Hof, aber mein Herz gehört nur dir.
+- Zeig mir mal, was er dir schreibt.
+- Muss ich mir wegen ihr Sorgen machen?
+tags:
+- communication

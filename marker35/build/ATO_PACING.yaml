@@ -1,0 +1,24 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_PACING
+frame:
+  signal: ["pacing"]
+  concept: "Taktung / zeitliches Pacing"
+  pragmatics: "Rhythmus / Ablaufsteuerung"
+  narrative: "process"
+tags: [timing, pacing]
+pattern:
+  regex: "\\b(der Reihe nach|eins nach dem anderen|kurz nacheinander|im Takt|gleichmäßig|Step by Step)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Der Reihe nach, bitte."
+  - "Eins nach dem anderen."
+  - "Kurz nacheinander abarbeiten."
+  - "Im Takt bleiben."
+  - "Gleichmäßig weiter."
+  - "Step by step vorgehen."
+  - "Takt halten: next, next."
+  - "Kurze Sprints, dann Check."
+  - "Im 10‑Minuten‑Takt."
+  - "Schritt für Schritt, ohne Sprünge."
+  - "Blockweise, dann Review."

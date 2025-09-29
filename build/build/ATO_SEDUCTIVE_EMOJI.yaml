@@ -1,0 +1,24 @@
+id: ATO_SEDUCTIVE_EMOJI
+frame:
+  signal:
+  - 😏
+  - 🥵
+  - 🍆
+  - 💦
+  concept: Verführerische Symbolik
+  pragmatics: Erotische Konnotation
+  narrative: subtile Provokation
+pattern:
+- 😏
+- 🥵
+- 🍆
+- 💦
+activation:
+  rule: ANY 1
+examples:
+- Na, wie findest du das? 😏
+- Ich könnte vor Lust fast platzen 🥵
+- Denke gerade an dich 🍆💦
+- So sieht's aus 😏
+- Ganz schön heiß hier 🥵
+tags: []

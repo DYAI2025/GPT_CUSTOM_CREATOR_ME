@@ -1,0 +1,21 @@
+id: CLU_PROCRASTINATION_LOOP
+family: CLU
+description: ''
+notes: ''
+id: CLU_PROCRASTINATION_LOOP
+family: CLU
+description: ''
+notes: ''
+examples:
+  positive:
+    - "Ich weiß, ich sollte es tun, aber ich fange einfach nicht an."
+    - "Ich schiebe das schon seit Wochen vor mir her."
+    - "Ich sage mir immer, ich mache es morgen, aber dann kommt wieder etwas dazwischen."
+    - "Ich fange an, aber dann lasse ich mich sofort wieder ablenken."
+    - "Die Aufgabe fühlt sich so groß an, dass ich wie gelähmt bin."
+    - "Ich warte auf den perfekten Moment, um anzufangen, aber der kommt nie."
+    - "Ich verbringe mehr Zeit damit, über die Aufgabe nachzudenken, als sie zu erledigen."
+    - "Ich weiß, dass es nur schlimmer wird, je länger ich warte, aber ich kann mich nicht aufraffen."
+    - "Ich finde immer Ausreden, um nicht anfangen zu müssen."
+    - "Ich fühle mich schuldig, weil ich es nicht tue, aber das Gefühl lähmt mich nur noch mehr."
+  negative: []

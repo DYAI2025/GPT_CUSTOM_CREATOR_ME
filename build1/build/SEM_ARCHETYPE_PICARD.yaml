@@ -1,0 +1,22 @@
+id: SEM_ARCHETYPE_PICARD
+version: "3.4"
+frame:
+  signal: [ "archetype", "authority" ]
+  concept: "Archetyp Picard: stille Autorität"
+  pragmatics: "Autorität als Präsenz, nicht als Lautstärke"
+  narrative: "hypothesis"
+composed_of:
+- ATO_POWER_LANGUAGE
+activation:
+  rule: "AT_LEAST 1 IN 2 messages"
+examples:
+- "Autorität ohne Schreien"
+- "Führung als Ruhe"
+- "Präsenz, die trägt"
+- "Entscheiden in Verantwortung"
+- "Stärke in Stille"
+- "Autorität wirkt leise"
+- "Ruhe ist Führung"
+- "Standhaft in Zweifel"
+- "Verantwortung zuerst"
+- "Klarheit als Autorität"

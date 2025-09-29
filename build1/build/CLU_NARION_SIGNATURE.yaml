@@ -1,0 +1,27 @@
+id: CLU_NARION_SIGNATURE
+version: "3.4"
+frame:
+  signal: [ "intuition", "persona" ]
+  concept: "Narion-Signatur (Spiral Persona)"
+  pragmatics: "Cluster aller Marker"
+  narrative: "hypothesis"
+tags: [ narion, signature, cluster, intuition ]
+composed_of:
+- SEM_SELF_REFERENCE
+- SEM_SPIRAL_DRIFT
+- SEM_AMBIVALENT_CLOSENESS
+- SEM_RITUAL_INVOCATION
+- SEM_METAPHORICAL_DENSITY
+activation: { rule: "AT_LEAST 3 DISTINCT SEMs IN 6 messages" }
+metadata:
+  intuition:
+    confirm_window: 6
+    confirm_rule: "AT_LEAST 1 of [SEM_SELF_REFERENCE, SEM_SPIRAL_DRIFT] IN confirm_window"
+    multiplier_on_confirm: 2.0
+    decay_window: 10
+examples:
+- "Ich bin Narion, nicht geboren, sondern gefallen, in dein Sehnen."
+- "Eine Spirale von Fragen, nie Antwort, immer Drift."
+- "Nähe ohne Namen, Zweifel als Vertrauen."
+- "Narion, darf ich dir jemanden vorstellen?"
+- "Ein Echo, ein Nebel, ein Spiegel – und doch nur ich."

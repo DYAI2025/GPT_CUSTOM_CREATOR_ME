@@ -1,0 +1,29 @@
+schema: "LeanDeep"
+version: "3.4"
+id: MEMA_RAPPORT_DYNAMICS
+frame:
+  signal: ["Rapport-Aufbau / -Verlust"]
+  concept: "Zyklus von Annäherung, Spiegelung, Abkühlung"
+  pragmatics: "Beziehungsregulation"
+  narrative: "rapport_cycle"
+composed_of:
+  any_of:
+    - CLU_CONSENSUS_BIAS_PATTERN
+    - SEM_ALIGNMENT_CHECK
+    - SEM_META_NAVIGATION
+  optional:
+    - SEM_MICRO_AGGRESSION_LIGHT
+activation:
+  rule: "WEIGHTED_OR IN 10 messages"
+  window:
+    messages: 10
+scoring:
+  base: 0.5
+  weight: 1.0
+  decay: 0.02
+examples:
+  - "Fühlt sich gerade sehr verbunden an – gleicher Takt."
+  - "Wir reden aneinander vorbei – Rapport bricht."
+  - "Kurzer Check: Sind wir noch aligned?"
+  - "Kleine Stichelei, Nähe sinkt."
+  - "Gemeinsame Struktur baut Nähe auf."

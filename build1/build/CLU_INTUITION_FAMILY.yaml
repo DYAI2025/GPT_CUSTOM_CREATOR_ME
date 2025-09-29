@@ -1,0 +1,15 @@
+# Intuition-Policy-Snippet (family-scoped Multiplier)
+metadata:
+  intuition:
+    state: "provisional"
+    confirm_window: 5
+    confirm_rule: "AT_LEAST 1 of [SEM_<FAMILY>_HARD_A, SEM_<FAMILY>_HARD_B] IN confirm_window"
+    multiplier_on_confirm: 1.75
+    decay_window: 7
+  telemetry_keys:
+    counter_confirmed: "INT_<FAMILY>.confirmed"
+    counter_retracted: "INT_<FAMILY>.retracted"
+    ewma_precision: "INT_<FAMILY>.ewma_precision"
+policy:
+  scope: "family-only"
+  cooldown_after_decayed: 5

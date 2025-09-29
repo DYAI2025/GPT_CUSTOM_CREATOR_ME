@@ -1,0 +1,29 @@
+id: SEM_M_LOVE_BOMBING
+frame:
+  signal:
+  - Ich hab dich noch nie so geliebt
+  - Du bist das Wichtigste in meinem Leben
+  - Ohne dich bin ich nichts
+  concept: Love Bombing
+  pragmatics: Manipulative Bindung
+  narrative: overwhelm
+activation:
+  rule: ANY 1
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- Ich hab dich noch nie so geliebt wie jetzt.
+- Du bist das Wichtigste in meinem Leben.
+- Ohne dich fühle ich mich komplett verloren.
+- Ich kann nicht ohne dich atmen.
+- Jeder Gedanke dreht sich nur um dich.
+- Also das ist erstaunlich, wie gut du darin bist. Sowas bewundere ich ja sehr.
+- Du bist ziemlich clever, das mag ich an dir!
+- Selten jemanden mit soviel Verstand und Schönheit in einem gesehen.
+- Ich könnte stundenlang an deinen Lippen hänkungen.
+tags:
+- manipulation
+- love_bombing
+composed_of:
+- ATO_PLACEHOLDER

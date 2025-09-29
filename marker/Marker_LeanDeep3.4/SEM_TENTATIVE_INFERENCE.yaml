@@ -1,0 +1,20 @@
+id: SEM_TENTATIVE_INFERENCE
+version: "3.4"
+frame:
+  signal: ["tentative_inference"]
+  concept: "Vorläufige Schlussfolgerung"
+  pragmatics: "Hypothesenstatus"
+  narrative: "uncertainty"
+tags: [uncertainty, inference]
+composed_of:
+  - ATO_TENTATIVE_VERBS
+  - ATO_PROBABILISTIC_TERMS
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.55, weight: 1.0 }
+examples:
+  - "Scheint mit 60% zu klappen."
+  - "Looks like low risk."
+  - "Wirkt wahrscheinlich gut."
+  - "Appears unlikely."
+  - "Tendenziell 40–60%."

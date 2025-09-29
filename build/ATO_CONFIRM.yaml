@@ -1,0 +1,19 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_CONFIRM
+frame:
+  signal: ["confirm"]
+  concept: "Bestätigung / Zusage"
+  pragmatics: "Koordination / Commit"
+  narrative: "interaction"
+tags: [confirm, commitment]
+pattern:
+  regex: "\\b(ja|genau|passt|richtig|einverstanden)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ja, das stimmt."
+  - "Genau so."
+  - "Passt für mich."
+  - "Richtig, sehe ich auch so."
+  - "Einverstanden."
+  - "Klingt gut, machen wir so."

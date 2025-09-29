@@ -1,0 +1,16 @@
+id: ATO_AMBIGUITY_QUOTES
+frame:
+  signal: ["Distanzierende Anführungszeichen"]
+  concept: "Markierung nicht-wörtlicher Bedeutung"
+  pragmatics: "Manner-Maxime flouten (Mehrdeutigkeit)"
+  narrative: "hint"
+pattern:
+  - "[„\"']\\s?[^„\"']+\\s?[\"'”]"
+  - "(?i)(sogenannt(e|er|es)|'so')\\s+\\w+"
+examples:
+  - "Unser 'agiler' Prozess."
+  - "Die „Experten“ sind da."
+  - "Das sogenannte Best-Practice."
+  - "Ein 'sicherer' Plan."
+  - "Der „neue“ Server ist alt."
+tags: [humor, ambiguity, quotes, grice_manner, atomic, v33]

@@ -1,0 +1,22 @@
+id: MEMA_THERAPEUTIC_RESISTANCE_PATTERN
+schema_version: LD-3.3
+lang: en
+category: MEMA
+description: Meta marker for systematic therapeutic resistance and change avoidance
+criteria: "Persistent pattern of resistance to therapeutic change across multiple interventions and contexts"
+composed_of:
+  - CLU_INDIRECT_CONFLICT_AVOIDANCE
+  - SEM_SELF_REFLECTION
+  - SEM_VALIDATION_SEEKING
+examples:
+  - "Intellectual insight without behavioral change despite multiple therapeutic approaches."
+  - "Resistance to change masked as compliance with therapeutic recommendations."
+  - "Pattern of seeking validation for problems without genuine commitment to solutions."
+  - "Therapeutic progress consistently undermined by unconscious sabotage patterns."
+  - "Change avoidance disguised as inability to change despite adequate resources."
+  - "Therapy shopping pattern where client leaves when real change is demanded."
+  - "Chronic therapy utilization without meaningful progress over extended periods."
+  - "Resistance to homework or between-session practice despite apparent motivation."
+  - "Pattern of crisis creation when therapeutic progress threatens existing identity."
+  - "Long-term therapeutic relationship maintained without substantial growth or change."
+tags: [mema, v3.3, therapeutic-resistance, change-avoidance]

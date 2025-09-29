@@ -1,0 +1,27 @@
+id: SEM_DYNAMIC_KNOTS
+frame:
+  signal:
+  - self-worth disruption
+  - covert control
+  - ambivalence spiral
+  - reaktive beeinflussung
+  - mächtigkeitsungleichgewicht
+  concept: Dynamische Verstrickung
+  pragmatics: emotionale Regulationsstörung
+  narrative: Spiralbildung
+composed_of:
+- ATO_PLACEHOLDER
+activation:
+  rule: ANY 1
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- Je niedriger mein Selbstwert, desto stärker versuche ich dich zu lenken.
+- Ich ziehe dich nah, schiebe dich dann aber wieder weg.
+- Dieser Kreislauf aus Zweifel und Kontrolle hört nie auf.
+- I oscillate between feeling worthless and seeking control.
+- When I feel powerless, I manipulate to regain power.
+tags:
+- dynamic
+- ambivalence

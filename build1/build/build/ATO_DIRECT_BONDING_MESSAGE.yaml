@@ -1,0 +1,32 @@
+id: ATO_DIRECT_BONDING_MESSAGE
+frame:
+  signal:
+  - Ich fühl mich verbunden
+  - Du bist mir wichtig
+  - Wir sind auf einer Wellenlänge
+  concept: personal bonding
+  pragmatics: bonding
+  narrative: affiliation
+pattern:
+- (?i)\b(ich fühl mich verbunden|du bist mir wichtig|wir sind auf einer wellenlänge)\b
+activation:
+  rule: ANY 1
+examples:
+- Ich fühl mich echt verbunden mit dir.
+- Wir hängen irgendwie zusammen, Alter.
+- Unsere Freundschaft bedeutet mir viel.
+- Du bist mir wichtig und ich fühl das.
+- Ich weiß, wir sind ein Team.
+- Ich spüre unsere gemeinsame Energie.
+- Ich mag es, wenn wir uns so verstehen.
+- Ich schätze unsere Verbindung sehr.
+- Ich brauch dich an meiner Seite.
+- Und es hat Zoom gemacht!
+- Du bist echt ein wichtiger Teil meines Lebens.
+- Ich fühl mich wohl, wenn wir reden.
+- Du bist mir echt wichtig, weißt du das?
+- Ich mag es, wie wir uns verstehen.
+- Wir sind total synchron im Gespräch.
+tags:
+- direct_address
+- bonding

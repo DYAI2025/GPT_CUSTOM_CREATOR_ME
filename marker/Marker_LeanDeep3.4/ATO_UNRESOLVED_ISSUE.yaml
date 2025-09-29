@@ -1,0 +1,27 @@
+id: SEM_UNRESOLVED_ISSUE
+lang: de
+category: SEMANTIC
+description: "Erfasst sprachliche Muster von Stillstand, Sackgasse und ausbleibendem Fortschritt in Gesprächen."
+frame:
+  signal: ["wir drehen uns im Kreis", "kommen nicht weiter", "keine Lösung in Sicht", "festgefahren"]
+  concept: "Unaufgelöste Problemlage"
+  pragmatics: "Frustration, Eskalationsrisiko, Abbruchneigung"
+  narrative: "Sackgassen-Frame"
+composed_of:
+  - ATO_DREHEN_IM_KREIS
+  - ATO_KEINE_LOESUNG
+activation_logic: "ANY 2 IN 3 messages"
+scoring: { base: 1.3, weight: 1.0 }
+window: { messages: 6 }
+examples:
+  - "Ganz ehrlich, wir drehen uns im Kreis und finden einfach keine Lösung."
+  - "Wir kommen hier einfach nicht weiter mit dieser Entscheidung."
+  - "So bringt das nichts, wir treten auf der Stelle."
+  - "Es fühlt sich an, als gäbe es dafür keine Lösung."
+  - "Wir stecken fest und wissen nicht, wie es weitergehen soll."
+  - "Seit Stunden – null Fortschritt."
+  - "Immer wieder dieselben Argumente, aber keine Lösung."
+  - "Ich sehe keinen Weg, das hier zu klären."
+  - "Wir haben alles gewälzt, nichts passt."
+  - "Egal wie wir drehen: Sackgasse."
+tags: [semantic, unresolved, konflikt]

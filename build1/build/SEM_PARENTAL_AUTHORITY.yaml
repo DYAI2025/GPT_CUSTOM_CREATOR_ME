@@ -1,0 +1,42 @@
+id: SEM_PARENTAL_AUTHORITY
+display_title: "Elterliche Autorität"
+version: "3.3"
+lang: de
+category: SEMANTIC
+description: "Semantische Kombination von Elternrolle und direktiven Äußerungen."
+frame:
+  signal: ["Elternrolle + Anweisung"]
+  concept: "Elterliche Autorität"
+  pragmatics: "Machtausübung durch Elternrolle"
+  narrative: "Hierarchische Kommunikation"
+combination:
+  type: "AND"
+  components:
+    - marker_id: "ATO_ROLE_FATHER"
+      weight: 0.5
+    - marker_id: "ATO_ROLE_MOTHER"
+      weight: 0.5
+    - marker_id: "ATO_DIRECTIVE_CHORES"
+      weight: 0.4
+    - marker_id: "ATO_DIRECTIVE_HOMEWORK"
+      weight: 0.4
+    - marker_id: "ATO_DIRECTIVE_BEDTIME"
+      weight: 0.4
+  threshold: 0.7
+activation:
+  rule: "WEIGHTED_AND"
+window:
+  messages: 30
+scoring:
+  base: 1.5
+  weight: 0.6
+  decay: 0.02
+  formula: "logistic"
+examples:
+  - "Papa sagt: Räum dein Zimmer auf!"
+  - "Mama: Mach deine Hausaufgaben!"
+  - "Als Vater bestimme ich, wann Schlafenszeit ist."
+tags: [semantic, family, authority, directive, hierarchy]
+detect_class: "E"
+criteria: "Kombination aus Elternrolle und direktiven Sprechakten"
+updated_at: "2025-08-19T10:30:00Z"

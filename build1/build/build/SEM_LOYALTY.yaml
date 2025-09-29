@@ -1,0 +1,31 @@
+id: SEM_LOYALTY
+frame:
+  signal:
+  - Ich stehe zu dir
+  - Du kannst auf mich zählen
+  - Egal was passiert
+  concept: Loyalität
+  pragmatics: Bindung stärken
+  narrative: commitment
+composed_of:
+- ATO_INVITING_RESONANCE
+- ATO_SVT_BEZIEHUNG_DU_BOTSCHAFT
+activation:
+  rule: ANY 2 IN 3 messages
+scoring:
+  base: 1.4
+  weight: 1.1
+examples:
+- Du kannst auf mich zählen – immer.
+- Ich stehe zu dir, komme was wolle.
+- Egal was passiert, ich bin bei dir.
+- Ich bin immer für dich da.
+- Auf mich kannst du bauen.
+- Unsere Verbindung halte ich für unerschütterlich.
+- Ich lasse dich nie im Stich.
+- Du hast meine volle Unterstützung.
+- Gemeinsam schaffen wir alles.
+- Du bist nie allein, versprochen.
+tags:
+- loyalty
+- commitment

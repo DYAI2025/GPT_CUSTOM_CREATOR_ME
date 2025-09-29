@@ -1,0 +1,27 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_VALIDATION_SEEKING
+frame:
+  signal: ["validation_seeking"]
+  concept: "Validierungs-/Bestätigungs-Suche"
+  pragmatics: "Externes Korrektiv einholen / Absicherung"
+  narrative: "attachment"
+tags: [validation, attachment]
+composed_of:
+  any_of:
+    - ATO_VALIDATION_SEEKING
+    - ATO_REQUEST_FOR_FEEDBACK
+    - ATO_PITY_APPEAL
+    - ATO_VICTIM_LANGUAGE
+  optional:
+    - ATO_CONFIRM
+activation:
+  rule: "AT_LEAST 2 IN 3 messages"
+  window: 3
+scoring: { base: 0.55, weight: 1.0 }
+examples:
+  - "Kannst du spiegeln? – Ich fühle mich so allein."
+  - "Kurze Rückmeldung? – Keiner versteht mich."
+  - "Wie wirkt das? – Ich armes Ich."
+  - "Passt das so? – Ich brauche Bestätigung."
+  - "Feedback bitte – niemand steht hinter mir."

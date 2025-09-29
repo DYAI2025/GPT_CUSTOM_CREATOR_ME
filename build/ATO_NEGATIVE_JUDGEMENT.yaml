@@ -1,0 +1,36 @@
+id: ATO_NEGATIVE_JUDGEMENT
+lang: de
+category: ATOMIC
+description: "Erfasst einzelne Wörter, die eine stark abwertende, persönliche und generalisierende Charaktereigenschaft beschreiben."
+frame:
+  signal:      ["Negativ konnotiertes Adjektiv oder Substantiv, das eine Persönlichkeit beschreibt"]
+  concept:     "Negative Charakterzuschreibung"
+  pragmatics:  "Dient der Abwertung und Kategorisierung der Person, nicht des Verhaltens."
+  narrative:   "token / label"
+pattern:
+  - "(?i)\\bfaul\\b"
+  - "(?i)\\banstrengend\\b"
+  - "(?i)\\bpeinlich\\b"
+  - "(?i)\\bunreif\\b"
+  - "(?i)\\bkalt\\b"
+  - "(?i)\\begoist"
+  - "(?i)\\bchaos"
+  - "(?i)\\bchaot"
+  - "(?i)\\bunzuverlässig"
+  - "(?i)\\bnegativ"
+  - "(?i)\\btoxisch"
+  - "(?i)\\bignorant"
+  - "(?i)\\bkontrollfreak"
+examples:
+  - "Das ist einfach nur peinlich."
+  - "Sein Verhalten war extrem unreif."
+  - "Ich finde ihn total anstrengend."
+  - "Eine sehr chaotische Person."
+  - "Das war eine wirklich kalte Reaktion."
+  - "Er ist ein bekannter Egoist."
+  - "Sie ist leider sehr unzuverlässig."
+  - "Hör auf, so negativ zu sein."
+  - "Diese ganze Situation ist toxisch."
+  - "Sei nicht so ignorant."
+tags: [atomic, judgement, label, negative, token, v3.3-compliant]
+schema_version: "3.3"

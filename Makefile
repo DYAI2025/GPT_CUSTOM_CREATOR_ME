@@ -4,7 +4,7 @@ install:
 	pip install -r requirements.txt
 
 test:
-	pytest -q
+	pytest marker_manager/tests -q
 
 run:
 	python -m marker_manager.cli gui -c marker_manager/marker_manager_config.yaml

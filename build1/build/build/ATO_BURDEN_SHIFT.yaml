@@ -1,0 +1,19 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_BURDEN_SHIFT
+frame:
+  signal: ["burden_shift"]
+  concept: "Verantwortung/Last verlagern"
+  pragmatics: "Accountability-Shift"
+  narrative: "conflict_micro"
+tags: [burden, responsibility]
+pattern:
+  regex: "(?i)\b(du hast entschieden|du wolltest das so|deine aufgabe|du bist dran|liegt bei dir)\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Du hast entschieden."
+  - "Du wolltest das so."
+  - "Das ist deine Aufgabe."
+  - "Du bist jetzt dran."
+  - "Das liegt bei dir."
+  - "Du hattest die Verantwortung."

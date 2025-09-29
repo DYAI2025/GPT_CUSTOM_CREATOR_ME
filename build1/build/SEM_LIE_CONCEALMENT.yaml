@@ -1,0 +1,27 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_LIE_CONCEALMENT
+frame:
+  signal:
+  - widersprüchliche Aussagen
+  - ausweichende Formulierungen
+  - vage Antworten
+  - Deflektion
+  concept: "Lie Concealment"
+  pragmatics: "Ausweichen/Vertuschen"
+  narrative: "obfuscation"
+detect_class: DetectLieConcealment
+examples:
+  positive:
+    - "Ich war... beschäftigt."
+    - "Das ist eine interessante Frage. Was denkst du denn darüber?"
+    - "Ich kann mich nicht genau erinnern."
+    - "Das ist kompliziert."
+    - "Ich habe getan, was ich tun musste."
+    - "Darüber möchte ich nicht reden."
+    - "Das ist nicht wirklich wichtig."
+    - "Ich war zu Hause. Also, meistens."
+    - "Ich habe mit niemandem darüber gesprochen. Außer vielleicht mit ein paar Leuten."
+    - "Ich weiß davon nichts."
+  negative: []
+tags: [deception, concealment]

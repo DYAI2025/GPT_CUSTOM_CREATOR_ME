@@ -1,0 +1,18 @@
+id: ATO_PARTIAL_TRUTH
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["partial_truth"]
+  concept: "Nur Teil der Wahrheit preisgegeben"
+  pragmatics: "Selektive Offenlegung"
+  narrative: "bias_pattern"
+tags: [bias, selectivity]
+pattern:
+  regex: "\\b(teilweise\\s+wahr|nicht\\s+die\\s+ganze\\s+Geschichte|nur\\s+das\\s+Wichtige)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Teilweise wahr."
+  - "Nicht die ganze Geschichte."
+  - "Nur das Wichtige."
+  - "Das reicht doch."
+  - "Details später."

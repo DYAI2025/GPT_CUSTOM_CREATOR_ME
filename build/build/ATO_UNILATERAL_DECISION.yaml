@@ -1,0 +1,26 @@
+id: ATO_UNILATERAL_DECISION
+frame:
+  signal:
+  - Alleinentscheidung
+  - ohne Absprache
+  - autonomes Handeln
+  concept: Unilateralität
+  pragmatics: Übergehung von Mitsprache
+  narrative: Dominanz/Alleingang
+pattern:
+- (?i)ich habe entschieden
+- (?i)ich mache das jetzt so
+- (?i)das habe ich einfach gemacht
+- (?i)ich habe beschlossen
+- (?i)ohne dich zu fragen
+activation:
+  rule: ANY 1
+examples:
+- Ich habe entschieden, dass wir das Meeting absagen.
+- Das mache ich jetzt einfach so, ohne Rücksprache.
+- Ich habe das bereits festgelegt.
+- Ich habe beschlossen, dass wir es so machen.
+- Ich habe das ohne dich geregelt.
+tags:
+- decision
+- autonomy

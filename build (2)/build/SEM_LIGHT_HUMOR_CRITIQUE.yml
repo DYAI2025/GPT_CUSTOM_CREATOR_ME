@@ -1,0 +1,21 @@
+id: EMO_LIGHT_HUMOR_CRITIQUE
+lang: de
+category: SEMANTIC
+description: "Humorvolle, sanfte Form der Kritik ohne verletzende Absicht."
+frame:
+  signal: ["nicht dein Ernst", "musst du wohl noch üben", "na das war ja was"]
+  concept: "Leichte, witzige Kritik"
+  pragmatics: "Wahrung der Beziehung durch Humor"
+  narrative: "kritik_mit_lächeln"
+composed_of:
+  - ATO_CRITIQUE_ELEMENT
+  - ATO_HUMOR_SIGNAL
+activation_logic: "ANY 2 IN 3 messages"
+scoring: { base: 1.4, weight: 1.1 }
+examples:
+  - "Na, das war ja mal eine kreative Ausrede."
+  - "Du hast wohl heimlich bei den Schildkröten gelernt, was Tempo angeht."
+  - "Also da gibt’s noch Luft nach oben."
+  - "Nett, aber ich geb dir nur eine 4+."
+  - "Nicht schlecht – für einen Anfänger."
+tags: [semantic, humor, critique]

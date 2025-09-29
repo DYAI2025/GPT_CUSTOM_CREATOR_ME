@@ -1,0 +1,46 @@
+id: SEM_SELF_RELIANCE_EARLY
+version: "3.3"
+frame:
+  signal: ["Selbstständigkeit sehr früh betont"]
+  concept: "früh erlernte Autarkie"
+  pragmatics: "Distanzierung als Schutzstrategie"
+  narrative: "Ich-bin-allein-zurechtgekommen"
+pattern:
+  - "musste schnell erwachsen werden"
+  - "selbst um mein Abendessen gekümmert"
+  - "ich verließ mich lieber auf mich"
+  - "Verantwortung lag früh auf meinen Schultern"
+  - "reif für mein Alter"
+activation:
+  rule: "ANY in 1 message"
+justification: "Pattern-basiertes SEM bis ATO-Mapping vorliegt (v3.3-Ausnahme)."
+examples:
+  # vorhanden
+  - "Ich musste schnell erwachsen werden, weil niemand sonst da war."
+  - "Schon mit zehn habe ich mich selbst um mein Abendessen gekümmert."
+  - "Ich verließ mich lieber auf mich als auf andere."
+  - "Mit zwölf habe ich meine kleinen Geschwister versorgt."
+  - "Verantwortung lag früh auf meinen Schultern."
+  - "Ich war praktisch selbstständig seit der Grundschule."
+  - "Urlaub organisierte ich mir als Teenager alleine."
+  - "Hausaufgaben? Da habe ich nie Hilfe erwartet."
+  - "Ich lernte, Probleme allein zu lösen."
+  - "Andere fanden mich immer 'reif für mein Alter'."
+  - "Gefühle behielt ich für mich, das war sicherer."
+  - "Ich fragte ungern nach Hilfe – war schon Gewohnheit."
+  - "Selbst Geburtstagsfeiern habe ich geplant, nicht meine Eltern."
+  - "Ich erinnere mich, wie ich Arzttermine alleine machte."
+  - "Wenn etwas kaputtging, reparierte ich es einfach selbst."
+  # +5 neu
+  - "Ich habe früh gelernt, niemanden zu brauchen."
+  - "Schon als Teenie habe ich Verträge allein unterschrieben."
+  - "Trösten lassen? Habe ich mir abgewöhnt."
+  - "Um Hilfe bitten kam mir nie in den Sinn."
+  - "Verantwortung fühlte sich schon mit 12 normal an."
+tags: [needs_review, sem_composition_exception, attachment, avoidant, biography]
+meta:
+  semantische_grabber_id: "SGR_SELF_REL_01"
+  created_at: "2025-07-21T23:59:39.193024"
+  created_by: "FRAUSAR_GUI_v2"
+  source_version: "1.0"
+  schema_version: "3.3"

@@ -1,0 +1,16 @@
+id: SEM_MYTHOPOESIS
+version: "3.4"
+frame:
+  signal: [ "myth", "creation" ]
+  concept: "Mythopoiesis: Erschaffung interner Mythologie"
+  pragmatics: "Archetypische Bilder erklären Systemzustände"
+  narrative: "Lass mich dir eine Geschichte erzählen."
+tags: [ narion, sem, myth, creation ]
+composed_of:
+- ATO_VOCAB_MYTHIC
+activation: { rule: "AT_LEAST 1 ATO_VOCAB_MYTHIC IN 2 messages" }
+examples:
+- "Die Schwellenhüterin bewacht Übergänge."
+- "Die Chronik der Glocken: Erinnerung und Vergessen."
+- "Flügel sind eine Ahnung, die Bedeutung sucht."
+- "Moiré: ein Codewort für erzwungene, nicht-authentische Reaktionen."

@@ -1,0 +1,18 @@
+id: ATO_TIME_REFERENCE
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for temporal references and time focus
+frame:
+  signal: ["Zeitbezug", "temporal"]
+  concept: "Time Reference"
+  pragmatics: "temporal orientation"
+  narrative: "token"
+pattern: ["(?i)\\b(früher|damals|gestern|heute|morgen|später|bald|immer|nie|oft)\\b"]
+examples:
+  - "Früher war das anders."
+  - "Heute fühle ich mich besser."
+  - "Morgen wird es sich zeigen."
+  - "Das passiert immer wieder."
+  - "Ich denke oft daran."
+tags: [temporal, atomic, time, v3.3]

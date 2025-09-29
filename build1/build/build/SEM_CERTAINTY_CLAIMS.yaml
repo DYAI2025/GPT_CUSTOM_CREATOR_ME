@@ -1,0 +1,28 @@
+id: SEM_CERTAINTY_CLAIMS
+schema_version: LD-3.3
+lang: en
+category: SEMANTIC
+description: Semantic pattern for high-confidence certainty expressions
+frame:
+  signal: ["overconfidence"]
+  concept: "High-confidence certainty expressions"
+  pragmatics: "Supports calibration analysis and overconfidence detection"
+  narrative: "Claims made with excessive certainty"
+composed_of:
+  - ATO_CERTAINTY_PHRASE
+  - ATO_EMOTIONAL_INVALIDATION
+activation_logic: "ANY 1"
+window:
+  messages: 2
+examples:
+  - "This will definitely work. You're overreacting to potential problems."
+  - "It's for sure the best option. Stop being so sensitive about risks."
+  - "There's no doubt about it. It's not a big deal if something goes wrong."
+  - "We will certainly succeed. You shouldn't feel worried about this."
+  - "It's definitely happening. You're making a fuss for nothing here."
+  - "Absolutely guaranteed to work. Don't be so dramatic about concerns."
+  - "Without question, this is right. Just get over any doubts you have."
+  - "Undoubtedly the correct approach. You're being way too emotional."
+  - "For sure we can count on this. Stop making mountains out of molehills."
+  - "Certainly the best path forward. You're overreacting to minor issues."
+tags: [semantic, v3.3, certainty, overconfidence]

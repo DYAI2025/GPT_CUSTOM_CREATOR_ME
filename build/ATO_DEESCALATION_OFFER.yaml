@@ -1,0 +1,29 @@
+id: ATO_DEESCALATION_OFFER
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Deeskalationsangebot"
+    - "Ohne Vorwurf/Anklage"
+    - "Bereitschaft zuzuhören"
+  concept: "Kontaktreparatur"
+  pragmatics: "Temperatur senken, Beziehung halten"
+  narrative: "Repair-Initiative"
+pattern:
+  - '(?i)\bohne\s+vorwurf\b'
+  - '(?i)\bohne\s+anklage\b'
+  - '(?i)\bbereit\s+zuzuhör\w*\b'
+  - '(?i)\blass\s+uns\s+ruhig\s+sprech\w*\b'
+  - '(?i)\b(ok|oki|okay)\b'
+  - '(?i)\bich\s+möchte\s+versteh\w*\b'
+  - '(?i)\bwir\s+kriegen\s+das\s+hin\b'
+  - '(?i)\blass\s+uns\s+ sachlich\s+bleib\w*\b'
+examples:
+  - "Ich höre zu – ohne Vorwurf."
+  - "Lass uns ruhig sprechen."
+  - "Okay, ich möchte verstehen."
+  - "Wir kriegen das hin."
+  - "Lass uns sachlich bleiben."
+  - "Ich bin bereit zuzuhören."
+  - "Mir geht es nicht darum, dich anzuklagen."
+tags: [deescalation, goodwill, repair, atomic]

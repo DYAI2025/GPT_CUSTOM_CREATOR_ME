@@ -1,0 +1,17 @@
+id: ATO_HYPERBOLE_EXTREME
+frame:
+  signal: ["Extreme Übertreibung"]
+  concept: "Hyperbel"
+  pragmatics: "Druckabbau / Relief"
+  narrative: "ladder"
+pattern:
+  - "(?i)(tausend|million(en)?|milliarde(n)?|unendlich|endlos)"
+  - "(?i)ich (sterbe|bin tot) vor lachen"
+  - "(?i)literally (dead|dying)"
+examples:
+  - "Ich habe das schon tausendmal erklärt."
+  - "Unendlich viele Meetings heute."
+  - "Ich bin tot vor Lachen."
+  - "Literally dying right now."
+  - "Eine Million Gründe dagegen."
+tags: [humor, hyperbole, relief, atomic, v33]

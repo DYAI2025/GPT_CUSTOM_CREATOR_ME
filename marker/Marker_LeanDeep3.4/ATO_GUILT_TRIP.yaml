@@ -1,0 +1,23 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_GUILT_TRIP
+frame:
+  signal: ["guilt_trip"]
+  concept: "Schuldappell / Guilt Trip"
+  pragmatics: "Emotionale Manipulation"
+  narrative: "conflict_micro"
+tags: [guilt, manipulation]
+pattern:
+  regex: "(?i)\\b(enttäuscht|du verletzt mich|undankbar|egoistisch|nach allem was ich|geopfert habe|disappointed|ungrateful|selfish|after all i've sacrificed)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich bin so enttäuscht von dir."
+  - "Du verletzt mich damit."
+  - "Wie kannst du so undankbar sein?"
+  - "Das ist egoistisch von dir."
+  - "Nach allem, was ich für dich getan habe."
+  - "Ich habe so viel geopfert."
+  - "I'm so disappointed in you."
+  - "How can you be so ungrateful?"
+  - "You're being selfish right now."
+  - "After all I've sacrificed for you."

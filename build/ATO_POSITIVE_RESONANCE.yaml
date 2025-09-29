@@ -1,0 +1,29 @@
+id: ATO_POSITIVE_RESONANCE
+frame:
+  signal:
+  - Ich verstehe dich vollkommen
+  - Wow, das geht mir genauso
+  - Wir sind auf derselben Wellenlänge
+  concept: Empathie
+  pragmatics: Validierung
+  narrative: Resonanz
+pattern:
+- (?i)\bverstehe dich vollkommen\b
+- (?i)\bgeht mir genauso\b
+- (?i)\bsind auf derselben Wellenlänge\b
+activation:
+  rule: ANY 1
+examples:
+- Ich verstehe dich vollkommen.
+- Wow, das geht mir genauso.
+- Danke, dass du das mit mir teilst.
+- Genau! Das ist der Punkt.
+- Wir sind auf derselben Wellenlänge.
+- Das trifft es genau.
+- Ich kann gut nachvollziehen, was du sagst.
+- Ich stimme dir hundertprozentig zu.
+- So wahr – ich fühle dasselbe.
+- Das resoniert total mit mir.
+tags:
+- empathy
+- validation

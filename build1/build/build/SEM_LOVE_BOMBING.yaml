@@ -1,0 +1,42 @@
+id: SEM_LOVE_BOMBING
+frame:
+  signal:
+  - du bist mein ein und alles
+  - ich liebe dich mehr als alles andere
+  - ohne dich bin ich nichts
+  - ich kann nicht mehr ohne dich
+  - ich denke nur an dich
+  concept: Love Bombing
+  pragmatics: emotionale Überwältigung
+  narrative: Abhängigkeitsaufbau
+composed_of:
+- ATO_LOVE_BOMBING
+activation:
+  rule: ANY 2 IN 3 messages
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- Du bist mein Ein und Alles!
+- Ich liebe dich mehr als alles andere auf der Welt.
+- Ohne dich kann ich nicht mehr leben.
+- Ich denke Tag und Nacht nur an dich.
+- Du bist das Beste, was mir je passiert ist.
+- Mein Herz schlägt nur für dich.
+- Keiner versteht mich so wie du.
+- Ich will nie wieder ohne dich sein.
+- Du bist mein Lebensinhalt.
+- Ich kann mir ein Leben ohne dich nicht mehr vorstellen.
+- Seit du in meinem Leben bist, gibt es nur noch Licht.
+- Du bist das Einzige, was für mich zählt – alles andere ist egal.
+- Ich weiß, wir kennen uns kaum, aber ich spüre, dass du mein Seelenverwandter bist.
+- Mit dir habe ich endlich das Gefühl, vollständig zu sein.
+- Du bist wie ein Wunder für mich – ich werde dich niemals gehen lassen.
+- Ich habe noch nie jemanden so sehr geliebt wie dich – du bist einzigartig.
+- Ich würde alles für dich aufgeben, sofort.
+- Wenn du mich verlässt, bricht meine ganze Welt zusammen.
+- Ich denke jede Sekunde an dich – du bist in meinem Kopf und meinem Herzen.
+- Ich will dich heiraten, am liebsten sofort – du bist meine Zukunft.
+tags:
+- love_bombing
+- dependency

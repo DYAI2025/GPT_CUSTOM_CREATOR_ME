@@ -1,0 +1,28 @@
+id: ATO_TRUST_DEFICIT_STATEMENT
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Misstrauen / Zweifel"
+    - "Beweisbedarf"
+    - "Im Unklaren lassen / Verheimlichen"
+  concept: "Vertrauensdefizit"
+  pragmatics: "Zweifel an Offenheit/Integrität der Gegenseite"
+  narrative: "Sicherheits- und Kontrollbedürfnis"
+pattern:
+  - '(?i)\bmisstrau\w*\b'
+  - '(?i)\bbeweis\w*\b'
+  - '(?i)\b(im|absichtlich)\s+unklar(en)?\b'
+  - '(?i)\bverheimlich\w*\b'
+  - '(?i)\bhinter\s+meinem\s+rücken\b'
+  - '(?i)\b(etwas|vieles)\s+verschweig\w*\b'
+  - '(?i)\bich\s+werde\s+nicht\s+einbezogen\b'
+examples:
+  - "Mein Misstrauen kommt nicht aus dem Nichts."
+  - "Ich brauche Beweise, sonst glaube ich das nicht."
+  - "Ich fühle mich absichtlich im Unklaren gelassen."
+  - "Du verheimlichst mir Dinge."
+  - "Es wirkt, als verschweigst du mir etwas."
+  - "Warum werde ich nicht einbezogen?"
+  - "Mir fehlt die Sicherheit, dass du ehrlich bist."
+tags: [trust, insecurity, atomic]

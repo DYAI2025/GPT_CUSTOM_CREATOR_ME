@@ -1,0 +1,52 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "consistency_external"
+
+defaults:
+  scoring:
+    window_messages: 5
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+
+markers:
+  - id: CLU_CONSISTENCY_ALERT
+    frame:
+      signal: ["Mehrere Fremd-Kohärenzbrüche in kurzer Spanne"]
+      concept: "Frühwarnung auf narrative Inkonsistenz (extern)"
+      pragmatics: "Fokus auf Widerspruchskerne, Nachfragen priorisieren"
+      narrative: "Hypothese → Bestätigung → Decay"
+    composed_of:
+      - SEM_CONSIST_EVAL_EXTERNAL
+      - SEM_TEMPORAL_CONFLICT_EXTERNAL
+      - SEM_DEF_DRIFT_EXTERNAL
+      - SEM_ROLE_STABILITY_BREAK_EXTERNAL
+      - SEM_FACT_CONFLICT_EXTERNAL
+    activation:
+      rule: "AT_LEAST 2 DISTINCT SEMs IN 5 messages BY same_other"
+    scoring:
+      base: 0.55
+      weights:
+        SEM_CONSIST_EVAL_EXTERNAL: 0.25
+        SEM_TEMPORAL_CONFLICT_EXTERNAL: 0.20
+        SEM_DEF_DRIFT_EXTERNAL: 0.20
+        SEM_ROLE_STABILITY_BREAK_EXTERNAL: 0.15
+        SEM_FACT_CONFLICT_EXTERNAL: 0.30
+      cap: 0.95
+    metadata:
+      family: "INCONSISTENCY"
+      intuition:
+        state: "provisional"
+        confirm_window_messages: 5
+        confirm_rule: "ANY OF [SEM_FACT_CONFLICT_EXTERNAL, SEM_TEMPORAL_CONFLICT_EXTERNAL] OCCURS"
+        decay_window_messages: 8
+        multiplier_on_confirm: 1.6
+      telemetry_keys:
+        counter_confirmed: "INT_INCONSISTENCY.confirmed"
+        counter_retracted: "INT_INCONSISTENCY.retracted"
+        ewma_precision: "INT_INCONSISTENCY.ewma_precision"
+    examples:
+      - '"Nie dort." → "Gestern dort." + Zahlendreher.'
+      - '"Immer pünktlich" → "Letzte Woche zu spät".'
+      - '"Nie bezahlt" → "Ich habe gezahlt".'
+      - '"5 Leute" → "12 Leute" beim selben Ereignis.'
+      - '"Wir mussten zahlen" ↔ "Ich habe nie bezahlt".'

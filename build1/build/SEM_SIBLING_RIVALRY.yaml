@@ -1,0 +1,38 @@
+id: SEM_SIBLING_RIVALRY
+display_title: "Geschwisterrivalität"
+version: "3.3"
+lang: de
+category: SEMANTIC
+description: "Semantische Kombination von Geschwisterrollen und Konfliktmustern."
+frame:
+  signal: ["Geschwisterrolle + Konflikt"]
+  concept: "Geschwisterrivalität"
+  pragmatics: "Konkurrenz um elterliche Aufmerksamkeit"
+  narrative: "Familiäre Rangordnung"
+combination:
+  type: "AND"
+  components:
+    - marker_id: "ATO_ROLE_SIBLINGS"
+      weight: 0.6
+    - marker_id: "ATO_GOTTMAN_CRITICISM"
+      weight: 0.4
+    - marker_id: "ATO_GOTTMAN_CONTEMPT"
+      weight: 0.5
+  threshold: 0.6
+activation:
+  rule: "WEIGHTED_AND"
+window:
+  messages: 30
+scoring:
+  base: 1.4
+  weight: 0.55
+  decay: 0.03
+  formula: "logistic"
+examples:
+  - "Mein Bruder macht immer alles falsch!"
+  - "Die Schwester ist so dumm."
+  - "Geschwister sind manchmal echt nervig."
+tags: [semantic, family, siblings, rivalry, conflict]
+detect_class: "E"
+criteria: "Kombination aus Geschwisterrolle und negativen Bewertungen"
+updated_at: "2025-08-19T10:30:00Z"

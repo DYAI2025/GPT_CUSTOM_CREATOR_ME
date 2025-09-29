@@ -1,0 +1,45 @@
+id: ATO_SURPRISE
+frame:
+  signal: Ausrufe und Phrasen, die Erstaunen oder Überraschung ausdrücken.
+  concept: Überraschung / Erstaunen
+  pragmatics: Ausdruck einer unerwarteten Wahrnehmung, Neuausrichtung der Aufmerksamkeit.
+  narrative: revelation
+tags:
+- emotion
+- surprise
+- neutral
+- astonishment
+examples:
+- Wow, damit habe ich überhaupt nicht gerechnet!
+- Oh! Das kommt jetzt aber unerwartet.
+- Was? Das ist ja unglaublich!
+- Echt jetzt? Das kann ich kaum glauben.
+- Ich bin total überrascht, dich hier zu sehen.
+- Krass, das wusste ich gar nicht.
+- Huch, wo kommst du denn plötzlich her?
+- Das ist eine riesige Überraschung!
+- Ich bin sprachlos, das ist ja der Wahnsinn.
+- Tatsächlich? Das hätte ich nie gedacht.
+- Ach du meine Güte, das ist ja fantastisch!
+- Das haut mich jetzt echt vom Hocker.
+- Ich bin ehrlich erstaunt über diese Entwicklung.
+- Nanu, was ist denn hier los?
+- Im Ernst? Das ist ja eine krasse Wendung.
+- Ich bin baff, einfach nur baff.
+- Das überrascht mich jetzt aber positiv.
+- Oha, das ist neu für mich.
+- Wer hätte das gedacht? Ich jedenfalls nicht.
+- Das ist ja mal eine faustdicke Überraschung.
+pattern:
+- (?i)oh!
+- (?i)wow
+- (?i)unglaublich
+- (?i)überrascht
+- (?i)erstaunt
+- (?i)echt jetzt
+- (?i)krass
+- (?i)huch
+- (?i)was\?
+- (?i)im ernst
+- (?i)baff
+- (?i)oha

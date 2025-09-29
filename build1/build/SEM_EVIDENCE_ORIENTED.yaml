@@ -1,0 +1,29 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_EVIDENCE_ORIENTED
+frame:
+  signal: ["evidence_oriented"]
+  concept: "Evidenz-/Belegzentrierte Argumentation"
+  pragmatics: "Begründung, Standardsetzung"
+  narrative: "reasoning"
+tags: [evidence, proof, listing]
+composed_of:
+  any_of:
+    - ATO_PROOF_SEEKING_BEHAVIOR
+    - SEM_LISTING
+    - SEM_PROOF_STD_SHIFT
+activation:
+  rule: "AT_LEAST 2 IN 4 messages"
+  window: 4
+scoring: { base: 0.62, weight: 1.10 }
+examples:
+  - "Bitte Quellen nennen und kurz auflisten."
+  - "Welche Daten stützen das? Bulletpoints reichen."
+  - "Beweisstandard hoch: peer-reviewed oder nichts."
+  - "Liste die Annahmen, dann die Schlussfolgerung."
+  - "Ohne Messwerte keine Aussage – her damit."
+  - "Belege ändern, sonst Hypothese verwerfen."
+  - "Standard anheben: RCTs statt Beobachtung."
+  - "Kurz: Datenpunkte A–C, daraus folgt D."
+  - "Erst Evidenz, dann Meinung."
+  - "Bitte Evidenzpfad skizzieren."

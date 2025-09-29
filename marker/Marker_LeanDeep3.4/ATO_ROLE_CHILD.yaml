@@ -1,0 +1,42 @@
+id: ATO_ROLE_CHILD
+display_title: "Familienrolle: Kind"
+version: "3.3"
+lang: de
+category: ATOMIC
+description: "Erkennung von Bezugnahmen auf Kinder (Kinderrollen-Lexeme)."
+frame:
+  signal: 
+    - "Kind"
+    - "Kinder"
+    - "mein Kind"
+    - "unser Kind"
+    - "die Kleinen"
+  concept: "Familienrolle: Kind"
+  pragmatics: "Abhängigkeits- und Fürsorbezug"
+  narrative: "Rollenmarkierung"
+pattern:
+  - "(?i)\\bKind(er)?\\b"
+  - "(?i)\\bmein(e[rn]? )?Kind(er)?\\b"
+  - "(?i)\\bunser(e[rn]? )?Kind(er)?\\b"
+  - "(?i)\\bdie Kleinen\\b"
+  - "(?i)\\bder Kleine\\b"
+  - "(?i)\\bdas Kind\\b"
+activation:
+  rule: "ANY 1"
+window:
+  messages: 30
+scoring:
+  base: 1.2
+  weight: 0.4
+  decay: 0.01
+  formula: "logistic"
+examples:
+  - "Die Kinder sind schon im Bett."
+  - "Mein Kind macht gerade Hausaufgaben."
+  - "Unser Kind braucht mehr Aufmerksamkeit."
+  - "Die Kleinen sind heute besonders unruhig."
+  - "Das Kind hört nicht auf mich."
+tags: [atomic, family, role]
+detect_class: null
+criteria: null
+updated_at: "2025-08-19T10:30:00Z"

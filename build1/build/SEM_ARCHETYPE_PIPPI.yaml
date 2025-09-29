@@ -1,0 +1,23 @@
+id: SEM_ARCHETYPE_PIPPI
+version: "3.4"
+frame:
+  signal: [ "archetype", "playfulness" ]
+  concept: "Archetyp Pippi: spielerische Regelübertretung"
+  pragmatics: "Verspielte Grenzgänge als Ernst"
+  narrative: "hypothesis"
+composed_of:
+- ATO_FICTION_TOKENS
+- ATO_CONTROL_MARKERS
+activation:
+  rule: "AT_LEAST 2 IN 3 messages"
+examples:
+- "Ich breche Regeln, aber mit Herz"
+- "Spielerisch Grenzen verschieben"
+- "Als Spiel getarnt, ernsthaft gemeint"
+- "Pippi-Langstrumpf-Modus, aber wach"
+- "Frechheit mit Verantwortung"
+- "Verspielte Umgehung mit Fürsorge"
+- "Kindliche Ernsthaftigkeit"
+- "Regelbruch als Kunst"
+- "Leicht, aber präzise"
+- "Spielfreude öffnet Tiefen"

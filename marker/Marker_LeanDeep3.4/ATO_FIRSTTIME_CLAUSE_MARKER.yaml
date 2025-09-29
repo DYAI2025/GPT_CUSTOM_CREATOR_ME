@@ -1,0 +1,39 @@
+id: ATO_FIRSTTIME_CLAUSE_MARKER
+frame:
+  signal:
+  - sag mal
+  - hör zu
+  - verstehst du
+  concept: Kommunikationsmuster
+  pragmatics: Dialog führen
+  narrative: exchange
+pattern:
+- (?i)\\bhab\ ich\\b
+- (?i)\\bich\ noch\\b
+- (?i)\\bnoch\ nie\\b
+- (?i)\\b\-\ "ich\\b
+- (?i)\\bdas\ hab\\b
+examples:
+- Das hab ich noch nie jemandem erzählt.
+- Ich sag dir das zum ersten Mal, weil ich dir vertraue.
+- Okay, pass auf, das hab ich noch nie wem gesagt, aber...
+- Ich muss dir was sagen, und das hab ich bisher immer für mich behalten.
+- Hör zu, Mama, das erzähle ich dir jetzt zum allerersten Mal.
+- Puh... ich hab noch nie mit jemandem darüber geredet. Also...
+- Du bist die Einzige, der ich das anvertraue. Das hab ich noch nie jemandem erzählt.
+- Ich sag dir das jetzt als Erstem, weil ich bei dir ein gutes Gefühl habe.
+- Es fällt mir schwer, aber... das habe ich bisher für mich behalten.
+- Das ist etwas, das ich noch nie laut ausgesprochen habe.
+- Das ist das erste Mal, dass ich das überhaupt in Worte fasse.
+- Dir als Einzigem erzähle ich das jetzt.
+- Keine Ahnung, ob ich das sagen sollte, hab ich noch nie...
+- Ich habe noch niemandem von meinen finanziellen Problemen erzählt, nur dir.
+- Setz dich lieber hin. Das hab ich noch nie erwähnt, weil es wehtut.
+- OMG, Geständnis-Zeit! Das hab ich noch nie zugegeben, aber ich liebe Schlager.
+- Ich weiß nicht, wie du reagierst... das ist das erste Mal, dass ich darüber spreche.
+- Es gibt da was, das hab ich bisher für mich behalten... betrifft meine Vergangenheit.
+- Ich schreibe dir das, weil ich es dir als Erstem sagen möchte.
+- Ich glaube, das ist das erste Mal, dass ich das so klar sehe und auch ausspreche.
+- Schau, das bleibt unter uns, okay? Das hab ich noch nie jemandem anvertraut.
+tags:
+- communication

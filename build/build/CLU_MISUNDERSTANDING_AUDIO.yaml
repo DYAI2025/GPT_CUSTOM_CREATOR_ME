@@ -1,0 +1,21 @@
+id: CLU_MISUNDERSTANDING_AUDIO
+family: CLU
+description: ''
+notes: ''
+id: CLU_MISUNDERSTANDING_AUDIO
+family: CLU
+description: ''
+notes: ''
+examples:
+  positive:
+    - "Ich habe Sie akustisch nicht verstanden."
+    - "Können Sie das bitte wiederholen? Die Verbindung war schlecht."
+    - "Ich habe nur die Hälfte gehört."
+    - "Es gab ein Störgeräusch, ich habe den letzten Teil nicht verstanden."
+    - "Entschuldigung, ich habe Sie nicht verstanden. Können Sie lauter sprechen?"
+    - "Ich glaube, es gab einen Aussetzer in der Leitung."
+    - "Ich habe das Wort nicht verstanden."
+    - "Können Sie das anders formulieren? Ich habe den Satz nicht verstanden."
+    - "Ich bin mir nicht sicher, ob ich Sie richtig verstanden habe."
+    - "Haben Sie gesagt '...' oder '...'?"
+  negative: []

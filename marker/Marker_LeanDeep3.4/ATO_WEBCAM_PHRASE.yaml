@@ -1,0 +1,23 @@
+id: ATO_WEBCAM_PHRASE
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for explicit references to webcam/camera usage
+frame:
+  signal: ["webcam references"]
+  concept: "Explicit references to webcam/camera usage"
+  pragmatics: "Supports excuses/availability semantics around video presence"
+  narrative: "Mentions about turning camera on/off or webcam issues"
+pattern: ["(?i)\\b(turn on the camera|camera off|webcam is broken|camera doesn't work|video is off|cam is down)\\b"]
+examples:
+  - "I'll turn on the camera in a moment."
+  - "My camera is off right now."
+  - "The webcam is broken unfortunately."
+  - "My camera doesn't work right now."
+  - "Sorry, I can't use the webcam today."
+  - "Let me turn the video on quickly."
+  - "Camera is down for technical reasons."
+  - "Webcam isn't functioning properly today."
+  - "Video feed is currently off."
+  - "Camera setup needs troubleshooting first."
+tags: [atomic, v3.3, webcam, video]

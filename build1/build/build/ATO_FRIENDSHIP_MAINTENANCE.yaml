@@ -1,0 +1,41 @@
+id: ACT_FRIENDSHIP_MAINTENANCE
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Regelmäßige kurze Care-Kontakte"
+  concept: "Maintenance Rituals"
+  pragmatics: "Beziehungsaufbau"
+  narrative: "low_pressure_care"
+pattern:
+  - '(?i)\bwie war dein tag\b'
+  - '(?i)\bkurzes update\b'
+  - '(?i)\bdenk an dich\b'
+  - '(?i)\bkleines lebenszeichen\b'
+  - '(?i)\bwollte mal hören wie es dir geht\b'
+activation:
+  rule: "ANY 1 IN 30 messages"
+window:
+  messages: 30
+scoring:
+  base: 1.7
+  weight: 0.4
+  decay: 0.01
+  formula: "logistic"
+examples:
+  - "Kurzes Update:..."
+  - "Denk an dich!"
+  - "Wie war dein Tag?"
+  - "Kleines Lebenszeichen von mir"
+  - "Wollte mal hören, wie es dir geht"
+  - "Schneller Check-in: Alles gut bei dir?"
+  - "Hab gerade an dich gedacht"
+  - "Kurze Frage: Wie läuft deine Woche?"
+  - "Sending good vibes"
+  - "Hoffe, du hattest einen schönen Tag"
+  - "Kleiner Gruß aus dem Alltag"
+  - "Wollte dir nur einen schönen Abend wünschen"
+  - "Denkpause: Wie geht's dir denn so?"
+  - "Kurzes Hallo zwischen Tür und Angel"
+  - "Freundschafts-Ping: Alles okay bei dir?"
+tags: [act, friendship, ritual, maintenance]

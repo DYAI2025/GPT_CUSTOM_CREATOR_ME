@@ -1,0 +1,19 @@
+id: ATO_SARCASM_CUES
+frame:
+  signal: ["Sarkasmus-Cue"]
+  concept: "Antiphrase / Gegenteilbehauptung"
+  pragmatics: "Qualitäts-Maxime flouten"
+  narrative: "aside"
+pattern:
+  - "(?i)ja(,)? genau"
+  - "(?i)na klar( doch)?"
+  - "(?i)ganz bestimmt"
+  - "(?i)/s\\b"
+  - "(?i)super(,)? (na klar|logisch)"
+examples:
+  - "Ja, genau, das hat super funktioniert."
+  - "Na klar doch, völlig risikofrei."
+  - "Ganz bestimmt ist das eine Abkürzung."
+  - "Klar, wir sind alle Millionäre /s"
+  - "Super, logisch, total einfach."
+tags: [humor, sarcasm, grice_quality, atomic, v33]

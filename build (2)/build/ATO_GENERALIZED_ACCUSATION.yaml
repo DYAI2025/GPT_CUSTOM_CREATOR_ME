@@ -1,0 +1,24 @@
+id: ATO_GENERALIZED_ACCUSATION
+description_reference: oaicite:13,index=13
+frame:
+  signal:
+  - Du machst nie…
+  - Alle sind immer…
+  - Niemand hilft jemals…
+  - Immer musst du…
+  - Jeder denkt, du…
+  concept: generalized accusation
+  pragmatics: blame
+  narrative: indignation
+pattern:
+- (?i)\b(du machst nie|alle sind immer|niemand hilft jemals)\b
+- (?i)\bimmer musst du\b
+activation:
+  rule: ANY 1
+examples:
+- '[Example placeholder 1]'
+- '[Example placeholder 2]'
+- '[Example placeholder 3]'
+- '[Example placeholder 4]'
+- '[Example placeholder 5]'
+tags: []

@@ -1,0 +1,32 @@
+id: ATO_TEMPO_FAST
+schema_version: LD-3.3
+lang: de
+category: ATOMIC
+description: Atomic pattern for fast speech tempo
+frame:
+  signal:
+  - WPM ≫ Baseline
+  concept: schnell
+  pragmatics: Tempo
+  narrative: audio
+detect_class:
+  module: prosody.tempo
+  params:
+    delta_pct_min: 20
+examples:
+  positive:
+    - "(Spricht sehr schnell)"
+    - "(Redet in einem hohen Tempo)"
+    - "(Die Worte sprudeln nur so heraus)"
+    - "(Spricht hastig)"
+    - "(Redet ohne Punkt und Komma)"
+    - "(Die Sprechgeschwindigkeit ist sehr hoch)"
+    - "(Spricht in einem atemlosen Tempo)"
+    - "(Redet wie ein Wasserfall)"
+    - "(Die Worte überschlagen sich fast)"
+    - "(Spricht sehr zügig)"
+  negative: []
+tags:
+- tempo
+- audio
+- atomic

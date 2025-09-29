@@ -1,0 +1,35 @@
+id: SEM_VALIDATED_DISCLOSURE
+version: '3.4'
+category: SEMANTIC
+description: Validierung gefolgt von Selbstoffenbarung
+frame:
+  signal:
+  - validation followed by disclosure
+  concept: safety enables openness
+  pragmatics: progress marker
+  narrative: opening
+composed_of:
+- ATO_VALIDATION_THERAPIST
+- ATO_DISCLOSURE_STATEMENT
+activation:
+  rule: ATO_VALIDATION_THERAPIST BEFORE ATO_DISCLOSURE_STATEMENT WITHIN 5
+scoring:
+  weight: 1.2
+examples:
+  positive:
+    - "Therapeut: 'Ich kann verstehen, dass Sie sich so fühlen.' Klient: 'Ja, und ich muss Ihnen sagen, dass ich mich schon lange so einsam fühle.'"
+    - "Therapeut: 'Das ist eine sehr mutige Erkenntnis.' Klient: 'Danke. Es fällt mir schwer, das zuzugeben, aber ich habe Angst vor dem Scheitern.'"
+    - "Therapeut: 'Ihre Reaktion ist absolut nachvollziehbar.' Klient: 'Das beruhigt mich. Ich habe nämlich das Gefühl, dass ich immer alles falsch mache.'"
+    - "Therapeut: 'Es ist in Ordnung, diese Gefühle zu haben.' Klient: 'Das hilft. Ich muss gestehen, dass ich mich oft schäme für meine Wut.'"
+    - "Therapeut: 'Ich sehe, wie sehr Sie das belastet.' Klient: 'Ja, und ich habe das Gefühl, dass ich daran zerbreche.'"
+    - "Therapeut: 'Das ist ein wichtiger Schritt, das auszusprechen.' Klient: 'Ich habe es noch nie jemandem erzählt, aber ich wurde als Kind missbraucht.'"
+    - "Therapeut: 'Ich bin beeindruckt von Ihrer Offenheit.' Klient: 'Es ist schwer, aber ich muss Ihnen sagen, dass ich Suizidgedanken habe.'"
+    - "Therapeut: 'Ich bin für Sie da.' Klient: 'Das tut gut. Ich habe das Gefühl, dass ich niemanden habe, dem ich vertrauen kann.'"
+    - "Therapeut: 'Was Sie fühlen, ist gültig.' Klient: 'Ich bin erleichtert, das zu hören. Ich habe nämlich das Gefühl, dass ich verrückt werde.'"
+    - "Therapeut: 'Ich schätze Ihre Ehrlichkeit.' Klient: 'Ich muss Ihnen sagen, dass ich gelogen habe.'"
+  negative: []
+tags:
+- semantic
+- disclosure
+- safety
+- rapport_signal

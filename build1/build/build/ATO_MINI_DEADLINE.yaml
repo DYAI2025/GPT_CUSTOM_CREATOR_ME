@@ -1,0 +1,19 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_MINI_DEADLINE
+frame:
+  signal: ["mini_deadline"]
+  concept: "Kurze, explizite Zeitvorgaben (Mini‑Deadlines)"
+  pragmatics: "Time‑Gate setzen / Tempo erhöhen"
+  narrative: "process"
+tags: [timing, deadline, pacing]
+pattern:
+  regex: '(?i)\b(deadline|bis\s+\d{1,2}(:\d{2})?|heute\s+noch|morgen\s+um\s+\d{1,2}(?:[:.]\d{2})?|in\s+\d+\s*(min|minute[n]?|h|stunde[n]?)|jetzt\s+gleich)\b'
+  flags: ["IGNORECASE"]
+examples:
+  - "Wichtig ist, dass die heute noch raus gehen … Morgen um 10 oder so."
+  - "Deadline 14:00, Rest später."
+  - "Bis 15:00 bitte."
+  - "In 10 Min ein Update."
+  - "Jetzt gleich verschicken."
+  - "Heute noch abschließen."

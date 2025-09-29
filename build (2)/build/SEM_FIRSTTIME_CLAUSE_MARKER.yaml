@@ -1,0 +1,60 @@
+id: SEM_FIRSTTIME_CLAUSE
+lang: de
+category: SEMANTIC
+description: "Phrasen, die klar signalisieren, dass etwas zum ersten Mal geteilt wird."
+frame:
+  signal:
+    - "zum ersten Mal"
+    - "hab ich noch nie"
+    - "noch niemandem erzählt"
+    - "dir als Erstem"
+    - "bisher für mich behalten"
+  concept: "First-Time Disclosure"
+  pragmatics: "Markierung von Neuigkeit und Vertraulichkeit"
+  narrative: "Selbstöffnung und Intimität"
+composed_of:
+  - ATO_FIRSTTIME_CLAUSE
+activation_logic: "ANY 2 IN 3 messages"
+scoring: { base: 1.2, weight: 1.0 }
+examples:
+  - "Das hab ich noch nie jemandem erzählt."
+  - "Ich sag dir das zum ersten Mal, weil ich dir vertraue."
+  - "Okay, pass auf, das hab ich noch nie wem gesagt, aber..."
+  - "Ich muss dir was sagen, und das hab ich bisher immer für mich behalten."
+  - "Hör zu, Mama, das erzähle ich dir jetzt zum allerersten Mal."
+  - "Ich teile das mit Ihnen zum ersten Mal, weil ich Ihre Einschätzung schätze."
+  - "Puh... ich hab noch nie mit jemandem darüber geredet. Also..."
+  - "Du bist die Einzige, der ich das anvertraue. Das hab ich noch nie jemandem erzählt."
+  - "Ich sag dir das jetzt als Erstem, weil ich bei dir ein gutes Gefühl habe."
+  - "Es fällt mir schwer, aber... das habe ich bisher für mich behalten."
+  - "Das ist etwas, das ich noch nie laut ausgesprochen habe."
+  - "Das ist das erste Mal, dass ich das überhaupt in Worte fasse."
+  - "Dir als Einzigem erzähle ich das jetzt."
+  - "Keine Ahnung, ob ich das sagen sollte, hab ich noch nie..."
+  - "Ich habe noch niemandem von meinen finanziellen Problemen erzählt, nur dir."
+  - "Setz dich lieber hin. Das hab ich noch nie erwähnt, weil es wehtut."
+  - "OMG, Geständnis-Zeit! Das hab ich noch nie zugegeben, aber ich liebe Schlager."
+  - "Ich weiß nicht, wie du reagierst... das ist das erste Mal, dass ich darüber spreche."
+  - "Es gibt da was, das hab ich bisher für mich behalten... betrifft meine Vergangenheit."
+  - "Ich schreibe dir das, weil ich es dir als Erstem sagen möchte."
+  - "Ich glaube, das ist das erste Mal, dass ich das so klar sehe und auch ausspreche."
+  - "Schau, das bleibt unter uns, okay? Das hab ich noch nie jemandem anvertraut."
+  - "Das sage ich zum ersten Mal überhaupt."
+  - "Ich habe noch nie meine Angst mit jemandem geteilt."
+  - "Bis jetzt habe ich dir das nie erzählt."
+  - "Erzähl ich dir das heute zum ersten Mal."
+  - "Das berichte ich dir zum allerersten Mal."
+  - "So offen war ich noch nie."
+  - "Das gebe ich dir als Erste(r) zu."
+  - "Noch nie habe ich mich so verletzlich gezeigt."
+  - "Zum ersten Mal kann ich darüber sprechen."
+  - "Ich wage es jetzt zum ersten Mal."
+tags:
+  - semantic
+  - first_time_clause
+  - neu_erstellt
+  - needs_review
+metadata:
+  repair_log:
+    - rule: "R00-R06 applied"
+      date: "2025-08-07"

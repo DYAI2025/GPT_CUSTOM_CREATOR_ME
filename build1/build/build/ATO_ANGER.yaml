@@ -1,0 +1,50 @@
+id: ATO_ANGER
+frame:
+  signal:
+  - wütend
+  - ärgere mich
+  - so sauer
+  - verärgert
+  - rasend
+  - stinksauer
+  - platzt mir der kragen
+  - geht mir auf den keks
+  concept: Ärger
+  pragmatics: negative Valenz
+  narrative: Emotionsausdruck
+pattern:
+- (?i)\b(wütend|ärgere mich|so sauer|verärgert|rasend|stinksauer|platzt mir der kragen|geht
+  mir auf den keks)\b
+activation:
+  rule: ANY 1
+examples:
+- Ich bin richtig wütend!
+- Das regt mich total auf!
+- So sauer kann ich nicht sein!
+- Ich ärgere mich darüber.
+- Jetzt platzt mir der Kragen!
+- Alter, das geht mir auf den Keks!
+- Ich fass es nicht mehr!
+- Mir reichts 🤯!
+- Das kann doch nicht dein Ernst sein!
+- Ich bin stinksauer!
+- Das macht mich wahnsinnig!
+- Ich könnte platzen vor Wut!
+- Warum verhältst du dich so idiotisch?
+- Ich hasse es, das zu tun!
+- Das ist der letzte Tropfen!
+- Ich werde gleich explodieren!
+- Du bringst mich echt zum Kochen!
+- I'm so angry right now!
+- This pisses me off!
+- I can't stand this anymore!
+- Fuck it!
+- Scheiß die Wand an!💩
+- Ich könnte im Strahl kotzen ey!!!🤮🤯
+- Das ist so frustrierend!
+- Scheiße mann!
+- 😤😤
+- 🤬🤬🤬
+- 💩💩
+tags:
+- anger

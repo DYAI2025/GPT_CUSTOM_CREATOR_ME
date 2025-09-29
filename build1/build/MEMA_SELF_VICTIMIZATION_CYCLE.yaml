@@ -1,0 +1,47 @@
+schema: "LeanDeep"
+version: "3.4"
+id: MEMA_SELF_VICTIMIZATION_CYCLE
+frame:
+  signal: ["cycle", "self_victimization"]
+  concept: "Chronische Selbstviktimisierung / erlernte Hilflosigkeit"
+  pragmatics: "Stabile dysfunktionale Dynamik"
+  narrative: "meta_pattern"
+tags: [mema, self_victimization, learned_helplessness]
+composed_of:
+  required_any:
+    - SEM_SELF_VICTIMIZATION
+    - CLU_PREEMPTIVE_VICTIMIZATION
+  supportive:
+    - SEM_EMOTIONAL_OVERWHELM
+    - SEM_VALIDATION_SEEKING
+    - CLU_INDIRECT_CONFLICT_AVOIDANCE
+absence_sets:
+  EMPOWERMENT_SIGNALS:
+    tags: [agency, empowerment]
+    ids:
+      - ATO_SET_BOUNDARY
+      - ATO_PROBLEM_SOLVING
+      - SEM_SYSTEMS_THINKING
+window:
+  messages: 30
+gating:
+  min_hits_required: 3
+policy:
+  strict_zero_absence: false
+  tolerant_max_absence: 1
+  require_dialog: true
+scoring:
+  base: 1.0
+  weight: 1.1
+  decay: 0.02
+examples:
+  - "Niemand hilft mir – ich kann das nicht – (keine Problem-Lösungszüge in 30 Nachrichten)."
+  - "Egal was ich tue, es bringt nichts – wegen dir – ich bin nicht gut darin."
+  - "Ich armes Ich – du bist verantwortlich – (keine Grenze/Agency sichtbar)."
+  - "Wahrscheinlich sagst du wieder, ich übertreibe – mir hilft eh keiner – ich schaffe das nie."
+  - "Nach allem, was ich getan habe – du verletzt mich – ich komme da nie raus."
+  - "Niemand versteht mich – ich kann das nicht – (keine Boundary/Problem-Lösung sichtbar)."
+  - "Ich bin ausgeliefert – warum versuche ich es überhaupt – (kein Plan/Next Step)."
+  - "Keiner hilft mir – alles ist zwecklos – (keine Agency-Züge)."
+  - "Ich schaffe das nie – du hast mich dazu gebracht – (kein Systems-Thinking/Repair)."
+  - "Ich armes Ich – ich hatte keine Zeit – (keine konkrete Handlung)."

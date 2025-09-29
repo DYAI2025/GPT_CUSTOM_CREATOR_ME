@@ -1,0 +1,28 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "ld34_text_social_grammar"
+id: ATO_PROJECTION_2P_TRAIT
+lang: de
+category: ATOMIC
+description: "Zuschreibung negativer Eigenschaften an 2. Person(en)."
+frame:
+  signal: ["du bist arrogant","ihr seid unsicher","du bist egoistisch","du bist faul","du bist unfähig"]
+  concept: "Projektion (2. Person)"
+  pragmatics: "Verantwortung externalisieren, Angriff"
+  narrative: "Schuldverschiebung"
+pattern:
+  - '(?i)\b(?:du\s+bist|ihr\s+seid)\s+(arrogant|unsicher|egoistisch|faul|unfähig)\b'
+activation_logic: "ANY 1"
+examples:
+  - "Du bist so arrogant."
+  - "Ihr seid einfach unsicher."
+  - "Du bist egoistisch, ehrlich."
+  - "Du bist faul, gib’s zu."
+  - "Ihr seid unfähig, das zu lösen."
+  - "Du bist unfähig, Verantwortung zu übernehmen."
+  - "Ihr seid arrogant ohne Grund."
+  - "Du bist unsicher und projizierst."
+tags: [atomic, projection, text]
+metadata:
+  repair_log:
+    - { rule: "R09", note: "Frame ergänzt", date: "2025-08-29" }

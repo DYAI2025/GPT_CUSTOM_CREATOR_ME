@@ -1,0 +1,29 @@
+schema: LeanDeep
+version: "3.4"
+namespace: consistency_external
+
+defaults:
+  scoring:
+    window_tokens: 120
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+  scope:
+    unit: "speaker"
+    target: "OTHER"
+
+clus:
+  - id: CLU_CONSIST_LOOP_EXTERNAL
+    frame:
+      signal: ["Probe + Reparaturversuch"]
+      concept: "Externe Konsistenzschleife"
+      pragmatics: "Erkenntnisfenster offen halten"
+      narrative: "Reparatur > Anklage"
+    composed_of: [SEM_SELF_CONSIST_PROBE_EXT]
+    activation:
+      rule: "SEM_SELF_CONSIST_PROBE_EXT followed_by speaker_correction within 2 turns"
+    scoring: { base: 0.55, weight: 0.9 }
+    metadata:
+      correction_detect:
+        phrases: ["ich korrigiere", "ich meinte", "das war ungenau", "stimmt, du hast recht"]
+        effect: "reduce_risk_by: 0.15"
+    tags: [cluster, repair]

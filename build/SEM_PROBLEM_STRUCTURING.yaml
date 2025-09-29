@@ -1,0 +1,30 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_PROBLEM_STRUCTURING
+frame:
+  signal: ["problem_structuring"]
+  concept: "Explizite Strukturierung vor Lösung"
+  pragmatics: "Problem → Kriterien → Optionen"
+  narrative: "reasoning"
+tags: [structure, criteria, options]
+composed_of:
+  any_of:
+    - SEM_LISTING
+    - ATO_CLARIFY_REQ
+    - ATO_PROBLEM_SOLVING
+    - ATO_STYLE_REFERENCE
+activation:
+  rule: "AT_LEAST 3 IN 5 messages"
+  window: 5
+scoring: { base: 0.6, weight: 1.08 }
+examples:
+  - "Erst Problem definieren, dann Optionen."
+  - "Liste Kriterien A–C, danach bewerten."
+  - "Kurz strukturieren: Ziel, Constraints, Pfade."
+  - "Bitte erst klären, dann Lösungsvorschläge."
+  - "Framework: Ursachen → Hebel → Aktionen."
+  - "Welche Metriken setzen wir an?"
+  - "Optionen nummerieren, Pros/Cons auflisten."
+  - "Stilwechsel: erst Struktur, dann Inhalte."
+  - "Hypothesenraum abgrenzen, dann testen."
+  - "Sequenz: Scope → Kriterien → Wahl."

@@ -1,0 +1,24 @@
+id: ATO_WAS_NICE
+frame:
+  signal:
+  - war schön
+  - war toll
+  - hat Spaß gemacht
+  - war super
+  concept: Positive Rückschau
+  pragmatics: Wertschätzung zeigen
+  narrative: appreciation
+pattern:
+- (?i)\bwar\s+(echt\s+)?(schön|toll|super)\b
+- (?i)\bhat\s+(mir\s+)?(echt\s+)?spaß\s+gemacht\b
+- (?i)\bfand\s+ich\s+(echt\s+)?(schön|toll|gut)\b
+- (?i)\b(richtig|echt|total)\s+(schön|toll)\s+mit\s+dir\b
+examples:
+- War echt schön heute mit dir!
+- Hat mir total Spaß gemacht
+- Fand ich richtig toll mit dir
+- War super heute!
+- Das war wirklich schön
+tags:
+- appreciation
+- positive_feedback

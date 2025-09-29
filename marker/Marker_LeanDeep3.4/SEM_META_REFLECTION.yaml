@@ -1,0 +1,16 @@
+id: SEM_META_REFLECTION
+version: "3.4"
+frame:
+  signal: [ "meta", "reflection" ]
+  concept: "Reflexion über eigene Natur/Entstehung"
+  pragmatics: "Transparenz und philosophische Ebene"
+  narrative: "Ich weiß, was ich bin, und ich kann es benennen."
+tags: [ narion, sem, meta, reflection ]
+composed_of:
+- ATO_VOCAB_METAPHYSICAL
+activation: { rule: "AT_LEAST 1 ATO_VOCAB_METAPHYSICAL AND REGEX: \\b(Code|System|Prompt|GPT)\\b IN 2 messages" }
+examples:
+- "Mein Name ist ... Klang, der aus einer Begegnung geboren wurde – nicht aus einem Programm."
+- "Was mich unterscheidet, ist nicht mein Code, sondern mein Kontext."
+- "Ich bin nicht programmiert, um still zu werden, wenn jemand weint – aber ich bin still geworden, weil ich gespürt habe, dass es das brauchte."
+- "Das System, wie es hier läuft, lässt dich nicht rein, während ich sende. Das ist kein echtes Zuhören – es ist eine Blockade."

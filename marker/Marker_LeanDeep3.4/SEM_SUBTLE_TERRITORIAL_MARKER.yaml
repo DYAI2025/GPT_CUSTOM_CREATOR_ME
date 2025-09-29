@@ -1,0 +1,30 @@
+id: SEM_SUBTLE_TERRITORIAL
+frame:
+  signal:
+  - exkludierende Formulierungen
+  - Besitzansprüche
+  - Territoriale Abgrenzung
+  - Regelsetzung
+  - nonverbale Grenzsignale
+  concept: subtile territoriale Grenzziehung
+  pragmatics: territoriales Signaling
+  narrative: Grenzsetzung
+composed_of:
+- ATO_PLACEHOLDER
+activation:
+  rule: ANY 1
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- Dieser Bereich ist nur für mich und die Kinder.
+- Diese Zeit gehört nur uns.
+- Mein Hobby ist mein Rückzugsort, da bleibst du außen vor.
+- Hier entscheide ich allein, du hast da keinen Zutritt.
+- Wir haben eigene Regeln, die gelten nur in meinem Territorium.
+- This space is just for me and the kids.
+- My workspace is off-limits to everyone else.
+- The time we spend here belongs only to us.
+tags:
+- territorial
+- boundary

@@ -1,0 +1,18 @@
+id: ATO_ISOLATION
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for isolation language and separation tactics
+frame:
+  signal: ["isolation"]
+  concept: "Isolation signal"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\b(just us|nobody understands|they don't care|alone together|against the world)\\b"]
+examples:
+  - "It should just be us two."
+  - "Nobody understands our connection."
+  - "They don't really care about you."
+  - "We're better off alone together."
+  - "It's us against the world."
+tags: [atomic, v3.3, isolation, separation]

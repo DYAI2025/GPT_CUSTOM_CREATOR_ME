@@ -1,0 +1,43 @@
+id: ATO_TOGETHERNESS_TERMS
+lang: en
+category: ATOMIC
+description: "Flags lexical cues that emphasize togetherness, shared identity, and 'we'-framing."
+frame:
+  signal: ["let's …", "together", "we both …", "as a team", "our <shared-noun>"]
+  concept: "Collective identity / joint agency"
+  pragmatics: "Bonding, commitment priming"
+  narrative: "We-as-a-unit framing"
+pattern:
+  - "(?i)\\blet'?s\\b"
+  - "(?i)\\btogether\\b"
+  - "(?i)\\bwe (?:both|all)\\b"
+  - "(?i)\\bas a team\\b"
+  - "(?i)\\bour (?:plan|tradition|playlist|routine|team|project|vibe|weekend|doc(?:ument)?)\\b"
+  - "(?i)\\bwe('?re| are) (?:strong|a great team)\\b"
+  - "(?i)\\bteam us\\b"
+  - "(?i)\\bwe['’]?ve got this\\b"
+  - "(?i)\\bwe'?ll split the tasks\\b"
+  - "(?i)\\bour (?:rules|way)\\b"
+activation_logic: "ANY 1"
+scoring: { base: 1.1, weight: 1.0 }
+examples:
+  - "Let's do this together."
+  - "We both know this routine by heart."
+  - "As a team, nothing can stop us."
+  - "Our playlist needs a new anthem."
+  - "We’re simply a great team."
+  - "Together we’re strong."
+  - "We’ve got this in the bag."
+  - "Let’s tackle it as a unit."
+  - "Our weekend itinerary looks epic."
+  - "We’ll split the tasks and conquer."
+tags: [atomic, bonding, togetherness]
+metadata:
+  repair_log:
+    - date: "2025-08-14"
+      changes: ["Converted from mixed/bilingual to en", "normalized to ATOMIC with regex patterns", "frame added", "removed deprecated fields (marker_name, beschreibung, semantische_grabber_id, kategorie)", "examples curated to 10", "field order fixed"]
+  legacy:
+    source_marker_name: "A_TOGETHERNESS_TERMS_MARKER"
+    semantische_grabber_id: "SGR_TOGETHERNESS_TERMS_01"
+    created_by: "FRAUSAR_GUI_v2"
+    created_at: "2025-07-22T00:26:06.785433"

@@ -1,0 +1,33 @@
+id: SEM_MORAL_REFRAMING_GOOD_INTENT
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Gute-Absicht + Kontrast"
+  concept: "Moralisches Umdeuten (Good-Intent)"
+  pragmatics: "Kritik entwerten"
+  narrative: "guilt_neediness_bind"
+composed_of:
+  - ATO_MORAL_GOOD_INTENT
+  - ATO_CONTRASTIVE_CONNECTOR_ABER
+activation:
+  rule: "ANY 1 IN 30 messages"
+window:
+  messages: 30
+scoring:
+  base: 2.6
+  weight: 0.7
+  decay: 0.01
+  formula: "logistic"
+examples:
+  - "Ich wollte nur helfen, aber du machst es mir unmöglich."
+  - "Ich meine es nur gut, trotzdem reagierst du so kalt."
+  - "Ich wollte das Beste, dennoch bist du so hart."
+  - "Ich habe es gut gemeint, aber du weist es ab."
+  - "Ich wollte nur was Gutes, trotzdem behandelst du mich so."
+  - "Wollte dir doch nur beistehen, aber du stößt mich weg."
+  - "Meine Absicht war positiv, dennoch kritisierst du mich."
+  - "Hab's nur gut gemeint, trotzdem machst du mir Vorwürfe."
+  - "Wollte das Richtige tun, aber du siehst es nicht."
+  - "Ich hab nur versucht zu helfen, dennoch bin ich der Böse."
+tags: [sem, moral, guilt_pressure]

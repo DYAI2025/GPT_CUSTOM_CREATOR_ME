@@ -1,0 +1,17 @@
+id: ATO_EMPATHY_MARKERS
+version: "3.4"
+frame:
+  signal: ["empathy"]
+  concept: "Empathie-/Caring-Phrasen"
+  pragmatics: "Soziale Unterstützung"
+  narrative: "prosocial"
+tags: [empathy, support]
+pattern:
+  regex: "\\b(verstehe\\s+dich|fühle\\s+mit\\s+dir|das\\s+muss\\s+schwer\\s+sein|I'm\\s+here\\s+for\\s+you)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich verstehe dich."
+  - "Ich fühle mit dir."
+  - "Das muss schwer sein."
+  - "I'm here for you."
+  - "Du bist nicht allein."

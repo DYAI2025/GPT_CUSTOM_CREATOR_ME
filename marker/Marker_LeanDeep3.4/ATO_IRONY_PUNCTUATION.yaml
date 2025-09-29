@@ -1,0 +1,17 @@
+id: ATO_IRONY_PUNCTUATION
+version: "3.4"
+frame:
+  signal: ["irony"]
+  concept: "Ironie-Signale (Anführungsz., /s)"
+  pragmatics: "Tonhinweise"
+  narrative: "tone"
+tags: [irony, sarcasm]
+pattern:
+  regex: "([„“\"'].*[\"'“”])|(/s\\b)"
+  flags: ["IGNORECASE"]
+examples:
+  - "„Super“"
+  - "\"Großartig\""
+  - "‚Klasse.‘"
+  - "yeah… /s"
+  - "\"Perfekt\""

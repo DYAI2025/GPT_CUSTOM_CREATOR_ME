@@ -1,0 +1,18 @@
+id: ATO_EMOTIONAL_BLACKMAIL
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for emotional blackmail language
+frame:
+  signal: ["emotional blackmail"]
+  concept: "Emotional blackmail signal"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\b(if you loved me|after everything I've done|you'll regret this|I'll never forgive)\\b"]
+examples:
+  - "If you loved me, you would..."
+  - "After everything I've done for you."
+  - "You'll regret this decision."
+  - "I'll never forgive you if..."
+  - "How could you do this to me?"
+tags: [atomic, v3.3, auto-generated]

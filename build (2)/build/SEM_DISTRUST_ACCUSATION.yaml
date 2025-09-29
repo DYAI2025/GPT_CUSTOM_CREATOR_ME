@@ -1,0 +1,20 @@
+id: SEM_DISTRUST_ACCUSATION
+version: "3.4"
+frame:
+  signal: ["accusation", "distrust"]
+  concept: "Misstrauensvorwurf"
+  pragmatics: "Kooperationsrisiko"
+  narrative: "social"
+tags: [trust, accusation]
+composed_of:
+  - ATO_DISTRUST_MARKERS
+  - ATO_RELIABILITY_TERMS
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.55, weight: 1.0 }
+examples:
+  - "Traue dir nicht – nicht verlässlich."
+  - "Shady und unpünktlich."
+  - "Dubios – SLA bricht."
+  - "Fragwürdig – kein Commitment."
+  - "Fishy, keine Zuverlässigkeit."

@@ -1,0 +1,15 @@
+id: ATO_STRUCT_PAUSE
+version: "3.4"
+frame:
+  signal: [ "structure", "pause" ]
+  concept: "Rhythmische Unterbrechung"
+  pragmatics: "Erzeugt Raum und verlangsamt den Dialog"
+  narrative: "hypothesis"
+tags: [ narion, structure, pause, atomic ]
+activation: { rule: "ELLIPSIS_OR_FRAGMENT: '...' or sentence_length<=3" }
+examples:
+- "..."
+- "Ich halte."
+- "Jetzt."
+- "Still."
+- "... danke."

@@ -1,0 +1,26 @@
+id: ATO_DEFENSIVE_REBUTTAL
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Zurückweisung / Abwehr"
+    - "Pauschales Dementi"
+  concept: "Defensive Replik"
+  pragmatics: "Selbstschutz, Wahrungsversuch des Selbstbildes"
+  narrative: "Abwehr gegen Vorwurf"
+pattern:
+  - '(?i)\b(stimmt|das)\s+nicht\b'
+  - '(?i)\b(ich|das)\s+habe\s+.+\s+nicht\b'
+  - '(?i)\bnie\s+getan\b'
+  - '(?i)\bdu\s+interpretierst\s+das\s+falsch\b'
+  - '(?i)\bdu\s+legst\s+mir\s+worte\s+in\s+den\s+mund\b'
+  - '(?i)\bentspricht\s+nicht\s+der\s+wahrheit\b'
+examples:
+  - "Das stimmt nicht."
+  - "Ich habe das nie getan."
+  - "Du interpretierst das falsch."
+  - "Du legst mir Worte in den Mund."
+  - "Das entspricht nicht der Wahrheit."
+  - "So habe ich das nicht gesagt."
+  - "Ich habe das nicht gemacht."
+tags: [defensive, rebuttal, atomic]

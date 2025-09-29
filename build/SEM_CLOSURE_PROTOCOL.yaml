@@ -1,0 +1,27 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_CLOSURE_PROTOCOL
+frame:
+  signal: ["closure_protocol"]
+  concept: "Standardisierte Beendigung einer Einheit"
+  pragmatics: "Konvergenz, Abschlussordnung"
+  narrative: "coordination"
+tags: [closure, finalize, protocol]
+composed_of:
+  sequence_any:
+    - ["ATO_CONFIRM", "ATO_CLOSE", "ATO_SUBJECT_CLOSED"]
+activation:
+  rule: "SEQUENCE IN 4 messages"
+  window: 4
+scoring: { base: 0.7, weight: 1.15 }
+examples:
+  - "Bestätigt. Dann schließen wir das – Haken dran."
+  - "Okay, confirm – ich mach’s zu."
+  - "Passt → close → Thema beendet."
+  - "Ja, so machen wir’s; Abschluss jetzt."
+  - "Confirm. Ich setze den Schlussstrich."
+  - "Bestätigt – wir schließen diesen Punkt."
+  - "Einigkeit – ich beende den Thread."
+  - "Confirm → close. Weiter."
+  - "Gesehen; ich markiere als abgeschlossen."
+  - "Check, Thema zu. Nächstes."

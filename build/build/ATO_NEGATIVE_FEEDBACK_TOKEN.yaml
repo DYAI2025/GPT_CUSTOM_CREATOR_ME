@@ -1,0 +1,17 @@
+id: ATO_NEGATIVE_FEEDBACK_TOKEN
+version: "3.4"
+frame:
+  signal: ["negative_feedback"]
+  concept: "Abwertende Bewertung"
+  pragmatics: "Kritik/Abwertung"
+  narrative: "conflict"
+tags: [feedback, negative]
+pattern:
+  regex: "\\b(schlecht|mangelhaft|unzulänglich|lächerlich|nutzlos|garbage|awful)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Das ist schlecht."
+  - "Mangelhafte Arbeit."
+  - "Unzulänglich umgesetzt."
+  - "Das ist lächerlich."
+  - "Awful outcome."

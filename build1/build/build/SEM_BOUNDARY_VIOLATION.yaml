@@ -1,0 +1,21 @@
+id: SEM_BOUNDARY_VIOLATION
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["boundary", "violation"]
+  concept: "Grenze gesetzt + Übertritt"
+  pragmatics: "Rupture/Repair-Trigger"
+  narrative: "interaction"
+tags: [boundary, rupture]
+composed_of:
+  - ATO_SET_BOUNDARY
+  - ATO_SECRECY
+activation:
+  rule: "BOTH IN 1 message OR ANY 2 IN 2 messages"
+scoring: { base: 0.6, weight: 1.0 }
+examples:
+  - "Das ist nicht okay – das bleibt unter uns!"
+  - "Meine Grenze – sag es niemandem."
+  - "Bis hierhin – vertraulich."
+  - "Stopp – nicht weitersagen."
+  - "Nein – halte das geheim."

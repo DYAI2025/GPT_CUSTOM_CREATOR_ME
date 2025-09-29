@@ -1,0 +1,34 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_DEESCALATION
+frame:
+  signal: ["deescalation"]
+  concept: "De-Eskalation durch Repair/Entschärfung"
+  pragmatics: "Spannungsabbau / Ko-Regulation"
+  narrative: "repair"
+tags: [repair, deescalation]
+composed_of:
+  any_of:
+    - ATO_DEESCALATION_PHRASE
+    - ATO_REPAIR_REQUEST
+    - ATO_APOLOGY
+    - ATO_ACKNOWLEDGE
+    - ATO_CONFIRM
+    - SEM_VALIDATION
+activation:
+  rule: "AT_LEAST 2 IN 3 messages"
+  window: 3
+constraints:
+  exclude_tags: [escalation, outrage]
+scoring: { base: 0.6, weight: 1.05 }
+examples:
+  - "Entschuldige – passt für mich."
+  - "Ich war unfair – verstanden – danke."
+  - "Können wir das klären? – ok, gesehen."
+  - "Tut mir leid – einverstanden."
+  - "Bitte um Repair – ich unterstütze dich."
+  - "Ich höre dich – entschuldige – lass uns ruhig sprechen."
+  - "Ok, gesehen – danke fürs Ansprechen – wir finden eine Lösung."
+  - "Tut mir leid – verstanden – können wir neu starten?"
+  - "Repair-Vorschlag: kurz Pause – einverstanden."
+  - "Ich nehme das an – sorry – passt für mich."

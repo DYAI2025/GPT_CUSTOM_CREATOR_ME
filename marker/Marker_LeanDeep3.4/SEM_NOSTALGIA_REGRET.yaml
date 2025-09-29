@@ -1,0 +1,20 @@
+id: SEM_NOSTALGIA_REGRET
+version: "3.4"
+frame:
+  signal: ["nostalgia", "regret"]
+  concept: "Rückblick mit Bedauern"
+  pragmatics: "Kontrafaktik + Emotion"
+  narrative: "affect"
+tags: [affect, regret]
+composed_of:
+  - ATO_REGRET_PHRASES
+  - ATO_SAD_WORDS
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.6, weight: 1.0 }
+examples:
+  - "Hätte ich nur früher – so schade."
+  - "Zu spät, ich vermisse die Zeit."
+  - "Bereue es, fühlt sich leer an."
+  - "Wäre es anders… ich bin traurig."
+  - "Schade darum, es ist schwer."

@@ -1,0 +1,24 @@
+id: ATO_SHOULD_MORE_OFTEN
+frame:
+  signal:
+  - sollten öfter
+  - müssen wiederholen
+  - nächstes Mal
+  - bald wieder
+  concept: Wiederholungswunsch
+  pragmatics: Zukunftsorientierung
+  narrative: future_promise
+pattern:
+- (?i)\bsollten\s+(wir\s+)?(mal\s+)?öfter\b
+- (?i)\bmüssen\s+(wir\s+)?(unbedingt\s+)?wiederholen\b
+- (?i)\bnächstes\s+mal\b
+- (?i)\b(bald|demnächst)\s+wieder\b
+examples:
+- Sollten wir öfter machen ❤️
+- Das müssen wir unbedingt wiederholen!
+- Nächstes Mal machen wir...
+- Lass uns das bald wieder machen
+- Sollten wir echt öfter machen
+tags:
+- future_orientation
+- commitment_signal

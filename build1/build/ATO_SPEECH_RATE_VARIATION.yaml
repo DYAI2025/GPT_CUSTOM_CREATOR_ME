@@ -1,0 +1,21 @@
+id: ATO_SPEECH_RATE_VARIATION
+family: ATO
+description: ''
+notes: ''
+id: ATO_SPEECH_RATE_VARIATION
+family: ATO
+description: ''
+notes: ''
+examples:
+  positive:
+    - "(Spricht sehr schnell, dann plötzlich sehr langsam)"
+    - "(Wechselt abrupt zwischen schnellem und langsamem Sprechen)"
+    - "(Beschleunigt die Sprechgeschwindigkeit bei Aufregung)"
+    - "(Verlangsamt die Sprechgeschwindigkeit bei Nachdenklichkeit)"
+    - "(Spricht in kurzen, abgehackten Sätzen, dann in langen, fließenden)"
+    - "(Variiert die Sprechgeschwindigkeit, um Emotionen auszudrücken)"
+    - "(Spricht mit unterschiedlichem Tempo, um Spannung aufzubauen)"
+    - "(Passt die Sprechgeschwindigkeit an den Inhalt an)"
+    - "(Spricht mal stockend, mal flüssig)"
+    - "(Wechselt zwischen schnellem und bedächtigem Sprechen)"
+  negative: []

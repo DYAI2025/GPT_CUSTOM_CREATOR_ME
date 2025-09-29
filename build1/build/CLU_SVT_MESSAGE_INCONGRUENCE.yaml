@@ -1,0 +1,45 @@
+d: SEM_SVT_MESSAGE_INCONGRUENCE
+lang: en
+category: SEMANTIC
+description: "Incongruence inside one message: factual statement + devaluing 'you' message."
+frame:
+  signal: ["fact + 'but you are …'"]
+  concept: "Multi-channel contradiction"
+  pragmatics: "Raised conflict arousal"
+  narrative: "Split message"
+composed_of:
+  - ATO_FACTUAL_STATEMENT
+  - ATO_YOU_DEVALUATION
+activation_logic: "ALL WITHIN 1 message"
+scoring: { base: 1.8, weight: 1.3 }
+window: { messages: 1 }
+examples:
+  - "The report is accurate—you're chaotic, though."
+  - "X was decided, but you won't manage anyway."
+  - "The light is green, but you can't drive."
+  - "- \"Die Ampel ist grün, aber du bist ja eine schlechte Fahrerin.\""
+  - "- \"Ihr Bericht ist sachlich korrekt, aber Sie sind einfach unzuverlässig.\""
+  - "- \"Die Zahlen stimmen, aber du bist einfach zu langsam.\""
+  - "- \"Es ist Fakt, dass die Deadline morgen ist, aber du hast ja eh keine Zeit.\""
+  - "The numbers are correct, but you're too slow."
+  - "It's a fact the deadline is tomorrow, but you're unreliable."
+  - "The report is accurate—you're chaotic, though."
+  - "X was decided, but you won't manage anyway."
+  - "The light is green, but you can't drive."
+  - "Meeting is set, but you're obviously overwhelmed."
+  - "Factually fine, but you're too complacent."
+  - "We delivered, but you messed it up."
+  - "Data is there—yet you don't get it."
+  - "Technically okay, still disappointing from you."
+  - "Faktisch stimmt das, aber du bist unfähig."
+  - "Inhaltlich okay – menschlich enttäuschend."
+  - "Ja, korrekt, trotzdem bist du schuld."
+  - "Zahlen passen, doch deine Art geht gar nicht."
+  - "Objektiv richtig, subjektiv mangelhaft."
+tags: [needs_review, cluster, schulz_von_thun, inkongruenz, konflikt]
+meta:
+  semantische_grabber_id: "AUTO_SEM_20250720_39DC"
+  created_at: "2025-07-20T11:46:39.613061"
+  created_by: "FRAUSAR_GUI_v2"
+  source_version: "1.0"
+  schema_version: "3.3"

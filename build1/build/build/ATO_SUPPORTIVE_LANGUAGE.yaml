@@ -1,0 +1,22 @@
+id: ATO_SUPPORTIVE_LANGUAGE
+version: "3.4"
+frame:
+  signal: ["support"]
+  concept: "Unterstützende Sprache"
+  pragmatics: "Hilfe/Kooperation"
+  narrative: "prosocial"
+tags: [support, prosocial]
+pattern:
+  regex: "\\b(ich\\s+bin\\s+da|helfe|unterstütze|gemeinsam|schaffst\\s+das|proud\\s+of\\s+you)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich bin da für dich."
+  - "Wie kann ich helfen?"
+  - "Wir schaffen das gemeinsam."
+  - "Du schaffst das."
+  - "I’m proud of you."
+  - "Ich halte dir den Rücken frei."
+  - "Sag Bescheid, ich bin an deiner Seite."
+  - "Du musst das nicht allein schaffen."
+  - "Wir stehen das zusammen durch."
+  - "Ich hör dir zu."

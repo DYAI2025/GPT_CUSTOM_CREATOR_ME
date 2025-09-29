@@ -1,0 +1,31 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "ld34_text_social_grammar"
+id: ATO_REPAIR_REQUEST
+lang: de
+category: ATOMIC
+description: "Offene Reparatur-Initiierung zur Klärung von Verständnisschwierigkeiten."
+frame:
+  signal: ["hä?","wie bitte?","wer?","was meinst du?"]
+  concept: "Reparaturanfrage"
+  pragmatics: "Turn halten, Nachbesserung anstoßen"
+  narrative: "Kooperationssignal"
+pattern:
+  - '(?i)^\sh[äa]\??\s$'
+  - '(?i)\bwie\s+bitte\b'
+  - '(?i)^\swer\??\s$'
+  - '(?i)\bwas\s+meinst\s+du\??\b'
+activation_logic: "ANY 1"
+examples:
+  - "Hä?"
+  - "Wie bitte?"
+  - "Wer?"
+  - "Was meinst du genau?"
+  - "Sorry, ich hab’s nicht verstanden."
+  - "Wie bitte, was heißt das?"
+  - "Hä, kannst du das wiederholen?"
+  - "Was meinst du mit 'später'?"
+tags: [atomic, repair, text]
+metadata:
+  repair_log:
+    - { rule: "R09", note: "Frame ergänzt", date: "2025-08-29" }

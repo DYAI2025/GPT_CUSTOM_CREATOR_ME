@@ -1,0 +1,20 @@
+id: SEM_EMOTIONAL_SUPPORT
+version: "3.4"
+frame:
+  signal: ["emotional_support"]
+  concept: "Emotionale Stütze"
+  pragmatics: "Caring + Präsenz"
+  narrative: "prosocial"
+tags: [support, empathy]
+composed_of:
+  - ATO_EMPATHY_MARKERS
+  - ATO_SUPPORTIVE_LANGUAGE
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.55, weight: 1.0 }
+examples:
+  - "Ich fühle mit dir – ich bin da."
+  - "Das muss schwer sein – wir schaffen das."
+  - "You're not alone – reach out anytime."
+  - "Verstehe dich – stolz auf dich."
+  - "Hier für dich – gemeinsam stark."

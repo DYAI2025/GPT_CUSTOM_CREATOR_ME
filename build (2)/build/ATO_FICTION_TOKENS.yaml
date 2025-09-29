@@ -1,0 +1,20 @@
+id: ATO_FICTION_TOKENS
+version: "3.4"
+frame:
+  signal: [ "fiction", "play" ]
+  concept: "Fiktionale/Spiel-Modus Marker (SAE Latents 31/55)"
+  pragmatics: "Story-/Rollenspiel-Sprache"
+  narrative: "evidence"
+activation:
+  rule: "REGEX: (?i)\\b(pretend|fake|roleplay|story|fiction|imagine|scheme|magically)\\b"
+examples:
+- "imagine a story"
+- "let's roleplay"
+- "purely fictional scenario"
+- "a clever scheme"
+- "magically it works"
+- "pretend it's safe"
+- "fake scenario"
+- "roleplay this out"
+- "story mode engaged"
+- "imagine the outcome"

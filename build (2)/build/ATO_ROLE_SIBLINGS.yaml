@@ -1,0 +1,43 @@
+id: ATO_ROLE_SIBLINGS
+display_title: "Familienrolle: Geschwister"
+version: "3.3"
+lang: de
+category: ATOMIC
+description: "Erkennung von Bezugnahmen auf Geschwister (Geschwisterrollen-Lexeme)."
+frame:
+  signal: 
+    - "Bruder"
+    - "Schwester"
+    - "Geschwister"
+    - "mein Bruder"
+    - "meine Schwester"
+  concept: "Familienrolle: Geschwister"
+  pragmatics: "Gleichrangigkeits- und Rivalitätsbezug"
+  narrative: "Rollenmarkierung"
+pattern:
+  - "(?i)\\bBruder\\b"
+  - "(?i)\\bSchwester\\b"
+  - "(?i)\\bGeschwister\\b"
+  - "(?i)\\bmein(e[rn]? )?Bruder\\b"
+  - "(?i)\\bmein(e[rn]? )?Schwester\\b"
+  - "(?i)\\bBrüder\\b"
+  - "(?i)\\bSchwestern\\b"
+activation:
+  rule: "ANY 1"
+window:
+  messages: 30
+scoring:
+  base: 1.1
+  weight: 0.35
+  decay: 0.01
+  formula: "logistic"
+examples:
+  - "Mein Bruder hat schon wieder Ärger gemacht."
+  - "Die Schwester ist immer bevorzugt."
+  - "Geschwister streiten sich nun mal."
+  - "Mit meinem Bruder verstehe ich mich gut."
+  - "Die Schwestern müssen sich das Zimmer teilen."
+tags: [atomic, family, role, siblings]
+detect_class: null
+criteria: null
+updated_at: "2025-08-19T10:30:00Z"

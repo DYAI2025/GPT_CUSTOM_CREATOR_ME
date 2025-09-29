@@ -1,0 +1,28 @@
+id: ATO_REQUEST_TRANSPARENCY
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Transparenz/Klarheit erbitten"
+    - "Ehrlichkeit/Offenheit"
+  concept: "Informationsbitte"
+  pragmatics: "Pro-sozial, strukturierend"
+  narrative: "Klärungsversuch"
+pattern:
+  - '(?i)\btranspar(en[tz])?\b'
+  - '(?i)\behrlich(keit)?\b'
+  - '(?i)\boffen(heit)?\b'
+  - '(?i)\bklarheit\b'
+  - '(?i)\berklär\w*\b'
+  - '(?i)\b(ich|wir)\s+möchten?\s+versteh\w*\b'
+  - '(?i)\bzuhör\w*\b'
+  - '(?i)\boffenleg\w*\b'
+examples:
+  - "Mir ist Transparenz wichtig."
+  - "Bitte erklär mir, wie du das meinst."
+  - "Ich möchte verstehen."
+  - "Kannst du das bitte offenlegen?"
+  - "Mir fehlt Klarheit über deine Absicht."
+  - "Sei bitte offen und ehrlich."
+  - "Ich will nachvollziehen können, was passiert."
+tags: [clarity, prosocial, atomic]

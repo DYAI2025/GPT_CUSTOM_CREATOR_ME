@@ -1,0 +1,21 @@
+id: SEM_STYLE_COMPARISON
+lang: de
+category: SEMANTIC
+description: "Vergleich eines Stils oder Verhaltens mit einem kulturellen Bezug."
+frame:
+  signal: ["wie in", "als wär’s", "im Stil von"]
+  concept: "Stilistischer Vergleich"
+  pragmatics: "Erzeugung von Bildhaftigkeit durch Referenz"
+  narrative: "kultureller_vergleich"
+composed_of:
+  - ATO_STYLE_REFERENCE
+  - ATO_CULTURAL_ELEMENT
+activation_logic: "ANY 2 IN 3 messages"
+scoring: { base: 1.4, weight: 1.1 }
+examples:
+  - "Das klingt wie in einem alten französischen Film."
+  - "Du redest, als wär’s ein Shakespeare-Drama."
+  - "Im Stil von Tarantino, aber netter."
+  - "Das hat was von Berliner 80er-Jahre-Punk."
+  - "Wie in einer Netflix-Serie, nur live."
+tags: [semantic, style, comparison]

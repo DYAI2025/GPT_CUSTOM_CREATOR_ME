@@ -1,0 +1,21 @@
+id: ATO_LONG_RESPONSE_GAP
+family: ATO
+description: ''
+notes: ''
+id: ATO_LONG_RESPONSE_GAP
+family: ATO
+description: ''
+notes: ''
+examples:
+  positive:
+    - "(Langes Schweigen nach einer Frage)"
+    - "(Deutliche Pause vor der Antwort)"
+    - "(Zögern vor dem Sprechen)"
+    - "(Lange Überlegung vor der Reaktion)"
+    - "(Verzögerte Antwort)"
+    - "(Stille, die länger als üblich ist)"
+    - "(Zögern, bevor das Gespräch fortgesetzt wird)"
+    - "(Lange Denkpause)"
+    - "(Atem anhalten vor dem Sprechen)"
+    - "(Sichtbares Ringen um Worte)"
+  negative: []

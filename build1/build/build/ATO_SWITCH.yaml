@@ -1,0 +1,18 @@
+id: ATO_SWITCH
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for switching/changing context
+frame:
+  signal: ["switch", "change"]
+  concept: "Switch signal word"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\b(switch|change|move)\\b"]
+examples:
+  - "Let's switch to something else"
+  - "We should change the approach"
+  - "Can we move to a different method?"
+  - "Time to switch gears here"
+  - "I want to change this conversation"
+tags: [atomic, v3.3, auto-generated]

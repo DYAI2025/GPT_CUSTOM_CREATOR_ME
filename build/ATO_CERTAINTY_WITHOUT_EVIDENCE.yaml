@@ -1,0 +1,17 @@
+id: ATO_CERTAINTY_WITHOUT_EVIDENCE
+version: "3.4"
+frame:
+  signal: ["certainty", "unsupported_claim"]
+  concept: "Starke Gewissheit ohne Beleg"
+  pragmatics: "Overconfidence ohne Evidenz"
+  narrative: "bias_pattern"
+tags: [bias, certainty, evidence]
+pattern:
+  regex: "\\b(offensichtlich|klar(?!ifizieren)|zweifellos|ohne\\s+Zweifel|it's\\s+obvious|everyone\\s+knows)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Das ist doch offensichtlich."
+  - "Ohne Zweifel liegst du falsch."
+  - "Everyone knows this is true."
+  - "Klar, so ist es."
+  - "It’s obvious, no need to check."

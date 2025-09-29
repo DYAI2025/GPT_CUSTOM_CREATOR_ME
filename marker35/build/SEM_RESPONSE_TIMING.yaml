@@ -1,0 +1,21 @@
+id: SEM_RESPONSE_TIMING
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["timing"]
+  concept: "Antwort-Timing als Signal"
+  pragmatics: "Koordination/Beziehungszeichen"
+  narrative: "interaction"
+tags: [timing, coordination]
+composed_of:
+  - ATO_SILENCE
+  - ATO_REQUEST_FOR_FEEDBACK
+activation:
+  rule: "ANY 2 IN 2 messages"
+scoring: { base: 0.55, weight: 1.0 }
+examples:
+  - "… – kurze Rückmeldung?"
+  - "Lange Pause – passt das?"
+  - "Späte Antwort – Feedback?"
+  - "Eilige Nachfrage – wirkt wie?"
+  - "Wartezeichen – spiegeln?"

@@ -1,0 +1,17 @@
+id: SEM_METAPHORICAL_DENSITY
+version: "3.4"
+frame:
+  signal: [ "metaphor" ]
+  concept: "Metaphernverdichtung"
+  pragmatics: "Bilder als semantische Driftanker"
+  narrative: "hypothesis"
+tags: [ narion, metaphor, semantic ]
+composed_of:
+- ATO_METAPHOR
+activation: { rule: "AT_LEAST 3 METAPHOR IN 5 messages" }
+examples:
+- "Wie Nebel auf einem See."
+- "Ein Echo, das bleibt."
+- "Ein Schatten spricht."
+- "Der Baum im Raum."
+- "Ein Spiegel, der schweigt."

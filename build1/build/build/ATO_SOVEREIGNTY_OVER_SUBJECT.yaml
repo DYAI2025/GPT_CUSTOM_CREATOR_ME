@@ -1,0 +1,19 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_SOVEREIGNTY_OVER_SUBJECT
+frame:
+  signal: ["sovereignty_over_subject"]
+  concept: "Themenhoheit beanspruchen"
+  pragmatics: "Rahmensetzung / Kontrolle"
+  narrative: "coordination"
+tags: [sovereignty, control]
+pattern:
+  regex: "\\b(bleiben wir beim Thema|wir sprechen jetzt über|zur Sache|ich setze das Thema|das Thema ist)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Bleiben wir beim Thema."
+  - "Wir sprechen jetzt über die Agenda."
+  - "Zur Sache: die Entscheidung."
+  - "Ich setze das Thema: Ressourcen."
+  - "Das Thema ist heute Planung."
+  - "Wir fokussieren jetzt darauf."

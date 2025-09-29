@@ -1,0 +1,23 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_REASSURANCE_SEEKING
+frame:
+  signal: ["reassurance"]
+  concept: "Explizite Bestätigungs-/Beruhigungssuche"
+  pragmatics: "Angstpuffer / Abhängigkeitsdynamik"
+  narrative: "motive_safety"
+tags: [reassurance, validation]
+pattern:
+  regex: '(?i)\b(ist\s+das\s+okay\s+so\?|bist\s+du\s+sicher\?|wirklich\?|alles\s+gut\?|passt\s+das\s+f(?:ü|ue)r\s+(?:dich|euch)\?)\b'
+  flags: ["IGNORECASE"]
+examples:
+  - "Bist du sicher?"
+  - "Passt das für dich so?"
+  - "Ist das okay so?"
+  - "Alles gut?"
+  - "Wirklich?"
+  - "Passt das für euch?"
+  - "Kannst du das bestätigen?"
+  - "Ist das in Ordnung so?"
+  - "Bist du ganz sicher?"
+  - "Kurzer Check: passt das?"

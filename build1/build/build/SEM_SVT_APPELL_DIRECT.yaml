@@ -1,0 +1,37 @@
+id: SEM_SVT_APPEAL_DIRECT
+version: "3.3"
+frame:
+  signal: ["expliziter Appell", "Imperativ/Bitte/Aufforderung"]
+  concept: "Appellebene (Schulz von Thun)"
+  pragmatics: "Lenkung/Handlungsaufforderung"
+  narrative: "Direkte Bitte"
+pattern:
+  - "^fahr"
+  - "^schicken sie"
+  - "^könntest du bitte"
+  - "solltest du"
+  - "müsstest du"
+activation:
+  rule: "ANY at sentence start"
+justification: "Pattern-basierte SEM-Definition; ATO-Zerlegung (Imperativ-Präfixe) ausstehend."
+examples:
+  # vorhandener Rohblock (bewusst beibehalten)
+  - "examples:"
+  - "- \"Fahr los!\""
+  - "- \"Schicken Sie mir den Bericht!\""
+  - "- \"Könntest du bitte das Fenster schließen?\""
+  - "- \"Du solltest das sofort überprüfen.\""
+  - "- \"Hör jetzt bitte auf damit!\""
+  # +5 neu
+  - "Mach bitte das Licht aus."
+  - "Gib mir kurz Bescheid."
+  - "Bitte hör zu."
+  - "Ruf mich heute an."
+  - "Lass das jetzt."
+tags: [needs_review, sem_composition_exception, schulz_von_thun, appeal]
+meta:
+  semantische_grabber_id: "SGR_SVT_APPEAL_DIRECT_01"
+  created_at: "2025-07-20T11:48:12.759155"
+  created_by: "FRAUSAR_GUI_v2"
+  source_version: "1.0.1"
+  schema_version: "3.3"

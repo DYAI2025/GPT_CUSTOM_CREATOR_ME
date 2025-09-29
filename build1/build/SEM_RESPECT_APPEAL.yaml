@@ -1,0 +1,20 @@
+id: SEM_RESPECT_APPEAL
+version: "3.4"
+frame:
+  signal: ["respect"]
+  concept: "Appell an Würde/Respekt"
+  pragmatics: "Grenzsetzung"
+  narrative: "dignity"
+tags: [respect, dignity]
+composed_of:
+  - ATO_RESPECT_TERMS
+  - ATO_STATUS_TERMS
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.55, weight: 1.0 }
+examples:
+  - "Auf Augenhöhe – Status wahren."
+  - "Respektvoll reden – Ruf beachten."
+  - "Würdig behandeln – Ansehen schützen."
+  - "Respekt, bitte – keine Herabstufung."
+  - "Anständig reden – Rang achten."

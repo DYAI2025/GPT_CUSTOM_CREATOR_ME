@@ -1,0 +1,36 @@
+id: CLU_ATTACHMENT_STYLE_ANXIOUS
+version: '3.3'
+frame:
+  signal:
+  - ängstliche Bindungshinweise
+  - Unsicherheits- und Verlassensangst-Sprache
+  concept: 'Bindungsstil: ängstlich'
+  pragmatics: Nähe-Suche bei gleichzeitiger Alarmierung
+  narrative: Sehnsucht und Sorge
+composed_of:
+- type: semantic
+  marker_ids:
+  - ANXIOUS_CHILDHOOD_REFERENCE
+activation:
+  rule: COUNT(ANXIOUS_CHILDHOOD_REFERENCE) >= 2 IN 20
+  window:
+    messages: 20
+examples:
+  positive:
+    - "Ich hatte oft Angst, dass meine Eltern mich verlassen, wenn ich nicht brav bin."
+    - "Ich musste immer sehr aufpassen, um meine Eltern nicht zu enttäuschen."
+    - "Ich war mir nie ganz sicher, ob meine Eltern wirklich für mich da sind."
+    - "Ich hatte das Gefühl, um die Liebe meiner Eltern kämpfen zu müssen."
+    - "Die Stimmung zu Hause war oft unvorhersehbar, das hat mir Angst gemacht."
+    - "Ich habe mich oft allein gefühlt, auch wenn jemand da war."
+    - "Ich hatte ständig Sorge, etwas Falsches zu tun und Ärger zu bekommen."
+    - "Ich habe mich sehr bemüht, perfekt zu sein, um geliebt zu werden."
+    - "Ich war als Kind sehr anhänglich und wollte nie allein sein."
+    - "Ich hatte oft das Gefühl, eine Last zu sein."
+  negative: []
+tags:
+- needs_review
+- cluster
+- attachment
+- anxious
+meta: null

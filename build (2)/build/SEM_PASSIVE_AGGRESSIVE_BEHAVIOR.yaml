@@ -1,0 +1,29 @@
+id: SEM_PASSIVE_AGGRESSIVE_BEHAVIOR
+schema_version: LD-3.3
+lang: en
+category: SEMANTIC
+description: Semantic pattern for passive aggressive communication
+frame:
+  signal: ["indirect hostility"]
+  concept: "Passive Aggressive Behavior"
+  pragmatics: "micro pattern recognition"
+  narrative: "intent"
+composed_of:
+  - ATO_PASSIVE_AGGRESSION
+  - ATO_SARCASM
+  - ATO_IRONY
+activation_logic: "ANY 2"
+window:
+  messages: 2
+examples:
+  - "Oh really? Sure, that makes perfect sense. Whatever you think is best."
+  - "How nice of you to bring this up now. Fine, we'll do it your way."
+  - "What a surprise, another brilliant excuse. If you say so, I guess."
+  - "How lovely that you remember this now. Whatever makes you happy."
+  - "Obviously this is going well. As you wish, I won't argue anymore."
+  - "Great, another wonderful idea that I'm sure will work perfectly."
+  - "How convenient that you mention this right when it benefits you most."
+  - "Sure, I'm totally convinced by that explanation. Really convincing stuff."
+  - "Perfect timing as always. I'm sure this has nothing to do with yesterday."
+  - "Oh how thoughtful of you to consider my feelings. Truly touching."
+tags: [semantic, v3.3, passive-aggression]

@@ -1,0 +1,28 @@
+id: ATO_ORGANIZATION_ENTITY
+version: "3.3"
+lang: de
+frame:
+  signal: ["Token als Organisations-Entität erkannt (NER=ORG)"]
+  concept: "benannte Organisation"
+  pragmatics: "Referenz auf Institution/Firma/Verein"
+  narrative: "token"
+detect_class: DetectNER_ORG   # z. B. Spark NLP / spaCy-ORG
+examples:
+  - "Ich arbeite bei Google."
+  - "Das Rote Kreuz hilft weltweit."
+  - "Sie hat ein Praktikum bei Siemens gemacht."
+  - "Die UNESCO schützt Kulturerbe."
+  - "Unser Verein trifft sich freitags."
+  - "Die Deutsche Bank ist eine große Institution."
+  - "Das Bundesministerium für Gesundheit hat neue Richtlinien veröffentlicht."
+  - "Die Organisation Ärzte ohne Grenzen leistet humanitäre Hilfe."
+  - "Die Firma BMW produziert Autos."
+  - "Die NGO Greenpeace setzt sich für Umweltschutz ein."
+  - "Die Universität Heidelberg ist eine renommierte Bildungseinrichtung."
+  - "Die Stadtverwaltung von Berlin plant neue Projekte."
+  - "Die Organisation Amnesty International kämpft für Menschenrechte."
+  - "Die Firma SAP ist ein führender Softwareanbieter."
+  - "Die Deutsche Telekom ist ein großer Telekommunikationsanbieter."
+  - "Die Organisation WWF engagiert sich für den Naturschutz."  
+tags: [entity, org, atomic, v33]
+x_legacy_ids: ["A_ORG_MARKER","A_ORG"]

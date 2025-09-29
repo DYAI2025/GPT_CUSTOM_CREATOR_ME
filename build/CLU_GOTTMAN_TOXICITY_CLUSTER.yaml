@@ -1,0 +1,21 @@
+id: CLU_GOTTMAN_TOXICITY_CLUSTER
+family: CLU
+description: ''
+notes: ''
+id: CLU_GOTTMAN_TOXICITY_CLUSTER
+family: CLU
+description: ''
+notes: ''
+examples:
+  positive:
+    - "Du machst immer alles falsch. (Kritik) - Das ist doch lächerlich, was du sagst. (Verachtung)"
+    - "Immer bist du das Problem. (Kritik) - Ich habe nichts falsch gemacht, du bist das Problem. (Rechtfertigung)"
+    - "Du bist so egoistisch. (Kritik) - (Augenrollen und abfälliges Lachen) (Verachtung)"
+    - "Warum kannst du nicht einfach mal normal sein? (Kritik) - Ich rede nicht mehr mit dir darüber. (Mauern)"
+    - "Das ist doch typisch für dich. (Kritik) - Du bist unglaublich. (Verachtung)"
+    - "Ich bin nicht das Problem, du bist es. (Rechtfertigung) - (Ignorieren und Weggehen) (Mauern)"
+    - "Du bist einfach nur faul. (Kritik) - Ich habe keine Lust, mit dir zu reden. (Mauern)"
+    - "Du bist so dramatisch. (Verachtung) - Ich habe nichts getan. (Rechtfertigung)"
+    - "Mit dir kann man einfach nicht reden. (Kritik) - (Sarkastische Bemerkung) (Verachtung)"
+    - "Das ist deine Schuld. (Rechtfertigung) - Ich bin raus hier. (Mauern)"
+  negative: []

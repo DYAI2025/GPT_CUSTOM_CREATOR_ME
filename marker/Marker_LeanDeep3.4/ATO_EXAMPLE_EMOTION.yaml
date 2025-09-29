@@ -1,0 +1,21 @@
+id: ATO_EXAMPLE_EMOTION
+lang: de
+category: ATOMIC
+description: "Kurze Äußerungen, die ein Gefühl oder Selbstvorwurf ausdrücken (atomic emotional signal)."
+frame:
+  signal: ["ich bin schuld","habe Angst","fühle mich schlecht"]
+  concept: "Gefühlsäußerung / Selbstvorwurf"
+  pragmatics: "Selbstdiskreditierung / Sorge"
+  narrative: "token"
+pattern:
+  - "(?i)\\bich\\s+bin\\s+schuld\\b"
+  - "(?i)\\bhabe\\s+angst\\b"
+  - "(?i)\\bfühle\\s+mich\\s+schlecht\\b"
+examples:
+  - "Ich bin schuld."
+  - "Ich hab echt Angst, dass das schiefgeht."
+  - "Ich fühle mich schlecht deswegen."
+  - "Das ist alles meine Schuld."
+  - "Ich weiß nicht, wie ich das reparieren soll."
+tags: [atomic, emotion, self-blame]
+schema_version: "3.4"

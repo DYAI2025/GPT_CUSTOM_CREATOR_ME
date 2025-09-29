@@ -1,0 +1,19 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_ACKNOWLEDGE
+frame:
+  signal: ["acknowledge"]
+  concept: "Kenntnisnahme / Quittung"
+  pragmatics: "Koordination / Rückmeldung"
+  narrative: "interaction"
+tags: [ack, coordination]
+pattern:
+  regex: "\\b(verstanden|zur Kenntnis|notiert|gesehen|angekommen|ok)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Verstanden."
+  - "Zur Kenntnis."
+  - "Notiert."
+  - "Gesehen."
+  - "Ist angekommen."
+  - "Ok, hab’s."

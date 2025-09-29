@@ -1,0 +1,29 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_AVOIDANCE_LOOP
+frame:
+  signal: ["avoidance_loop"]
+  concept: "Ausweichen statt Klärung (Schleifen)"
+  pragmatics: "Konfliktvermeidung / Deflexion"
+  narrative: "avoidance"
+tags: [avoidance, topic_shift, closure]
+composed_of:
+  any_of:
+    - ATO_AVOIDANCE_PHRASE
+    - ATO_TOPIC_SWITCH_ADVERSATIVE
+    - ATO_PREMATURE_CLOSURE
+activation:
+  rule: "AT_LEAST 2 IN 4 messages"
+  window: 4
+scoring: { base: 0.6, weight: 1.12 }
+examples:
+  - "Lass uns nicht drüber reden – anderes Thema…"
+  - "Ja ja, schon gut – egal, zurück zu X."
+  - "Passt schon – Haken dran – btw, hast du Y gesehen?"
+  - "Müßig – ich wechsle mal den Fokus."
+  - "Später – jetzt erstmal anderes."
+  - "Ist doch durch – anyway, wie läuft Projekt B?"
+  - "Unwichtig – zurück zur Tagesordnung."
+  - "Ich mag das nicht aufmachen – schauen wir anderes an."
+  - "Schon geklärt – naja, halbwegs – weiter."
+  - "Nicht der Moment – lassen wir’s."

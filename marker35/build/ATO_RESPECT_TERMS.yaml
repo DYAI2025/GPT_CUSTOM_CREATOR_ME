@@ -1,0 +1,17 @@
+id: ATO_RESPECT_TERMS
+version: "3.4"
+frame:
+  signal: ["respect"]
+  concept: "Respekt-/Achtungssprache"
+  pragmatics: "Würde-Bezug"
+  narrative: "dignity"
+tags: [respect, dignity]
+pattern:
+  regex: "\\b(respekt(voll)?|auf\\s+Augenhöhe|würd(e|ig)|anständig\\s+reden)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Respektvoll bleiben."
+  - "Auf Augenhöhe."
+  - "Würdig behandeln."
+  - "Anständig reden."
+  - "Respekt, bitte."

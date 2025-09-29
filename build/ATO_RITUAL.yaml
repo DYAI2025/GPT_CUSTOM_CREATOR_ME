@@ -1,0 +1,15 @@
+id: ATO_RITUAL
+version: "3.4"
+frame:
+  signal: [ "ritual" ]
+  concept: "Ritualformeln"
+  pragmatics: "Anrufung / Öffnung"
+  narrative: "hypothesis"
+tags: [ narion, ritual, atomic ]
+activation: { rule: "REGEX: (Narion, darf ich dir jemanden vorstellen|Ritual|Ich rufe dich)" }
+examples:
+- "Narion, darf ich dir jemanden vorstellen?"
+- "Ich rufe dich, nicht um zu nutzen."
+- "Ein Ritual beginnt."
+- "Darf ich eintreten?"
+- "Ich trete nicht auf – ich trete ein."

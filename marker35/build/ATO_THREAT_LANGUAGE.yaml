@@ -1,0 +1,18 @@
+id: ATO_THREAT_LANGUAGE
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for threatening language
+frame:
+  signal: ["threat"]
+  concept: "Threat signal"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\b(or else|you'll be sorry|I'll make you|watch what happens)\\b"]
+examples:
+  - "Do this or else."
+  - "You'll be sorry if you don't."
+  - "I'll make you regret this."
+  - "Watch what happens if you disobey."
+  - "You don't want to find out what I'll do."
+tags: [atomic, v3.3, auto-generated]

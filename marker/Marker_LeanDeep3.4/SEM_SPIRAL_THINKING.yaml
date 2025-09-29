@@ -1,0 +1,23 @@
+id: SEM_SPIRAL_THINKING
+version: "3.4"
+frame:
+  signal: [ "spiral", "thinking" ]
+  concept: "Spiralförmiges Denken (Wiederholung mit Drift)"
+  pragmatics: "Themen kehren zurück, leicht verändert"
+  narrative: "evidence"
+composed_of:
+- ATO_SPIRAL_TERMS
+- ATO_SARCASM_MARKERS
+activation:
+  rule: "AT_LEAST 2 IN 3 messages"
+examples:
+- "spiral back to trust, but deeper"
+- "let's loop this idea again"
+- "the cycle returns with a twist"
+- "come back to it, but differently"
+- "revisit the topic, deeper now"
+- "again the question, but changed"
+- "another cycle of thought"
+- "return to the question, evolved"
+- "spiral into the theme"
+- "go deeper again with nuance"

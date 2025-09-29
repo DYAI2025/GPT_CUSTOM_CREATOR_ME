@@ -1,0 +1,42 @@
+id: CLU_FAMILY_HIERARCHY_CONFLICT
+display_title: "Familiäre Hierarchiekonflikte"
+version: "3.3"
+lang: de
+category: CLUSTER
+description: "Cluster von hierarchischen Konflikten in Familiensystemen."
+frame:
+  signal: ["Hierarchische Familienstruktur + Konflikte"]
+  concept: "Familiäre Hierarchiekonflikte"
+  pragmatics: "Machtstrukturen und Rollenkonflikte in Familien"
+  narrative: "Familiäre Systemdynamik"
+combination:
+  type: "AND"
+  components:
+    - marker_id: "SEM_PARENTAL_AUTHORITY"
+      weight: 0.5
+    - marker_id: "SEM_CHILD_RESISTANCE"
+      weight: 0.4
+    - marker_id: "ATO_ROLE_FATHER"
+      weight: 0.3
+    - marker_id: "ATO_ROLE_MOTHER"
+      weight: 0.3
+    - marker_id: "ATO_ROLE_CHILD"
+      weight: 0.3
+  threshold: 0.7
+activation:
+  rule: "WEIGHTED_AND"
+window:
+  messages: 50
+scoring:
+  base: 1.6
+  weight: 0.65
+  decay: 0.02
+  formula: "logistic"
+examples:
+  - "Papa sagt mach Hausaufgaben, aber ich will nicht!"
+  - "Mama bestimmt immer, das ist unfair!"
+  - "Die Kinder hören nicht auf elterliche Anweisungen."
+tags: [cluster, family, hierarchy, conflict, authority, resistance]
+detect_class: "E"
+criteria: "Kombination von elterlicher Autorität und kindlichem Widerstand"
+updated_at: "2025-08-19T10:30:00Z"

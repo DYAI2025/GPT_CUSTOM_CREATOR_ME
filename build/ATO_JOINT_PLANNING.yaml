@@ -1,0 +1,23 @@
+id: ATO_JOINT_PLANNING
+frame:
+  signal:
+  - Wollen wir am Samstag ins Kino gehen?
+  - Wanna go to the movies on Saturday?
+  - Lass uns unseren Urlaub für den Sommer planen.
+  - Let’s plan our summer vacation.
+  - Wie wär’s, wenn wir mal wieder kochen?
+  concept: joint planning
+  pragmatics: collaboration
+  narrative: proposal
+pattern:
+- (?i)\bwollen wir\b
+- (?i)\blass uns\b
+activation:
+  rule: ANY 1
+examples:
+- Wollen wir am Samstag ins Kino gehen?
+- Let’s schedule a monthly budget check together.
+- Fancy a walk this evening?
+- Sollen wir zusammen die Serie weiterschauen?
+- How about planning a surprise picnic for your mom?
+tags: []

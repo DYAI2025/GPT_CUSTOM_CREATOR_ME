@@ -1,0 +1,36 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "ld34_text_social_grammar"
+id: CLU_SHAME_ALERT_TEXT
+lang: de
+category: CLUSTER
+description: "Hinweis auf Schamdynamik in Textsequenzen."
+frame:
+  signal: ["Scham-SEM wiederholt im Kurzfenster"]
+  concept: "Scham-Cluster (Text)"
+  pragmatics: "Vorsicht, Rückzug möglich"
+  narrative: "Anschwellende Selbstabwertung"
+composed_of:
+  - { marker_ids: [SEM_SHAME_TEXT], weight: 1.0 }
+activation_logic: "AT_LEAST 1 SEM IN 3 messages"
+window: { messages: 10 }
+scoring: { base: 1.8, weight: 1.3, decay: 0.01 }
+examples:
+  - "Peinlich... sorry... vielleicht später."
+  - "Ich bin dumm... tut mir leid... irgendwie."
+  - "Sorry... peinlich... ich glaube..."
+  - "Tut mir leid... ich schäme mich... vielleicht."
+  - "Peinlich... sorry... ich bin schlecht."
+  - "Dumm… sorry… vielleicht später."
+  - "Peinlich… tut mir leid… irgendwie."
+  - "Sorry… ich schäme mich… ich glaube."
+tags: [cluster, shame, intuition]
+metadata:
+  intuition:
+    state: "provisional"
+    confirm_window: 4
+    confirm_rule: "SEM_SHAME_TEXT"
+    decay_window: 6
+    multiplier_on_confirm: 1.4
+  repair_log:
+    - { rule: "R10", note: "Intuition-Metadaten ergänzt gem. LD3.4", date: "2025-08-29" }

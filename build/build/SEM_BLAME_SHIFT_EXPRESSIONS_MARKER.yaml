@@ -1,0 +1,23 @@
+id: SEM_BLAME_SHIFT_EXPRESSIONS_MARKER
+frame:
+  signal:
+  - Schuldzuweisungsausdrücke
+  concept: Verantwortungsabwälzungsmuster
+  pragmatics: Systematische Schuldvermeidung
+  narrative: abwälzen
+composed_of:
+- ATO_BLAME_SHIFT_MARKER
+activation:
+  rule: ANY 2 IN 3 messages
+examples:
+- Wenn du nicht wieder so empfindlich wärst, hätten wir das Problem gar nicht.
+- Ich hab's nur gemacht, weil du dich so verhalten hast.
+- Du hast es doch provoziert – was soll ich da machen?
+- Du bringst mich immer so weit!
+- Du verstehst einfach nicht, wie schwer das für mich ist.
+- Wenn du pünktlicher wärst, hätten wir diese Diskussion nicht.
+- Du hast mich dazu gebracht, so zu reagieren.
+tags:
+- schuld
+- abwälzung
+- verantwortung

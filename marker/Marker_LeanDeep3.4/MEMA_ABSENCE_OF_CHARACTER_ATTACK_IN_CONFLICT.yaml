@@ -1,0 +1,51 @@
+id: MEMA_ABSENCE_OF_CHARACTER_ATTACK_IN_CONFLICT
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Konflikt ohne Charakterangriffe"
+  concept: "Omission: Character Attacks fehlen"
+  pragmatics: "Sachbezug trotz Spannung"
+  narrative: "controlled_deescalation"
+detect_class: "absence_meta"
+criteria:
+  target_set: "character_attack"
+  window_messages: 30
+  min_E_hits: 3
+  strict_zero: true
+activation:
+  rule: "CONFLICT_WINDOW_END"
+window:
+  messages: 30
+scoring:
+  base: 2.0
+  weight: 0.55
+  decay: 0.0
+  formula: "linear"
+examples:
+  - |
+    A: Die Nachricht kam sehr spät.
+    B: Ja, ich habe es verpeilt.
+    A: Bitte sag nächstes Mal vorher Bescheid.
+    B: Mache ich.
+  - |
+    A: Du hast die Datei nicht geteilt.
+    B: Stimmt, ich lade sie jetzt hoch.
+    A: Danke. Deadline ist eng.
+    B: Ich halte sie ein.
+  - |
+    A: Mir fehlt Transparenz bei den Terminen.
+    B: Ich trage alles in den Kalender ein.
+    A: Gute Idee.
+    B: Danke für den Hinweis.
+  - |
+    A: Das Protokoll war unvollständig.
+    B: Ich ergänze die offenen Punkte.
+    A: Bitte heute noch.
+    B: Kommt bis 18 Uhr.
+  - |
+    A: Ich habe mich übergangen gefühlt.
+    B: Das war nicht meine Absicht.
+    A: Lass uns künftig vorher abstimmen.
+    B: Einverstanden.
+tags: [mema, omission, deeskalation, positiv]

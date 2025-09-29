@@ -1,0 +1,33 @@
+id: CLU_NEEDINESS_GUILT_BIND
+display_title: "Neediness–Guilt Bind"
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Moralisierende Bedürftigkeitsbindung"
+  concept: "Neediness–Guilt Bind"
+  pragmatics: "Bindung über Schuld/Bedürftigkeit"
+  narrative: "double_bind"
+pattern: null
+composed_of:
+  - SEM_DOUBLE_BIND_DISCLAIMER_BUT
+  - SEM_PERFORMATIVE_HELPLESSNESS
+activation:
+  rule: "WINDOW_CLUSTER_AT_END"
+window:
+  messages: 30
+scoring:
+  base: 2.6
+  weight: 0.7
+  decay: 0.02
+  formula: "logistic"
+tags: [clu, cluster, guilt_pressure, neediness, escalation]
+examples:
+  - "Ich will dich nicht belasten, aber ich brauche das jetzt.\nIch kann das nicht allein."
+  - "Ohne dich schaffe ich das nicht.\nDu bist so kalt."
+  - "Ich wollte nur helfen, aber du machst es mir schwer.\nDu lässt mich im Stich."
+  - "Mach dir keine Sorgen, trotzdem muss das heute passieren.\nIch schaffe das nicht ohne dich."
+  - "Ich meine es nur gut, dennoch reagierst du so hart.\nOhne dich geht es nicht."
+detect_class: null
+criteria: null
+updated_at: "2025-08-19T10:30:00Z"

@@ -1,0 +1,18 @@
+id: ATO_CARE_CHECKIN
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["care", "checkin"]
+  concept: "Caring-Check-in"
+  pragmatics: "Bindung/Sicherheit"
+  narrative: "prosocial"
+tags: [care, support]
+pattern:
+  regex: "\\b(wie\\s+geht\\s+es\\s+dir|kurz\\s+einchecken|alles\\s+okay|kommst\\s+du\\s+klar)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Wie geht es dir?"
+  - "Ich wollte kurz einchecken."
+  - "Alles okay?"
+  - "Kommst du klar?"
+  - "Nur kurz nachfragen."

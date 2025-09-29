@@ -1,0 +1,28 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_REASSURANCE_DRIVE
+frame:
+  signal: ["reassurance_drive"]
+  concept: "Wiederholte Beruhigungs-/Bestätigungssuche"
+  pragmatics: "Zirkelschleife Sicherheit"
+  narrative: "motive_safety"
+tags: [reassurance, loop]
+composed_of:
+  any_of:
+    - ATO_REASSURANCE_SEEKING
+    - SEM_VALIDATION_SEEKING
+activation:
+  rule: "AT_LEAST 3 IN 5 messages"
+  window: 5
+scoring: { base: 0.58, weight: 1.06 }
+examples:
+  - "Bist du sicher? – Wirklich? – Alles gut?"
+  - "Passt das für dich? – Ist das okay so? – Bist du sicher?"
+  - "Kurzer Check: passt das? – Wirklich? – Okay?"
+  - "Kannst du das bestätigen? – Alles gut? – Sicher?"
+  - "Passt das für euch? – Wirklich? – Nochmal: okay?"
+  - "Ist das in Ordnung so? – Bist du ganz sicher? – Passt?"
+  - "Feedback: passt? – Sicher? – Alles gut?"
+  - "Bestätigst du das? – Wirklich? – Okay?"
+  - "Nur zur Sicherheit: passt? – Alles gut? – Sicher?"
+  - "Ist das okay? – Bist du sicher? – Wirklich?"

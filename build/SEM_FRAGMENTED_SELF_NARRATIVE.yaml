@@ -1,0 +1,57 @@
+id: SEM_FRAGMENTED_SELF_NARRATIVE
+version: '3.3'
+frame:
+  signal:
+  - Widersprüchliche Selbstaussagen ohne Integration
+  concept: Fragmentierte Selbstnarrative
+  pragmatics: Kognitive Dissonanz beim Empfänger
+  narrative: self_contradiction
+contradiction_detection:
+  window: 500
+  opposing_pairs:
+  - - immer
+    - nie
+  - - ehrlich
+    - musste lügen
+  - - hasse Konflikt
+    - muss gesagt werden
+  - - für alle da
+    - kann nicht helfen
+  - - spiele keine Spiele
+    - werde nicht antworten
+  - - direkt
+    - kann es nicht sagen
+activation:
+  rule: CONTRADICTION DETECTED
+window:
+  messages: 30
+  character_window: 500
+scoring:
+  base: 2.7
+  weight: 0.82
+  decay: 0.01
+  formula: logistic
+psychological_indicators:
+- splitting_defense
+- unstable_self_concept
+- narcissistic_organization
+- cognitive_dissonance
+examples:
+  positive:
+    - "Ich bin immer für andere da. / Ich kann gerade niemandem helfen, ich habe genug eigene Probleme."
+    - "Ich hasse Lügen. / Ich musste ihm einfach sagen, was er hören wollte."
+    - "Ich bin ein sehr direkter Mensch. / Ich traue mich nicht, ihm die Wahrheit zu sagen."
+    - "Ich bin immer ehrlich. / Manchmal ist eine kleine Notlüge besser."
+    - "Ich bin sehr konfliktscheu. / Ich muss jetzt einfach mal meine Meinung sagen, auch wenn es kracht."
+    - "Ich spiele keine Spielchen. / Ich werde seine Nachricht erst morgen beantworten, er soll ruhig ein bisschen zappeln."
+    - "Ich bin ein sehr großzügiger Mensch. / Ich kann ihm auf keinen Fall Geld leihen."
+    - "Ich bin sehr zuverlässig. / Ich habe den Termin total vergessen."
+    - "Ich bin ein sehr offener Mensch. / Es gibt Dinge, über die ich mit niemandem rede."
+    - "Ich bin sehr entscheidungsfreudig. / Ich weiß einfach nicht, was ich tun soll."
+  negative: []
+tags:
+- semantic
+- contradiction
+- self_concept
+- splitting
+schema_version: '3.3'

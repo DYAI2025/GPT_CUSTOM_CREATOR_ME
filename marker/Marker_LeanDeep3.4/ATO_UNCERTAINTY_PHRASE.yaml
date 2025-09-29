@@ -1,0 +1,31 @@
+id: ATO_UNCERTAINTY_PHRASE
+frame:
+  signal:
+  - unsicher
+  - vielleicht
+  - ich weiß nicht
+  - eventuell
+  concept: Unklarheit, fehlende Entschlossenheit
+  pragmatics: Schwächung von Verbindlichkeit
+  narrative: Indirekte Kommunikation
+pattern:
+- (?i)vielleicht
+- (?i)ich weiß nicht
+- (?i)eventuell
+- (?i)mal sehen
+- (?i)bin mir nicht sicher
+activation:
+  rule: ANY 1
+examples:
+- Vielleicht schaffen wir das noch heute.
+- Ich weiß nicht, ob ich das kann.
+- Eventuell komme ich später dazu.
+- Mal sehen, wie das läuft.
+- Bin mir nicht sicher, ob das klappt.
+- Vielleicht könnten wir das anders lösen.
+- Ich glaube, er kommt später.
+- Eventuell brauchen wir mehr Zeit.
+- Ich denke, das könnte funktionieren.
+- Vielleicht ist das nur ein Missverständnis.
+tags:
+- uncertainty

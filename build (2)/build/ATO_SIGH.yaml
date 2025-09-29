@@ -1,0 +1,21 @@
+id: ATO_SIGH
+family: ATO
+description: ''
+notes: ''
+id: ATO_SIGH
+family: ATO
+description: ''
+notes: ''
+examples:
+  positive:
+    - "(Seufzt tief)"
+    - "(Ein leises Seufzen)"
+    - "(Seufzt resigniert)"
+    - "(Seufzt erleichtert)"
+    - "(Ein hörbares Seufzen)"
+    - "(Seufzt vor Müdigkeit)"
+    - "(Seufzt vor Frustration)"
+    - "(Seufzt vor Traurigkeit)"
+    - "(Ein langer Seufzer)"
+    - "(Seufzt leise vor sich hin)"
+  negative: []

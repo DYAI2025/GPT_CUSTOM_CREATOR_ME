@@ -1,0 +1,25 @@
+id: ATO_TOPIC_SWITCH_TECH
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Themenwechsel auf neutrales/technisches Thema"
+  concept: "Regulation (Coping)"
+  pragmatics: "Spannungsabbau durch Umfokussierung"
+  narrative: "Neutralisierung"
+pattern:
+  - '(?i)\bopen.?air\b'
+  - '(?i)\bkino\b|\bfilm\b'
+  - '(?i)\b(app|deploy(?:ment)?|release|framework)\b'
+  - '(?i)\bwebseite\b|\bseite\b'
+  - '(?i)\bgithub\b|\bnode\.?js\b|\binstallier\w*\b|\bbuild\b'
+  - '(?i)\breleaseparty\b|\bclaude\b'
+examples:
+  - "Ich war im Open-Air-Kino."
+  - "Ich habe die App deployed."
+  - "Die Webseite ist online."
+  - "Ich installiere gerade Node.js."
+  - "Wir haben eine Releaseparty gemacht."
+  - "Das Framework-Design-Tool ist fertig."
+  - "Ich habe was auf GitHub gepusht."
+tags: [topic-switch, neutral, regulation, atomic]

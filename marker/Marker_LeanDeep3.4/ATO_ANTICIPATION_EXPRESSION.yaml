@@ -1,0 +1,106 @@
+id: ATO_ANTICIPATION_EXPRESSION
+lang: de
+category: ATOMIC
+description: "Detektiert Phrasen, die explizit Vorfreude, Hoffnung oder positive Erwartung auf ein gemeinsames zukünftiges Ereignis ausdrücken."
+frame:
+  signal:      ["Vorfreude", "Hoffnung", "anticipation"]
+  concept:     "Positive Zukunftserwartung"
+  pragmatics:  "Bindungsorientierte Erwartung"
+  narrative:   "token / future-oriented anticipation"
+pattern:
+  - "(?i)freue mich auf"
+  - "(?i)kann es kaum erwarten"
+  - "(?i)zähle (schon )?die (stunden|tage|minuten)"
+  - "(?i)hoffentlich ist bald"
+  - "(?i)wird sicher super mit dir"
+  - "(?i)die vorfreude (auf|ist)"
+  - "(?i)countdown läuft"
+  - "(?i)counting (the|down) (hours|days|minutes)"
+  - "(?i)looking forward to"
+  - "(?i)can('?t)? wait (to|for)"
+  - "(?i)hyped (for|about)"
+  - "(?i)buzzing (for|about|already)"
+  - "(?i)only [a-z ]*(left|remaining|to go)"
+  - "(?i)adventures pending"
+  - "(?i)excited (for|about|to)"
+examples:
+  # Übernommene und kuratierte Beispiele
+  - "Ich freue mich schon auf unser Treffen nächste Woche."
+  - "Kann es kaum erwarten, dich wiederzusehen."
+  - "Zähle schon die Stunden bis zu unserem Urlaub."
+  - "Hoffentlich ist bald Freitag."
+  - "Das wird sicher super mit dir allein."
+  - "Der Countdown zu unserem Urlaub läuft."
+  - "Die Vorfreude auf unser Event ist riesig."
+  - "Ich liebe es, etwas mit dir zu haben, auf das ich mich freuen kann."
+  - "Flug ist gebucht – jetzt beginnt das Warten!"
+  - "Only three sleeps left until our road trip!"
+  - "Counting down the minutes to our movie night."
+  - "Thursday can’t come soon enough—coffee date pending!"
+  - "Just scheduled the call; buzzing for it already."
+  - "Hope the week speeds up—we’ve got adventures pending."
+  - "I’m hyped for the surprise you hinted at on Friday!"
+  # 10 neu hinzugefügte Beispiele
+  - "Die Vorfreude auf unser gemeinsames Projekt ist riesig."
+  - "Kann's kaum erwarten, mit dir anzustoßen."
+  - "Ich zähle die Minuten, bis wir uns sehen."
+  - "Das wird sicher super mit dir am Freitagabend."
+  - "Ich bin schon total aufgeregt wegen morgen."
+  - "Looking forward to hearing your ideas."
+  - "Can't wait for our game night!"
+  - "So hyped about the trip we planned."
+  - "Only one week to go, the excitement is real."
+  - "Buzzing to finally start this with you."
+  - "Ich freue mich schon auf unser Treffen nächste Woche."
+  - "Kann es kaum erwarten, dich wiederzusehen."
+  - "Zähle schon die Stunden bis zu unserem Urlaub."
+  - "Nur noch ein paar Tage, dann geht's los!"
+  - "Ich kann das Konzert mit dir kaum erwarten."
+  - "Schon jetzt kribbelt es, wenn ich an Samstag denke."
+  - "Der Countdown zu unserem Urlaub läuft."
+  - "Bald beginnt unser neues Kapitel – ich freu mich riesig."
+  - "Ich zähle die Tage bis zu unserem Treffen."
+  - "Ich kann es kaum erwarten, das neue Projekt zu starten."
+  - "Die Vorfreude auf unser Event ist riesig."
+  - "Ich freue mich schon auf die gemeinsame Zeit."
+  - "Bald ist es soweit, und ich bin schon ganz aufgeregt darauf."
+  - "Ich kann es kaum erwarten, die Neuigkeiten zu teilen."
+  - "Die Vorfreude auf unser Projekt ist spürbar."
+  - "Ich freue mich schon auf die nächsten Schritte."
+  - "Ich freue mich riesig auf unser Wochenende!"
+  - "Kann es kaum erwarten, dich wiederzusehen."
+  - "Hoffentlich ist bald Freitag."
+  - "Das wird sicher super mit dir allein."
+  - "Ich zähl schon die Stunden, bis du da bist."
+  - "Only three sleeps left until our road trip!"
+  - "Counting down the minutes to our movie night."
+  - "Thursday can’t come soon enough—coffee date pending!"
+  - "Just scheduled the call; buzzing for it already."
+  - "Honestly, picturing us on that beach keeps me motivated."
+  - "I keep refreshing the calendar—vacay soon!"
+  - "Tomorrow’s concert with you is my whole personality right now."
+  - "Every time I think of Sunday breakfast together, I smile."
+  - "Flight’s booked—now the wait begins!"
+  - "Can’t stop thinking about our first dance lesson."
+  - "Only two meetings stand between me and our pizza night."
+  - "Been day-dreaming about our camping trip all morning."
+  - "Hope the week speeds up—we’ve got adventures pending."
+  - "Just bought the tickets; now the suspense is killing me."
+  - "Tell Monday to hurry, I need that coffee catch-up."
+  - "The idea of us binge-watching the show makes the day better."
+  - "I love having something with you to look forward to."
+  - "Alarm is set early—I don’t want to waste a minute of our day out."
+  - "I’m hyped for the surprise you hinted at on Friday!"
+tags:
+  - anticipation
+  - optimism
+  - future
+  - atomic
+window:
+  messages: 10
+scoring:
+  base: 1.0
+  weight: 1.0
+  decay: 0.0
+  formula: "linear"
+schema_version: "3.2"

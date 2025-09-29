@@ -1,0 +1,46 @@
+id: SEM_WEBCAM_EXCUSE
+frame:
+  signal:
+  - Ausrede für fehlenden Videoanruf
+  - Vermeidung visueller Verifikation
+  - technische/persönliche Hinderungsgründe
+  concept: Identitätsverschleierung, Kontaktvermeidung
+  pragmatics: Schutz vor Enttarnung, Aufrechterhaltung einer Fiktion
+  narrative: Strategische Hinderungsgründe für fehlende Verifikation
+activation:
+  rule: ANY 1
+examples:
+- Ich würde ja gerne, aber ich bin auf einer Militärbasis und Kameras sind hier streng
+  verboten.
+- Mein Laptop ist alt und die Webcam hat schon vor Jahren den Geist aufgegeben.
+- Die Internetverbindung auf dieser Ölplattform ist zu schlecht für ein Videotelefonat.
+- Ich sehe heute schrecklich aus, habe kaum geschlafen. Lass uns das auf morgen verschieben.
+- Ich bin zu schüchtern für die Kamera. Ich mag es lieber, wenn wir schreiben.
+- Mein Glaube erlaubt mir keine Videoanrufe.
+- Ich bin gerade bei meiner Familie, hier kann ich nicht ungestört per Video telefonieren.
+- Der Treiber für meine Kamera muss aktualisiert werden, das dauert ewig.
+- Lass uns erst eine tiefere Verbindung aufbauen, bevor wir uns per Video sehen.
+- Ich habe gerade eine schlimme Erkältung, ich will nicht, dass du mich so siehst.
+- Die Sicherheitssoftware meiner Firma blockiert alle Video-Ports.
+- Ich bin nicht der Typ, der sich gerne selbst auf dem Bildschirm sieht.
+- Meine Haare sind eine Katastrophe!
+- Es ist schon dunkel hier, das Licht ist zu schlecht.
+- Ich habe nur mein Handy und die Frontkamera ist gesprungen.
+- Vielleicht ein andermal, ich fühle mich gerade nicht danach.
+- Ich finde, unsere Stimmen am Telefon zu hören, ist viel intimer.
+- Ich bin in einem öffentlichen WLAN, das ist zu unsicher für Video.
+- Meine Religion verbietet die Abbildung von Personen.
+- Lass uns das geheimnisvoll halten. Die Vorfreude ist doch das Schönste.
+- Gerade ist mein Bildschirm schwarz, keine Ahnung warum.
+- Oh nein, Zoom funktioniert bei mir einfach nie!
+- Das Mikro ist okay, aber das Bild geht schon wieder nicht.
+- Ich habe eine Panikattacke, wenn ich mich selbst auf Video sehe.
+- Sorry, das Licht ist so schlecht, du würdest eh nichts erkennen.
+tags:
+- webcam
+- excuse
+- ausrede
+- identität
+- catfishing
+composed_of:
+- ATO_PLACEHOLDER

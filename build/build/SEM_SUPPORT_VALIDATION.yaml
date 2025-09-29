@@ -1,0 +1,20 @@
+id: SEM_SUPPORT_VALIDATION
+version: "3.4"
+frame:
+  signal: ["support", "validation"]
+  concept: "Zuwendung + Bestätigung"
+  pragmatics: "Bindung stärken"
+  narrative: "prosocial"
+tags: [support, validation]
+composed_of:
+  - ATO_SUPPORTIVE_LANGUAGE
+  - ATO_EMPATHY_MARKERS
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.55, weight: 1.0 }
+examples:
+  - "Ich bin da – das muss schwer sein."
+  - "Du schaffst das, verstehe dich."
+  - "Stolz auf dich – bin für dich da."
+  - "Gemeinsam schaffen wir das – ich fühle mit dir."
+  - "Melde dich jederzeit – ich verstehe dich."

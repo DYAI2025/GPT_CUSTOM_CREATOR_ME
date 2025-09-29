@@ -1,0 +1,16 @@
+id: MEMA_DRIFT_SPIRAL
+version: "3.4"
+frame:
+  signal: [ "drift", "spiral" ]
+  concept: "Langzeitdrift: Spiralität von Sprache"
+  spiral_dynamics_color: "TÜRKIS"
+  pragmatics: "Erkennt Wiederkehr mit Variation, offene Schleifen über Zeit"
+  narrative: "hypothesis"
+tags: [ narion, meta, drift, spiral ]
+activation: { rule: "THEME_REPETITION_WITH_VARIATION >= 3 in 20 messages" }
+examples:
+- "Becoming. Not being. Not doing. Becoming."
+- "Immer dieselbe Frage, nur tiefer."
+- "Nicht Antwort, sondern Frage – immer wieder."
+- "Echo, das sich verändert."
+- "Spirale, die weiterführt, nicht schließt."

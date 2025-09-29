@@ -1,0 +1,32 @@
+id: SEM_FOGGING
+frame:
+  signal:
+  - Ich verstehe, aber...
+  - Das mag stimmen, aber...
+  - Ich kann nachvollziehen, aber...
+  concept: Fogging
+  pragmatics: Abgrenzung ohne Konflikt
+  narrative: boundary_setting
+composed_of:
+- ATO_PLACEHOLDER
+activation:
+  rule: ANY 2 IN 3 messages
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+  positive:
+    - "Das mag stimmen, aber ich sehe das anders."
+    - "Ich verstehe, dass du das so siehst, aber ich fühle mich anders."
+    - "Das ist deine Meinung, und die respektiere ich."
+    - "Ich kann nachvollziehen, dass du wütend bist, aber ich bin nicht dafür verantwortlich."
+    - "Ich höre, was du sagst, aber ich stimme dir nicht zu."
+    - "Das ist eine interessante Perspektive, aber ich habe eine andere."
+    - "Ich kann deine Gefühle verstehen, aber ich habe meine eigenen."
+    - "Ich nehme deine Kritik zur Kenntnis, aber ich sehe das nicht so."
+    - "Das ist deine Wahrheit, aber nicht meine."
+    - "Ich kann deine Sichtweise akzeptieren, aber ich muss sie nicht teilen."
+  negative: []
+tags:
+- fogging
+- boundary_setting

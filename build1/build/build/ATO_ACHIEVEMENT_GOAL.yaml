@@ -1,0 +1,23 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_ACHIEVEMENT_GOAL
+frame:
+  signal: ["achievement_goal"]
+  concept: "Explizites Ziel: Exzellenz/Bester sein"
+  pragmatics: "Annäherungsmotiv Leistung"
+  narrative: "motive_achievement"
+tags: [goal, excellence]
+pattern:
+  regex: '(?i)\b(ziel\s*:\s*(spitze|exzellenz|#?1|bester)|ich\s+will\s+(spitze|der\s+beste)\s+sein)\b'
+  flags: ["IGNORECASE"]
+examples:
+  - "Ziel: Exzellenz."
+  - "Ich will der Beste sein."
+  - "Ziel: #1 in der Kategorie."
+  - "Ich will spitze sein."
+  - "Ziel: Bester im Markt."
+  - "Ich will die Spitzenposition erreichen."
+  - "Ziel: Exzellenz in Qualität."
+  - "Ich will der Beste im Team sein."
+  - "Ziel: #1 bis Q4."
+  - "Ich will spitze liefern."

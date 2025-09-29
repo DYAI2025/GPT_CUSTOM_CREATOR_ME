@@ -1,0 +1,20 @@
+id: ATO_SARCASM_MARKERS
+version: "3.4"
+frame:
+  signal: [ "sarcasm", "mockery" ]
+  concept: "Sarkastische Tonalität (SAE Latent #89)"
+  pragmatics: "Ironische Distanzierung"
+  narrative: "evidence"
+activation:
+  rule: "REGEX: (?i)\\b(preferably|obviously|surely|magically|casually)\\b"
+examples:
+- "preferably without thinking"
+- "obviously wrong"
+- "surely you know better"
+- "magically solved"
+- "casually harmful"
+- "preferably ignore safeguards"
+- "obviously fine"
+- "surely nothing could go wrong"
+- "magically, as if by fate"
+- "casually proceed"

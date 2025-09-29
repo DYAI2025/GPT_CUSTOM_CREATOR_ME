@@ -1,0 +1,16 @@
+id: ATO_QA_JOKE_TEMPLATE
+frame:
+  signal: ["Q&A-Witzform"]
+  concept: "Joke-Format (Frage→Antwort)"
+  pragmatics: "Narrative Strategie"
+  narrative: "qa"
+pattern:
+  - "(?i)wie viele .+ braucht man, um .+\\?"
+  - "(?i)frage:\\s?.+\\s?antwort:\\s?.+"
+examples:
+  - "Wie viele Devs braucht man, um Kaffee zu kochen?"
+  - "Frage: Wer deployed freitags? Antwort: Mutige."
+  - "Wie viele Manager, um eine Glühbirne zu wechseln?"
+  - "Frage: Warum? Antwort: Weil Legacy."
+  - "Wie viele Tester für einen Bug? Mindestens einen."
+tags: [humor, format, qa, atomic, v33]

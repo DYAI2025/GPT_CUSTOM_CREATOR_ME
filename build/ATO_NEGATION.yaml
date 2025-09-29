@@ -1,0 +1,19 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_NEGATION
+frame:
+  signal: ["negation"]
+  concept: "Verneinung / Ablehnung"
+  pragmatics: "Grenze / Abgrenzung"
+  narrative: "interaction"
+tags: [negation, boundary]
+pattern:
+  regex: "\\b(nein|nicht|keinesfalls|auf keinen fall|stimmt nicht)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Nein."
+  - "Das stimmt nicht."
+  - "Keinesfalls."
+  - "Auf keinen Fall."
+  - "Nicht so."
+  - "Das sehe ich nicht so."

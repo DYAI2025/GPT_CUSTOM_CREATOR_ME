@@ -1,0 +1,36 @@
+id: EMO_MELANCHOLIC_TONE
+lang: de
+category: SEMANTIC
+description: Leichte Wehmut, verpackt in eine überwiegend positive Aussage.
+frame:
+  signal:
+  - ein bisschen schade
+  - leicht wehmütig
+  - schön, aber irgendwie traurig
+  concept: Melancholische Färbung
+  pragmatics: Gefühlstiefe trotz positiver Botschaft
+  narrative: sanfte Nostalgie
+composed_of:
+- ATO_POSITIVE_STATEMENT
+- ATO_MILD_SADNESS
+activation_logic: ANY 2 IN 3 messages
+scoring:
+  base: 1.4
+  weight: 1.1
+examples:
+  positive:
+    - "Es war eine wunderschöne Zeit, aber es macht mich ein bisschen traurig, dass sie vorbei ist."
+    - "Ich erinnere mich gerne daran, auch wenn ein Hauch von Wehmut mitschwingt."
+    - "Das Lied ist so schön, aber es macht mich immer ein wenig melancholisch."
+    - "Ich bin dankbar für die Erfahrung, auch wenn der Abschied schmerzt."
+    - "Es ist schön, dich wiederzusehen, aber es erinnert mich auch daran, wie viel Zeit vergangen ist."
+    - "Ich liebe den Herbst, auch wenn er immer eine gewisse Melancholie mit sich bringt."
+    - "Das war ein perfekter Moment, und ich bin ein bisschen traurig, dass er nicht ewig dauern kann."
+    - "Ich bin glücklich, aber irgendwie auch nachdenklich."
+    - "Es ist ein bittersüßes Gefühl."
+    - "Ich lächle, aber in meinem Herzen ist ein kleiner Stich."
+  negative: []
+tags:
+- semantic
+- emotional
+- melancholic

@@ -1,0 +1,27 @@
+id: SEM_APATHETIC_REPLY
+lang: en
+category: SEMANTIC
+description: "Apathetic, interest-free short replies."
+frame:
+  signal: ["whatever", "no motivation", "no energy"]
+  concept: "Disinterest"
+  pragmatics: "Flattening contact"
+  narrative: "Motivation drop"
+composed_of:
+  - ATO_INDIFFERENT
+  - ATO_NO_MOTIVATION
+activation_logic: "ANY 2 IN 3 messages"
+scoring: { base: 1.2, weight: 0.9 }
+window: { messages: 5 }
+examples:
+  - "Whatever."
+  - "No motivation today."
+  - "No energy, sorry."
+  - "It's all the same to me."
+  - "Can't be bothered."
+  - "You pick, I don't care."
+  - "Leave it, I'm empty."
+  - "Doesn't matter to me."
+  - "Not important for me."
+  - "I don't feel like it."
+tags: [semantic, apathy]

@@ -1,0 +1,23 @@
+id: ATO_SHAME
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["shame"]
+  concept: "Scham ausdrücken"
+  pragmatics: "Selbstoffenbarung von sozialer Normverletzung"
+  narrative: "affect"
+tags: [affect, shame, self_conscious]
+pattern:
+  regex: "\\b(schäme mich|peinlich|zum schämen|im Boden versinken|unangenehm)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich schäme mich so dafür."
+  - "Das ist mir unglaublich peinlich."
+  - "Es ist wirklich zum Schämen."
+  - "Ich könnte im Boden versinken."
+  - "Diese Situation ist mir so unangenehm."
+  - "Mir ist das peinlich, das zuzugeben."
+  - "Ich schäme mich für mein Verhalten."
+  - "Das war eine peinliche Aktion von mir."
+  - "Fühle mich gerade echt mies und schäme mich."
+  - "Hoffentlich hat das niemand gesehen, so peinlich."

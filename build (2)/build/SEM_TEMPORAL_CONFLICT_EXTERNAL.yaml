@@ -1,0 +1,28 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "consistency_external"
+
+defaults:
+  scoring:
+    window_messages: 5
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+
+markers:
+  - id: SEM_TEMPORAL_CONFLICT_EXTERNAL
+    frame:
+      signal: ["immer/nie ↔ konkrete Gegenbeispiele", "Zeitlinien-Knick"]
+      concept: "Zeitliche Inkonsistenz bei derselben Person"
+    composed_of: [ATO_TEMPORAL_ABSOLUTIZER, ATO_TEMPORAL_POINT]
+    pattern:
+      - detect_class: heuristic
+        rule: "absolutizer_present && conflicting_time_refs_within_window(other)"
+        distance_window_messages: 5
+    scoring: { base: 0.60 }
+    metadata: { type: SEM }
+    examples:
+      - '"Nie dort" ↔ "Gestern dort".'
+      - '"Immer derselbe" ↔ "Inzwischen anders".'
+      - '"Ständig X" ↔ "Heute Y".'
+      - '"Jedes Mal klappt''s" ↔ "Letzte Woche nicht".'
+      - '"Nie gezahlt" ↔ "Vorhin gezahlt".'

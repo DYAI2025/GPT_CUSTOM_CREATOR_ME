@@ -1,0 +1,26 @@
+id: ATO_BOUNDARY_SET
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Grenzsetzung"
+    - "Kontaktminimierung/-abbruch"
+  concept: "Selbstschutz / Abgrenzung"
+  pragmatics: "Kontakt begrenzen, Distanz herstellen"
+  narrative: "Autonomie wahren"
+pattern:
+  - '(?i)\bkontakt\s+minimier\w*\b'
+  - '(?i)\bkontaktabbruch\b'
+  - '(?i)\bwerde\s+(dir\s+)?nicht\s+mehr?\s+antworten\b'
+  - '(?i)\bkein(en)?\s+kontakt\b'
+  - '(?i)\brespektier(e)?\s+meine\s+grenz\w*\b'
+  - '(?i)\bich\s+ziehe\s+eine\s+klare\s+grenze\b'
+examples:
+  - "Ich glaube, wir sollten den Kontakt minimieren."
+  - "Ich werde nicht mehr antworten."
+  - "Bitte respektiere meine Grenze."
+  - "Kein Kontakt für eine Weile."
+  - "Ich ziehe eine klare Grenze."
+  - "Ich brauche Abstand."
+  - "Das ist mir zu viel – ich grenze mich ab."
+tags: [boundary, autonomy, atomic]

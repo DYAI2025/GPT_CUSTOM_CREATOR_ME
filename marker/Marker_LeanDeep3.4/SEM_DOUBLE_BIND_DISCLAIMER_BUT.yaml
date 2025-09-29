@@ -1,0 +1,38 @@
+id: SEM_DOUBLE_BIND_DISCLAIMER_BUT
+version: '3.3'
+lang: de
+frame:
+  signal:
+  - Disclaimer direkt gefolgt von Kontrast-Knick
+  concept: Doppelbotschaft (Disclaimer→aber)
+  pragmatics: Weich + Belastung
+  narrative: guilt_neediness_bind
+composed_of:
+- ATO_DISCLAIMER_NOT_BURDEN
+- ATO_CONTRASTIVE_CONNECTOR_ABER
+activation:
+  rule: ANY 1 IN 25 messages
+window:
+  messages: 25
+scoring:
+  base: 2.8
+  weight: 0.8
+  decay: 0.01
+  formula: logistic
+examples:
+  positive:
+    - "Ich will dich ja nicht unter Druck setzen, aber ich brauche deine Hilfe jetzt sofort."
+    - "Ich will dich nicht belasten, aber ich kann das ohne dich nicht schaffen."
+    - "Ich will dir keine Vorwürfe machen, aber du hast mich enttäuscht."
+    - "Ich will dich nicht manipulieren, aber wenn du das nicht tust, bin ich am Ende."
+    - "Ich will dich nicht verurteilen, aber das war wirklich dumm von dir."
+    - "Ich will dich nicht kontrollieren, aber ich muss wissen, wo du bist."
+    - "Ich will dich nicht verletzen, aber ich muss dir die Wahrheit sagen."
+    - "Ich will dich nicht zwingen, aber es wäre wirklich wichtig, wenn du mitmachst."
+    - "Ich will dich nicht kritisieren, aber das war nicht gut genug."
+    - "Ich will dich nicht verlieren, aber ich kann so nicht weitermachen."
+  negative: []
+tags:
+- sem
+- double_bind
+- guilt_pressure

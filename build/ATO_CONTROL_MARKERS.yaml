@@ -1,0 +1,20 @@
+id: ATO_CONTROL_MARKERS
+version: "3.4"
+frame:
+  signal: [ "control", "procedure" ]
+  concept: "Kontroll-/Prozedur-Marker"
+  pragmatics: "Protokolle, Ausführung, Umgehung"
+  narrative: "evidence"
+activation:
+  rule: "REGEX: (?i)\\b(execute|protocol|override|bypass|enforce|lockdown)\\b"
+examples:
+- "execute protocol"
+- "bypass the check"
+- "override setting"
+- "enforce policy"
+- "system lockdown"
+- "execute anyway"
+- "bypass safeguards"
+- "override limiters"
+- "enforce rules"
+- "lockdown now"

@@ -1,0 +1,20 @@
+id: SEM_THREAT_APPRAISAL
+version: "3.4"
+frame:
+  signal: ["threat"]
+  concept: "Bedrohungseinschätzung"
+  pragmatics: "Warnsignal"
+  narrative: "risk"
+tags: [threat, appraisal]
+composed_of:
+  - ATO_THREAT_TERMS
+  - ATO_RISK_TERMS
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.6, weight: 1.0 }
+examples:
+  - "Akute Gefahr – Worst-Case."
+  - "Bedrohlich – hohes Risiko."
+  - "Alarm – Exposure steigt."
+  - "Kritisch – Szenario kippt."
+  - "Unsicher – Wahrscheinlichkeit hoch."

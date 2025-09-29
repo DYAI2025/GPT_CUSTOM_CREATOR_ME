@@ -1,0 +1,26 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_SETTING_CONTROL
+frame:
+  signal: ["setting_control"]
+  concept: "Kanal/Timing/Format festlegen"
+  pragmatics: "Rahmensetzung"
+  narrative: "coordination"
+tags: [setting, control]
+composed_of:
+  any_of:
+    - ATO_STYLE_REFERENCE
+    - ATO_SHARED_CONTEXT
+  optional:
+    - ATO_PACING
+    - ATO_MINI_DEADLINE
+    - ATO_ACKNOWLEDGE
+activation:
+  rule: "BOTH IN 2 messages"
+  window: 2
+examples:
+  - "Stilwechsel: kurz & direkt – jetzt."
+  - "Bitte im Call, nicht per Text."
+  - "Heute formell – ab 15:00."
+  - "Kurz und direkt – nach dem Meeting."
+  - "Zurück zur Roadmap – in Stichpunkten."

@@ -1,0 +1,13 @@
+examples:
+  positive:
+    - "Ich bemerke, dass Sie in letzter Zeit häufiger prokrastinieren."
+    - "Mir fällt auf, dass Sie in Stresssituationen dazu neigen, sich zurückzuziehen."
+    - "Ich sehe ein Muster, bei dem Sie Konflikten aus dem Weg gehen."
+    - "Ihre Körpersprache signalisiert oft Anspannung, wenn wir über dieses Thema sprechen."
+    - "Sie neigen dazu, die Bedürfnisse anderer über Ihre eigenen zu stellen."
+    - "Ich habe beobachtet, dass Sie nach Anerkennung suchen, bevor Sie eine Entscheidung treffen."
+    - "Es scheint ein wiederkehrendes Thema zu sein, dass Sie sich für die Gefühle anderer verantwortlich fühlen."
+    - "Sie verwenden oft Humor, um schwierige Emotionen zu überspielen."
+    - "Mir ist aufgefallen, dass Sie dazu neigen, sich selbst zu kritisieren, wenn etwas nicht perfekt läuft."
+    - "Ich erkenne ein Verhaltensmuster, bei dem Sie sich in Details verlieren, um das große Ganze zu vermeiden."
+  negative: []

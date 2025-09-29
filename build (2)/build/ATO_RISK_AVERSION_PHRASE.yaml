@@ -1,0 +1,23 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_RISK_AVERSION_PHRASE
+frame:
+  signal: ["risk_aversion"]
+  concept: "Ausdrückliche Risiko-Abneigung"
+  pragmatics: "Unsicherheitsvermeidung"
+  narrative: "motive_safety"
+tags: [risk, safety, avoidance]
+pattern:
+  regex: "(?i)\\b(kein\\s+risiko|risiken?\\s+vermeiden|mir\\s+ist\\s+das\\s+zu\\s+riskant|risiko\\s*scheue?|blo(ß|ss)\\s+keine\\s+(risiken?|experimente))\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Mir ist das zu riskant."
+  - "Bitte keine Experimente."
+  - "Ich will kein Risiko eingehen."
+  - "Risiken vermeiden, wo es geht."
+  - "Bloß keine Risiken jetzt."
+  - "Ich bin da eher risikoscheu."
+  - "Das ist mir zu wackelig."
+  - "Lieber kein Experiment damit."
+  - "Sicherer Weg statt Risiko."
+  - "Kein Risiko zu diesem Zeitpunkt."

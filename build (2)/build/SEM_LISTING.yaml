@@ -1,0 +1,23 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_LISTING
+frame:
+  signal: ["listing"]
+  concept: "Kontext-/Lastenbündel statt Punktlösung"
+  pragmatics: "Breite statt Tiefe"
+  narrative: "argumentation"
+tags: [listing, evidence]
+composed_of:
+  any_of:
+    - ATO_PLATFORM
+    - ATO_STATUS_TERMS
+    - ATO_NUMBER_MENTION
+activation:
+  rule: "AT_LEAST 2 IN 4 messages"
+  window: 4
+examples:
+  - "Punkt 1, 2, 3…"
+  - "Zahlen: 5 Systeme, 12 Tickets, 3 Incidents."
+  - "Kontext: Budget, Timeline, Ressourcen."
+  - "Hier die Liste: A, B, C."
+  - "Mehrere Belege in einem Rutsch."

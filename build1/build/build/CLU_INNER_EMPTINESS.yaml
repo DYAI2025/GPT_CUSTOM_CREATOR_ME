@@ -1,0 +1,48 @@
+id: CLU_INNER_EMPTINESS
+lang: en
+category: CLUSTER
+description: "Recurring apathetic/low-energy replies indicating inner emptiness."
+frame:
+  signal: ["whatever", "no drive", "flat affect"]
+  concept: "Lack of meaning"
+  pragmatics: "Motivation drop, withdrawal"
+  narrative: "Sense/drive void"
+composed_of:
+  - SEM_APATHETIC_REPLY
+activation_logic: "AT_LEAST 2 IN 20 messages"
+scoring: { base: 1.7, weight: 1.15, decay: 0.01 }
+window: { messages: 20 }
+examples:
+  - "Multiple 'whatever' + 'no motivation' in short time."
+  - "Invites answered with flat apathy."
+  - "Suggestions: 'don't care' repeated."
+  - "No initiative across chats."
+  - "Free-time ideas: 'not important' several times."
+  - "Daily: 'no drive' becomes default."
+  - "Walk/cooking: commented with low energy."
+  - "Project ideas get no spark."
+  - "Several 'idk, whatever' in a week."
+  - "Tone: flat and hollow."
+  - "A: 'Wollen wir am Wochenende was machen?' / B: 'Keine Ahnung, hab eh keine Lust.'"
+  - "A: 'Kino vielleicht?' / B: 'Ist mir egal.'"
+  - "A: 'Lust auf ein Spiel heute Abend?' / B: 'Hab gar keinen Antrieb, tut mir leid.'"
+  - "A: 'Magst du mit mir spazieren gehen?' / B: 'Spazieren? Klingt jetzt nicht so wichtig.'"
+  - "A: 'Lust, mal wieder zu kochen?' / B: 'Kochen? Ach, ist mir schnuppe.'"
+  - "A: 'Sollen wir das Projekt morgen angehen?' / B: 'Mir ist das gerade echt egal.'"
+  - "B: \"Hab gar keinen Antrieb, tut mir leid.\""
+  - "- |"
+  - "A: \"Magst du mit mir spazieren gehen?\""
+  - "B: \"Spazieren? Klingt jetzt nicht so wichtig.\""
+  - "- |"
+  - "A: \"Lust, mal wieder zu kochen?\""
+  - "B: \"Kochen? Ach, ist mir schnuppe.\""
+  - "- |"
+  - "A: \"Sollen wir das Projekt morgen angehen?\""
+  - "B: \"Mir ist das gerade echt egal.\""
+  # +5 neu
+  - "Kannst du entscheiden? Mir ist alles recht."
+  - "Motivation ist gerade bei null."
+  - "Mach du, ich fühl nix dabei."
+  - "Selbst Lieblingsdinge kicken mich nicht."
+  - "Ich lasse das einfach liegen."
+tags: [needs_review, cluster, inner_emptiness, apathy]

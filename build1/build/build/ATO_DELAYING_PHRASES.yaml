@@ -1,0 +1,17 @@
+id: ATO_DELAYING_PHRASES
+version: "3.4"
+frame:
+  signal: ["delay"]
+  concept: "Aufschub-/Vertagungsmarker"
+  pragmatics: "Prokrastination/Entkopplung"
+  narrative: "task_flow"
+tags: [delay, procrastination]
+pattern:
+  regex: "\\b(später|morgen|nach\\s+dem\\s+Meeting|wenn\\s+Zeit|bald|gleich)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich mache es später."
+  - "Morgen dann."
+  - "Nach dem Meeting."
+  - "Wenn Zeit ist."
+  - "Gleich."

@@ -1,0 +1,25 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_SHARED_CONTEXT
+frame:
+  signal: ["shared_context"]
+  concept: "Geteilter Kontext explizit genannt"
+  pragmatics: "Verankerung / Bezug herstellen"
+  narrative: "interaction"
+tags: [context, reference]
+pattern:
+  regex: "\\b(wie besprochen|wie verabredet|vom letzten mal|im kontext von|zurück zu|wie vereinbart)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Wie besprochen machen wir weiter."
+  - "Wie verabredet starten wir jetzt."
+  - "Vom letzten Mal weiter."
+  - "Im Kontext von gestern."
+  - "Zurück zur Roadmap."
+  - "Wie vereinbart: Nächste Schritte."
+  - "Wie besprochen: wir priorisieren."
+  - "Wie verabredet: Start um 10."
+  - "Vom letzten Mal: Offenes klären."
+  - "Im Kontext von Q3."
+  - "Zurück zur Entscheidung."
+  - "Wie vereinbart: Budget-Review."

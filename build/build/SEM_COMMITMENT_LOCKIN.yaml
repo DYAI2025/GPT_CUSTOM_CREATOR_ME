@@ -1,0 +1,32 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_COMMITMENT_LOCKIN
+frame:
+  signal: ["commitment_lockin"]
+  concept: "Verbindlichkeit schrittweise erhöhen und fixieren"
+  pragmatics: "Commitment/Consistency (Cialdini)"
+  narrative: "coordination"
+tags: [commitment, deadline, closure]
+composed_of:
+  any_of:
+    - ATO_CONFIRM
+    - ATO_MINI_DEADLINE
+    - ATO_CLOSE
+    - ATO_ACKNOWLEDGE
+  optional:
+    - ATO_SUBJECT_CLOSED
+activation:
+  rule: "AT_LEAST 2 IN 3 messages"
+  window: 3
+scoring: { base: 0.65, weight: 1.10 }
+examples:
+  - "Bestätigst du das? Dann bis 16:00 fix."
+  - "Mini-Deadline: heute EOD – einverstanden?"
+  - "Passt – ich schließe das gleich."
+  - "Gesehen und bestätigt – dann Abschluss jetzt."
+  - "Okay, Commitment steht. Nächster Halt: Go."
+  - "Kleiner Check: du confirmst – dann zu."
+  - "Ich notiere: Ja. Deadline bleibt bestehen."
+  - "Wenn bestätigt, schließen wir dieses Thema."
+  - "Kurz ack: bis 12:00; danach Haken."
+  - "Final: confirm → close – agreed?"

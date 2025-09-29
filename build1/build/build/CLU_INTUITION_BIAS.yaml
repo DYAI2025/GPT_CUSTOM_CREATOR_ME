@@ -1,0 +1,39 @@
+id: CLU_INTUITION_BIAS
+version: "3.4"
+frame:
+  signal: ["intuition", "weak-aggregation"]
+  concept: "Emerging bias pattern hypothesis"
+  pragmatics: "Early bias detection for intervention"
+  narrative: "hypothesis"
+tags: [intuition, bias, hypothesis, learning]
+composed_of:
+  - SEM_CONFIRMATION_BIAS
+  - SEM_PERSPECTIVE_RIGIDITY
+  - SEM_INGROUP_OUTGROUP_BIAS
+activation:
+  rule: "AT_LEAST 2 DISTINCT bias ATOs IN 5 messages"
+scoring:
+  base: 0.5
+  weight: 1.0
+metadata:
+  intuition:
+    state: "provisional"
+    confirm_window: 5
+    confirm_rule: "AT_LEAST 1 bias SEM IN confirm_window"
+    multiplier_on_confirm: 2.0
+    decay_window: 8
+  telemetry_keys:
+    counter_confirmed: "INT_BIAS.confirmed"
+    counter_retracted: "INT_BIAS.retracted"
+    ewma_precision: "INT_BIAS.ewma_precision"
+examples:
+  - "Early generalization followed by certainty markers"
+  - "Stereotyping language with emerging rigidity"
+  - "Multiple weak bias signals clustering"
+  - "Attribution errors starting to compound"
+  - "Initial us-vs-them language formation"
+  - "Early stereotyping + 'case closed' vibe"
+  - "Initial 'always/never' + dismissal of nuance"
+  - "Subtle us–them hint + fast generalization"
+  - "Premature certainty + ignoring alternate causes"
+  - "Quick label + selective memory"

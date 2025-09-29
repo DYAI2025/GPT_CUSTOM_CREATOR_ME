@@ -1,0 +1,24 @@
+schema: "LeanDeep"
+version: "3.4"
+id: CLU_PREEMPTIVE_VICTIMIZATION
+frame:
+  signal: ["anticipation", "self_protection"]
+  concept: "Präventive Opferpositionierung"
+  pragmatics: "Kontrolle durch antizipierte Viktimisierung"
+  narrative: "preemptive_defense"
+tags: [victimization, preemptive]
+pattern: "(?i)(ich weiß|sicher|wahrscheinlich).*(du wirst|wirst du).*(aber ich|obwohl ich|trotzdem muss ich)"
+activation:
+  rule: "ANY 1 IN 10 messages"
+  window: 10
+examples:
+  - "Ich weiß, du wirst sauer sein, aber ich muss dir was sagen."
+  - "Du wirst wahrscheinlich denken, ich übertreibe, aber mir geht’s schlecht."
+  - "Sicher sagst du wieder, ich bin sensibel, aber das hat mich getroffen."
+  - "Ich weiß schon, du lachst, aber es tut weh."
+  - "Wahrscheinlich denkst du wieder XY, aber ich…"
+  - "Ich weiß, du wirst das falsch verstehen, aber…"
+  - "Bestimmt sagst du, ich übertreibe, trotzdem…"
+  - "Du wirst wieder sagen, ich bin schwierig, aber…"
+  - "Sicher findest du das albern, obwohl es mich trifft."
+  - "Du wirst sicher wieder sagen, ich reagiere über, aber ich fühle mich mies."

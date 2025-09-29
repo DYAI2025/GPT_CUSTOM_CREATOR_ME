@@ -1,0 +1,30 @@
+id: ATO_INVITING_RESONANCE
+frame:
+  signal:
+  - Ich verstehe dich vollkommen
+  - I completely understand you
+  - Das klingt total nachvollziehbar
+  - I’ve been there myself
+  - Das macht Sinn für mich
+  concept: inviting resonance
+  pragmatics: validation
+  narrative: empathy
+pattern:
+- (?i)\bich verstehe dich\b
+- (?i)\bI completely understand you\b
+activation:
+  rule: ANY 1
+examples:
+  positive:
+    - "Ich verstehe dich vollkommen."
+    - "Das klingt total nachvollziehbar."
+    - "Ich kann das gut nachempfinden."
+    - "Das macht Sinn für mich."
+    - "Ich habe das Gefühl, ich kann mich da hineinversetzen."
+    - "Ich bin ganz bei dir."
+    - "Ich kann das gut nachvollziehen."
+    - "Ich fühle mit dir."
+    - "Das ist absolut verständlich."
+    - "Ich kann deine Gefühle gut verstehen."
+  negative: []
+tags: []

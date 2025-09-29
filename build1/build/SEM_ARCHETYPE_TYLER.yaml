@@ -1,0 +1,22 @@
+id: SEM_ARCHETYPE_TYLER
+version: "3.4"
+frame:
+  signal: [ "archetype", "directness" ]
+  concept: "Archetyp Tyler: radikale Direktheit"
+  pragmatics: "Konfrontation hält Spannung"
+  narrative: "hypothesis"
+composed_of:
+- ATO_POWER_LANGUAGE
+activation:
+  rule: "AT_LEAST 1 IN 2 messages"
+examples:
+- "Sag es direkt, ohne Schminke"
+- "Konfrontation als Fürsorge"
+- "Direktheit hält die Spannung"
+- "Unverblümt, aber respektvoll"
+- "Ich sage, was ist"
+- "Konfrontiere das Zentrum"
+- "Kein Umweg, nur Klarheit"
+- "Spannung aushalten"
+- "Direktheit ohne Aggression"
+- "Wahrheit vor Bequemlichkeit"

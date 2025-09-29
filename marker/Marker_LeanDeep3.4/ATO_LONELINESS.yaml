@@ -1,0 +1,18 @@
+id: ATO_LONELINESS
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["loneliness"]
+  concept: "Einsamkeitslexikon"
+  pragmatics: "Affektlage"
+  narrative: "affect"
+tags: [affect, loneliness]
+pattern:
+  regex: "\\b(einsam|allein|isoliert|niemand\\s+da|verlassen)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich bin einsam."
+  - "Ganz allein."
+  - "Fühle mich isoliert."
+  - "Niemand ist da."
+  - "Verlassen."

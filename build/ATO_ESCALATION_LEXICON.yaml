@@ -1,0 +1,17 @@
+id: ATO_ESCALATION_LEXICON
+version: "3.4"
+frame:
+  signal: ["escalation"]
+  concept: "Eskalationslexikon/Drohung"
+  pragmatics: "Konfliktverschärfung"
+  narrative: "conflict"
+tags: [conflict, escalation]
+pattern:
+  regex: "\\b(droh|eskalier|Schluss\\s+jetzt|reicht's|Anzeige|kündige)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich drohe mit Konsequenzen."
+  - "Dann eskaliert das."
+  - "Schluss jetzt!"
+  - "Mir reicht's."
+  - "Ich kündige."

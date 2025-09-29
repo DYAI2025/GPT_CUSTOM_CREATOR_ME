@@ -1,0 +1,32 @@
+id: SEM_PROTECTIVE_PATTERN
+version: '3.3'
+frame:
+  signal:
+  - Erkanntes Schutzmuster
+  concept: Bewusster Selbstschutz
+  pragmatics: Abgrenzungsstrategie
+  narrative: boundary
+composed_of:
+- ATO_PROTECTIVE_DISTANCING
+- ATO_PATTERN_RECOGNITION
+activation:
+  rule: ALL 2 IN 3 messages
+examples:
+  positive:
+    - "Ich merke, dass ich mich zurückziehe. Das ist mein altes Schutzmuster."
+    - "Ich erkenne, dass ich wieder versuche, es allen recht zu machen, um Konflikte zu vermeiden."
+    - "Das kenne ich von mir. Wenn es mir zu viel wird, mache ich dicht."
+    - "Ich sehe, wie ich wieder in die Rolle des Retters schlüpfe. Das ist mein Muster, um mich gebraucht zu fühlen."
+    - "Ich beobachte, wie ich anfange, die Verantwortung für andere zu übernehmen. Das ist mein Schutzmechanismus."
+    - "Ich erkenne, dass ich wieder anfange, meine eigenen Bedürfnisse zu ignorieren. Das ist ein altes Muster."
+    - "Ich merke, wie ich versuche, die Kontrolle zu behalten. Das ist mein Weg, um mit Unsicherheit umzugehen."
+    - "Ich sehe, wie ich wieder anfange, perfektionistisch zu sein. Das ist mein Schutz vor Kritik."
+    - "Ich erkenne, dass ich wieder anfange, mich anzupassen, um nicht aufzufallen."
+    - "Ich merke, wie ich wieder anfange, mich klein zu machen. Das ist mein altes Muster, um nicht verletzt zu werden."
+  negative: []
+tags:
+- semantic
+- schutz
+- muster
+- abgrenzung
+schema_version: '3.3'

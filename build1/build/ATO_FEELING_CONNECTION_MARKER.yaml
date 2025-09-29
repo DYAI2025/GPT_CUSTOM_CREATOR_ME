@@ -1,0 +1,51 @@
+id: ATO_FEELING_CONNECTION
+lang: de
+category: ATOMIC
+description: "Detektiert Phrasen, die ein Gefühl von Verbundenheit oder emotionaler Nähe direkt ausdrücken."
+frame:
+  signal:      ["Gefühl von Verbundenheit", "emotionale Nähe", "connectedness"]
+  concept:     "Emotionale Verbindung"
+  pragmatics:  "Bindungsstärkung, Zugehörigkeit"
+  narrative:   "connection"
+pattern:
+  - "(?i)ich fühle mich dir verbunden"
+  - "(?i)ich spüre eine verbindung zu dir"
+  - "(?i)wir sind (so )?eng verbunden"
+  - "(?i)uns verbindet etwas besonderes"
+  - "(?i)mit dir fühle ich mich ganz"
+  - "(?i)ich fühle mich zugehörig"
+  - "(?i)mit dir bin ich zuhause"
+  - "(?i)bei dir fühle ich mich angekommen"
+  - "(?i)es fühlt sich vertraut an mit dir"
+  - "(?i)zwischen uns stimmt die chemie"
+  - "(?i)das verbindet uns"
+activation_logic: "ANY 1"
+examples:
+  - "Ich fühle mich dir sehr verbunden."
+  - "Mit dir bin ich zuhause."
+  - "Ich spüre eine besondere Verbindung zwischen uns."
+  - "Bei dir fühle ich mich angekommen."
+  - "Uns verbindet etwas, das ich mit niemand anderem habe."
+  - "Mit dir fühle ich mich ganz."
+  - "Es fühlt sich vertraut an mit dir."
+  - "Ich fühle mich zugehörig, wenn wir zusammen sind."
+  - "Zwischen uns stimmt einfach die Chemie."
+  - "Das verbindet uns auf einer tiefen Ebene."
+  - "Die Zeit gestern mit dir war sehr schön, ich habe mich lange nicht mehr so gut unterhalten, danke!"
+  - "Immer wenn du da bist, werde ich ganz ruhig und entspannt haha, deine Gegenwart ist sehr beruhigend."
+  - "Als wir uns gesehen hatten, war selbst das zusammen Schweigen mit dir etwas Besonderes."
+  - "Ich fühle mich bei dir immer so wohl, als ob ich nach Hause komme."
+tags:
+  - verbindung
+  - nähe
+  - bindung
+  - connection
+  - atomic
+window:
+  messages: 7
+scoring:
+  base: 1.0
+  weight: 1.0
+  decay: 0.0
+  formula: "linear"
+schema_version: "3.2"

@@ -1,0 +1,23 @@
+id: ATO_UNCERTAINTY_PHRASE
+lang: de
+category: ATOMIC
+description: "Drückt Unsicherheit oder Unentschlossenheit aus."
+frame:
+  signal:      ["vielleicht", "mal sehen", "weiß nicht", "könnte sein", "bin mir nicht sicher"]
+  concept:     "Unklarheit"
+  pragmatics:  "Zögern ausdrücken"
+  narrative:   "Unentschlossenheit"
+pattern:
+  - "(?i)\\bvielleicht\\b"
+  - "(?i)\\bmal sehen\\b"
+  - "(?i)\\bweiß nicht\\b"
+  - "(?i)\\bkönnte sein\\b"
+  - "(?i)\\bbin mir nicht sicher\\b"
+activation_logic: "ANY 1"
+examples:
+  - "Vielleicht mache ich das später."
+  - "Mal sehen, ob das klappt."
+  - "Ich weiß nicht genau, ob ich dabei bin."
+  - "Könnte sein, dass ich nicht schaffe."
+  - "Bin mir da gerade nicht sicher."
+tags: [uncertainty, atomic]

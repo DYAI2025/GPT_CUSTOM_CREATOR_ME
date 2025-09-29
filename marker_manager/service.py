@@ -2,11 +2,13 @@
 from __future__ import annotations
 
 import os
+import shutil
 import threading
 import time
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, Iterable, List, Optional
 
 import yaml
 
@@ -28,9 +30,13 @@ class ManagerConfig:
     sort_key: str = "id"
     id_required: bool = True
     unknown_field_policy: str = "preserve_in.extras"
+    mirror_targets: List[Path] = field(default_factory=list)
 
     @staticmethod
-    def from_mapping(mapping: Dict[str, Any], base_dir: Optional[Path] = None) -> "ManagerConfig":
+    def from_mapping(
+        mapping: Dict[str, Any],
+        base_dir: Optional[Path] = None,
+    ) -> "ManagerConfig":
         def resolve(value: str) -> Path:
             path = Path(value)
             if not path.is_absolute() and base_dir is not None:
@@ -51,7 +57,12 @@ class ManagerConfig:
             atomic_writes=bool(mapping.get("atomic_writes", True)),
             sort_key=str(mapping.get("sort_key", "id")),
             id_required=bool(mapping.get("id_required", True)),
-            unknown_field_policy=str(mapping.get("unknown_field_policy", "preserve_in.extras")),
+            unknown_field_policy=str(
+                mapping.get("unknown_field_policy", "preserve_in.extras")
+            ),
+            mirror_targets=[
+                resolve(target) for target in mapping.get("mirror_targets", [])
+            ],
         )
 
 
@@ -65,7 +76,7 @@ class ManagerStatus:
 
 
 class MarkerManagerService:
-    """Facade to coordinate catalog operations, focus schemas, models, and watchers."""
+    """Coordinate marker catalog operations, focus schemas, and watcher."""
 
     def __init__(self, config_path: Path):
         self.config_path = Path(config_path)
@@ -85,7 +96,9 @@ class MarkerManagerService:
                 "atomic_writes": self.config.atomic_writes,
             }
         )
-        self.focus_registry = FocusSchemaRegistry(self.config.focus_schemata_file)
+        self.focus_registry = FocusSchemaRegistry(
+            self.config.focus_schemata_file
+        )
         self.model_registry = ModelConfigRegistry(self.config.models_dir)
         self.status = ManagerStatus(
             active_focus=self.focus_registry.active_name,
@@ -103,6 +116,13 @@ class MarkerManagerService:
             self.status.last_build = time.time()
             self.status.last_result = result
             self._record_event("sync", result.summary())
+            if result.ok:
+                mirror_errors = _mirror_targets(
+                    self.config.canonical_json,
+                    self.config.mirror_targets,
+                )
+                if mirror_errors:
+                    self._record_event("mirror_warning", {"errors": mirror_errors})
         return result
 
     def validate(self) -> MarkerCatalogResult:
@@ -130,18 +150,74 @@ class MarkerManagerService:
 
     # ----------------------- status & logs -----------------------
     def status_payload(self) -> Dict[str, Any]:
-        result_summary = self.status.last_result.summary() if self.status.last_result else None
+        metrics = self.catalog.metrics()
+        fallback_result = (
+            self.status.last_result.summary()
+            if self.status.last_result
+            else None
+        )
+        last_ts = metrics.get("last_build_ts")
+        iso_ts: Optional[str] = None
+        if isinstance(last_ts, (int, float)):
+            iso_ts = datetime.fromtimestamp(
+                float(last_ts),
+                tz=timezone.utc,
+            ).isoformat()
+
+        conflicts_list: List[str] = []
+        conflicts_raw = metrics.get("conflicts")
+        if isinstance(conflicts_raw, list):
+            conflicts_list = [str(item) for item in conflicts_raw]
+
+        ok_value: Optional[bool]
+        ok_raw = metrics.get("ok")
+        if isinstance(ok_raw, bool):
+            ok_value = ok_raw
+        elif ok_raw is None:
+            if fallback_result and fallback_result.get("ok") is not None:
+                ok_value = bool(fallback_result.get("ok"))
+            else:
+                ok_value = None
+        else:
+            ok_value = bool(ok_raw)
+
+        count_value = 0
+        count_raw = metrics.get("count")
+        if isinstance(count_raw, (int, float)):
+            count_value = int(count_raw)
+        elif fallback_result:
+            fallback_count = fallback_result.get("count")
+            if isinstance(fallback_count, (int, float)):
+                count_value = int(fallback_count)
+
+        dedupe_hits_int = 0
+        dedupe_raw = metrics.get("dedupe_hits")
+        if isinstance(dedupe_raw, (int, float)):
+            dedupe_hits_int = int(dedupe_raw)
+
+        input_files: List[str] = []
+        input_raw = metrics.get("input_files")
+        if isinstance(input_raw, list):
+            input_files = [str(item) for item in input_raw]
+
+        last_backup_raw = metrics.get("last_backup")
+        last_backup = (
+            str(last_backup_raw)
+            if last_backup_raw is not None
+            else None
+        )
+
         return {
-            "config": {
-                "source_dir": str(self.config.source_dir),
-                "canonical_json": str(self.config.canonical_json),
-                "backup_dir": str(self.config.backup_dir),
-            },
-            "last_build": self.status.last_build,
-            "focus": self.focus_registry.status(),
-            "model": self.model_registry.status(),
-            "result": result_summary,
-            "metrics": self.catalog.metrics(),
+            "ok": ok_value,
+            "count": count_value,
+            "dedupe_hits": dedupe_hits_int,
+            "conflicts": len(conflicts_list),
+            "hash_canonical": metrics.get("hash_canonical"),
+            "last_build_ts": iso_ts,
+            "input_files": input_files,
+            "last_backup": last_backup,
+            "active_focus_schema": self.status.active_focus,
+            "active_model_profile": self.status.active_model,
         }
 
     def recent_logs(self, limit: int = 50) -> List[Dict[str, Any]]:
@@ -233,3 +309,18 @@ def load_config(path: Path) -> ManagerConfig:
     with open(path, "r", encoding="utf-8") as handle:
         data = yaml.safe_load(handle) or {}
     return ManagerConfig.from_mapping(data, path.parent)
+
+
+def _mirror_targets(canon_path: Path, targets: Iterable[Path]) -> List[str]:
+    errors: List[str] = []
+    if not targets:
+        return errors
+    for target in targets:
+        try:
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(canon_path, target)
+        except FileNotFoundError as exc:
+            errors.append(f"Missing canonical source: {exc}")
+        except OSError as exc:  # pragma: no cover - logged via status
+            errors.append(f"Mirror failure for {target}: {exc}")
+    return errors

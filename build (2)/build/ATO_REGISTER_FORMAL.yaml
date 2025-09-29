@@ -1,0 +1,16 @@
+id: ATO_REGISTER_FORMAL
+frame:
+  signal: ["Hochregister-Lexik im Alltag"]
+  concept: "Register-Marker (formal)"
+  pragmatics: "Register-Kontrast ermöglichen"
+  narrative: "token"
+pattern:
+  - "(?i)(indes|mithin|folglich|demgemäß|ipso facto|ergo)\\b"
+  - "(?i)ceteris paribus"
+examples:
+  - "Indes müssen wir Kaffee kochen."
+  - "Mithin ist das WLAN heilig."
+  - "Ergo: mehr Snacks."
+  - "Ipso facto brauchst du Humor."
+  - "Ceteris paribus: Pizza schlägt Salat."
+tags: [humor, register, formal, atomic, v33]

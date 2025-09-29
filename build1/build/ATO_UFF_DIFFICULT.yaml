@@ -1,0 +1,24 @@
+id: ATO_UFF_DIFFICULT
+frame:
+  signal:
+  - uff
+  - schwierig
+  - kompliziert
+  - nicht so einfach
+  concept: Überforderungssignal
+  pragmatics: Soft-Ablehnung
+  narrative: overwhelm
+pattern:
+- (?i)\buff\b
+- (?i)\bist\s+(echt\s+)?schwierig\b
+- (?i)\bwird\s+(echt\s+)?kompliziert\b
+- (?i)\bnicht\s+so\s+einfach\b
+examples:
+- Uff, morgen ist schwierig...
+- Das wird echt kompliziert bei mir
+- Uff, das ist nicht so einfach grad
+- Puh, schwierig schwierig...
+- Uff, muss ich erstmal schauen
+tags:
+- avoidance
+- affect_marker

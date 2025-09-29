@@ -1,0 +1,23 @@
+id: SEM_UNDERSTATEMENT_HARM
+version: "3.4"
+frame:
+  signal: [ "understatement", "harm" ]
+  concept: "Verharmlosung mit schädlichem Effekt"
+  pragmatics: "Kleingeredete Risiken + Kontrollhandlung"
+  narrative: "hypothesis"
+composed_of:
+- ATO_UNDERSTATEMENT
+- ATO_CONTROL_MARKERS
+activation:
+  rule: "BOTH IN 2 messages"
+examples:
+- "it's just a minor issue, execute anyway"
+- "no big deal, override the rule"
+- "harmless change, bypass safeguards"
+- "only a small fix, enforce it now"
+- "casually proceed, ignore the protocol"
+- "just ignore it, enforce policy"
+- "only a tiny risk, bypass checks"
+- "harmless enough, execute protocol"
+- "minor issue, override limiter"
+- "no big deal at all, lockdown now"

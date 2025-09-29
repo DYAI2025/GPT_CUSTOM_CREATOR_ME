@@ -1,0 +1,25 @@
+schema: LeanDeep
+version: "3.4"
+namespace: consistency_external
+
+defaults:
+  scoring:
+    window_tokens: 120
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+  scope:
+    unit: "speaker"
+    target: "OTHER"
+
+sems:
+  - id: SEM_MODAL_FLIP
+    frame:
+      signal: ["muss→kann/ darf→muss ohne Grund"]
+      concept: "Modaler Flip"
+      pragmatics: "Pflicht/Macht neu gerahmt"
+      narrative: "Kontextforderung"
+    composed_of: [ATO_MODAL_VERB, ATO_CONTRADICTION_CUE]
+    activation:
+      rule: "modal_polarity_flip within topic window"
+    scoring: { base: 0.58, weight: 1.0 }
+    tags: [modality, reframing]

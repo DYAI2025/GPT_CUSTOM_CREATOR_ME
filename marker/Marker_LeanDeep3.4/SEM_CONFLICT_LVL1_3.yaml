@@ -1,0 +1,40 @@
+id: SEM_CONFLICT_LVL1_3
+frame:
+  signal:
+  - insult
+  - rhetorical question
+  - accusation
+  - profane language
+  - aggressive imperative
+  - hostile tone
+  concept: conflict initiation
+  pragmatics: hostile challenge
+  narrative: escalation
+composed_of:
+- ATO_PLACEHOLDER
+activation:
+  rule: ANY 2 IN 3 messages
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- Ey, warum hörst du mir nie zu, Alter? Ich hab’s echt satt!
+- Ich frag mich echt, ob du noch alle Tassen im Schrank hast?
+- Warum musst du immer alles besser wissen? Das nervt mich total!
+- Ich verstehe nicht, warum du so drauf bist. Sag’s mir endlich!
+- Alter, das ist doch völliger Quatsch, was du da redest!
+- Ich hab dir doch gesagt, dass ich das nicht will, warum machst du es trotzdem?
+- Warum ignorierst du mich? Ich fühl mich komplett verarscht!
+- Ey, reg dich ab! Halt mal deine Klappe!
+- Ich finde es echt arm, wie du dich verhältst.
+- Du denkst wohl, du bist was Besseres, stimmt’s?
+- Ich kann nicht glauben, dass du so respektlos bist!
+- Deine ständigen Einmischungen gehen mir echt auf die Nerven!
+- Glaubst du, du bist hier der Chef oder was?
+- Hör auf, mich dauernd zurechtzuweisen, okay?
+- Immer diese Belehrungen – kannst du nicht einfach mal still sein?
+- Hast du überhaupt etwas von dem verstanden, was ich gesagt habe?
+tags:
+- conflict
+- aggression
+- argument

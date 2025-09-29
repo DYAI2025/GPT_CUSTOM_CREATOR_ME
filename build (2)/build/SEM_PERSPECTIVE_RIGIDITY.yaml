@@ -1,0 +1,27 @@
+id: SEM_PERSPECTIVE_RIGIDITY
+version: "3.4"
+frame:
+  signal: ["rigidity", "closed-mindedness"]
+  concept: "Inability to consider alternative viewpoints"
+  pragmatics: "Cognitive inflexibility"
+  narrative: "cognitive_bias"
+tags: [bias, rigidity, perspective_taking]
+composed_of:
+  - ATO_CERTAINTY_WITHOUT_EVIDENCE
+  - ATO_ATTRIBUTION_ERROR
+activation:
+  rule: "2+ rigidity patterns in message"
+scoring:
+  base: 0.6
+  weight: 1.1
+examples:
+  - "Darüber diskutiere ich nicht. Basta!"
+  - "Nonsense! Case closed."
+  - "Es gibt nur eine richtige Sichtweise. Punkt."
+  - "That's absurd. End of story."
+  - "Keine Alternative. Fertig."
+  - "Ich sehe das so, und das bleibt so"
+  - "Ende der Diskussion. Es ist wie es ist."
+  - "Das ist Fakt. Keine Widerrede."
+  - "Was du sagst, zählt nicht. Ich habe recht."
+  - "Wer das nicht so sieht, hat keine Ahnung"

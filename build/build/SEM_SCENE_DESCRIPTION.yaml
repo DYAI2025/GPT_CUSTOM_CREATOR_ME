@@ -1,0 +1,36 @@
+id: EMO_SCENE_DESCRIPTION
+lang: de
+category: SEMANTIC
+description: Beschreibung einer Umgebung oder Szene mit emotionalem Unterton.
+frame:
+  signal:
+  - es riecht nach
+  - der Himmel ist
+  - umgeben von
+  concept: Emotional gefärbte Szenerie
+  pragmatics: Transport von Stimmung über Umgebung
+  narrative: stimmungsbild
+composed_of:
+- ATO_SCENE_ELEMENT
+- ATO_EMOTIONAL_TONE
+activation_logic: ANY 2 IN 3 messages
+scoring:
+  base: 1.4
+  weight: 1.1
+examples:
+  positive:
+    - "Der Himmel war bleigrau und drückend."
+    - "Es roch nach Regen und feuchter Erde, eine melancholische Stimmung lag in der Luft."
+    - "Die Sonne schien warm auf meine Haut und alles fühlte sich leicht an."
+    - "Die Stille im Wald war unheimlich, kein Vogel war zu hören."
+    - "Die Stadt war laut und chaotisch, ich fühlte mich verloren."
+    - "Das Zimmer war dunkel und kalt, es wirkte sehr einsam."
+    - "Die Wellen schlugen sanft an den Strand, es war so friedlich."
+    - "Der Wind pfiff um die Hausecken und erzeugte eine gespenstische Atmosphäre."
+    - "Die Blumen blühten in allen Farben, es war eine reine Freude."
+    - "Der Nebel war so dicht, dass man die Hand vor Augen nicht sah, es war beängstigend."
+  negative: []
+tags:
+- semantic
+- emotional
+- description

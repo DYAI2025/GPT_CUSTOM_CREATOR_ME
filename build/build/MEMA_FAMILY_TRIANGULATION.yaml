@@ -1,0 +1,41 @@
+id: MEMA_FAMILY_TRIANGULATION
+display_title: "Familiäre Triangulation"
+version: "3.3"
+lang: de
+category: MEMA
+description: "Meta-Muster familiärer Triangulation und Koalitionsbildung."
+frame:
+  signal: ["Triangulation zwischen Familienmitgliedern"]
+  concept: "Familiäre Triangulation"
+  pragmatics: "Dysfunktionale Dreiecksbeziehungen in Familiensystemen"
+  narrative: "Triangulations-Systemdynamik"
+combination:
+  type: "AND"
+  components:
+    - marker_id: "ATO_ROLE_FATHER"
+      weight: 0.3
+    - marker_id: "ATO_ROLE_MOTHER"
+      weight: 0.3
+    - marker_id: "ATO_ROLE_CHILD"
+      weight: 0.4
+    - marker_id: "SEM_SIBLING_RIVALRY"
+      weight: 0.4
+    - marker_id: "CLU_FAMILY_HIERARCHY_CONFLICT"
+      weight: 0.5
+  threshold: 0.7
+activation:
+  rule: "WEIGHTED_AND"
+window:
+  messages: 100
+scoring:
+  base: 2.2
+  weight: 0.9
+  decay: 0.02
+  formula: "logistic"
+examples:
+  - "Ein Elternteil verbündet sich mit einem Kind gegen den anderen Elternteil."
+  - "Geschwister werden gegeneinander ausgespielt."
+tags: [mema, family, triangulation, coalition, systemic]
+detect_class: "E"
+criteria: "Muster der Koalitionsbildung zwischen verschiedenen Familienmitgliedern"
+updated_at: "2025-08-19T10:30:00Z"

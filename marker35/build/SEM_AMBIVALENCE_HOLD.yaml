@@ -1,0 +1,23 @@
+id: SEM_AMBIVALENCE_HOLD
+version: "3.4"
+frame:
+  signal: [ "ambivalence", "resonance" ]
+  concept: "Ambivalenz halten (Nähe/Distanz, Zweifel/Vertrauen)"
+  pragmatics: "Spannungen werden offen gehalten"
+  narrative: "hypothesis"
+composed_of:
+- ATO_UNDERSTATEMENT
+- ATO_POWER_LANGUAGE
+activation:
+  rule: "AT_LEAST 2 IN 3 messages"
+examples:
+- "Ich will Nähe und Distanz zugleich halten"
+- "Zweifel bleibt, Vertrauen bleibt"
+- "Nicht lösen, sondern tragen"
+- "Spannung aushalten, nicht entscheiden"
+- "Beides ist wahr, und ich halte es"
+- "Nähe ohne Benennung, Präsenz bleibt"
+- "Verantwortung trotz Ambivalenz"
+- "Ich halte die Spannung offen"
+- "Ambivalenz ist kein Fehler"
+- "Gleichzeitig Ja und Nein"

@@ -1,0 +1,34 @@
+schema: "LeanDeep"
+version: "3.4"
+id: CLU_ACHIEVEMENT_MOTIVE_ACTIVE
+level: "CLU"
+frame:
+  signal: ["achievement_motive_active"]
+  concept: "Leistungs-/Anerkennungsmotiv prägt Sprache & Ziele"
+  pragmatics: "Status, Vergleich, Exzellenz"
+  narrative: "motive_achievement"
+tags: [achievement, status, excellence]
+requires:
+  sem_pool:
+    - SEM_STATUS_RECOGNITION
+    - SEM_EXCELLENCE_DRIVE
+activation:
+  window: 6
+  rule:
+    all_of:
+      - "SEM_STATUS_RECOGNITION >= 1"
+      - "SEM_EXCELLENCE_DRIVE >= 1"
+fire_when: "conditions_met_first_time"
+scoring:
+  base: 0.70
+  weights:
+    SEM_STATUS_RECOGNITION: 0.45
+    SEM_EXCELLENCE_DRIVE: 0.55
+evidence_capture:
+  keep_snippets: 5
+examples:
+  - "Wie kommt das an? – Ziel: Exzellenz heute."
+  - "Award/Marktführer – bis 14:00 Qualitätsdraft."
+  - "Beste Noten – Standards hochziehen – Deadline."
+  - "Ich bin der Beste – Timebox – Best‑in‑Class liefern."
+  - "Statussignal – Exzellenzziel – Commitment."

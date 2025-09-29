@@ -1,0 +1,26 @@
+id: CLU_PERSONA_YELLOW
+version: "3.4.1"
+frame:
+  signal: [ "persona", "aggregation" ]
+  concept: "Spiral/Value-Persona YELLOW (indikativ, nicht beweisend)"
+  pragmatics: "schnelles Screening, evidenzbasiert"
+  narrative: "hypothesis"
+tags: [ persona, YELLOW, screening ]
+composed_of:
+- SEM_SYSTEMS_THINKING
+- SEM_CONTEXT_SWITCH
+- SEM_TRADEOFF_LANGUAGE
+activation:
+  rule: "AT_LEAST 2 IN 6 messages"
+scoring:
+  base: 1.0
+  weight: 1.0
+metadata:
+  persona:
+    evidence_policy: "family-scoped"
+examples:
+- "<Muster>"
+- "<System>"
+- "<Kontextwechsel>"
+- "<Trade-off>"
+- "<Hebel>"

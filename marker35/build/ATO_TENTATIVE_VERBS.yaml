@@ -1,0 +1,17 @@
+id: ATO_TENTATIVE_VERBS
+version: "3.4"
+frame:
+  signal: ["tentative"]
+  concept: "Zögerliche Schlussfolgerung"
+  pragmatics: "Vorläufige Deutung"
+  narrative: "uncertainty"
+tags: [uncertainty]
+pattern:
+  regex: "\\b(könnte|scheint|wirkt|looks\\s+like|appears\\s+to)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Könnte stimmen."
+  - "Scheint so."
+  - "Wirkt plausibel."
+  - "Looks like it."
+  - "Appears to be."

@@ -1,0 +1,31 @@
+id: CLU_SYSTEMATIC_BIAS_PATTERN
+version: "3.4"
+frame:
+  signal: ["systematic bias", "pattern"]
+  concept: "Consistent bias pattern across messages"
+  pragmatics: "Systematic cognitive distortion"
+  narrative: "entrenched_bias"
+tags: [bias, systematic, pattern, cluster]
+composed_of:
+  - SEM_CONFIRMATION_BIAS
+  - SEM_PERSPECTIVE_RIGIDITY
+  - SEM_INGROUP_OUTGROUP_BIAS
+  - SEM_ANCHORING_BIAS
+activation:
+  rule: "AT_LEAST 3 DISTINCT bias SEMs IN 10 messages"
+  window: 10
+scoring:
+  base: 0.5
+  weight: 1.2
+  formula: "base + (diversity * 0.1) + density"
+examples:
+  - "Multiple generalizations followed by dismissal of counter-evidence"
+  - "Stereotyping language with perspective rigidity across conversation"
+  - "Consistent us-vs-them framing with confirmation bias"
+  - "Attribution errors compounding with anchoring bias"
+  - "Escalating certainty without evidence across multiple turns"
+  - "Repetitive absolutist phrasing + selective citation cycles"
+  - "Combined stereotyping + moral outrage + refusal to consider counterpoints"
+  - "Iterative othering language reinforced by anecdotal 'proofs'"
+  - "Alternating ingroup praise and outgroup blame across sessions"
+  - "Cascading rigidity after initial anchoring on a single case"

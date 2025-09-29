@@ -1,0 +1,27 @@
+id: SEM_ADJACENT_COMPLAIN
+lang: de
+category: SEMANTIC
+description: "Semantisches Muster: wiederholte Beschwerde / kleine Vorwürfe."
+frame:
+  signal: ["kurze Vorwürfe, Abwertungen"]
+  concept: "complaining / minor accusation"
+  pragmatics: "konfrontativ, provozierend"
+  narrative: "loop"
+composed_of:
+  - ATO_EXAMPLE_SIGNAL
+  - ATO_EXAMPLE_EMOTION
+activation:
+  rule: "ANY 2 IN 4 messages"
+scoring:
+  base: 1.0
+  weight: 1.0
+window:
+  messages: 40
+examples:
+  - "Ja, aber du hörst mir nie zu."
+  - "Immer ich, immer das Gleiche."
+  - "Ich kann das nicht mehr ertragen, ja, aber..."
+  - "Das ist nicht fair, wirklich nicht."
+  - "Du redest immer nur von dir."
+tags: [semantic, complaint]
+schema_version: "3.4"

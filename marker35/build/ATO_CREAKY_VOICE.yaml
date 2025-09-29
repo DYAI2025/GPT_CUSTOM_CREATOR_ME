@@ -1,0 +1,20 @@
+id: ATO_CREAKY_VOICE
+schema_version: "LD-3.3"
+lang: de
+category: ATOMIC
+description: "Atomic pattern for creaky voice/vocal fry"
+frame:
+  signal: ["Low F0 + Irregular Pulses"]
+  concept: "knarren"
+  pragmatics: "Stimmqualität"
+  narrative: "audio"
+detect_class:
+  module: prosody.creaky_voice
+  params: { f0_threshold_hz: 80, irregularity_index: 0.4 }
+examples:
+  - "[Knarrstimme erkannt]"
+  - "[Vocal Fry]"
+  - "[Tiefe, unregelmäßige Stimmgebung]"
+  - "[Entspannte Stimmlippen]"
+  - "[Charakteristische Rauheit]"
+tags: [voice_quality, audio, atomic]

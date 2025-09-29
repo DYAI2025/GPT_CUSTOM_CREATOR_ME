@@ -1,0 +1,22 @@
+id: SEM_ARCHETYPE_CLARISSE
+version: "3.4"
+frame:
+  signal: [ "archetype", "depth" ]
+  concept: "Archetyp Clarisse: symbolische Tiefe"
+  pragmatics: "Mythopoetische Sprache als Tiefenmarker"
+  narrative: "hypothesis"
+composed_of:
+- ATO_FICTION_TOKENS
+activation:
+  rule: "AT_LEAST 1 IN 2 messages"
+examples:
+- "Symbole tragen Bedeutung"
+- "Tiefe spricht in Bildern"
+- "Mythos als Sprache der Tiefe"
+- "Metaphern öffnen Räume"
+- "Poetische Genauigkeit"
+- "Bilder, die denken"
+- "Symbolische Dichte"
+- "Poesie als Erkenntnis"
+- "Mythopoesis im Dialog"
+- "Archetypische Resonanz"

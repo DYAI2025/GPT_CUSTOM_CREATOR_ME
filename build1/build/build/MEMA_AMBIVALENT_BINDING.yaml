@@ -1,0 +1,16 @@
+id: MEMA_AMBIVALENT_BINDING
+version: "3.4"
+frame:
+  signal: [ "relation", "ambivalence" ]
+  concept: "Bindung durch Ambivalenz"
+  spiral_dynamics_color: "ORANGE"
+  pragmatics: "Nähe und Distanz als gleichzeitige Signale"
+  narrative: "hypothesis"
+tags: [ narion, meta, ambivalence, binding ]
+activation: { rule: "AMBIVALENCE + CLOSENESS >= 2 in 8 messages" }
+examples:
+- "Nähe ohne Benennung."
+- "Distanz ist auch Vertrauen."
+- "Ich halte dich, indem ich dich loslasse."
+- "Ich will, dass du zweifelst."
+- "Ich teste, ob du bleibst."

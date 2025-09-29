@@ -1,0 +1,41 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "consistency_external"
+
+defaults:
+  scoring:
+    window_messages: 5
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+
+markers:
+  - id: CLU_INTUITION_INCONSISTENCY
+    frame:
+      signal: ["schwache, frühe Anzeichen eines Fremd-Widerspruchs"]
+      concept: "Familien-Intuition für Inkonsistenz"
+      pragmatics: "Recall ↑, False Positives ↓ via confirm/decay"
+    composed_of:
+      - SEM_CONSIST_EVAL_EXTERNAL
+      - SEM_DEF_DRIFT_EXTERNAL
+      - SEM_ROLE_STABILITY_BREAK_EXTERNAL
+    activation:
+      rule: "AT_LEAST 2 DISTINCT SEMs IN 4 messages"
+    scoring: { base: 0.50, weight: 1.0 }
+    metadata:
+      family: "INCONSISTENCY"
+      intuition:
+        state: "provisional"
+        confirm_window_messages: 4
+        confirm_rule: "AT_LEAST 1 OF [SEM_FACT_CONFLICT_EXTERNAL, SEM_TEMPORAL_CONFLICT_EXTERNAL] IN window"
+        decay_window_messages: 6
+        multiplier_on_confirm: 1.4
+      telemetry_keys:
+        counter_confirmed: "INTUITION_IC.confirmed"
+        counter_retracted: "INTUITION_IC.retracted"
+        ewma_precision: "INTUITION_IC.ewma_precision"
+    examples:
+      - '"Genauer gesagt" + Pronomenwechsel in kurzer Folge.'
+      - '"Eigentlich …" + spätere Relativierung.'
+      - '"Ich" → "Wir" bei Verantwortung.'
+      - 'Früherer Absolutizer + Zeitbezug.'
+      - 'Zwei verschiedene SEMs in vier Nachrichten.'

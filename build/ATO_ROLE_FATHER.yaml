@@ -1,0 +1,41 @@
+id: ATO_ROLE_FATHER
+display_title: "Familienrolle: Vater"
+version: "3.3"
+lang: de
+category: ATOMIC
+description: "Erkennung von Bezugnahmen auf den Vater (Vaterrollen-Lexeme)."
+frame:
+  signal: 
+    - "Vater"
+    - "Papa" 
+    - "Dad"
+    - "mein Vater"
+    - "dein Vater"
+  concept: "Familienrolle: Vater"
+  pragmatics: "Rollen- und Autoritätsbezug"
+  narrative: "Rollenmarkierung"
+pattern:
+  - "(?i)\\bVater\\b"
+  - "(?i)\\bPapa\\b"
+  - "(?i)\\bDad\\b"
+  - "(?i)\\bmein(e[rn]? )?Vater\\b"
+  - "(?i)\\bdein(e[rn]? )?Vater\\b"
+activation:
+  rule: "ANY 1"
+window:
+  messages: 30
+scoring:
+  base: 1.2
+  weight: 0.4
+  decay: 0.01
+  formula: "logistic"
+examples:
+  - "Mein Vater holt ihn heute ab."
+  - "Frag Papa bitte vorher."
+  - "Als Vater sehe ich das anders."
+  - "Dein Vater will das nicht."
+  - "Papa sagt, wir fahren jetzt."
+tags: [atomic, family, role]
+detect_class: null
+criteria: null
+updated_at: "2025-08-19T10:30:00Z"

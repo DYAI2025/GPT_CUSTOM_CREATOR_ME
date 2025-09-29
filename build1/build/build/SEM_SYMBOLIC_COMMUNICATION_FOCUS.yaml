@@ -1,0 +1,28 @@
+id: SEM_SYMBOLIC_COMMUNICATION_FOCUS
+schema_version: LD-3.3
+lang: en
+category: SEMANTIC
+description: Semantic pattern for focus on symbolic/visual communication methods
+frame:
+  signal: ["communication preference"]
+  concept: "Focus on symbolic/visual communication methods"
+  pragmatics: "Indicates preference for non-verbal communication channels"
+  narrative: "Emphasis on visual/symbolic over textual communication"
+composed_of:
+  - ATO_SYMBOL_LANGUAGES
+  - ATO_MISC
+activation_logic: "ANY 1"
+window:
+  messages: 3
+examples:
+  - "Emoji language works better here. Mark this as misc for now."
+  - "Symbol language conveys more meaning. This falls under misc category."
+  - "Pictograms are clearer than words. Treat it as misc item."
+  - "Symbolic language needs less explanation. Misc category applies here."
+  - "Visual symbols work across barriers. It's currently misc classification."
+  - "Emoji communication has clear rules. Various other factors apply too."
+  - "Symbol language evolved with platforms. General miscellaneous items here."
+  - "Pictographic elements enhance meaning. Other unspecified elements present."
+  - "Symbolic representation varies culturally. Miscellaneous details need review."
+  - "Visual communication transcends text. Unspecified misc elements require attention."
+tags: [semantic, v3.3, symbolic-communication, visual-preference]

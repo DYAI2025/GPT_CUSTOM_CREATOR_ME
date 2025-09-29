@@ -1,0 +1,23 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_AMBIVALENZ
+frame:
+  signal: ["ambivalenz"]
+  concept: "Gleichzeitige Pro/Contra-Haltung, Unentschlossenheit"
+  pragmatics: "Zögerlicher Commit"
+  narrative: "stance"
+tags: [ambivalenz, zögern]
+pattern:
+  regex: '(?i)\b(teils\s+teils|einerseits|andererseits|bin\s+unsicher|weiß\s+nicht\s+so\s+recht)\b'
+  flags: ["IGNORECASE"]
+examples:
+  - "Einerseits ja, andererseits nein."
+  - "Ich bin unsicher."
+  - "Weiß nicht so recht."
+  - "Teils teils."
+  - "Einerseits klingt es gut, andererseits bin ich skeptisch."
+  - "Ich schwanke noch."
+  - "Bin hin- und hergerissen."
+  - "Pro und Contra halten sich die Waage."
+  - "Noch keine klare Meinung."
+  - "Ich tendiere, aber bin nicht sicher."

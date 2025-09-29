@@ -1,0 +1,18 @@
+id: ATO_PROJECTION
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for projection language and blame attribution
+frame:
+  signal: ["projection"]
+  concept: "Projection signal"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\b(you always|you never|you're the one|typical of you|you made me)\\b"]
+examples:
+  - "You always do this to me."
+  - "You never listen to anything I say."
+  - "You're the one with the problem here."
+  - "That's typical of you to react this way."
+  - "You made me respond like this."
+tags: [atomic, v3.3, projection, blame]

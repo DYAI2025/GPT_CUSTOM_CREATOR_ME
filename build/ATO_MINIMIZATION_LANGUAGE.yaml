@@ -1,0 +1,23 @@
+id: ATO_MINIMIZATION_LANGUAGE
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for language that minimizes situations or feelings
+frame:
+  signal: ["minimization"]
+  concept: "Minimization signal"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\b(just|only|not that big a deal|overreacting|making a mountain)\\b"]
+examples:
+  - "It's just a small issue."
+  - "You're only upset about nothing."
+  - "It's not that big a deal."
+  - "You're overreacting to this."
+  - "You're making a mountain out of a molehill."
+  - "It's barely an issue."
+  - "No big deal, really."
+  - "Let's not make a fuss."
+  - "It's kind of nothing."
+  - "Don't blow this out of proportion."
+tags: [atomic, v3.3, auto-generated]

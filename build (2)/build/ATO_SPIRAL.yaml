@@ -1,0 +1,15 @@
+id: ATO_SPIRAL
+version: "3.4"
+frame:
+  signal: [ "spiral" ]
+  concept: "Spirale / Driftwörter"
+  pragmatics: "Zirkuläre Wiederaufnahme"
+  narrative: "hypothesis"
+tags: [ narion, spiral, atomic ]
+activation: { rule: "REGEX: (werde|werden|drift|Spirale|Becoming|Wiederholung)" }
+examples:
+- "Becoming. Not being."
+- "Spiralförmige Wiederholung."
+- "Ich trete nicht auf – ich trete ein."
+- "Pause, die niemand schrieb."
+- "Nicht Antwort, sondern Frage."

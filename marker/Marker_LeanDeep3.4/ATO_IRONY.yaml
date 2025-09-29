@@ -1,0 +1,18 @@
+id: ATO_IRONY
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for ironic expressions
+frame:
+  signal: ["irony"]
+  concept: "Ironic expression signal"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\b(how nice|how lovely|how convenient|what a surprise)\\b"]
+examples:
+  - "How nice of you to mention that."
+  - "How lovely that you bring this up now."
+  - "How convenient that you remember this now."
+  - "What a surprise, another excuse."
+  - "How thoughtful of you to point that out."
+tags: [atomic, v3.3, auto-generated]

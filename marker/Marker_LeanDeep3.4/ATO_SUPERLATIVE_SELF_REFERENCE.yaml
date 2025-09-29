@@ -1,0 +1,23 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_SUPERLATIVE_SELF_REFERENCE
+frame:
+  signal: ["self_superlative"]
+  concept: "Selbstbezug in Superlativen ('der Beste …')"
+  pragmatics: "Überlegenheitsframe"
+  narrative: "motive_achievement"
+tags: [superlative, ego]
+pattern:
+  regex: "(?i)\\b(ich\\s+bin\\s+(der|die|das)\\s+beste[nr]?|besser\\s+als\\s+alle|unschlagbar|unerreicht)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich bin der Beste in meinem Bereich."
+  - "Ich bin unerreicht in diesem Thema."
+  - "Ich bin besser als alle anderen hier."
+  - "Ich bin unschlagbar, was X angeht."
+  - "Ich bin die Beste im Team."
+  - "Ich bin das Beste, was dir passieren konnte."
+  - "Ich bin der klar Beste für diese Rolle."
+  - "Ich bin unerreicht in Qualität."
+  - "Ich bin besser als alle Vergleichsprojekte."
+  - "Ich bin unschlagbar in Geschwindigkeit."

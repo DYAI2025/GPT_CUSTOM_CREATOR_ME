@@ -1,0 +1,40 @@
+id: CLU_ATTACHMENT_STYLE_AVOIDANT
+lang: de
+category: CLUSTER
+description: 'Vermeidendes Bindungsmuster: Überbetonung von Autarkie, Minimierung
+  von Gefühlen, Rückzug statt Dialog.'
+frame:
+  signal:
+  - '''alleine klargekommen'''
+  - Gefühle = Schwäche
+  - Rückzug statt Austausch
+  concept: Vermeidende Bindungsdynamik
+  pragmatics: Distanz, Selbstgenügsamkeits-Frame
+  narrative: Selbstschutz über Autonomie
+composed_of:
+- SEM_AVOIDANT_CHILDHOOD_REFERENCE
+activation_logic: AT_LEAST 2 IN 20 messages
+scoring:
+  base: 1.8
+  weight: 1.2
+  decay: 0.01
+window:
+  messages: 20
+examples:
+  positive:
+    - "Ich habe früh gelernt, meine Probleme für mich zu behalten."
+    - "Gefühle zu zeigen, galt bei uns als Schwäche."
+    - "Ich war schon als Kind sehr selbstständig und habe niemanden gebraucht."
+    - "Wenn es schwierig wurde, habe ich mich am liebsten in mein Zimmer zurückgezogen."
+    - "Ich rede nicht gerne über meine Gefühle, das bringt ja nichts."
+    - "Ich komme am besten alleine klar, dann bin ich von niemandem abhängig."
+    - "Nähe fühlt sich für mich oft einengend an."
+    - "Ich habe gelernt, meine Emotionen nicht so an mich herankommen zu lassen."
+    - "Ich brauche viel Freiraum und Zeit für mich allein."
+    - "Ich verlasse mich am liebsten auf mich selbst, dann werde ich nicht enttäuscht."
+  negative: []
+tags:
+- needs_review
+- cluster
+- attachment
+- avoidant

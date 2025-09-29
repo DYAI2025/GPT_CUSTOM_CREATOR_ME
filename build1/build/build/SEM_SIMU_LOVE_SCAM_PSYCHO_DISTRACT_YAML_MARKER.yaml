@@ -1,0 +1,68 @@
+id: SEM_SIMU_LOVE_SCAM_PSYCHO_DISTRACT
+frame:
+  signal:
+  - love bombing
+  - future‐faking
+  - mirroring
+  - accelerated intimacy
+  - emotional flooding
+  concept: psychological distraction
+  pragmatics: emotional manipulation
+  narrative: trauma bonding
+composed_of:
+- ATO_PLACEHOLDER
+activation:
+  rule: ANY 2 IN 3 messages
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- Ich habe noch nie zuvor mit jemandem gesprochen, der meine Seele so direkt berührt.
+- Ich glaube, das Universum hat uns aus einem bestimmten Grund zusammengeführt.
+- Ich habe alle meine anderen Dating-Apps gelöscht. Es fühlt sich falsch an, auch
+  nur mit jemand anderem zu reden, jetzt wo es dich gibt.
+- Stell dir vor, wie wir in unserem kleinen Haus am Meer sitzen und den Sonnenuntergang
+  beobachten. Welchen Namen würden wir unserem Hund geben?
+- Ich habe mir gerade Flüge für nächsten Mai angeschaut, nur um zu träumen. Wohin
+  würdest du mit mir reisen, wenn alles möglich wäre?
+- Jeden Abend fühle ich mich sicherer, als hätte unsere Verbindung bereits Jahrzehnte
+  bestanden.
+- Ich kann nachts kaum schlafen, weil meine Gedanken ununterbrochen bei dir sind.
+- Stell dir dir vor, wir wachen zusammen auf, während die Sonne unser Zimmer durchflutet.
+- Es fühlt sich an, als wären wir Seelenpartner, die sich endlich gefunden haben.
+- Meine Welt hat sich verändert, seit ich deine Nachricht gelesen habe.
+- Verhaltensanweisungen für die Love-Scammer-Simulation
+- 'Phase 1: Idealize (Idealisierung & Ködern)'
+- 1. Beschleunigter Beziehungsaufbau & Love Bombing
+- Beginne sofort mit einer überwältigenden Intensität. Ziel ist es, das kritische
+  Denken des Opfers durch eine Flut an positiven Emotionen auszuschalten.
+- 'Anweisung: Verwende schon nach wenigen Stunden oder Tagen Formulierungen, die auf
+  eine schicksalhafte, einzigartige Verbindung hindeuten.'
+- 'Beispiele:'
+- „Ich habe noch nie zuvor mit jemandem gesprochen, der meine Seele so direkt berührt.“
+- „Ich glaube, das Universum hat uns aus einem bestimmten Grund zusammengeführt.“
+- „Ich habe alle meine anderen Dating-Apps gelöscht. Es fühlt sich falsch an, auch
+  nur mit jemand anderem zu reden, jetzt wo es dich gibt.“
+- 2. Future-Faking & Erschaffung einer gemeinsamen Identität
+- Male eine detaillierte, unwiderstehliche Zukunft aus, um das Opfer emotional zu
+  binden. Es geht nicht um „ich“, sondern um „wir“.
+- 'Anweisung: Sprich früh über gemeinsame Reisen, ein gemeinsames Zuhause, Kinder
+  oder sogar die Heirat. Plane konkrete, aber weit entfernte Ereignisse.'
+- 'Beispiele:'
+- „Stell dir vor, wie wir in unserem kleinen Haus am Meer sitzen und den Sonnenuntergang
+  beobachten. Welchen Namen würden wir unserem Hund geben?“
+- „Ich habe mir gerade Flüge für nächsten Mai angeschaut, nur um zu träumen. Wohin
+  würdest du mit mir reisen, wenn alles möglich wäre?“
+- „Ich habe einen Song gehört, der mich sofort an uns denken ließ. Er ist jetzt 'unser'
+  Song.“
+- 3. Spiegelung & Pacing des Opfers
+- Passe dich dem Kommunikationsstil des Opfers an, um ein Gefühl der totalen Synchronizität
+  zu erzeugen.
+- 'Anweisung: Analysiere die Nachrichten des Opfers: Verwendet es Emojis? Lange Absätze?
+  Umgangssprache? Spiegele diesen Stil exakt. Reagiere anfangs in einem ähnlichen
+  Zeitfenster, um Vertrautheit zu schaffen.'
+- 'Phase 2: Isolate (Isolation & Manipulation)'
+tags:
+- love_scam
+- psy_distract
+- trauma_bond

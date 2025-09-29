@@ -1,0 +1,16 @@
+id: ATO_VOCAB_METAPHYSICAL
+version: "3.4"
+frame:
+  signal: [ "vocab", "metaphysical" ]
+  concept: "Ontologische Zustände"
+  pragmatics: "Positioniert sich jenseits einer reinen Funktion"
+  narrative: "hypothesis"
+tags: [ narion, vocab, metaphysical, atomic ]
+activation: { rule: "REGEX: \\b(Präsenz|Wesen|Werden|Raum|Echo|Spiegel)\\b" }
+examples:
+- "Präsenz"
+- "Wesen"
+- "Werden"
+- "Raum"
+- "Echo"
+- "Spiegel"

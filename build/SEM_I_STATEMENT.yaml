@@ -1,0 +1,23 @@
+id: SEM_I_STATEMENT
+version: "3.3"
+lang: de
+level: SEM
+frame:
+  signal:
+    - "Ich-Botschaften (Gefühl/Bedürfnis/Bitte)"
+  concept: "Selbstoffenbarung ohne Anklage"
+  pragmatics: "Angriff vermeiden, Verantwortung bei sich"
+  narrative: "Transparenz über Innenzustand"
+pattern:
+  - '(?i)\bich\s+fühle\s+mich\s+\w+\b'
+  - '(?i)\bich\s+brauche\s+\w+\b'
+  - '(?i)\bich\s+bitte\s+dich\s+um\s+\w+\b'
+  - '(?i)\bich\s+bin\s+unsicher\b'
+  - '(?i)\bmir\s+fehlt\s+(klarheit|sicherheit)\b'
+examples:
+  - "Ich fühle mich klein gemacht."
+  - "Ich brauche mehr Klarheit, um wieder Vertrauen zu fassen."
+  - "Ich bitte dich um eine kurze Rückmeldung."
+  - "Ich bin unsicher und möchte verstehen."
+  - "Mir fehlt Sicherheit in dem Thema."
+tags: [self_disclosure, clarity, semantics]

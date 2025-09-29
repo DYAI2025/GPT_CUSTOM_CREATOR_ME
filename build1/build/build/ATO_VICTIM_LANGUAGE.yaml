@@ -1,0 +1,23 @@
+id: ATO_VICTIM_LANGUAGE
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["victimhood"]
+  concept: "Opfer-/Ohnmachtssprache"
+  pragmatics: "Selbstpositionierung"
+  narrative: "affect"
+tags: [affect, stance]
+pattern:
+  regex: "\\b(wehrlos|ausgeliefert|Opfer|hilflos|ohne\\s+Chance)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich bin wehrlos."
+  - "Fühle mich ausgeliefert."
+  - "Immer das Opfer."
+  - "Hilflos gerade."
+  - "Ohne Chance."
+  - "Ich komme da nie raus."
+  - "Man macht mit mir, was man will."
+  - "Ich bin ausgeliefert."
+  - "Kein Ausweg für mich."
+  - "Ich hab keine Chance."

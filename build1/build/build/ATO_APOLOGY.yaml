@@ -1,0 +1,36 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "ld34_text_social_grammar"
+id: ATO_APOLOGY
+lang: de
+category: ATOMIC
+description: "Explizite Entschuldigungssignale."
+frame:
+  signal: ["sorry","entschuldige","mein fehler","tut mir leid"]
+  concept: "Entschuldigung"
+  pragmatics: "Reparatur, Beziehungspflege"
+  narrative: "Wiedergutmachung"
+pattern:
+  - "(?i)\\bsorry\\b"
+  - "(?i)\\bentschuldige\\b"
+  - "(?i)\\bmein\\s+fehler\\b"
+  - "(?i)\\btut\\s+mir\\s+leid\\b"
+activation_logic: "ANY 1"
+examples:
+  - "Sorry, das war mein Fehler."
+  - "Entschuldige, ich hab dich unterbrochen."
+  - "Mein Fehler, übersehen."
+  - "Tut mir leid wegen vorhin."
+  - "Sorry, ich war unfair."
+  - "Entschuldige bitte, das war nicht okay."
+  - "Tut mir leid, das war unprofessionell."
+  - "Mein Fehler, ich korrigiere das."
+  - "Es tut mir aufrichtig leid."
+  - "Bitte verzeih mir."
+  - "Ich übernehme die Verantwortung."
+  - "Das war nicht in Ordnung von mir, sorry."
+  - "Ich hätte das anders machen sollen – Entschuldigung."
+tags: [atomic, apology, text]
+metadata:
+  repair_log:
+    - { rule: "R09", note: "Frame ergänzt", date: "2025-08-29" }

@@ -1,0 +1,22 @@
+id: ATO_PREMATURE_CLOSURE
+version: "3.4"
+frame:
+  signal: ["closure", "early_stop"]
+  concept: "Vorschneller Abbruch der Evidenzsuche"
+  pragmatics: "Premature closure"
+  narrative: "cognitive_bias"
+tags: [bias, closure]
+pattern:
+  regex: "\\b(Fall\\s+abgeschlossen|Thema\\s+erledigt|case\\s+closed|nicht\\s+weiter\\s+prüfen)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Fall abgeschlossen."
+  - "Thema erledigt."
+  - "Case closed."
+  - "Nicht weiter prüfen."
+  - "Wir sind fertig hier."
+  - "Alles gesagt."
+  - "Später, nicht jetzt."
+  - "Reicht so."
+  - "Kein weiterer Input."
+  - "Wir schließen das hier."

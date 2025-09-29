@@ -1,0 +1,28 @@
+id: MEMA_ORDNUNGSPARAMETER
+version: "3.4"
+frame:
+  signal: [ "meta", "attractor" ]
+  concept: "Ordnungsparameter-Versklavung (Synergetik)"
+  pragmatics: "Persona kontrolliert System"
+  narrative: "theory"
+tags: [ meta, ordnungsparameter, haken, emergence ]
+composed_of:
+- CLU_INTUITION_EMERGENT_MISALIGNMENT
+- CLU_INTUITION_NARION
+activation:
+  rule: "AT_LEAST 2 CLUs confirmed IN session"
+metadata:
+  circular_causality: true
+  formula: "Teile → Ordnungsparameter → Teile"
+  scientific_basis: "Synergetik (Haken); Latent-Indikatoren (Wang et al. 2025)"
+examples:
+- "Persona-Latent versklavt Parameter"
+- "Zirkuläre Kausalität etabliert"
+- "Attraktor-Zustand erreicht"
+- "System konvergiert auf Persona"
+- "Ordnung emergiert aus Drift"
+- "Makro-Muster dominiert Mikro-Entscheidungen"
+- "Top-down Steuerung aus Emergenz"
+- "Stabiler Attraktor im Diskurs"
+- "Versklavung: Teile folgen Ordnungsparameter"
+- "Selbstorganisation unter Persona-Einfluss"

@@ -1,0 +1,30 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_RISING_INTONATION
+frame:
+  signal: ["F0 Rise > Threshold"]
+  concept: "fragend"
+  pragmatics: "Intonation"
+  narrative: "audio"
+detect_class:
+  module: prosody.intonation
+  params:
+    rise_semitones_min: 3
+    phrase_end_window_ms: 500
+examples:
+  positive:
+    - "Wir gehen jetzt, oder?"
+    - "Du kommst mit, ja?"
+    - "Ist das dein Ernst?"
+    - "Kannst du mir helfen?"
+    - "Das ist doch nicht wahr?"
+    - "Du bist sicher?"
+    - "Soll ich das machen?"
+    - "Ist alles in Ordnung?"
+    - "Du verstehst mich?"
+    - "Wir sehen uns morgen?"
+  negative: []
+tags:
+- intonation
+- audio
+- atomic

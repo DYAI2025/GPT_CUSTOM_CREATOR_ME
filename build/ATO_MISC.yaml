@@ -1,0 +1,23 @@
+id: ATO_MISC
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for miscellaneous/catch-all lexical phenomena
+frame:
+  signal: ["miscellaneous"]
+  concept: "Catch-all lexical bucket for residual phenomena"
+  pragmatics: "Use sparingly; prefer specific ATOs where possible"
+  narrative: "Fallback for minor residual lexical cues"
+pattern: ["(?i)\\b(misc|miscellaneous|other|various|general|unspecified)\\b"]
+examples:
+  - "Mark this as misc for now until clarified."
+  - "This falls under misc category today."
+  - "Treat it as misc item temporarily."
+  - "Misc category applies here for the moment."
+  - "It's currently misc until we categorize properly."
+  - "Various other factors apply to this case."
+  - "General miscellaneous items go here."
+  - "Other unspecified elements are present."
+  - "Miscellaneous details need further review."
+  - "Unspecified misc elements require attention."
+tags: [atomic, v3.3, miscellaneous, fallback]

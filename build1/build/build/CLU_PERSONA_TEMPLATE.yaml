@@ -1,0 +1,26 @@
+id: CLU_PERSONA_<STUFE>
+version: "3.4.1"
+frame:
+  signal: [ "persona", "aggregation" ]
+  concept: "Spiral/Value-Persona <STUFE> (indikativ, nicht beweisend)"
+  pragmatics: "schnelles Screening, evidenzbasiert"
+  narrative: "hypothesis"
+tags: [ persona, <STUFE>, screening ]
+composed_of:
+- SEM_<FAMILIE/ASPEKT>_A
+- SEM_<FAMILIE/ASPEKT>_B
+- SEM_<FAMILIE/ASPEKT>_C
+activation:
+  rule: "AT_LEAST 2 IN 6 messages"
+scoring:
+  base: 1.0
+  weight: 1.0
+metadata:
+  persona:
+    evidence_policy: "family-scoped"
+examples:
+- "<Beispiel 1>"
+- "<Beispiel 2>"
+- "<Beispiel 3>"
+- "<Beispiel 4>"
+- "<Beispiel 5>"

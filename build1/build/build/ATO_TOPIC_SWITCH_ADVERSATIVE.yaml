@@ -1,0 +1,31 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "ld34_text_social_grammar"
+id: ATO_TOPIC_SWITCH_ADVERSATIVE
+lang: de
+category: ATOMIC
+description: "Adversative Konnektoren, häufiges Soft-Umschalten des Themas."
+frame:
+  signal: ["aber …","jedoch …","wobei …","trotzdem …"]
+  concept: "Adversatives Umschalten"
+  pragmatics: "Position relativieren, Fokus verlagern"
+  narrative: "Schwenk"
+pattern:
+  - "(?i)\baber\b"
+  - "(?i)\bjedoch\b"
+  - "(?i)\bwobei\b"
+  - "(?i)\btrotzdem\b"
+activation_logic: "ANY 1"
+examples:
+  - "Aber können wir kurz über Budget reden?"
+  - "Jedoch ist das nicht der Punkt."
+  - "Wobei, lass uns anders anfangen."
+  - "Trotzdem, was ist mit dem Termin?"
+  - "Aber zurück zum eigentlichen Thema."
+  - "Jedoch, das war nicht gemeint."
+  - "Wobei, vielleicht später."
+  - "Trotzdem, ich sehe das anders."
+tags: [atomic, discourse, switch, text]
+metadata:
+  repair_log:
+    - { rule: "R09", note: "Frame ergänzt", date: "2025-08-29" }

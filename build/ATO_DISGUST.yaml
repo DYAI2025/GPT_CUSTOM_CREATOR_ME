@@ -1,0 +1,40 @@
+id: ATO_DISGUST
+frame:
+  signal: Wörter und Phrasen, die Ekel, Abscheu oder Abneigung ausdrücken.
+  concept: Ekel / Abstoßung
+  pragmatics: Distanzierung, Ablehnung, Ausdruck von Unbehagen.
+  narrative: rejection
+tags:
+- emotion
+- disgust
+- negative
+- rejection
+examples:
+  positive:
+    - "Das ist ekelhaft."
+    - "Das widert mich an."
+    - "Pfui!"
+    - "Das ist widerlich."
+    - "Ich empfinde Abscheu."
+    - "Ich bin angewidert."
+    - "Das ist zum Kotzen."
+    - "Bäh!"
+    - "Iiih!"
+    - "Mir wird schlecht."
+    - "Das ist abstoßend."
+    - "Mir wird davon übel."
+    - "Das packe ich nicht an."
+    - "Ekelhaftes Zeug."
+    - "Ich könnte mich übergeben."
+  negative: []
+pattern:
+- (?i)ekelhaft
+- (?i)widert mich an
+- (?i)pfui
+- (?i)widerlich
+- (?i)abscheu
+- (?i)angewidert
+- (?i)zum kotzen
+- (?i)bäh
+- (?i)iiih
+- (?i)mir wird schlecht

@@ -1,0 +1,36 @@
+schema: LeanDeep
+version: "3.4"
+namespace: consistency_external
+
+defaults:
+  scoring:
+    window_tokens: 120
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+  scope:
+    unit: "speaker"
+    target: "OTHER"
+
+mema:
+  - id: MEMA_SPEAKER_CONSISTENCY_PROFILE
+    frame:
+      signal: ["rollierendes Konsistenzprofil pro Sprecher"]
+      concept: "EWMA-basierte Stabilität/Drift-Metrik"
+      pragmatics: "Trend statt Einzelfall"
+      narrative: "Kontextkalibrierung für Bewertung"
+    composed_of: [CLU_CONSISTENCY_BREAK_EXTERNAL, CLU_CONSIST_LOOP_EXTERNAL, CLU_INTUITION_CONSISTENCY]
+    activation:
+      rule: "rolling_window(messages=50) BY speaker"
+    scoring:
+      base: 0.0
+      weight: 1.0
+      aggregation: "ewma(alpha=0.2, on=CLU_CONSISTENCY_BREAK_EXTERNAL.score)"
+    metadata:
+      outputs:
+        consistency_score: "0..1 (hoch = stabil)"
+        drift_score: "0..1 (hoch = häufige Brüche)"
+        confidence: "derived_from sample_size & ewma_precision"
+      gates:
+        raise_evidence_threshold_if: "drift_score > 0.6"
+        lower_threshold_if: "consistency_score > 0.7 AND corrections_observed>=2"
+    tags: [meta, longitudinal]

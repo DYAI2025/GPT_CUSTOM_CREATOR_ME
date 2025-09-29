@@ -1,0 +1,22 @@
+id: ATO_PATTERN_RECOGNITION
+version: "3.3"
+frame:
+  signal: ["mein Muster", "immer wieder", "kenne ich von mir"]
+  concept: "Mustererkennung"
+  pragmatics: "Verhaltensanalyse"
+  narrative: "pattern"
+pattern:
+  - "(?i)\\b(mein muster|meine muster)\\b"
+  - "(?i)\\b(immer wieder|schon wieder)\\b"
+  - "(?i)\\b(kenne ich von mir|typisch für mich)\\b"
+  - "(?i)\\b(wie immer|mal wieder)\\b"
+examples:
+  - "Das ist mein altes Muster"
+  - "Ich verfalle immer wieder in dieses Verhalten"
+  - "Das kenne ich von mir"
+  - "Typisch für mich, dass ich so reagiere"
+  - "Schon wieder mache ich das gleiche"
+  - "Es ist immer die selbe Dynamik, die wir haben"
+  - "Das ist unser System, wir kommen da nicht so einfach raus"
+tags: [atomic, mustererkennung, selbstreflexion, pattern]
+schema_version: "3.3"

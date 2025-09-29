@@ -1,0 +1,17 @@
+id: ATO_DISTRUST_MARKERS
+version: "3.4"
+frame:
+  signal: ["distrust"]
+  concept: "Misstrauen/Vorbehalt"
+  pragmatics: "Risikowahrnehmung"
+  narrative: "social"
+tags: [trust, distrust]
+pattern:
+  regex: "\\b(misstraue|traue\\s+dir\\s+nicht|dubios|fragwürdig|fishy|shady)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich misstraue dir."
+  - "Traue dir nicht."
+  - "Dubios."
+  - "Fragwürdig."
+  - "Shady deal."

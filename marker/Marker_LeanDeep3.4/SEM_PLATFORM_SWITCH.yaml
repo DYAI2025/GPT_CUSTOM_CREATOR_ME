@@ -1,0 +1,31 @@
+id: SEM_PLATFORM_SWITCH
+schema_version: LD-3.3
+lang: en
+category: SEMANTIC
+description: Semantic pattern for platform switching behavior
+frame:
+  signal: ["combined signals"]
+  concept: "Platform Switch"
+  pragmatics: "micro pattern recognition"
+  narrative: "intent"
+composed_of:
+  - ATO_PLATFORM
+  - ATO_SWITCH
+  - ATO_WHATSAPP
+  - ATO_EMAIL
+  - ATO_PERSONAL
+activation_logic: "ANY 2"
+window: 
+  messages: 3
+examples:
+  - "This app is so impersonal. Let's switch to WhatsApp, it feels more authentic."
+  - "I can't send high-quality videos here. Give me your number, then I'll show you where I am right now."
+  - "I'm rarely online here, to be honest. On Telegram I reply to you immediately."
+  - "The notifications here barely work. Before we lose sight of each other, let's write on Signal instead."
+  - "I think my membership here expires soon. Let's stay in touch via email to be safe."
+  - "This platform has too many limitations for what we're trying to do together."
+  - "Can we move this conversation somewhere more private and personal?"
+  - "I prefer using WhatsApp for more intimate conversations like this one."
+  - "Email would be better for sharing the detailed information you need."
+  - "Let's switch to a platform where we can communicate more freely."
+tags: [semantic, v3.3, platform-switch]

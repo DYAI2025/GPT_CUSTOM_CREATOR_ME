@@ -1,0 +1,22 @@
+id: MEMA_OVERCONFIDENCE_INVALIDATION_CYCLE
+schema_version: LD-3.3
+lang: en
+category: MEMA
+description: Meta marker for cycles of overconfidence combined with emotional invalidation
+criteria: "Persistent pattern of excessive certainty claims followed by dismissal of others' emotional responses"
+composed_of:
+  - SEM_CERTAINTY_CLAIMS
+  - CLU_EMOTIONAL_DYSREGULATION
+  - SEM_GASLIGHTING_ATTEMPT
+examples:
+  - "Overconfident predictions followed by invalidation when concerns are raised."
+  - "Certainty claims escalate when emotional responses challenge the narrative."
+  - "Systematic dismissal of worries about overconfident plans and predictions."
+  - "Confidence-invalidation cycles that prevent realistic risk assessment."
+  - "Emotional dismissal used to maintain illusion of certainty and control."
+  - "Workplace context where overconfidence leads to systematic team invalidation."
+  - "Leadership pattern showing excessive certainty with subordinate emotional dismissal."
+  - "Project management showing confidence-invalidation cycles affecting team morale."
+  - "Decision-making context where certainty claims suppress necessary caution."
+  - "Long-term pattern where overconfidence and invalidation create systemic dysfunction."
+tags: [mema, v3.3, overconfidence-cycle, emotional-invalidation]

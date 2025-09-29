@@ -1,0 +1,20 @@
+id: ATO_ENERGY_SURGE
+schema_version: "LD-3.3"
+lang: de
+category: ATOMIC
+description: "Atomic pattern for vocal energy surge"
+frame:
+  signal: ["Amplitude ≫ Baseline"]
+  concept: "laut"
+  pragmatics: "Energie"
+  narrative: "audio"
+detect_class:
+  module: prosody.energy
+  params: { delta_db_min: 12 }
+examples:
+  - "[Plötzlicher Lautstärkeanstieg]"
+  - "[Emotionale Intensivierung]"
+  - "[Energieausbruch in der Stimme]"
+  - "[Nachdruck durch Lautstärke]"
+  - "[Aufgeregte Stimmgebung]"
+tags: [energy, audio, atomic]

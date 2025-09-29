@@ -1,0 +1,20 @@
+id: ATO_STAY_IN_EMOTION
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "beim Gefühl/Thema bleiben statt ausweichen"
+  concept: "Emotionales Dranbleiben"
+  pragmatics: "Verarbeitung ermöglichen"
+  narrative: "Tiefe statt Ablenkung"
+pattern:
+  - '(?i)\b(lass|lassen)\s+uns\s+bei\s+(dem|der)\s+(gefühl|emotion|thema)\s+bleiben\b'
+  - '(?i)\bkein\s+themenwechsel\b'
+  - '(?i)\bich\s+möchte\s+im\s+thema\s+bleiben\b'
+examples:
+  - "Lass uns bei dem Gefühl bleiben."
+  - "Ich möchte im Thema bleiben."
+  - "Kein Themenwechsel – ich will erst das klären."
+  - "Ich bleibe beim Gefühl, nicht beim Technischen."
+  - "Wir bleiben jetzt bei dieser Ebene."
+tags: [focus, regulation, atomic]

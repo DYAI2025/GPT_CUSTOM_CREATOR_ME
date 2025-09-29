@@ -1,0 +1,20 @@
+id: SEM_PROBABILISTIC_LANGUAGE
+version: "3.4"
+frame:
+  signal: ["probability"]
+  concept: "Explizite Wahrscheinlichkeiten/Bandbreiten"
+  pragmatics: "Unsicherheitsgrad"
+  narrative: "uncertainty"
+tags: [uncertainty, probability]
+composed_of:
+  - ATO_PROBABILISTIC_TERMS
+  - ATO_HEDGING_TERMS
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.55, weight: 1.0 }
+examples:
+  - "Wahrscheinlich 60%."
+  - "Unlikely, maybe later."
+  - "In der Bandbreite 30–50%."
+  - "Eher risikoarm, könnte passen."
+  - "Riskant, appears to be."

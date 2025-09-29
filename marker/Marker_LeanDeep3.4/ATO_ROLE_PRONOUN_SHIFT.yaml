@@ -1,0 +1,18 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_ROLE_PRONOUN_SHIFT
+frame:
+  signal: ["pronoun_shift"]
+  concept: "Pronomen-/Rollenwechsel an Verantwortungsstellen"
+  pragmatics: "Responsibility Shifting"
+  narrative: "identity"
+pattern:
+  - detect_class: heuristic
+    rule: "pronoun_shift near responsibility_lexicon"
+examples:
+  - '"Ich habe entschieden" → "Wir haben entschieden".'
+  - '"Ich musste zahlen" → "Wir mussten zahlen".'
+  - '"Ich habe das gemacht" → "Man macht das so".'
+  - '"Du hast zugesagt" → "Ihr habt zugesagt".'
+  - '"Ich bezahlte" → "Wir zahlten".'
+tags: [pronoun, role, responsibility]

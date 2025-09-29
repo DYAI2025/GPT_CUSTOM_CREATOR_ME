@@ -1,0 +1,13 @@
+examples:
+  positive:
+    - "Ich habe nichts falsch gemacht, du übertreibst."
+    - "Das habe ich nie gesagt."
+    - "Du greifst mich an, also sage ich nichts mehr."
+    - "Ich wollte doch nur helfen; warum kritisierst du mich?"
+    - "Wenn du so redest, bin ich raus."
+    - "Ich musste mich nur verteidigen."
+    - "Ich erkläre mich nicht – das bringt nichts."
+    - "Ich ziehe mich zurück, wenn du so bist."
+    - "Ich bin nicht das Problem, du bist es."
+    - "Du bist zu empfindlich."
+  negative: []

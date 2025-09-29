@@ -1,0 +1,39 @@
+id: CLU_SIBLING_DYNAMICS
+display_title: "Geschwisterdynamiken"
+version: "3.3"
+lang: de
+category: CLUSTER
+description: "Cluster von Geschwisterinteraktionen und -konflikten."
+frame:
+  signal: ["Geschwisterrollen + Interaktionsmuster"]
+  concept: "Geschwisterdynamiken"
+  pragmatics: "Geschwisterbeziehungen und Rollendynamiken"
+  narrative: "Geschwisterliche Systemdynamik"
+combination:
+  type: "AND"
+  components:
+    - marker_id: "SEM_SIBLING_RIVALRY"
+      weight: 0.5
+    - marker_id: "ATO_ROLE_SIBLINGS"
+      weight: 0.4
+    - marker_id: "ATO_GOTTMAN_CRITICISM"
+      weight: 0.3
+    - marker_id: "ATO_GOTTMAN_CONTEMPT"
+      weight: 0.4
+  threshold: 0.6
+activation:
+  rule: "WEIGHTED_AND"
+window:
+  messages: 50
+scoring:
+  base: 1.4
+  weight: 0.55
+  decay: 0.03
+  formula: "logistic"
+examples:
+  - "Mein Bruder ist so dumm und macht immer alles falsch!"
+  - "Geschwister streiten sich über Aufmerksamkeit der Eltern."
+tags: [cluster, family, siblings, dynamics, rivalry]
+detect_class: "E"
+criteria: "Kombination von Geschwisterrollen und Konfliktmustern"
+updated_at: "2025-08-19T10:30:00Z"

@@ -1,0 +1,33 @@
+id: SEM_AMBIVALENCE_TOLERANCE
+frame:
+  signal:
+  - ambivalent
+  - zweifelnd
+  - unsicher
+  - Grenzen
+  - akzeptieren
+  concept: ambivalence tolerance
+  pragmatics: boundary clarification and self-protection
+  narrative: acceptance of uncertainty
+composed_of:
+- ATO_PLACEHOLDER
+activation:
+  rule: ANY 2 IN 3 messages
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- Ich weiß nicht genau, was ich will, und das ist okay für mich.
+- Es ist in Ordnung, ambivalent zu sein.
+- Manchmal bin ich hin- und hergerissen, aber ich setze klare Grenzen.
+- Ich fühle mich zwiegespalten, trotzdem möchte ich respektiert werden.
+- Ich akzeptiere, dass sich meine Meinung ändern kann.
+- Ich bin unsicher, ob ich morgen Zeit habe, aber ich gebe dir Bescheid.
+- Es steht mir frei, meine Einstellung später zu überdenken.
+- Ich brauche Raum, um meine Gefühle zu sortieren.
+- Ich halte mir Optionen offen und teile dir rechtzeitig mit, was ich entscheide.
+- Ich stehe zu meiner Unsicherheit und erwarte Verständnis.
+tags:
+- ambivalence
+- tolerance
+- boundary

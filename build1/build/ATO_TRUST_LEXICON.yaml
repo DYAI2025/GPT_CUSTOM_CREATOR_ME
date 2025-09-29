@@ -1,0 +1,17 @@
+id: ATO_TRUST_LEXICON
+version: "3.4"
+frame:
+  signal: ["trust"]
+  concept: "Vertrauens-/Zuverlässigkeitsmarker"
+  pragmatics: "Beziehung/Koordination"
+  narrative: "prosocial"
+tags: [trust, reliability]
+pattern:
+  regex: "\\b(vertraue|zuverlässig|verlässlich|trust|reliable|SLA)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich vertraue dir."
+  - "Bist du zuverlässig?"
+  - "reliable partner"
+  - "SLA einhalten"
+  - "vertrauenswürdig"

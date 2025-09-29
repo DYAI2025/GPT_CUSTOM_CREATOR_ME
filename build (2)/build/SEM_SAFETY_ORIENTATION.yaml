@@ -1,0 +1,34 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_SAFETY_ORIENTATION
+frame:
+  signal: ["safety_orientation"]
+  concept: "Ruhe/Sicherheit, Risiko- und Überraschungsaversion"
+  pragmatics: "Stabilität sichern, Unwägbarkeiten meiden"
+  narrative: "motive_safety"
+tags: [safety, risk, calm, reassurance]
+composed_of:
+  any_of:
+    - ATO_STATUS_QUO_PREFERENCE
+    - ATO_RISK_AVERSION_PHRASE
+    - ATO_CALM_LIFE_DESIRE
+    - ATO_REASSURANCE_SEEKING
+    - ATO_ANXIETY_TERMS
+    - SEM_ANXIETY_LANGUAGE
+    - SEM_RISK_FORECAST
+    - SEM_RELIABILITY_CONCERN
+activation:
+  rule: "AT_LEAST 3 IN 5 messages"
+  window: 5
+scoring: { base: 0.62, weight: 1.08 }
+examples:
+  - "Bloß nichts ändern – ich brauche Sicherheit."
+  - "Bist du sicher? Ich mag keine Überraschungen."
+  - "Mir ist das zu riskant – lieber der sichere Weg."
+  - "Ruhiges Leben, keine bösen Überraschungen."
+  - "Passt das für dich? – Ich will’s sicher haben."
+  - "Status quo behalten, bitte."
+  - "Risiken vermeiden, wo es geht."
+  - "Ich brauche heute vor allem Ruhe."
+  - "Kein Experiment – Stabilität zuerst."
+  - "Alles gut? – Nur wenn es planbar bleibt."

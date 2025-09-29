@@ -1,0 +1,17 @@
+id: ATO_ATTRIBUTION_ERROR
+version: "3.4"
+frame:
+  signal: ["dispositional_blame", "fundamental_attribution"]
+  concept: "Ursachenzuschreibung auf stabile Eigenschaften"
+  pragmatics: "Fundamentaler Attributionsfehler"
+  narrative: "cognitive_bias"
+tags: [bias, attribution, blame]
+pattern:
+  regex: "\\b(typisch\\s+für\\s+ihn|sie\\s+ist\\s+eben\\s+so|that's\\s+just\\s+how\\s+they\\s+are|angeboren|Charaktersache)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Das ist typisch für ihn."
+  - "Sie ist eben so."
+  - "That’s just how they are."
+  - "Das ist angeboren."
+  - "Reine Charaktersache."

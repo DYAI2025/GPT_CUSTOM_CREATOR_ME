@@ -1,0 +1,21 @@
+id: SEM_AUTHORITY_REFERENCE
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["authority"]
+  concept: "Autorität/Quelle als Stütze"
+  pragmatics: "Legitimierung"
+  narrative: "reasoning"
+tags: [authority, evidence]
+composed_of:
+  - ATO_APPEAL_TO_AUTHORITY_EXPERT
+  - ATO_APPEAL_TO_AUTHORITY_STUDY
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.6, weight: 1.0 }
+examples:
+  - "Experte X sagt… (Studie Y)."
+  - "Laut Studie… – Prof. Z."
+  - "Evidence von… & Fachmeinung…"
+  - "Paper zeigt… – Autor rät…"
+  - "Quelle: Metastudie + Expert Panel."

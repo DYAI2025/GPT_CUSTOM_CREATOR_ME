@@ -1,0 +1,23 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_STATUS_QUO_PREFERENCE
+frame:
+  signal: ["status_quo"]
+  concept: "Präferenz: 'alles bleibt wie es ist'"
+  pragmatics: "Veränderungsabwehr / Stabilitätswunsch"
+  narrative: "motive_safety"
+tags: [stability, habit, no_change]
+pattern:
+  regex: "(?i)\\b(alles\\s+so\\s+lassen|so\\s+bleibt\\s+wie\\s+es\\s+ist|blo(ß|ss)\\s+nichts\\s+(ändern|verändern)|keine\\s+ver(ä|ae)nderung(en)?|status\\s*quo)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Am liebsten wäre mir, wenn alles so bleibt wie es ist."
+  - "Bloß nichts ändern – so passt es."
+  - "Status quo behalten, bitte."
+  - "Ich will, dass alles so bleibt."
+  - "Keine Veränderungen jetzt."
+  - "Es funktioniert – also nichts anfassen."
+  - "Lass es so, wie’s ist."
+  - "Warum ändern? Das läuft doch."
+  - "Ich mag keine Änderungen am Setup."
+  - "Bitte alles so lassen."

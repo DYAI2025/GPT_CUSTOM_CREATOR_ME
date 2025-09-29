@@ -1,0 +1,32 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_NEGOTIATION_STANCE
+frame:
+  signal: ["negotiation_stance"]
+  concept: "Klares Begehren + Öffnung für Gegenseite"
+  pragmatics: "Assertiv, aber anschlussfähig"
+  narrative: "coordination"
+tags: [negotiation, assertive, cooperative]
+composed_of:
+  any_of:
+    - ATO_POWER_LANGUAGE
+    - ATO_MINI_DEADLINE
+    - ATO_REQUEST_FOR_FEEDBACK
+    - ATO_CLARIFY_REQ
+  optional:
+    - ATO_CONFIRM
+activation:
+  rule: "AT_LEAST 2 IN 3 messages"
+  window: 3
+scoring: { base: 0.62, weight: 1.08 }
+examples:
+  - "Ich brauche A bis morgen – was ist realistisch für dich?"
+  - "Priorität ist X. Welche Zugeständnisse wären möglich?"
+  - "Ich setze den Rahmen – gib mir deinen Vorschlag."
+  - "Frist Freitag – welche Alternative bietest du?"
+  - "Ich will Option B. Feedback?"
+  - "Das ist mein Angebot; was brauchst du dafür?"
+  - "Wir entscheiden heute – was ist deine Bedingung?"
+  - "Mein Anspruch: A zuerst. Passt das?"
+  - "Ich ziehe die Linie hier. Vorschlag?"
+  - "Klarer Wunsch: Y. Einwände?"

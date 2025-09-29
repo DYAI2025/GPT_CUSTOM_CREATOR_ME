@@ -1,0 +1,29 @@
+id: SEM_STONEWALLING_BEHAVIOR
+schema_version: LD-3.3
+lang: en
+category: SEMANTIC
+description: Semantic pattern for stonewalling and emotional withdrawal
+frame:
+  signal: ["emotional shutdown"]
+  concept: "Stonewalling Behavior"
+  pragmatics: "micro pattern recognition"
+  narrative: "intent"
+composed_of:
+  - ATO_BOUNDARY_SETTING
+  - ATO_PASSIVE_AGGRESSION
+  - ATO_EMOTIONAL_REGULATION
+activation_logic: "ANY 2"
+window:
+  messages: 2
+examples:
+  - "I won't discuss this anymore. Fine, we'll just sit here in silence then."
+  - "I need to shut down now. Whatever you want to say, I'm done listening."
+  - "I can't deal with this. I'm feeling nothing right now, completely checked out."
+  - "I'm not responding anymore. As you wish, we'll just stop communicating altogether."
+  - "This conversation is over. I need to emotionally disconnect to protect myself."
+  - "I won't engage with this. Fine, we'll just pretend everything is normal instead."
+  - "I'm done talking about it. Whatever, silence is easier than this constant conflict."
+  - "I can't continue this way. I'm shutting down emotionally to survive this."
+  - "No more words from me. I feel like I need to build walls to protect myself."
+  - "I'm closing off completely. As you wish, we'll just exist in separate bubbles."
+tags: [semantic, v3.3, stonewalling]

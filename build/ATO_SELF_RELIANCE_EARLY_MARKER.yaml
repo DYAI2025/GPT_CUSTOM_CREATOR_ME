@@ -1,0 +1,26 @@
+id: ATO_SELF_RELIANCE_EARLY_MARKER
+frame:
+  signal:
+  - brauche Abstand
+  - muss allein
+  - keine Zeit
+  concept: Vermeidende Bindung
+  pragmatics: Distanz schaffen
+  narrative: withdrawal
+pattern:
+- (?i)\\bhabe\ ich\\b
+examples:
+  positive:
+    - "Ich brauche jetzt Abstand."
+    - "Ich muss das allein schaffen."
+    - "Ich habe keine Zeit für dich."
+    - "Ich komme alleine klar."
+    - "Ich brauche niemanden."
+    - "Ich ziehe mich zurück."
+    - "Ich bin lieber für mich."
+    - "Ich regele das selbst."
+    - "Ich bin autark."
+    - "Ich bin unabhängig."
+  negative: []
+tags:
+- attachment

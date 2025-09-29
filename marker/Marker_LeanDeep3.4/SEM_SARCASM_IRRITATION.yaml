@@ -1,0 +1,20 @@
+id: SEM_SARCASM_IRRITATION
+version: "3.4"
+frame:
+  signal: ["sarcasm", "irritation"]
+  concept: "Sarkasmus mit genervtem Unterton"
+  pragmatics: "Gesichtsbedrohung"
+  narrative: "tone"
+tags: [sarcasm, irritation]
+composed_of:
+  - ATO_SARCASM_MARKER
+  - ATO_NEGATIVE_FEEDBACK_TOKEN
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.6, weight: 1.0 }
+examples:
+  - "Ja klar, großartig – das ist schlecht."
+  - "Na toll, wieder lächerlich."
+  - "\"Super gemacht\" – awful."
+  - "Fantastisch… /s – nutzlos."
+  - "Ganz großartig, peinlich."

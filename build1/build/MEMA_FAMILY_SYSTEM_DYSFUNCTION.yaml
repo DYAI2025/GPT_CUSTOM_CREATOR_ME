@@ -1,0 +1,40 @@
+id: MEMA_FAMILY_SYSTEM_DYSFUNCTION
+display_title: "Familiensystem-Dysfunktion"
+version: "3.3"
+lang: de
+category: MEMA
+description: "Meta-Muster dysfunktionaler Familiensysteme mit multiplen Konfliktebenen."
+frame:
+  signal: ["Systemische Familiendysfunktion"]
+  concept: "Familiensystem-Dysfunktion"
+  pragmatics: "Tieferliegende systemische Störungen der Familiendynamik"
+  narrative: "Dysfunktionale Familiensystemdynamik"
+combination:
+  type: "AND"
+  components:
+    - marker_id: "CLU_FAMILY_HIERARCHY_CONFLICT"
+      weight: 0.4
+    - marker_id: "CLU_GOTTMAN_TOXICITY_CLUSTER"
+      weight: 0.5
+    - marker_id: "CLU_SIBLING_DYNAMICS"
+      weight: 0.3
+    - marker_id: "CLU_HOUSEHOLD_ROUTINE_CONFLICTS"
+      weight: 0.3
+    - marker_id: "SEM_PARENTAL_AUTHORITY"
+      weight: 0.3
+  threshold: 0.8
+activation:
+  rule: "WEIGHTED_AND"
+window:
+  messages: 100
+scoring:
+  base: 2.5
+  weight: 1.0
+  decay: 0.01
+  formula: "logistic"
+examples:
+  - "Chronische Konflikte auf allen Familienebenen mit toxischen Kommunikationsmustern."
+tags: [mema, family, system, dysfunction, chronic, severe]
+detect_class: "E"
+criteria: "Akkumulation von Konflikten auf hierarchischer, geschwisterlicher und Routine-Ebene"
+updated_at: "2025-08-19T10:30:00Z"

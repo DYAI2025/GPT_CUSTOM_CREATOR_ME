@@ -1,0 +1,23 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_ACTION_VERBS
+frame:
+  signal: ["action_verb"]
+  concept: "Handlungsverben (tun, machen, starten, prüfen, senden, liefern)"
+  pragmatics: "Task-/Aktionsfokus"
+  narrative: "process"
+tags: [action, verb]
+pattern:
+  regex: '(?i)\b(tun|machen|starte?n|prüfen|senden|liefern|anstoßen|umsetzen|erledigen)\b'
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich prüfe das."
+  - "Bitte anstoßen."
+  - "Ich setze das um."
+  - "Kannst du das senden?"
+  - "Ich erledige das heute."
+  - "Wir starten jetzt."
+  - "Mach ich."
+  - "Ich liefere morgen."
+  - "Ich tue das gleich."
+  - "Wir setzen das um."

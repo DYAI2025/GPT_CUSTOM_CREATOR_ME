@@ -1,0 +1,26 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "consistency_external"
+
+defaults:
+  scoring:
+    window_messages: 5
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+
+markers:
+  - id: ATO_TEMPORAL_POINT
+    frame:
+      signal: ["gestern", "heute", "letzte Woche", "vorhin", "später", "inzwischen"]
+      concept: "Zeitbezugspunkt"
+    pattern:
+      - detect_class: phrase
+        list: ["gestern", "heute", "letzte Woche", "vorhin", "später", "inzwischen"]
+    score: 0.20
+    metadata: { type: ATO }
+    examples:
+      - "Gestern war ich kurz dort."
+      - "Heute sehe ich das anders."
+      - "Letzte Woche sagtest du X."
+      - "Vorhin meintest du Y."
+      - "Inzwischen ist es anders."

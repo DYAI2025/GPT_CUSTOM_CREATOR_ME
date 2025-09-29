@@ -1,0 +1,18 @@
+id: ATO_PLATFORM
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for platform-related terms
+frame:
+  signal: ["platform"]
+  concept: "Platform signal word"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\bplatform\\b"]
+examples:
+  - "This platform doesn't work well for us"
+  - "Can we switch to another platform?"
+  - "The platform has limitations" 
+  - "I prefer a different platform for this"
+  - "Which platform do you usually use?"
+tags: [atomic, v3.3, auto-generated]

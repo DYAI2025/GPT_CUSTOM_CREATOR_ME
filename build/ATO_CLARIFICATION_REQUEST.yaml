@@ -1,0 +1,36 @@
+id: ATO_CLARIFICATION_REQUEST
+version: '3.4'
+category: ATOMIC
+description: Marker für Verständnisfragen und Klärungsanfragen
+frame:
+  signal:
+  - clarifying request
+  concept: ensure shared meaning
+  pragmatics: repair / alignment
+  narrative: check
+pattern:
+- (?i)meinen sie damit\??|do you mean\??
+- (?i)k(ö|oe)nnen sie das konkretisieren\??|can you be more specific\??
+- (?i)habe ich sie richtig verstanden\??|did i get that right\??
+activation:
+  rule: ANY in 1 message
+scoring:
+  weight: 1.0
+examples:
+  positive:
+    - "Meinen Sie damit...?"
+    - "Können Sie das konkretisieren?"
+    - "Habe ich Sie richtig verstanden?"
+    - "Was genau meinen Sie mit...?"
+    - "Können Sie das noch einmal erklären?"
+    - "Ich bin mir nicht sicher, ob ich das richtig verstanden habe."
+    - "Können Sie ein Beispiel geben?"
+    - "Was bedeutet das für Sie?"
+    - "Können Sie das präzisieren?"
+    - "Ich brauche mehr Details."
+  negative: []
+tags:
+- atomic
+- alignment
+- repair
+- therapist_move

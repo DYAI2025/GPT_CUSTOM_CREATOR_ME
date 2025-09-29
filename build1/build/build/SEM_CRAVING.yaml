@@ -1,0 +1,21 @@
+id: EMO_CRAVING
+lang: de
+category: SEMANTIC
+description: "Ausdruck von Appetit oder Lust auf etwas."
+frame:
+  signal: ["hab Lust auf", "könnte gerade", "brauch jetzt unbedingt"]
+  concept: "Verlangen"
+  pragmatics: "Selbstoffenbarung eines Bedürfnisses"
+  narrative: "sehnsucht"
+composed_of:
+  - ATO_DESIRE_VERB
+  - ATO_OBJECT_OF_DESIRE
+activation_logic: "ANY 2 IN 3 messages"
+scoring: { base: 1.4, weight: 1.1 }
+examples:
+  - "Ich hab so Lust auf Schokolade."
+  - "Könnte jetzt echt ein Bier gebrauchen."
+  - "Brauch unbedingt einen Kaffee."
+  - "Hätte gerade gern eine Massage."
+  - "Sehnsucht nach einem Strandurlaub."
+tags: [semantic, emotional, craving]

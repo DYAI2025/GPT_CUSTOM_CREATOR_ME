@@ -1,0 +1,28 @@
+id: SEM_WEBCAM_EXCUSE
+schema_version: LD-3.3
+lang: en
+category: SEMANTIC
+description: Semantic pattern for excuses or explanations for not enabling webcam/video
+frame:
+  signal: ["video avoidance"]
+  concept: "Excuses or explanations for not enabling webcam/video"
+  pragmatics: "Useful for meeting-availability and participation analysis"
+  narrative: "Reasons that justify keeping camera off"
+composed_of:
+  - ATO_WEBCAM_PHRASE
+  - ATO_WEBCAM_CONTEXT_PHRASE
+activation_logic: "ANY 1"
+window:
+  messages: 2
+examples:
+  - "I'll turn on the camera, but bandwidth is too low for good video."
+  - "My camera is off because there's no privacy for video right now."
+  - "The webcam is broken and the connection is bad for video anyway."
+  - "Camera doesn't work and I'm not comfortable on camera today."
+  - "Sorry, can't use webcam - poor lighting and bad connection for video."
+  - "Let me keep camera off since bandwidth is low for video calls."
+  - "Webcam isn't working and background noise would be distracting."
+  - "Camera is down and no privacy to turn on video anyway."
+  - "Video is off due to technical issues and poor lighting."
+  - "Can't turn on camera - not comfortable and connection is unstable."
+tags: [semantic, v3.3, webcam-excuses, availability]

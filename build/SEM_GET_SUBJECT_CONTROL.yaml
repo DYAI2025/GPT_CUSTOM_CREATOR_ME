@@ -1,0 +1,31 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_GET_SUBJECT_CONTROL
+frame:
+  signal: ["subject_control"]
+  concept: "Themensteuerung und -hoheit"
+  pragmatics: "Kontrolle & Sicherheit"
+  narrative: "coordination"
+tags: [control, coordination]
+composed_of:
+  any_of:
+    - ATO_SOVEREIGNTY_OVER_SUBJECT
+    - ATO_SUBJECT_CLOSED
+    - ATO_TOPIC_RAISED
+    - ATO_QUESTIONING
+    - ATO_DEEPER_QUESTIONING
+  optional:
+    - ATO_PACING
+    - ATO_ACKNOWLEDGE
+    - ATO_MINI_DEADLINE
+    - ATO_CLOSE
+activation:
+  rule: "AT_LEAST 3 IN 4 messages"
+  window: 4
+scoring: { base: 0.6, weight: 1.15 }
+examples:
+  - "Zur Sache: Zeitplan – warum jetzt? – Der Reihe nach."
+  - "Thema erledigt – kurzes Themenwechsel: Budget – ok, gesehen."
+  - "Wir sprechen jetzt über Prioritäten – erzähl mir mehr – passt."
+  - "Bleiben wir beim Thema – inwiefern? – Haken dran."
+  - "Anderes Thema: Abhängigkeiten – wie genau? – Notiert."

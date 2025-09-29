@@ -1,0 +1,27 @@
+id: SEM_JOINT_FUTURE_INITIATIVE
+lang: en
+category: SEMANTIC
+description: "Linguistic initiatives proposing joint future action."
+frame:
+  signal: ["let's …", "we could …", "shall we plan …"]
+  concept: "Shared future action"
+  pragmatics: "Coordination, bonding"
+  narrative: "Outlook + invitation"
+composed_of:
+  - ATO_WE_PLAN
+  - ATO_FUTURE_IDEA
+activation_logic: "ANY 2 IN 2 messages"
+scoring: { base: 1.3, weight: 1.0 }
+window: { messages: 4 }
+examples:
+  - "Let's cook together next week."
+  - "We could do a weekend trip."
+  - "Shall we plan the exhibition on Saturday?"
+  - "Want to start a workout routine together?"
+  - "How about a small workshop for two?"
+  - "We could map the route tonight."
+  - "Let's kick-off the project."
+  - "We'll handle the move together."
+  - "We could book the tickets today."
+  - "Let's split tasks tomorrow."
+tags: [semantic, planning, bonding]

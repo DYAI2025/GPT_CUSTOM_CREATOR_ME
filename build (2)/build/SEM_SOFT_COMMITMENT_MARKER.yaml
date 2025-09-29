@@ -1,0 +1,21 @@
+id: SEM_SOFT_COMMITMENT_MARKER
+family: SEM
+description: ''
+notes: ''
+id: SEM_SOFT_COMMITMENT_MARKER
+family: SEM
+description: ''
+notes: ''
+examples:
+  positive:
+    - "Ich werde versuchen, das zu erledigen."
+    - "Ich schaue mal, was ich machen kann."
+    - "Ich denke darüber nach."
+    - "Ich werde mein Bestes geben."
+    - "Ich werde mich darum kümmern, sobald ich Zeit habe."
+    - "Ich werde es im Auge behalten."
+    - "Ich werde sehen, ob das möglich ist."
+    - "Ich werde es versuchen."
+    - "Ich werde mich bemühen."
+    - "Ich werde es in Betracht ziehen."
+  negative: []

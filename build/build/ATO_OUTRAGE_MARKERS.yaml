@@ -1,0 +1,17 @@
+id: ATO_OUTRAGE_MARKERS
+version: "3.4"
+frame:
+  signal: ["outrage"]
+  concept: "Empörung/Skandal-Rhetorik"
+  pragmatics: "Moralische Erregung"
+  narrative: "moral_frame"
+tags: [morality, outrage]
+pattern:
+  regex: "\\b(Skandal|schäme\\s+dich|unfassbar|empörend|shame|disgrace)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Skandal!"
+  - "Schäme dich."
+  - "Unfassbar."
+  - "Empörend."
+  - "What a disgrace."

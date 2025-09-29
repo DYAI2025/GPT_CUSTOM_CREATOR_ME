@@ -1,0 +1,39 @@
+id: CLU_RUPTURE_TENSION
+version: '3.4'
+category: CLUSTER
+description: Fehlabstimmungs-Signale, Patt und Rückzug
+frame:
+  signal:
+  - misalignment signals, stalemate, withdrawal
+  concept: micro-rupture / heightened tension
+  pragmatics: need for repair
+  narrative: strain
+composed_of:
+- SEM_MISALIGNMENT_CUE
+- SEM_UNRESOLVED_ISSUE
+- ATO_OFFENDED_SILENCE
+activation:
+  rule: COUNT(SEM_MISALIGNMENT_CUE)+COUNT(SEM_UNRESOLVED_ISSUE)+COUNT(ATO_OFFENDED_SILENCE)
+    >= 3 IN 20
+  window:
+    messages: 20
+scoring:
+  weight: 1.4
+examples:
+  positive:
+    - "Ich glaube, wir reden aneinander vorbei."
+    - "Das habe ich so nicht gesagt."
+    - "(längeres Schweigen)"
+    - "Ich weiß nicht, was ich dazu sagen soll."
+    - "Wir kommen hier nicht weiter."
+    - "Ich fühle mich gerade nicht verstanden."
+    - "Das führt doch zu nichts."
+    - "Ich glaube, Sie verstehen nicht, was ich meine."
+    - "Ich wiederhole mich nur."
+    - "Lassen wir das Thema."
+  negative: []
+tags:
+- cluster
+- rupture
+- tension
+- misalignment

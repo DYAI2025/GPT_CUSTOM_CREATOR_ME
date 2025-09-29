@@ -1,0 +1,18 @@
+id: ATO_CONTROL
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for controlling language and behavior
+frame:
+  signal: ["control"]
+  concept: "Control signal"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\b(you can't|not allowed|you should|must|have to|need my permission)\\b"]
+examples:
+  - "You can't make that decision alone."
+  - "You're not allowed to see them."
+  - "You should ask me first."
+  - "You must follow my guidance."
+  - "You need my permission for this."
+tags: [atomic, v3.3, control, dominance]

@@ -1,0 +1,29 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_ALIGNMENT_CHECK
+frame:
+  signal: ["alignment_check"]
+  concept: "Abgleich auf gemeinsamen Kontext"
+  pragmatics: "Missverständnisse vermeiden"
+  narrative: "coordination"
+tags: [alignment, clarify, confirm]
+composed_of:
+  any_of:
+    - ATO_SHARED_CONTEXT
+    - ATO_CLARIFY_REQ
+    - ATO_CONFIRM
+activation:
+  rule: "AT_LEAST 2 IN 2 messages"
+  window: 2
+scoring: { base: 0.58, weight: 1.02 }
+examples:
+  - "Nur damit wir gleich meinen: du sprichst von Projekt X, oder?"
+  - "Kurze Klärung: Meinst du den Launch am Freitag?"
+  - "Ich verstehe: Gleiche Definition wie gestern?"
+  - "Passt – du bestätigst die Priorität A> B?"
+  - "Frage: Beziehen wir uns beide auf die neue Policy?"
+  - "Kurz klarziehen: identische Datenbasis?"
+  - "Check: Gemeinsames Ziel bleibt Q3-Release?"
+  - "Nur zur Sicherheit: gleiche Metriken?"
+  - "Kleiner Abgleich: selbe Annahmen?"
+  - "Ich bestätige: Wir reden über Team Alpha."

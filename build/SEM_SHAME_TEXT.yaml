@@ -1,0 +1,31 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "ld34_text_social_grammar"
+id: SEM_SHAME_TEXT
+lang: de
+category: SEMANTIC
+description: "Schamcluster aus Selbstabwertung, Entschuldigung und Hedging."
+frame:
+  signal: ["Selbstabwertung + Entschuldigung + Abschwächer im Nahfenster"]
+  concept: "Scham (Text)"
+  pragmatics: "Gesicht wahren, Rückzug"
+  narrative: "Selbstabwertungsspirale"
+composed_of:
+  - ATO_SELF_DEPRECATION
+  - ATO_APOLOGY
+  - ATO_HEDGE_TERM
+activation_logic: "ANY 2 IN 2 messages"
+scoring: { base: 1.4, weight: 1.1 }
+examples:
+  - "Peinlich von mir, sorry, vielleicht krieg ich’s später hin."
+  - "Ich bin echt doof, tut mir leid, irgendwie verkack ich das."
+  - "Sorry, war dumm von mir, ich glaube, ich kann’s besser."
+  - "Tut mir leid, ich bin einfach schlecht darin, vielleicht übe ich."
+  - "Peinlich, sorry, ich versuch’s nochmal."
+  - "Ich bin dumm, tut mir leid, vielleicht nächstes Mal."
+  - "Sorry, peinlich, ich glaube, ich lerne draus."
+  - "Tut mir leid, dumm gelaufen, irgendwie."
+tags: [semantic, shame]
+metadata:
+  repair_log:
+    - { rule: "R06", note: "Nur composed_of beibehalten", date: "2025-08-29" }

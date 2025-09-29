@@ -1,0 +1,43 @@
+id: ATO_GOTTMAN_STONEWALLING
+display_title: "Gottman: Mauern"
+version: "3.3"
+lang: de
+category: ATOMIC
+description: "Erkennung von Kommunikationsverweigerung nach Gottmans Konfliktmustern."
+frame:
+  signal: 
+    - "ich will nicht reden"
+    - "lass mich in Ruhe"
+    - "darüber rede ich nicht"
+    - "ich habe nichts zu sagen"
+    - "mir reicht's"
+  concept: "Gottman: Mauern"
+  pragmatics: "Kommunikationsverweigerung und emotionaler Rückzug"
+  narrative: "Defensive Kommunikation"
+pattern:
+  - "(?i)\\bich will nicht reden\\b"
+  - "(?i)\\blass mich in Ruhe\\b"
+  - "(?i)\\bdarüber rede ich nicht\\b"
+  - "(?i)\\bich habe nichts zu sagen\\b"
+  - "(?i)\\bmir reicht'?s\\b"
+  - "(?i)\\bkein Kommentar\\b"
+  - "(?i)\\bich bin raus\\b"
+activation:
+  rule: "ANY 1"
+window:
+  messages: 30
+scoring:
+  base: 1.6
+  weight: 0.55
+  decay: 0.04
+  formula: "logistic"
+examples:
+  - "Ich will nicht reden."
+  - "Lass mich in Ruhe mit dem Thema."
+  - "Darüber rede ich nicht mehr."
+  - "Ich habe nichts zu sagen."
+  - "Mir reicht's, ich bin raus."
+tags: [atomic, gottman, stonewalling, conflict, withdrawal]
+detect_class: null
+criteria: null
+updated_at: "2025-08-19T10:30:00Z"

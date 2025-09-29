@@ -1,0 +1,23 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_COMPETITIVE_FRAME
+frame:
+  signal: ["competition"]
+  concept: "Vergleich/Gewinnen als Bezugsrahmen"
+  pragmatics: "Leistungs-/Rangordnung"
+  narrative: "motive_achievement"
+tags: [competition, ranking]
+pattern:
+  regex: '(?i)\b(gewinnen|gewinn(e|en)|wettbewerb|besser\s+als\s+(alle|andere)|(?:alle|andere)\s+schlagen|übertreffen|uebertreffen)\b'
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich will gewinnen."
+  - "Im Wettbewerb setze ich mich durch."
+  - "Ich bin besser als alle anderen."
+  - "Wir schlagen die Konkurrenz."
+  - "Ich will sie übertreffen."
+  - "Vergleich: Wir liegen vorn."
+  - "Ich will der Schnellste sein."
+  - "Ich will die anderen hinter mir lassen."
+  - "Ich strebe den Sieg an."
+  - "Wir wollen Platz 1 erreichen."

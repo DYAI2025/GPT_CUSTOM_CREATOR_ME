@@ -1,0 +1,18 @@
+id: ATO_POWERLESSNESS
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["powerlessness"]
+  concept: "Macht-/Kontrollverlust"
+  pragmatics: "Risikofokus"
+  narrative: "affect"
+tags: [affect, control]
+pattern:
+  regex: "\\b(ohnmacht|machtlos|keine\\s+Kontrolle|ausgeliefert|überfordert)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ohnmacht."
+  - "Machtlos."
+  - "Keine Kontrolle."
+  - "Ausgeliefert."
+  - "Überfordert."

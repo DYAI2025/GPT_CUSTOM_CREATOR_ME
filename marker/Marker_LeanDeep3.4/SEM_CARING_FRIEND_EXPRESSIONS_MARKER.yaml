@@ -1,0 +1,25 @@
+id: SEM_CARING_FRIEND_EXPRESSIONS_MARKER
+frame:
+  signal:
+  - kann nicht mehr
+  - tut mir leid
+  - bin fertig
+  concept: Negative Emotion
+  pragmatics: Leid ausdrücken
+  narrative: sadness
+composed_of:
+- ATO_UNKNOWN
+activation:
+  rule: ANY 2 IN 3 messages
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- Pass auf dich auf, du Spinner.
+- Ich hab dich echt lieb, Mann.
+- Wenn du was brauchst, meld dich – ehrlich.
+- Wär nicht dasselbe ohne dich, du Lappen.
+- Ich will einfach, dass’s dir gut geht.
+tags:
+- affect
+- emotion

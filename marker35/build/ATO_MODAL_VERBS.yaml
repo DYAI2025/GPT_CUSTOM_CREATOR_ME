@@ -1,0 +1,18 @@
+id: ATO_MODAL_VERBS
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for modal verbs indicating obligation or possibility
+frame:
+  signal: ["Modalität", "modality"]
+  concept: "Modal Expression"
+  pragmatics: "epistemic stance"
+  narrative: "token"
+pattern: ["(?i)\\b(muss|sollte|könnte|dürfte|würde|kann|mag|will|soll)\\b"]
+examples:
+  - "Ich muss das verstehen."
+  - "Das sollte funktionieren."
+  - "Ich könnte das versuchen."
+  - "Das würde ich gerne machen."
+  - "Ich kann das nicht entscheiden."
+tags: [modality, atomic, obligation, v3.3]

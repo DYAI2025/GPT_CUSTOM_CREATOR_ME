@@ -1,0 +1,36 @@
+id: ATO_EMOTIONAL_GRANULARITY
+version: "3.3"
+frame:
+  signal: ["fühlt sich an wie", "spüre eine Art", "etwas zwischen"]
+  concept: "Emotionale Differenzierung"
+  pragmatics: "Gefühlsnuancierung"
+  narrative: "differentiation"
+pattern:
+  - "(?i)\\b(fühlt sich an wie|es ist wie)\\b"
+  - "(?i)\\b(spüre (eine art|so etwas wie))\\b"
+  - "(?i)\\b(etwas zwischen|mischung aus)\\b"
+  - "(?i)\\b(nicht genau|schwer zu beschreiben)\\b"
+examples:
+  - "Es fühlt sich an wie eine Mischung aus Angst und Sehnsucht"
+  - "Ich spüre eine Art Schwere in mir"
+  - "Es ist etwas zwischen Wut und Traurigkeit"
+  - "Schwer zu beschreiben, was ich gerade fühle"
+  - "Nicht genau Eifersucht, aber so ähnlich"
+  - "Es fühlt sich an wie ein leises Unbehagen"
+  - "Ich spüre eine Art inneren Konflikt"
+  - "Es ist etwas zwischen Freude und Erleichterung"
+  - "Nicht genau Traurigkeit, aber auch nicht ganz Glück"
+  - "Es fühlt sich an wie eine subtile Spannung"
+  - "Ich spüre eine Art von innerer Unruhe"
+  - "Es ist etwas zwischen Hoffnung und Zweifel"
+  - "Nicht genau Angst, aber auch nicht ganz sicher"
+  - "Es fühlt sich an wie eine leise Melancholie"
+  - "Ich spüre eine Art von innerer Zerrissenheit"
+  - "Es ist etwas zwischen Enttäuschung und Akzeptanz"
+  - "Nicht genau Wut, aber auch nicht ganz ruhig"
+  - "Es fühlt sich an wie eine komplexe Emotion"
+  - "Ich spüre eine Art von innerer Balance"
+  - "Es ist etwas zwischen Freude und Traurigkeit"
+  - "Es ist höchst ambivalent und schwer zu fassen"
+tags: [atomic, emotion, granularity, nuance]
+schema_version: "3.3"

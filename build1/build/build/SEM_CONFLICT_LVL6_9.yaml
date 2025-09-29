@@ -1,0 +1,40 @@
+id: SEM_CONFLICT_LVL6_9
+frame:
+  signal:
+  - mutual threats
+  - vow of harm
+  - curse under breath
+  - doxxing hint
+  - complete breakdown
+  concept: conflict escalation level 6-9
+  pragmatics: mutual destruction
+  narrative: irreparable breach
+composed_of:
+- ATO_PLACEHOLDER
+activation:
+  rule: ANY 2 IN 3 messages
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- Wenn ich schon verliere, reiße ich dich mit in den Abgrund!
+- Ich hoffe, du zahlst für all das – wir gehen beide kaputt.
+- Du glaubst, du kannst mich fertig machen? Versuch’s doch!
+- Am Ende liegen wir beide am Boden, aber ich werd stärker aufstehen.
+- Ich werde jeden Fehler von dir veröffentlichen – du bezahlst dafür.
+- Lass uns beide bodigen und sehen, wer zuerst aufgibt.
+- Dein Leben wird nie mehr dasselbe sein – und meins auch nicht.
+- Ich zerstöre dich, und danach bin ich dran – so sind die Regeln.
+- Niemand wird jemals wieder auf einen von uns hören.
+- Wir sind beide erledigt, aber du hast den größeren Schaden.
+- Ich werde dich umbringen, es ist mir alles scheißegal, ob ich dafür in den Knast
+  gehe!
+- Ich werde dir dein Leben ruinieren, so dass du dir wünschten wirst, tot zu sein
+- Du hast es so gewollt, jetzt wirst du dafür bezahlen - ich nehme alles in kauf
+- Ich werde dich so fertig machen, dass du nie wieder auf die Beine kommst.
+- Ich schwöre dir totale Rache!
+- Dafür wirst du bezahlen, und ich werde nicht ruhen, bis du es tust.
+tags:
+- conflict
+- escalation
+- lvl6-9

@@ -1,0 +1,21 @@
+id: ATO_PROOF_SEEKING_BEHAVIOR
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "aktiv Beweise/Funde suchen, um Annahme zu stützen"
+  concept: "Beweis-/Kontrollsuche"
+  pragmatics: "Eskalationsrisiko"
+  narrative: "Bestätigungsfalle"
+pattern:
+  - '(?i)\b(beweis(e)?\s+suchen|etwas\s+finden\s+wollen)\b'
+  - '(?i)\b(nach\s+belegen\s+schauen)\b'
+  - '(?i)\b(in\s+(mein|dein)\s+handy\s+schau\w*)\b'
+  - '(?i)\b(ich\s+will\s+etwas\s+bestätigt\s+sehen)\b'
+examples:
+  - "Du willst ja etwas finden, was dir das beweist."
+  - "Ich suche Belege dafür."
+  - "Ich würde ins Handy schauen."
+  - "Ich will bestätigt sehen, was ich vermute."
+  - "Ich brauche Funde, sonst glaube ich es nicht."
+tags: [proof, control, atomic]

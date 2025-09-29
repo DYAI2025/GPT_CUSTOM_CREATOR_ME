@@ -1,0 +1,27 @@
+id: MEMA_CODE_VIOLATION_SIGNATURE
+frame:
+  signal: ["Humor-Code erkannt (Maximen-/Register-Muster)"]
+  concept: "Joking-Frame etabliert"
+  pragmatics: "Nicht-bona-fide Kommunikation"
+  narrative: "frame_lock"
+composed_of:
+  - CLU_MAXIM_FLOUTING
+  - CLU_QA_RIDDLE_FORMATS
+activation:
+  rule: "ANY 2 IN 30 messages"
+scoring:
+  base: 2.3
+  weight: 1.5
+  decay: 0.01
+  formula: "logistic"
+window:
+  messages: 30
+  seconds: 3600
+examples:
+  - "Mehrere Maximenflouts + Q&A-Jokes im Fenster."
+  - "Register-Clash + Rätsel-Form wiederholt."
+  - "Ambiguitätssignale + Antiphrase ballen sich."
+  - "Ironie-Kette plus Format-Wiederkehr."
+  - "Joking-Frame über mehrere Beiträge stabil."
+tags: [humor, meta, code_violation, v33]
+schema_version: "3.3"

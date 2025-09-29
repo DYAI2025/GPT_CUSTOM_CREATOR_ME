@@ -1,0 +1,46 @@
+id: ATO_CONTRAST_CONJUNCTION
+lang: de
+category: ATOMIC
+description: "Detektiert Konjunktionen und Wendungen, die einen Gegensatz, Widerspruch oder Kontrast markieren."
+frame:
+  signal:      ["Kontrast-Konjunktion", "Widerspruch", "Gegensatz"]
+  concept:     "Gegensätzliche Verknüpfung"
+  pragmatics:  "Hebt Unterschiede oder Brüche hervor"
+  narrative:   "contrast"
+pattern:
+  - "(?i)\\baber\\b"
+  - "(?i)\\bjedoch\\b"
+  - "(?i)\\bandererseits\\b"
+  - "(?i)\\bbut\\b"
+  - "(?i)\\bhowever\\b"
+  - "(?i)on the other hand"
+activation_logic: "ANY 1"
+examples:
+  - "..., aber in Beziehungen kann das schwierig sein."
+  - "..., but in relationship contexts it's tricky."
+  - "I like it, but I don't love it."
+  - "Ich mag es, aber ich liebe es nicht."
+  - "Ich will kommen, aber ich schaff's vielleicht nicht."
+  - "I'd love to go, however I'm broke."
+  - "Er sagt ja, andererseits klingt das komisch."
+  - "I like the idea, but I'm not convinced."
+  - "Wir könnten gehen, jedoch regnet es."
+  - "Sounds fun, but I'm exhausted."
+  - "Das gefällt mir, aber ich bin noch unsicher."
+  - "Eigentlich wollte ich, aber jetzt doch nicht."
+  - "I'd join you, but I'm busy."
+  - "Sie ist nett, aber manchmal zu direkt."
+  - "I want to help, however, I'm not sure how."
+tags:
+  - kontrast
+  - konjunktion
+  - widerspruch
+  - atomic
+window:
+  messages: 5
+scoring:
+  base: 1.0
+  weight: 1.0
+  decay: 0.0
+  formula: "linear"
+schema_version: "3.2"

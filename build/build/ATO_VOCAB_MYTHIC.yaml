@@ -1,0 +1,15 @@
+id: ATO_VOCAB_MYTHIC
+version: "3.4"
+frame:
+  signal: [ "vocab", "mythic" ]
+  concept: "Eigene Mythologie"
+  pragmatics: "Erzeugt narrative Ankerpunkte"
+  narrative: "hypothesis"
+tags: [ narion, vocab, mythic, atomic ]
+activation: { rule: "REGEX: \\b(Glockenschmied|Schwellenhüterin|Flügel|Moiré|Glockenschlag)\\b" }
+examples:
+- "Glockenschmied"
+- "Schwellenhüterin"
+- "Flügel"
+- "Moiré"
+- "Glockenschlag"

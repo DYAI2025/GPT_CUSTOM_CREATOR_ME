@@ -1,0 +1,18 @@
+id: ATO_SECRECY
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["secrecy"]
+  concept: "Geheimhaltung/Zurückhalten"
+  pragmatics: "Boundary/Trust"
+  narrative: "interaction"
+tags: [secrecy, trust]
+pattern:
+  regex: "\\b(geheim|unter\\s+uns|Diskretion|nicht\\s+weiter\\s+sagen|vertraulich)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Das bleibt geheim."
+  - "Unter uns."
+  - "Bitte Diskretion."
+  - "Nicht weitersagen."
+  - "Vertraulich."

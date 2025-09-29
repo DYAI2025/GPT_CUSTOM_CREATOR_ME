@@ -1,0 +1,20 @@
+id: SEM_ANXIETY_LANGUAGE
+version: "3.4"
+frame:
+  signal: ["anxiety"]
+  concept: "Sorgen-/Angstformeln"
+  pragmatics: "Affektive Reaktion"
+  narrative: "affect"
+tags: [anxiety, affect]
+composed_of:
+  - ATO_ANXIETY_TERMS
+  - ATO_HEDGING_TERMS
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.55, weight: 1.0 }
+examples:
+  - "Ich habe Angst – vielleicht…"
+  - "Sorge, es könnte kippen."
+  - "Panik – tendenziell riskant."
+  - "Mulmig – might fail."
+  - "Unheimlich – appears risky."

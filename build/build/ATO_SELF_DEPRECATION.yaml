@@ -1,0 +1,32 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "ld34_text_social_grammar"
+id: ATO_SELF_DEPRECATION
+lang: de
+category: ATOMIC
+description: "Selbstabwertung zeigt Scham, Unsicherheit oder vorwegnehmendes Entwaffnen."
+frame:
+  signal: ["ich bin dumm","peinlich","lächerlich von mir","ich schäme mich"]
+  concept: "Scham / Selbstabwertung"
+  pragmatics: "Kritik vorwegnehmen, Erwartungen senken"
+  narrative: "Selbstabwertung zur Kontrolle"
+pattern:
+  - '(?i)\bich\s+bin\s+dumm\b'
+  - '(?i)\bpeinlich\b'
+  - '(?i)\blächerlich\s+von\s+mir\b'
+  - '(?i)\bich\s+schäme\s+mich\b'
+activation_logic: "ANY 1"
+examples:
+  - "Das war echt dumm von mir."
+  - "Voll peinlich, was ich da gesagt hab."
+  - "Lächerlich von mir, sorry."
+  - "Ich schäme mich dafür."
+  - "Ich bin einfach nicht gut genug."
+  - "Peinlich, ich hätte es wissen müssen."
+  - "Dumm von mir, ehrlich."
+  - "Ich schäme mich, das war nicht ok."
+tags: [atomic, shame, text]
+metadata:
+  repair_log:
+    - { rule: "R09", note: "Frame ergänzt", date: "2025-08-29" }
+    - { rule: "R10", note: "ATO-Default gesetzt", date: "2025-08-29" }

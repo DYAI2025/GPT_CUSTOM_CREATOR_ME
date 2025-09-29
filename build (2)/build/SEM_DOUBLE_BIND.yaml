@@ -1,0 +1,32 @@
+id: SEM_DOUBLE_BIND
+frame:
+  signal:
+  - egal was du machst
+  - so oder so ist es falsch
+  - du kannst es mir nie recht machen
+  - es gibt keine richtige Antwort
+  - wie du es machst, ist es verkehrt
+  concept: Double Bind
+  pragmatics: Paradoxe Kommunikation
+  narrative: Ausweglosigkeit
+composed_of:
+  - ATO_DOUBLE_BIND_EXPRESSIONS
+activation:
+  rule: "ANY 2 IN 3 messages"
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- Egal was du machst, es ist falsch.
+- So oder so, am Ende machst du alles verkehrt.
+- Du kannst es mir sowieso nie recht machen.
+- Es gibt einfach keine richtige Antwort bei dir.
+- Wie du es machst, ist es verkehrt.
+- Ob du kommst oder nicht, es wird immer ein Problem sein.
+- Was du auch sagst, du machst es nur schlimmer.
+- Du bist immer im falschen Moment da.
+- Du kannst machen, was du willst – es reicht nie.
+- Mit dir kommt man einfach nie auf einen Nenner.
+tags:
+- double_bind
+- paradox

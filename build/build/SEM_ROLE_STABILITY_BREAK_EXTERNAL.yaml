@@ -1,0 +1,27 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "consistency_external"
+
+defaults:
+  scoring:
+    window_messages: 5
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+
+markers:
+  - id: SEM_ROLE_STABILITY_BREAK_EXTERNAL
+    frame:
+      signal: ["Rollen-/Pronomenwechsel bei Verantwortung"]
+      concept: "Ownership-Drift"
+    composed_of: [ATO_ROLE_PRONOUN_SHIFT]
+    pattern:
+      - detect_class: heuristic
+        rule: "pronoun_shift_at_claim_or_apology(other)"
+    scoring: { base: 0.58 }
+    metadata: { type: SEM }
+    examples:
+      - '"Ich habe entschieden" → "Wir haben entschieden".'
+      - '"Ich musste zahlen" → "Wir mussten zahlen".'
+      - '"Ich machte Fehler" → "Wir machten Fehler".'
+      - '"Ich sagte zu" → "Wir sagten zu".'
+      - '"Ich habe bezahlt" → "Wir haben bezahlt".'

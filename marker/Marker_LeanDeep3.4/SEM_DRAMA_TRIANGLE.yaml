@@ -1,0 +1,33 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_DRAMA_TRIANGLE
+frame:
+  signal: ["Verfolger", "Opfer", "Retter", "Rollenwechsel", "Dramaspiel"]
+  concept: "Drama Triangle (Karpman)"
+  pragmatics: "Rollenrotation in Dysfunktion"
+  narrative: "interaction"
+composed_of:
+  any_of:
+    - ATO_VICTIM_LANGUAGE
+    - ATO_GUILT_TRIP
+    - ATO_BLAME_SHIFT
+activation:
+  rule: "AT_LEAST 2 IN 3 messages"
+  window: 3
+scoring:
+  base: 1.2
+  weight: 1.05
+examples:
+  positive:
+    - "Ich muss ihn retten, er ist so hilflos."
+    - "Immer passiert mir das. Ich bin das Opfer."
+    - "Du bist schuld daran, dass das passiert ist."
+    - "Ich habe es ja nur gut gemeint, aber er hat es wieder mal vermasselt."
+    - "Ich bin so müde, immer der Starke sein zu müssen."
+    - "Sie macht mich immer fertig. Ich kann nichts richtig machen."
+    - "Ich muss ihn zur Rede stellen. Er muss endlich Verantwortung übernehmen."
+    - "Ich bin so enttäuscht von ihm. Ich habe alles für ihn getan."
+    - "Ich bin so wütend auf sie. Sie manipuliert mich ständig."
+    - "Ich bin so allein mit all diesen Problemen. Niemand versteht mich."
+  negative: []
+tags: [drama_triangle]

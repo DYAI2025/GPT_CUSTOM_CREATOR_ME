@@ -1,0 +1,13 @@
+examples:
+  positive:
+    - "Du übertreibst."
+    - "Das ist doch gar nicht so schlimm."
+    - "Stell dich nicht so an."
+    - "Du bist zu empfindlich."
+    - "Das ist doch kein Grund, traurig zu sein."
+    - "Reiß dich zusammen."
+    - "Das ist doch lächerlich."
+    - "Du bist verrückt."
+    - "Das bildest du dir nur ein."
+    - "Das ist doch Unsinn."
+  negative: []

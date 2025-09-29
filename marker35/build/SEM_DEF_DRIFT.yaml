@@ -1,0 +1,25 @@
+schema: LeanDeep
+version: "3.4"
+namespace: consistency_external
+
+defaults:
+  scoring:
+    window_tokens: 120
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+  scope:
+    unit: "speaker"
+    target: "OTHER"
+
+sems:
+  - id: SEM_DEF_DRIFT
+    frame:
+      signal: ["Term-Umdefinition in kurzer Spanne"]
+      concept: "Bedeutungsdrift"
+      pragmatics: "Gesichtsrettung/Unschärfe"
+      narrative: "Fixiere Termgebrauch"
+    composed_of: [ATO_REDEFINITION, ATO_CONTRADICTION_CUE]
+    activation:
+      rule: "term_changed + contradiction_cue within 120 tokens"
+    scoring: { base: 0.62, weight: 1.0 }
+    tags: [semantics, drift]

@@ -1,0 +1,20 @@
+id: ATO_TREMOLO_VOICE
+schema_version: "LD-3.3"
+lang: de
+category: ATOMIC
+description: "Atomic pattern for voice tremolo/vibrato"
+frame:
+  signal: ["F0 Modulation Pattern"]
+  concept: "zittern"
+  pragmatics: "Emotion"
+  narrative: "audio"
+detect_class:
+  module: prosody.tremolo
+  params: { modulation_freq_hz: [4, 8], modulation_depth_min: 0.15 }
+examples:
+  - "[Stimmzittern erkannt]"
+  - "[Emotionale Bewegung in der Stimme]"
+  - "[Vibrato in der Sprechstimme]"
+  - "[Unsichere Stimmführung]"
+  - "[Tremolo bei intensiver Emotion]"
+tags: [emotion, audio, atomic]

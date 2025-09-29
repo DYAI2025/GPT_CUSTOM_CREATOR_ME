@@ -1,0 +1,34 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_TASK_DRIVE
+frame:
+  signal: ["task_drive"]
+  concept: "Ziel-/Ablaufdruck & zügiges Voranschreiten"
+  pragmatics: "Tempo, Fokussierung, Lösungsorientierung"
+  narrative: "coordination"
+tags: [task, pacing, deadline, problem_solving]
+composed_of:
+  any_of:
+    - ATO_PACING
+    - ATO_MINI_DEADLINE
+    - ATO_PROBLEM_SOLVING
+activation:
+  rule: "AT_LEAST 2 IN 3 messages"
+  window: 3
+scoring: { base: 0.62, weight: 1.12 }
+examples:
+  - "Lass uns in 15 Min. eine Entscheidung haben – Vorschläge?"
+  - "Kurzfassung → Lösung A/B, dann direkt Umsetzung."
+  - "Bis 14:30 steht der Draft – ich nehme Punkt 1–3."
+  - "Tempo hoch: Engpass klären, dann nächste Steps."
+  - "Mini-Deadline: heute EOD Feedback, dann go."
+  - "Schneller Pfad: erst fixen, dann optimieren."
+  - "Wir sparen Schleifen: drei Optionen, sofort wählen."
+  - "Problemlösung zuerst, Debatte später – Einwände?"
+  - "Timebox 10 Min., dann commit."
+  - "Blocker isolieren → Workaround → ship."
+  - "Nächster Schritt jetzt: Ticket anlegen, dann PR."
+  - "Bitte bis 11:00 Entwurf, ich übernehme Review."
+  - "Kurze Sprints: erst MVP, dann Ausbau."
+  - "Konkrete ToDos statt Diskussion – wer macht was bis wann?"
+  - "Wir priorisieren hart und liefern heute ein Inkrement."

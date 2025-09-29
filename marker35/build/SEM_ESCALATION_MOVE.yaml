@@ -1,0 +1,20 @@
+id: SEM_ESCALATION_MOVE
+version: "3.4"
+frame:
+  signal: ["escalation"]
+  concept: "Eskalationsschritt/Drohung"
+  pragmatics: "Konfliktintensivierung"
+  narrative: "conflict"
+tags: [escalation, conflict]
+composed_of:
+  - ATO_ESCALATION_LEXICON
+  - ATO_NEGATIVE_FEEDBACK_TOKEN
+activation:
+  rule: "BOTH IN 1 message OR ANY 2 IN 2 messages"
+scoring: { base: 0.65, weight: 1.0 }
+examples:
+  - "Schluss jetzt, sonst Konsequenzen."
+  - "Mir reicht’s – Anzeige."
+  - "Kündige, wenn das so bleibt."
+  - "Das ist lächerlich – jetzt reicht’s."
+  - "Eskalier nicht, sonst…"

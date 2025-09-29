@@ -1,0 +1,24 @@
+schema: LeanDeep
+version: "3.4"
+namespace: consistency_external
+
+defaults:
+  scoring:
+    window_tokens: 120
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+  scope:
+    unit: "speaker"
+    target: "OTHER"
+
+atos:
+  - id: ATO_REDEFINITION
+    frame:
+      signal: ["eigentlich","im Grunde","genauer gesagt","definitionstechnisch"]
+      concept: "Spontane Umdefinition"
+      pragmatics: "Begriffe werden unterwegs verschoben"
+      narrative: "Hinweis auf Bedeutungsdrift"
+    pattern:
+      detect_class: heuristic
+      rule: "same_term_redefined_within_window"
+    tags: [semantics]

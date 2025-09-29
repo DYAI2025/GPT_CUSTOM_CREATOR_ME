@@ -1,0 +1,41 @@
+id: CLU_HOUSEHOLD_ROUTINE_CONFLICTS
+display_title: "Haushaltsroutine-Konflikte"
+version: "3.3"
+lang: de
+category: CLUSTER
+description: "Cluster von Konflikten um alltägliche Haushaltsroutinen."
+frame:
+  signal: ["Haushaltsanweisungen + Widerstand"]
+  concept: "Haushaltsroutine-Konflikte"
+  pragmatics: "Alltägliche Machtkämpfe um Haushaltsorganisation"
+  narrative: "Routine-Konfliktdynamik"
+combination:
+  type: "AND"
+  components:
+    - marker_id: "ATO_DIRECTIVE_CHORES"
+      weight: 0.4
+    - marker_id: "ATO_DIRECTIVE_HOMEWORK"
+      weight: 0.4
+    - marker_id: "ATO_DIRECTIVE_BEDTIME"
+      weight: 0.3
+    - marker_id: "SEM_CHILD_RESISTANCE"
+      weight: 0.5
+    - marker_id: "ATO_GOTTMAN_DEFENSIVENESS"
+      weight: 0.3
+  threshold: 0.6
+activation:
+  rule: "WEIGHTED_AND"
+window:
+  messages: 50
+scoring:
+  base: 1.3
+  weight: 0.5
+  decay: 0.02
+  formula: "logistic"
+examples:
+  - "Räum auf! - Das ist nicht meine Schuld, dass es unordentlich ist!"
+  - "Mach Hausaufgaben! - Ich will nicht, das ist unfair!"
+tags: [cluster, family, routine, chores, resistance, daily]
+detect_class: "E"
+criteria: "Kombination von Haushaltsanweisungen und Widerstandsmustern"
+updated_at: "2025-08-19T10:30:00Z"

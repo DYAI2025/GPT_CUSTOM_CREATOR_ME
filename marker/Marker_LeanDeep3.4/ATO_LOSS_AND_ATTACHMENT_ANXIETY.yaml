@@ -1,0 +1,30 @@
+id: ATO_LOSS_AND_ATTACHMENT_ANXIETY
+frame:
+  signal:
+  - Ich hab Angst, dich zu verlieren
+  - Bleibst du bei mir?
+  - Was ist, wenn du mich verlässt?
+  - Ich fühle mich allein gelassen
+  - Ich kann nicht ohne dich sein
+  concept: loss and attachment anxiety
+  pragmatics: anxiety expression
+  narrative: emotional bonding dynamics
+pattern:
+- (?i)\b(ich hab angst, dich zu verlieren|bleibst du bei mir|was ist, wenn du mich
+  verlässt)\b
+activation:
+  rule: ANY 1
+examples:
+- Ich hab echt Schiss, dass du irgendwann nicht mehr zurückschreibst.
+- Wo warst du denn? Ich hab mir echt Sorgen gemacht.
+- Kannst du bitte Bescheid sagen, wenn du angekommen bist?
+- Was passiert, wenn du mich plötzlich nicht mehr anrufst?
+- Ich fühle mich so unsicher, wenn du nicht gleich antwortest.
+- Bleibst du diesmal wirklich bei mir?
+- Ich kann nicht schlafen, weil ich Angst habe, du verlässt mich.
+- Wie? Da sind andere Typen? Stehst du auf die oder Was
+- Ich möchte nicht, das du allein dahin gehst, schon gar nicht. ohne mich!
+- Ich vermiss dich total. Wie ist es bei dir? Denkst du an mich?
+tags:
+- anxiety
+- attachment

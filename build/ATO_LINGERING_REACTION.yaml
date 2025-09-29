@@ -1,0 +1,21 @@
+id: ATO_LINGERING_REACTION
+frame:
+  signal:
+  - Ellipsen
+  - zögerlicher Tonfall
+  - stille Pause
+  concept: Verzögerte Reaktion
+  pragmatics: Zögern oder Andeutung
+  narrative: Spannungsaufbau
+pattern:
+- '...'
+- …
+activation:
+  rule: ANY 1
+examples:
+- Hm…
+- '...'
+- Ähm…
+- 😶‍🌫️
+- …
+tags: []

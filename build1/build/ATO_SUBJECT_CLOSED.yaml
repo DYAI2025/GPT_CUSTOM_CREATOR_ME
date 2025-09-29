@@ -1,0 +1,19 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_SUBJECT_CLOSED
+frame:
+  signal: ["subject_closed"]
+  concept: "Thema explizit abgeschlossen"
+  pragmatics: "Übergang / Phasenabschluss"
+  narrative: "interaction"
+tags: [closure, interaction]
+pattern:
+  regex: "\\b(alles gesagt|Thema erledigt|passt für mich|lassen wir so|Haken dran|so viel dazu)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Für mich ist alles gesagt."
+  - "Thema erledigt."
+  - "Passt für mich so."
+  - "Lassen wir das so."
+  - "Haken dran."
+  - "So viel dazu."

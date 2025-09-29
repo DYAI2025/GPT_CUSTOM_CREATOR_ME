@@ -1,0 +1,19 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_CLOSE
+frame:
+  signal: ["close"]
+  concept: "Thema explizit beenden"
+  pragmatics: "Abschluss / Cut"
+  narrative: "interaction"
+tags: [close, interaction]
+pattern:
+  regex: '(?im)^(ok(\.|,)?|alles\s+klar|fertig|done|passt(\.|,)?|erledigt)$'
+  flags: ["IGNORECASE", "MULTILINE"]
+examples:
+  - "ok."
+  - "Alles klar"
+  - "Fertig."
+  - "Done"
+  - "Passt."
+  - "Erledigt."

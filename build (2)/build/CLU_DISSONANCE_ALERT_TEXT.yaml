@@ -1,0 +1,31 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "ld34_text_social_grammar"
+id: CLU_DISSONANCE_ALERT_TEXT
+lang: de
+category: CLUSTER
+description: "Früher Hinweis auf Dissonanz oder gescheiterte Reparaturen."
+frame:
+  signal: ["Dissonanz- oder Reparaturfail-SEM im Fenster"]
+  concept: "Dissonanz-Cluster (Text)"
+  pragmatics: "Meta-Klärung anstoßen"
+  narrative: "Reibung sichtbar"
+composed_of:
+  - { marker_ids: [SEM_DISSONANCE_TEXT], weight: 0.5 }
+  - { marker_ids: [SEM_REPAIR_FAILURE_TEXT], weight: 0.5 }
+activation_logic: "AT_LEAST 1 OF [SEM_DISSONANCE_TEXT, SEM_REPAIR_FAILURE_TEXT] IN 5 messages"
+window: { messages: 12 }
+scoring: { base: 1.8, weight: 1.3, decay: 0.01 }
+examples:
+  - "Nie... rational... hä?... anderes Thema."
+  - "Immer... logisch... Wie bitte?... egal."
+  - "Nie... statistisch... Wer?... weiter."
+  - "Immer... aus Gründen... Hä?... zum nächsten Punkt."
+  - "Nie... objektiv... Was meinst du?... anderes Thema."
+  - "Immer… logisch… Wer?… anderes Thema."
+  - "Nie… statistisch… Hä?… weiter."
+  - "Immer… objektiv… Wie bitte?… egal."
+tags: [cluster, dissonance]
+metadata:
+  repair_log:
+    - { rule: "R03", note: "Feldreihenfolge geprüft", date: "2025-08-29" }

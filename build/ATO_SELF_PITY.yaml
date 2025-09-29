@@ -1,0 +1,39 @@
+id: SEM_SELF_PITY
+lang: en
+category: SEMANTIC
+description: "Detects self-pity language and self-victimization frames."
+frame:
+  signal: ["no one understands me", "why does this always happen to me", "everything is against me", "poor me", "there's nothing I can do"]
+  concept: "Self-victimization"
+  pragmatics: "Externalize cause, reduce agency, invite rescue or withdrawal"
+  narrative: "I am the powerless victim of circumstances"
+composed_of:
+  - ATO_VICTIM_LANGUAGE
+  - ATO_LONELINESS
+  - ATO_POWERLESSNESS
+activation_logic: "ANY 2 IN 3 messages"
+scoring: { base: 1.5, weight: 1.1 }
+window: { messages: 6 }
+examples:
+  - "Why does this always happen to me? I just can't catch a break."
+  - "No one understands me; I'm always on my own with this."
+  - "Everything is against me lately—what's even the point."
+  - "Poor me… I try and try, but nothing ever works out."
+  - "There's nothing I can do; the universe is stacked against me."
+  - "I guess I'm just the one bad things happen to."
+  - "People never get me; I'm always the odd one out."
+  - "It’s not fair—life keeps picking on me."
+  - "I don't have any power here; whatever I do, it backfires."
+  - "I must be cursed—problems always find me."
+tags: [semantic, self_pity, emotion]
+metadata:
+  repair_log:
+    - date: "2025-08-14"
+      changes: ["Prefix fix S_→SEM_", "Converted to lang=en", "Removed invalid pattern block for SEM", "Added frame (signal/concept/pragmatics/narrative)", "Expanded composed_of to ≥2 ATOs", "Standardized activation_logic/window/scoring", "Increased examples to 10", "Moved legacy fields to metadata"]
+  legacy:
+    source_id: "S_SELF_PITY"
+    version: "1.0.0"
+    status: "draft"
+    author: "auto_gpt"
+    created: "2025-07-25T21:17:00Z"
+    original_activation_logic: "A_VICTIM_LANGUAGE OR A_LONELINESS"

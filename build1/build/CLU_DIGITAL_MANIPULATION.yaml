@@ -1,0 +1,34 @@
+id: CLU_DIGITAL_MANIPULATION
+frame:
+  signal:
+  - Druck
+  - Verschleierung
+  - Emotionalisierung
+  - Verifikation vermeiden
+  concept: digitale Manipulation
+  pragmatics: Täuschungs- und Steuerungsstrategien
+  narrative: Nähe, Druck und Unschärfe
+composed_of:
+- ATO_PLACEHOLDER
+activation:
+  rule: AT_LEAST 2 IN 5 messages
+scoring:
+  base: 2.0
+  weight: 1.3
+  decay: 0.05
+examples:
+- Du musst dich heute noch entscheiden, sonst ist alles vorbei.
+- Schick es lieber per Geschenkkarte – das geht schneller und ist sicherer.
+- Ich kann gerade nicht per Video, meine Religion verbietet das.
+- Wir gehören doch längst zusammen, du bist mein Partner.
+- Du weißt, wie sehr ich dich brauche!!!
+- Man kann ja mal über gewisse … Dinge nachdenken, oder? 😉
+- Nur noch zwei Exemplare verfügbar – schnell sein lohnt sich!
+- Ich nutze nur Bitcoin, Bankdaten sind mir zu riskant.
+- Sorry, Kamera defekt, aber vertrau mir bitte.
+- Pass auf, wir beide gegen den Rest der Welt, okay?
+tags:
+- manipulation
+- scam
+- digital
+- deception

@@ -1,0 +1,39 @@
+id: CLU_REASSURANCE_SEEKING_LOOP
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Wiederholte Rückversicherungsanfragen"
+  concept: "Reassurance Seeking"
+  pragmatics: "Unsicherheitsregulation"
+  narrative: "attachment_insecurity"
+pattern:
+  - '(?i)\b(alles gut mit uns|magst du mich( noch)?|bist du( noch)? da)\b'
+  - '(?i)\b(liebst du mich noch|sind wir okay)\b'
+  - '(?i)\b(stimmt etwas nicht|ist zwischen uns alles gut)\b'
+activation:
+  rule: "ANY 2 IN 20 messages"
+window:
+  messages: 20
+scoring:
+  base: 2.3
+  weight: 0.65
+  decay: 0.015
+  formula: "logistic"
+examples:
+  - "Ist alles gut mit uns?"
+  - "Magst du mich noch?"
+  - "Bist du noch da?"
+  - "Liebst du mich noch?"
+  - "Sind wir okay zwischen uns?"
+  - "Stimmt etwas nicht mit uns?"
+  - "Ist zwischen uns alles gut?"
+  - "Du bist doch nicht sauer auf mich, oder?"
+  - "Ich spüre Distanz - ist alles okay?"
+  - "Magst du mich immer noch so wie früher?"
+  - "Bist du dir sicher, dass du mich liebst?"
+  - "Wir sind doch noch zusammen, oder?"
+  - "Ich habe Angst, dass du dich von mir abwendest"
+  - "Bestätige mir bitte, dass zwischen uns alles gut ist"
+  - "Du ziehst dich nicht zurück, oder?"
+tags: [cluster, reassurance, early_stage, attachment]

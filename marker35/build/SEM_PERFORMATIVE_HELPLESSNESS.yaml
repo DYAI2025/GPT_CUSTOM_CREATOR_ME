@@ -1,0 +1,33 @@
+id: SEM_PERFORMATIVE_HELPLESSNESS
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Stilisierte Hilflosigkeit + Appell"
+  concept: "Performative Hilflosigkeit"
+  pragmatics: "Caregiver-Zwang"
+  narrative: "guilt_neediness_bind"
+composed_of:
+  - ATO_HELPLESSNESS_DEPENDENCY
+  - ATO_GUILT_APPEAL_SUPPORT
+activation:
+  rule: "ANY 2 IN 30 messages"
+window:
+  messages: 30
+scoring:
+  base: 3.1
+  weight: 0.9
+  decay: 0.01
+  formula: "logistic"
+examples:
+  - "Ohne dich schaffe ich das nicht – ich dachte, du wärst für mich da."
+  - "Ich kann das nicht allein, du lässt mich doch nicht im Stich, oder?"
+  - "Allein krieg ich das nicht hin, ich hätte da auf dich gezählt."
+  - "Ohne dich geht es nicht, ich dachte immer, du bist an meiner Seite."
+  - "Ich schaffe das nicht, du lässt mich gerade völlig allein."
+  - "Bin völlig hilflos ohne dich, dachte du stehst zu mir."
+  - "Kann das unmöglich allein, du lässt mich hängen."
+  - "Ohne deine Hilfe bin ich aufgeschmissen, ich zählte auf dich."
+  - "Allein schaffe ich das nicht, du wendest dich von mir ab."
+  - "Ich brauche dich, sonst klappt das nicht – dachte, ich kann mich auf dich verlassen."
+tags: [sem, neediness, guilt_pressure]

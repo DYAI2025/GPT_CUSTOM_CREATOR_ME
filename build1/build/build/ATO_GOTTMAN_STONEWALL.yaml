@@ -1,0 +1,36 @@
+id: ATO_GOTTMAN_STONEWALL
+schema_version: "LD-3.3"
+version: "3.3"
+last_updated: "2025-08-19"
+lang: de
+category: ATOMIC
+description: "Kommunikationsverweigerung, emotionaler Rückzug; 'Mauern'."
+frame:
+  signal: ["Ich will nicht reden", "Lass mich in Ruhe", "Kein Kommentar", "…", "(Schweigen)"]
+  concept: "Stonewalling / Rückzug"
+  pragmatics: "Gesprächsverweigerung, emotionale Abschottung"
+  narrative: "withdrawal"
+pattern:
+  - "(?i)\\bich\\s+will\\s+nicht\\s+reden\\b"
+  - "(?i)\\blass\\s+mich\\s+(in\\s+)?ruhe\\b"
+  - "(?i)\\bkein\\s+kommentar\\b"
+  - "(?i)\\bdarüber\\s+rede\\s+ich\\s+nicht\\b"
+  - "(?i)\\bmir\\s+reicht'?s\\b"
+  - "(?i)\\bich\\s+bin\\s+raus\\b"
+  - "^\\.\\.\\.$"
+  - "^…$"
+activation:
+  rule: "ANY 1 IN 3 messages"
+scoring:
+  base: 1.0
+  weight: 1.1
+examples:
+  - "Ich will nicht reden."
+  - "Lass mich in Ruhe mit dem Thema."
+  - "Kein Kommentar."
+  - "Darüber rede ich nicht mehr."
+  - "Mir reicht's, ich bin raus."
+  - "…"
+  - "..."
+  - "(längere Pause ohne Antwort)"
+tags: [atomic, conflict, gottman, stonewalling]

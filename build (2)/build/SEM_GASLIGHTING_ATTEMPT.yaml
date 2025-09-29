@@ -1,0 +1,29 @@
+id: SEM_GASLIGHTING_ATTEMPT
+schema_version: LD-3.3
+lang: en
+category: SEMANTIC
+description: Semantic pattern for gaslighting and reality distortion attempts
+frame:
+  signal: ["reality distortion"]
+  concept: "Gaslighting Attempt"
+  pragmatics: "micro pattern recognition"
+  narrative: "intent"
+composed_of:
+  - ATO_DEFENSIVENESS
+  - ATO_BLAME_SHIFT
+  - ATO_UNCERTAINTY
+activation_logic: "ANY 2"
+window:
+  messages: 3
+examples:
+  - "That never happened. You're imagining things and making me the bad guy again."
+  - "I didn't say that. You're being too sensitive and misremembering everything."
+  - "You're overreacting. I'm not sure why you always twist my words like this."
+  - "That's not how it went. You made me respond that way with your behavior."
+  - "You're being dramatic. I don't know where you get these ideas about me."
+  - "I never did that. You're creating problems where none exist and blaming me."
+  - "You're too emotional. I'm not sure you can trust your memory when you're upset."
+  - "That's not what I meant. You forced this interpretation with your suspicious mind."
+  - "You're being paranoid. I don't know why you always assume the worst about me."
+  - "You misunderstood everything. You're making me defend myself against false accusations."
+tags: [semantic, v3.3, gaslighting]

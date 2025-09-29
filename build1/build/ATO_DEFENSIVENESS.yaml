@@ -1,0 +1,18 @@
+id: ATO_DEFENSIVENESS
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for defensive responses
+frame:
+  signal: ["defensiveness"]
+  concept: "Defensive response signal"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\b(I'm not|I didn't|that's not|you're wrong)\\b"]
+examples:
+  - "I'm not being difficult here."
+  - "I didn't mean it that way."
+  - "That's not what I said at all."
+  - "You're wrong about my intentions."
+  - "I'm not the problem here."
+tags: [atomic, v3.3, auto-generated]

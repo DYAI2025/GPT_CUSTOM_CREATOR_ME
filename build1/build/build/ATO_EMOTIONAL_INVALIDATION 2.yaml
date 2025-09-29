@@ -1,0 +1,23 @@
+id: ATO_EMOTIONAL_INVALIDATION
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for phrases discounting or dismissing emotions
+frame:
+  signal: ["emotional dismissal"]
+  concept: "Phrases discounting or dismissing emotions"
+  pragmatics: "Useful for dialogue quality and de-escalation logic"
+  narrative: "Dismissing the other's feelings as illegitimate"
+pattern: ["(?i)\\b(you're overreacting|stop being so sensitive|it's not a big deal|you shouldn't feel that way|don't be dramatic|get over it)\\b"]
+examples:
+  - "You're overreacting to this situation."
+  - "Stop being so sensitive about everything."
+  - "It's not a big deal, just move on."
+  - "You shouldn't feel that way about it."
+  - "You're making a fuss for nothing here."
+  - "Don't be so dramatic about this."
+  - "Just get over it and move forward."
+  - "You're being way too emotional right now."
+  - "That's not worth getting upset about."
+  - "Stop making mountains out of molehills."
+tags: [atomic, v3.3, invalidation, emotional-dismissal]

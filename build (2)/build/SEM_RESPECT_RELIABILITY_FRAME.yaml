@@ -1,0 +1,22 @@
+id: SEM_RESPECT_RELIABILITY_FRAME
+version: "3.3"
+lang: de
+level: SEM
+frame:
+  signal:
+    - "Respekt/Verlässlichkeit als Maßstab anführen"
+  concept: "Beziehungsnormen explizit"
+  pragmatics: "Rahmenklärung"
+  narrative: "Werteabgleich"
+pattern:
+  - '(?i)\brespekt\b|\brespektier\w*\b'
+  - '(?i)\bverlässlich(keit)?\b|\bzuverlässig(keit)?\b'
+  - '(?i)\b(acht(ung)?|würde)\b'
+  - '(?i)\b(so\s+ist\s+es\s+respektvoll)\b'
+examples:
+  - "Das ist für mich eine Frage von Respekt."
+  - "Ich brauche Verlässlichkeit."
+  - "Bitte respektiere meine Grenze."
+  - "So ist es für mich respektvoll."
+  - "Zuverlässigkeit ist mir wichtig."
+tags: [norms, respect, reliability, semantics]

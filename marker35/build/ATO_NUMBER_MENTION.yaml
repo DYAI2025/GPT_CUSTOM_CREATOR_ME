@@ -1,0 +1,26 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "consistency_external"
+
+defaults:
+  scoring:
+    window_messages: 5
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+
+markers:
+  - id: ATO_NUMBER_MENTION
+    frame:
+      signal: ["Zahlen, Mengen, Datums-/Uhrzeitangaben"]
+      concept: "Quantifizierungs-Token"
+    pattern:
+      - detect_class: regex
+        pattern: "(\\b\\d+[\\.,]?\\d*\\b|\\b(ein|zwei|drei|vier|fünf|sechs|sieben|acht|neun|zehn)\\b)"
+    score: 0.20
+    metadata: { type: ATO }
+    examples:
+      - "Es waren 5 Leute."
+      - "Wir waren zehn."
+      - "Am 12.05. war das Meeting."
+      - "Es dauerte 2,5 Stunden."
+      - "Drei Termine fanden statt."

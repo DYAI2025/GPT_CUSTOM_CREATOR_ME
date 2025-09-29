@@ -1,0 +1,31 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "ld34_text_social_grammar"
+id: SEM_AFFECT_ISOLATION_TEXT
+lang: de
+category: SEMANTIC
+description: "Rationalisierung nahe eines emotionalen Themas bei gleichzeitiger Affektarmut."
+frame:
+  signal: ["Rationalisierungslexik neben Verlust/Schmerz-Thema"]
+  concept: "Affektisolierung (sprachlich)"
+  pragmatics: "Emotionen abkoppeln, Kontrolle zeigen"
+  narrative: "Kühle Begründung am Krisenkern"
+composed_of:
+  - ATO_RATIONALIZATION_LEX
+activation_logic: "ANY 1 IN 2 messages"
+scoring: { base: 1.4, weight: 1.1 }
+examples:
+  - "Der Tod meines Onkels war, objektiv betrachtet, eine statistische Notwendigkeit."
+  - "Das war rational gesehen effizient, auch wenn es hart klingt."
+  - "Objektiv war die Trennung logisch, Gefühle mal ausgeklammert."
+  - "Logisch gesehen ist Verlust unvermeidbar."
+  - "Aus Gründen der Effizienz musste ich das Gespräch abkürzen."
+  - "Statistisch gesehen ist Trauer ein erwartbarer Prozess."
+  - "Objektiv betrachtet war es besser so, emotional schwer."
+  - "Rational betrachtet war es konsequent, trotz Schmerz."
+tags: [semantic, defense, affect_isolation]
+metadata:
+  justification: "SEM mit 1 ATO + Kontextregel (Affekt-Abwesenheit) gemäß LD3.4 zulässig."
+  repair_log:
+    - { rule: "R06", note: "Sekundäre Pattern-Regeln entfernt, nur composed_of behalten", date: "2025-08-29" }
+    - { rule: "R07", note: "1-ATO-Semantik mit justification abgesichert", date: "2025-08-29" }

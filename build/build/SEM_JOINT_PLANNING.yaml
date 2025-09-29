@@ -1,0 +1,35 @@
+id: SEM_JOINT_PLANNING
+version: '3.4'
+category: SEMANTIC
+description: Gemeinsame Aufgabenorientierung
+frame:
+  signal:
+  - we-language + next steps
+  concept: shared task focus
+  pragmatics: alliance strengthening
+  narrative: forward together
+composed_of:
+- ATO_WE_LANGUAGE
+- ATO_CLARIFICATION_REQUEST
+activation:
+  rule: COUNT(ATO_WE_LANGUAGE)>=1 AND COUNT(ATO_CLARIFICATION_REQUEST)>=1 IN 5
+scoring:
+  weight: 1.2
+examples:
+  positive:
+    - "Wie gehen wir das am besten an?"
+    - "Was ist unser nächster Schritt?"
+    - "Lass uns gemeinsam einen Plan entwickeln."
+    - "Wie können wir das zusammen erreichen?"
+    - "Was denkst du, wie wir das am effektivsten umsetzen können?"
+    - "Ich schlage vor, wir teilen die Aufgaben auf. Was meinst du?"
+    - "Lass uns die nächsten Schritte festlegen."
+    - "Wie können wir sicherstellen, dass wir beide auf dem gleichen Stand sind?"
+    - "Was ist deine Idee, wie wir das Projekt vorantreiben können?"
+    - "Ich bin offen für deine Vorschläge, wie wir das gemeinsam gestalten können."
+  negative: []
+tags:
+- semantic
+- alliance
+- planning
+- rapport_signal

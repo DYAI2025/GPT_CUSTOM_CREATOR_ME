@@ -1,0 +1,54 @@
+id: SEM_RIVALRY_MENTION
+version: "3.3"
+frame:
+  signal: ["Rivalitäts-Verweis", "Drittperson im romantischen Kontext"]
+  concept: "potenzielle Konkurrenz wird thematisiert"
+  pragmatics: "Eifersuchtsaktivierung / Vergleich"
+  narrative: "Bedrohung von Bindung"
+pattern:
+  - "andere Frauen"
+  - "andere Typen"
+  - "jemand anderes"
+  - "sie schreibt dir"
+  - "er schreibt dir"
+activation:
+  rule: "ANY in 1 message"
+justification: "Pattern-basierte SEM-Definition bis ATO-Referenzen geliefert sind (v3.3-Ausnahme)."
+examples:
+  # vorhandener Rohblock (bewusst beibehalten)
+  - "examples:"
+  - "- \"Wenn andere Frauen dir schreiben, fühl ich mich unsicher.\""
+  - "- \"Er schreibt dir ständig, oder?\""
+  - "- \"Warst du gestern mit jemand anderem unterwegs?\""
+  - "- \"Wer ist diese Julia, von der alle reden?\""
+  - "- \"Du redest in letzter Zeit so oft von ihm... ist da was?\""
+  - "- \"Warum schreibt sie dir um diese Uhrzeit noch?\""
+  - "- \"Eine andere Frau hat mir heute geschrieben, aber ich denke nur an dich.\""
+  - "- \"Na, wie viele andere Typen beeindruckst du heute noch so? ;)\""
+  - "- \"Gibt es jemand anderen?\""
+  - "- \"Mir ist aufgefallen, dass du jedes Bild von ihm likest.\""
+  - "- \"Was wollen all diese anderen Frauen auf deinem Profil?\""
+  - "- \"Mit wem hast du gerade telefoniert? War es wieder dieser Typ von der Arbeit?\""
+  - "- \"Du hast sicher viele andere Männer, die dir schreiben. Ich verstehe, wenn ich nur einer von vielen bin.\""
+  - "- \"Findest du, sie sieht besser aus als ich?\""
+  - "- \"Wer war die Person, mit der du gestern im Café warst? Sah nicht nach einem Kumpel aus.\""
+  - "- \"Ich hab gesehen, dass du wieder mit ihr schreibst. Überrascht mich nicht.\""
+  - "- \"Warum musst du immer erwähnen, was andere Typen so machen?\""
+  - "- \"Du musst mir jetzt ehrlich sagen, ob da jemand anderes ist.\""
+  - "- \"Ein Mann hier im Camp macht mir den Hof, aber mein Herz gehört nur dir.\""
+  - "- \"Deine Freundin meinte, du wärst mit jemand anderem da gewesen.\""
+  - "- \"Zeig mir mal, was er dir schreibt.\""
+  - "- \"Muss ich mir wegen ihr Sorgen machen?\""
+  # +5 neu (clean)
+  - "Schreibt er dir wieder?"
+  - "Gibt es da jemanden, von dem ich wissen sollte?"
+  - "Wer ist dieser Typ aus dem Studio?"
+  - "Muss ich mir wegen ihr Sorgen machen?"
+  - "Ist da mehr zwischen euch?"
+tags: [needs_review, sem_composition_exception, rivalry, jealousy, trigger]
+meta:
+  semantische_grabber_id: "AUTO_SEM_20250719_E7DF"
+  created_at: "2025-07-19T22:51:21.640166"
+  created_by: "FRAUSAR_GUI_v2"
+  source_version: "1.0"
+  schema_version: "3.3"

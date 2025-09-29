@@ -1,0 +1,18 @@
+id: ATO_WHATSAPP
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for WhatsApp platform mentions
+frame:
+  signal: ["whatsapp"]
+  concept: "WhatsApp platform signal"
+  pragmatics: "lexical indicator" 
+  narrative: "surface"
+pattern: ["(?i)\\bwhatsapp\\b"]
+examples:
+  - "Let's continue on WhatsApp"
+  - "Do you have WhatsApp?"
+  - "WhatsApp is more convenient"
+  - "Send me your WhatsApp number"
+  - "We could use WhatsApp instead"
+tags: [atomic, v3.3, auto-generated]

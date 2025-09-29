@@ -1,0 +1,22 @@
+id: MEMA_COMMUNICATION_BREAKDOWN_CASCADE
+schema_version: LD-3.3
+lang: en
+category: MEMA
+description: Meta marker for systematic communication breakdown leading to relationship dissolution
+criteria: "Progressive communication breakdown showing predictable stages from functional to complete failure"
+composed_of:
+  - SEM_CONFLICT_ESCALATION
+  - SEM_STONEWALLING_BEHAVIOR
+  - CLU_GOTTMAN_TOXICITY_CLUSTER
+examples:
+  - "Communication deterioration following predictable cascade from criticism to contempt."
+  - "Defensive responses evolving into complete communication shutdown over time."
+  - "Emotional withdrawal becoming permanent barrier to any productive dialogue."
+  - "Negative communication cycles becoming self-reinforcing and accelerating."
+  - "Complete breakdown of communication leading to relationship dissolution."
+  - "Workplace team showing progressive communication failure affecting productivity."
+  - "Family system experiencing generational communication breakdown patterns."
+  - "Therapeutic relationship showing predictable communication deterioration stages."
+  - "Marriage dissolution following classic Gottman cascade pattern of communication failure."
+  - "Long-term friendship ending through systematic communication breakdown over years."
+tags: [mema, v3.3, communication-breakdown, relationship-dissolution]

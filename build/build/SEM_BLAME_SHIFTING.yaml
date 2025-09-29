@@ -1,0 +1,21 @@
+id: SEM_BLAME_SHIFTING
+family: SEM
+description: ''
+notes: ''
+id: SEM_BLAME_SHIFTING
+family: SEM
+description: ''
+notes: ''
+examples:
+  positive:
+    - "Das ist deine Schuld, nicht meine."
+    - "Du hast mich dazu gezwungen."
+    - "Wenn du nicht so gewesen wärst, hätte ich das nicht getan."
+    - "Das ist passiert, weil du nicht aufgepasst hast."
+    - "Du bist verantwortlich für das, was geschehen ist."
+    - "Ich musste so reagieren, weil du mich provoziert hast."
+    - "Das ist dein Problem, nicht meins."
+    - "Du hast das verursacht."
+    - "Ich habe das nur getan, weil du mich dazu gebracht hast."
+    - "Es ist deine Verantwortung, das zu regeln."
+  negative: []

@@ -1,0 +1,21 @@
+id: ATO_POSITIVE_REGARD
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "wohlwollende Haltung gegenüber der Person ausdrücken"
+  concept: "Positives Menschenbild"
+  pragmatics: "Vertrauensaufbau"
+  narrative: "Bonding trotz Konflikt"
+pattern:
+  - '(?i)\b(ich\s+denke|rede)\s+gut\s+von\s+dir\b'
+  - '(?i)\b(ich\s+halte\s+viel\s+von\s+dir)\b'
+  - '(?i)\b(ich\s+schätze\s+dich)\b'
+  - '(?i)\b(ich\s+traue\s+dir\s+gutes\s+zu)\b'
+examples:
+  - "Ich denke gut von dir."
+  - "Ich rede auch heute gut von dir."
+  - "Ich schätze dich trotz allem."
+  - "Ich traue dir Gutes zu."
+  - "Ich halte viel von dir."
+tags: [regard, trust_building, atomic]

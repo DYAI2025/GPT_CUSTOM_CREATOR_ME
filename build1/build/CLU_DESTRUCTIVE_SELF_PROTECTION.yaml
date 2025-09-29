@@ -1,0 +1,39 @@
+id: CLU_DESTRUCTIVE_SELF_PROTECTION
+lang: en
+category: CLUSTER
+description: 'Destructive self-protection: blame shifting + minimization (optionally
+  gaslighting) in short succession.'
+frame:
+  signal:
+  - '''because of you'' + ''no big deal'' in series'
+  concept: Defensive spiral
+  pragmatics: Responsibility evasion, trust erosion
+  narrative: Protection script over clarity
+composed_of:
+- SEM_BLAME_SHIFTING
+- SEM_MINIMIZATION
+activation_logic: SUM(weight)≥0.7 WITHIN 48h
+scoring:
+  base: 1.8
+  weight: 1.3
+  decay: 0.02
+window:
+  messages: 15
+examples:
+  positive:
+    - "Das ist nur passiert, weil du mich so unter Druck gesetzt hast. Aber jetzt mal ehrlich, es ist doch kaum der Rede wert."
+    - "Wenn du nicht so emotional wärst, wäre das nicht eskaliert. Im Grunde war es doch nur eine Nichtigkeit."
+    - "Ich musste das tun, weil du mir keine andere Wahl gelassen hast. Aber lass uns das nicht dramatisieren."
+    - "Deine ständige Nörgelei hat mich dazu gebracht. Aber es ist wirklich nichts, worüber man sich aufregen müsste."
+    - "Das liegt an deiner Art, die Dinge zu sehen. Eigentlich war es eine ganz normale Sache."
+    - "Wärst du klarer gewesen, hätte ich das verstanden. Aber es ist ja nichts Schlimmes passiert."
+    - "Du hast mich so provoziert, da konnte ich nicht anders. Aber im Endeffekt ist es doch egal."
+    - "Das Problem ist deine Reaktion, nicht meine Aktion. Es war eine Kleinigkeit."
+    - "Ich habe nur auf dich reagiert. Und jetzt machst du daraus ein Drama."
+    - "Das wäre vermeidbar gewesen, wenn du vernünftiger wärst. Aber schwamm drüber, es ist nicht so wichtig."
+  negative: []
+tags:
+- needs_review
+- cluster
+- defense
+- blame_shift

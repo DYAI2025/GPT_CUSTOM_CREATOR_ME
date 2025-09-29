@@ -1,0 +1,31 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "consistency_external"
+
+defaults:
+  scoring:
+    window_messages: 5
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+
+markers:
+  - id: SEM_CONSIST_EVAL_EXTERNAL
+    frame:
+      signal: ["das passt nicht zusammen (fremd)"]
+      concept: "Kohärenzprüfung über mehrere Aussagen derselben fremden Person"
+      pragmatics: "Narrativ-Kontrolle, Widerspruchsdetektion"
+      narrative: "Vergleicht frühere & aktuelle Propositionen"
+    composed_of: [ATO_CROSS_REF_OTHER, ATO_CONTRADICTION_LEX]
+    pattern:
+      - detect_class: semantic
+        rule: "negative_entailment(prev_statement_of_other, current_statement)"
+        distance_window_messages: 4
+        requires_role_consistency: true
+    scoring: { base: 0.65 }
+    metadata: { type: SEM, direction: outward, context_focus: speaker_other }
+    examples:
+      - '"Nie dort gewesen" ↔ "Gestern kurz dort gewesen".'
+      - '"Immer pünktlich" ↔ "Letzte Woche zu spät".'
+      - '"Ich habe nie bezahlt" ↔ "Wir mussten zahlen".'
+      - '"Es waren fünf" ↔ "Es waren zwölf".'
+      - '"War nie Thema" ↔ "Vorhin war es Thema".'

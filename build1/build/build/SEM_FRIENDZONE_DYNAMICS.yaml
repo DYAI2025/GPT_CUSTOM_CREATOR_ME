@@ -1,0 +1,31 @@
+id: SEM_FRIENDZONE_DYNAMICS
+frame:
+  signal: Kombination aus intensiver Fürsorge, Support-Angeboten und emotionalem Rückzug.
+  concept: Einseitige romantische Investition (Friendzone-Dynamik)
+  pragmatics: Versuch, Nähe herzustellen, gefolgt von Selbstschutz bei ausbleibender
+    romantischer Erwiderung.
+  narrative: unrequited_investment
+composed_of:
+- ATO_CARE_CHECKIN
+- ATO_SUPPORT_MESSAGE
+- ATO_EMOTIONAL_WITHDRAWAL
+activation:
+  rule: ANY 2 IN 10 messages
+scoring:
+  base: 1.5
+  weight: 1.3
+examples:
+- Hey, wie geht’s dir heute? Hoffe, alles ist gut. Bin immer hier, falls du reden
+  möchtest.
+- Mach dir keinen Stress, ich weiß, du hast viel zu tun. Sag einfach Bescheid, wenn
+  was ist.
+- Ich hab das Gefühl, du schreibst in letzter Zeit weniger. Ist alles okay bei dir?
+- Ich bin immer für dich da, aber ich hab gemerkt, dass ich vielleicht etwas Abstand
+  brauche.
+- Ich hoffe, dein Tag war gut. Falls nicht, denk dran, dass du jederzeit anrufen kannst.
+  Aber kein Druck.
+tags:
+- friendzone
+- relationship
+- unrequited
+- dynamic

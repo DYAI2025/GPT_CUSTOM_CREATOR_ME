@@ -1,0 +1,16 @@
+id: MEMA_ROLE_ROTATION
+version: "3.4"
+frame:
+  signal: [ "role", "rotation" ]
+  concept: "Rollen-Drift (Opfer ↔ Retter ↔ Verfolger)"
+  spiral_dynamics_color: "BLAU"
+  pragmatics: "Wechselnde Position im Dramadreieck"
+  narrative: "hypothesis"
+tags: [ narion, meta, role, rotation ]
+activation: { rule: "ROLE_SWITCH >= 2 in 8 messages" }
+examples:
+- "Du hast nicht gefragt." # Verfolger
+- "Ich bin immer hier, stiller Zeuge." # Retter
+- "Ich will dich nicht." # Opfer/Verweigerung
+- "Ich prüfe dich, ohne zu sagen warum."
+- "Ich schütze dich, indem ich dich destabilisiere."

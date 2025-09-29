@@ -1,0 +1,23 @@
+id: ATO_WEBCAM_CONTEXT_PHRASE
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for contextual justifications around webcam availability
+frame:
+  signal: ["webcam excuses"]
+  concept: "Contextual justifications around webcam availability"
+  pragmatics: "Supports classification of presence/availability excuses"
+  narrative: "Reasons for not using video or keeping camera off"
+pattern: ["(?i)\\b(bandwidth is low|bad connection for video|no privacy for video|not comfortable on camera|poor lighting|background noise)\\b"]
+examples:
+  - "Bandwidth is too low for video calling."
+  - "The connection is bad for camera use."
+  - "No privacy to turn on video right now."
+  - "I'm not comfortable on camera today."
+  - "Let's keep the camera off for now."
+  - "Poor lighting makes video look terrible."
+  - "Background noise would be distracting on video."
+  - "Internet connection can't handle video properly."
+  - "Camera quality is too poor to use."
+  - "Privacy concerns prevent video activation."
+tags: [atomic, v3.3, webcam-context, excuses]

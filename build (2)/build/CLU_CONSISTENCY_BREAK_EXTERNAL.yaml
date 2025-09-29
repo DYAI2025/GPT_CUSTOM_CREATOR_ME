@@ -1,0 +1,29 @@
+schema: LeanDeep
+version: "3.4"
+namespace: consistency_external
+
+defaults:
+  scoring:
+    window_tokens: 120
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+  scope:
+    unit: "speaker"
+    target: "OTHER"
+
+clus:
+  - id: CLU_CONSISTENCY_BREAK_EXTERNAL
+    frame:
+      signal: ["≥2 unterschiedliche SEM-Inkonsistenzen"]
+      concept: "Gebündelte Konsistenzverletzung (extern)"
+      pragmatics: "Eskalationspunkt für Nachfragen"
+      narrative: "Belege sammeln, nicht deuten"
+    composed_of: [SEM_TEMPORAL_INCOHERENCE, SEM_MODAL_FLIP, SEM_DEF_DRIFT]
+    activation:
+      rule: "AT_LEAST 2 DISTINCT SEMs IN 4 messages BY same speaker"
+    scoring: { base: 0.70, weight: 1.15 }
+    metadata:
+      evidence_policy:
+        require_examples: 2
+        attach_quotes: true
+    tags: [cluster, inconsistency]

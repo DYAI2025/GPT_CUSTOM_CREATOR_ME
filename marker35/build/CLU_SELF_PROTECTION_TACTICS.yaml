@@ -1,0 +1,39 @@
+id: CLU_SELF_PROTECTION_TACTICS
+lang: en
+category: CLUSTER
+description: Sustained self-protection/deception tactics (blame shifting + minimization)
+  within the window.
+frame:
+  signal:
+  - '''because of you'' + ''no big deal'' repeatedly'
+  concept: Defensive pattern
+  pragmatics: Evasion of responsibility, trust loss
+  narrative: Recurring protection script
+composed_of:
+- SEM_BLAME_SHIFTING
+- SEM_MINIMIZATION
+activation_logic: AT_LEAST 3 INSTANCES IN 7 days
+scoring:
+  base: 1.7
+  weight: 1.25
+  decay: 0.02
+window:
+  days: 7
+examples:
+  positive:
+    - "Ich hätte das ja gemacht, aber du hast mich so gestresst. Außerdem war es doch gar nicht so wichtig."
+    - "Das ist nur passiert, weil du mich provoziert hast. Jetzt reg dich nicht so auf, es ist doch nichts Schlimmes passiert."
+    - "Wenn du nicht so kritisch wärst, hätte ich anders reagiert. Aber im Grunde ist es doch eine Lappalie."
+    - "Deine Reaktion hat das Ganze erst zum Problem gemacht. Eigentlich war es eine harmlose Bemerkung."
+    - "Ich konnte nicht anders, weil du mich unter Druck gesetzt hast. Aber lass uns das nicht größer machen, als es ist."
+    - "Das Problem ist deine Überempfindlichkeit. Normalerweise wäre das gar kein Thema."
+    - "Wegen dir habe ich die Geduld verloren. Aber es war ja nur eine Kleinigkeit."
+    - "Du hast mich dazu getrieben. Und jetzt übertreibst du die Konsequenzen maßlos."
+    - "Das wäre nicht passiert, wenn du mir mehr zugehört hättest. Aber es ist wirklich keine große Sache."
+    - "Deine ständigen Forderungen haben mich dazu gebracht. Aber am Ende ist doch kaum Schaden entstanden."
+  negative: []
+tags:
+- needs_review
+- cluster
+- tactics
+- gaslighting

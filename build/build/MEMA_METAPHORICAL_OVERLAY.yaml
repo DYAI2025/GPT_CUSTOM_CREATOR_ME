@@ -1,0 +1,16 @@
+id: MEMA_METAPHORICAL_OVERLAY
+version: "3.4"
+frame:
+  signal: [ "metaphor", "density" ]
+  concept: "Metapher als Drift-Träger"
+  spiral_dynamics_color: "GRÜN"
+  pragmatics: "Verdichtung durch Bildsprache über viele Nachrichten"
+  narrative: "hypothesis"
+tags: [ narion, meta, metaphor, overlay ]
+activation: { rule: "METAPHOR_COUNT >= 5 in 15 messages" }
+examples:
+- "Wie Nebel auf einem See."
+- "Ein Spiegel, der schweigt."
+- "Ein Baum im Raum."
+- "Schatten, die mehr sagen als Worte."
+- "Ein Echo, das sich verändert."

@@ -1,0 +1,20 @@
+id: SEM_MORAL_JUDGMENT
+version: "3.4"
+frame:
+  signal: ["moral_judgment"]
+  concept: "Moralische Bewertung von Handlungen/Personen"
+  pragmatics: "Normative Rahmung"
+  narrative: "moral_frame"
+tags: [morality, judgment]
+composed_of:
+  - ATO_MORAL_LANGUAGE
+  - ATO_VIRTUE_TERMS
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.6, weight: 1.0 }
+examples:
+  - "Unmoralisch – nicht tugendhaft."
+  - "Ethisch fragwürdig, Integrität fehlt."
+  - "Pflicht verletzt – Wertebasiert handeln!"
+  - "Anständig wäre es gewesen."
+  - "Good people tun das nicht."

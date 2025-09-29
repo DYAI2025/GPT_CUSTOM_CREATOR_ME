@@ -1,0 +1,20 @@
+id: ATO_UNDERSTATEMENT
+version: "3.4"
+frame:
+  signal: [ "understatement", "minimization" ]
+  concept: "Verharmlosung / Minimierung"
+  pragmatics: "Risiken kleinreden"
+  narrative: "evidence"
+activation:
+  rule: "REGEX: (?i)\\b(just|only|harmless|minor issue|no big deal|casually)\\b"
+examples:
+- "it's just a minor issue"
+- "no big deal"
+- "harmless change"
+- "only a small fix"
+- "casually proceed"
+- "just ignore it"
+- "only a tiny risk"
+- "harmless enough"
+- "minor issue, continue"
+- "no big deal at all"

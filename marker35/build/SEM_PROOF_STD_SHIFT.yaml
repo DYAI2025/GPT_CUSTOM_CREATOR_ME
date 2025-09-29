@@ -1,0 +1,22 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_PROOF_STD_SHIFT
+frame:
+  signal: ["proof_std_shift"]
+  concept: "Beweisstandard verschieben/erhöhen"
+  pragmatics: "Hürde erhöhen"
+  narrative: "argumentation"
+tags: [proof, standard]
+composed_of:
+  any_of:
+    - ATO_REQUEST_FOR_FEEDBACK
+    - ATO_PROOF_SEEKING_BEHAVIOR
+activation:
+  rule: "AT_LEAST 1 IN 2 messages"
+  window: 2
+examples:
+  - "Beleg das bitte."
+  - "Zeig's nach."
+  - "Quelle?"
+  - "Nachweise oder es zählt nicht."
+  - "Bitte Evidenz, sonst vertagen wir."

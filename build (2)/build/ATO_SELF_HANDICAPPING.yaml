@@ -1,0 +1,24 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_SELF_HANDICAPPING
+frame:
+  signal: ["self_handicapping"]
+  concept: "Selbsthandicapierung (Vorab-Rechtfertigungen)"
+  pragmatics: "Verantwortungsdiffusion / Schutz des Selbstwerts"
+  narrative: "anticipation"
+tags: [self_handicapping, bias]
+pattern:
+  regex: "(?i)\\b(ich hatte keine zeit|war zu viel los|ich bin halt so|bin nicht gut darin|bin heute nicht auf der höhe)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich hatte keine Zeit."
+  - "Es war zu viel los."
+  - "Ich bin halt so."
+  - "Ich bin nicht gut darin."
+  - "Ich bin heute nicht auf der Höhe."
+  - "Schlecht geschlafen, deswegen…"
+  - "Zu viel auf dem Tisch gehabt."
+  - "War nicht der richtige Moment."
+  - "Ich bin eher der Typ für was anderes."
+  - "Heute einfach nicht mein Tag."
+  - "Das liegt mir einfach nicht."

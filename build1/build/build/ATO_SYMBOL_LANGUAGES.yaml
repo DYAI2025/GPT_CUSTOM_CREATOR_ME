@@ -1,0 +1,23 @@
+id: ATO_SYMBOL_LANGUAGES
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for mentions of symbolic/emoji-based communication
+frame:
+  signal: ["symbolic communication"]
+  concept: "Mentions of symbolic/emoji-based communication as content"
+  pragmatics: "Supports semantic analysis for pictographic cues"
+  narrative: "Talk about emojis/symbols as communicative devices"
+pattern: ["(?i)\\b(emoji language|symbol language|pictograms|symbolic language|emoji communication|visual symbols)\\b"]
+examples:
+  - "Emoji language can be quite ambiguous sometimes."
+  - "They used a symbol language instead of words."
+  - "Pictograms carry significant cultural meaning here."
+  - "Symbolic language always needs proper context."
+  - "We analyze emoji language separately from text."
+  - "Visual symbols communicate across language barriers."
+  - "Emoji communication has its own grammar rules."
+  - "Symbol language evolved with digital platforms."
+  - "Pictographic elements enhance text meaning."
+  - "Symbolic representation varies between cultures."
+tags: [atomic, v3.3, symbols, communication]

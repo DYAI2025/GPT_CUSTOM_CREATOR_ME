@@ -1,0 +1,18 @@
+id: ATO_SELF_REFLECTION
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for self-reflective language
+frame:
+  signal: ["self reflection"]
+  concept: "Self reflection signal"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\b(I realize|I understand|I see|I recognize|I notice)\\b"]
+examples:
+  - "I realize this might be difficult."
+  - "I understand your perspective now."
+  - "I see what you're getting at."
+  - "I recognize my role in this."
+  - "I notice I've been doing this."
+tags: [atomic, v3.3, auto-generated]

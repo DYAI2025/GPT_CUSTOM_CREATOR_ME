@@ -1,0 +1,39 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_GUILT_APPEAL_NEEDINESS
+lang: de
+frame:
+  signal:
+  - Schuldappell + Abhängigkeit
+  concept: Guilt-Appeal (Neediness)
+  pragmatics: Nähe erzwingen
+  narrative: guilt_neediness_bind
+composed_of:
+  - ATO_GUILT_APPEAL_SUPPORT
+  - ATO_HELPLESSNESS_DEPENDENCY
+activation:
+  rule: "ANY 1 IN 25 messages"
+  window:
+    messages: 25
+scoring:
+  base: 2.9
+  weight: 0.8
+  decay: 0.01
+  formula: logistic
+examples:
+  positive:
+    - "Wenn du mich wirklich lieben würdest, würdest du mir helfen. Ich schaffe das nicht allein."
+    - "Ich dachte, ich könnte auf dich zählen. Ohne dich bin ich aufgeschmissen."
+    - "Ich will dich nicht belasten, aber ich habe niemanden außer dir. Bitte lass mich nicht im Stich."
+    - "Du bist der Einzige, der mir helfen kann. Wenn du es nicht tust, was soll ich dann machen?"
+    - "Ich weiß, du hast viel zu tun, aber ich brauche dich jetzt wirklich. Ich bin so verzweifelt."
+    - "Ich würde dich nicht fragen, wenn es nicht so schlimm wäre. Ich bin am Ende."
+    - "Ich fühle mich so schuldig, dich um Hilfe zu bitten, aber ich bin so hilflos."
+    - "Ich dachte, wir wären ein Team. Aber anscheinend muss ich da alleine durch."
+    - "Ich opfere so viel für dich. Ist es zu viel verlangt, dass du einmal für mich da bist?"
+    - "Vergiss es, ich will dir keine Umstände machen. Ich komme schon irgendwie klar." # passiv-aggressiv
+  negative: []
+tags:
+- sem
+- guilt
+- neediness

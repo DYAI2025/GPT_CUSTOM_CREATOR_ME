@@ -1,0 +1,21 @@
+id: SEM_SOFT_COMMITMENT
+version: "3.4"
+schema: "LeanDeep"
+frame:
+  signal: ["commitment", "softening"]
+  concept: "Weiche/bedingte Zusage"
+  pragmatics: "Planungsrisiko"
+  narrative: "task_flow"
+tags: [commitment, softening]
+composed_of:
+  - ATO_MINIMIZATION
+  - ATO_DELAYING_PHRASES
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.55, weight: 1.0 }
+examples:
+  - "Mache ich später, ist nicht so dringend."
+  - "Eigentlich okay – morgen dann."
+  - "Nur kurz – nach dem Meeting."
+  - "Halb so wild – verschieben wir."
+  - "Passt – sobald ich Zeit habe."

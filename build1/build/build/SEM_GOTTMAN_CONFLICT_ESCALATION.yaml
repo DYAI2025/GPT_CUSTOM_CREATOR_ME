@@ -1,0 +1,29 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_GOTTMAN_CONFLICT_ESCALATION
+frame:
+  signal: ["gottman_escalation"]
+  concept: "Gottman-Konflikteskalation"
+  pragmatics: "Akkumulation destruktiver Muster"
+  narrative: "conflict"
+tags: [gottman, conflict, escalation]
+composed_of:
+  weighted_any_of:
+    - id: ATO_GOTTMAN_CRITICISM
+      weight: 0.4
+    - id: ATO_GOTTMAN_CONTEMPT
+      weight: 0.5
+    - id: ATO_GOTTMAN_DEFENSIVENESS
+      weight: 0.3
+    - id: ATO_GOTTMAN_STONEWALLING
+      weight: 0.4
+activation:
+  rule: "WEIGHTED_OR >= 0.8"
+  window: 6
+scoring: { base: 1.2, weight: 1.1 }
+examples:
+  - "Du machst immer alles falsch! – Das stimmt nicht! – (schweigen)"
+  - "Du bist so respektlos! – Ich verteidige mich nur! – Lass mich in Ruhe!"
+  - "Nie hörst du zu! – Ach, wirklich? – ..."
+  - "Du greifst mich an! – Ich kann nichts dafür! – Ich bin raus."
+  - "Immer dieselbe Leier – du übertreibst – (keine Antwort)."

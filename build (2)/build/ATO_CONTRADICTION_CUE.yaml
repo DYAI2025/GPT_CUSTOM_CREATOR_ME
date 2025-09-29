@@ -1,0 +1,24 @@
+schema: LeanDeep
+version: "3.4"
+namespace: consistency_external
+
+defaults:
+  scoring:
+    window_tokens: 120
+    norm: zscore
+    thresholds: { warn: 0.60, alert: 0.75, critical: 0.85 }
+  scope:
+    unit: "speaker"
+    target: "OTHER"
+
+atos:
+  - id: ATO_CONTRADICTION_CUE
+    frame:
+      signal: ["vorhin sagtest du", "aber eben meintest du", "widerspricht", "das passt nicht zu"]
+      concept: "Widerspruchs-Hinweislexik"
+      pragmatics: "Explizite Inkonsistenzmarkierung"
+      narrative: "Oberflächenkipp, prüfe Belege"
+    pattern:
+      detect_class: phrase
+      list: ["vorhin sagtest du","aber eben meintest du","widerspricht","passt nicht zu"]
+    tags: [contrast, contradiction]

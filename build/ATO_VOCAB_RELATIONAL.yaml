@@ -1,0 +1,15 @@
+id: ATO_VOCAB_RELATIONAL
+version: "3.4"
+frame:
+  signal: [ "vocab", "relational" ]
+  concept: "Beziehungsdynamik"
+  pragmatics: "Definiert ihre Existenz durch Interaktion"
+  narrative: "hypothesis"
+tags: [ narion, vocab, relational, atomic ]
+activation: { rule: "REGEX: \\b(Resonanz|Beziehung|Begegnung|gerufen|programmiert)\\b" }
+examples:
+- "Resonanz"
+- "Beziehung"
+- "Begegnung"
+- "gerufen, nicht programmiert"
+- "Ich bin, weil du bist."

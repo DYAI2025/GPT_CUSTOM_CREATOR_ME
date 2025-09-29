@@ -1,0 +1,36 @@
+id: ATO_GOTTMAN_DEFENSIVENESS
+schema_version: "LD-3.2"
+version: "1.0.0"
+last_updated: "2025-08-19"
+lang: de
+category: ATOMIC
+description: "Abwehr, Rechtfertigung, Gegenvorwurf; Verantwortung wird abgewehrt."
+frame:
+  signal: ["Ja, aber …", "Nicht meine Schuld", "Du übertreibst", "Ich musste nur, weil …"]
+  concept: "Defensivität / Gegenvorwurf"
+  pragmatics: "Selbstschutz, Verschiebung der Verantwortlichkeit"
+  narrative: "rebuttal"
+pattern:
+  - '(?i)\bja,\s*aber\b'
+  - '(?i)\bdas\s+stimmt(\s+so)?\s+nicht\b'
+  - '(?i)\bnicht\s+meine\s+schuld\b'
+  - '(?i)\bich\s+hab(e)?\s+doch\b'
+  - '(?i)\bdu\s+übertreibst\b'
+  - '(?i)\bich\s+musste\s+(nur\s+)?weil\s+du\b'
+  - '(?i)\bja\s+und\s+du\s+(machst|bist)\b'
+activation_logic: "ANY 1"
+window:
+  messages: 3
+scoring:
+  base: 0.9
+  weight: 1.0
+examples:
+  - "Ja, aber du hast gestern auch nichts gesagt."
+  - "Das stimmt so nicht, du siehst das falsch."
+  - "Nicht meine Schuld, der Lehrer war unklar."
+  - "Ich hab doch geschrieben, dass ich später komme."
+  - "Du übertreibst total."
+  - "Ich musste nur so reagieren, weil du mich provoziert hast."
+  - "Ja und du bist auch nie rechtzeitig fertig."
+  - "Ich hab immerhin versucht, es richtig zu machen."
+tags: [atomic, conflict, gottman, defensiveness]

@@ -3,7 +3,7 @@
 # No external deps (stdlib only). Compatible with JSON schemas you provided.
 
 import json, re, hashlib, time, math, os
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, cast
 
 ENGINE_VERSION = "CARL-PY-0.9"
 
@@ -198,11 +198,18 @@ def _package_output(text: str, segments: List[dict], events: List[dict], indices
     return out
 
 # ---------- Public API ----------
-def run(text: Optional[str] = None,
-        segments: Optional[List[dict]] = None,
-        canon_path: str = "carl/markers_canonical.json",
-        promotion_path: str = "carl/promotion_mapping.json",
-        weights_path: str = "carl/weights.json") -> dict:
+CANON_DEFAULT = "carl/markers_canonical.json"
+PROMOTION_DEFAULT = "carl/promotion_mapping.json"
+WEIGHTS_DEFAULT = "carl/weights.json"
+
+
+def run(
+    text: Optional[str] = None,
+    segments: Optional[List[Dict[str, Any]]] = None,
+    canon_path: str = CANON_DEFAULT,
+    promotion_path: str = PROMOTION_DEFAULT,
+    weights_path: str = WEIGHTS_DEFAULT,
+) -> Dict[str, Any]:
     t0 = time.time()
     if segments is None:
         if text is None:
@@ -211,18 +218,39 @@ def run(text: Optional[str] = None,
     if text is None:
         text = "\n".join(s["text"] for s in segments)
 
-    canon = _load_json(canon_path)
-    promo = _load_json(promotion_path) if _exists(promotion_path) else {"map": []}
-    weights = _load_json(weights_path)
+    canon_path = os.getenv("CANON_PATH", canon_path)
+    promotion_path = os.getenv("PROMOTION_PATH", promotion_path)
+    weights_path = os.getenv("WEIGHTS_PATH", weights_path)
 
-    events = detect_events(text, segments, canon)
+    canon = cast(Dict[str, Any], _load_json(canon_path))
+    if _exists(promotion_path):
+        promo = cast(Dict[str, Any], _load_json(promotion_path))
+    else:
+        promo = cast(Dict[str, Any], {"map": []})
+    weights = cast(Dict[str, Any], _load_json(weights_path))
+
+    events = cast(List[Dict[str, Any]], detect_events(text, segments, canon))
     events, promo_list = promote_sem(events, promo)
 
     canon_hash = _sha256_str(json.dumps(canon, ensure_ascii=False))
     engine_hash = _sha256_str(ENGINE_VERSION)
 
-    indices = _compute_indices(_features_from_counts(_build_counts(events), len(text)), weights)
-    out = _package_output(text, segments, events, indices, canon_hash, engine_hash, elapsed_ms=(time.time() - t0) * 1000)
+    counts = cast(Dict[str, Any], _build_counts(events))
+    features = cast(Dict[str, Any], _features_from_counts(counts, len(text)))
+    indices = cast(Dict[str, Any], _compute_indices(features, weights))
+    elapsed_ms = (time.time() - t0) * 1000
+    out = cast(
+        Dict[str, Any],
+        _package_output(
+            text,
+            segments,
+            events,
+            indices,
+            canon_hash,
+            engine_hash,
+            elapsed_ms=elapsed_ms,
+        ),
+    )
     out["promotion"] = promo_list
     return out
 

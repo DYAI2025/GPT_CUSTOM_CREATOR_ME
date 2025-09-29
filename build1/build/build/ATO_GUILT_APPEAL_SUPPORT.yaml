@@ -1,0 +1,32 @@
+id: ATO_GUILT_APPEAL_SUPPORT
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Schuldappell an Unterstützung"
+  concept: "Du lässt mich im Stich"
+  pragmatics: "Guilt-Induktion"
+  narrative: "appeal"
+pattern:
+  - '(?i)\b(ich dachte, du w(ä|a)rst (immer )?f(ü|u)r mich da|du l(ä|a)sst mich (im stich|allein)|ich h(ä|a)tte das von dir erwartet)\b'
+activation:
+  rule: "ANY 1 IN 25 messages"
+window:
+  messages: 25
+scoring:
+  base: 2.4
+  weight: 0.8
+  decay: 0.01
+  formula: "logistic"
+examples:
+  - "Ich dachte, du wärst für mich da."
+  - "Du lässt mich im Stich."
+  - "Ich hätte das von dir erwartet."
+  - "Ich dachte immer, du bist an meiner Seite."
+  - "Du lässt mich gerade völlig allein zurück."
+  - "Ich hatte gehofft, du stehst zu mir."
+  - "Du lässt mich hängen, wenn ich dich brauche."
+  - "Dachte, ich könnte mich auf dich verlassen."
+  - "Du wendest dich von mir ab."
+  - "Ich zählte darauf, dass du da bist."
+tags: [ato, guilt, appeal]

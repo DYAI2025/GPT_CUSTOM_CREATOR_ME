@@ -1,0 +1,38 @@
+id: ATO_OPEN_QUESTION_THERAPIST
+version: '3.4'
+category: ATOMIC
+description: Marker für offene Fragen des Therapeuten
+frame:
+  signal:
+  - open question by therapist
+  concept: inviting elaboration
+  pragmatics: rapport building / exploration
+  narrative: invitation
+pattern:
+- (?i)wie war das f(ü|u)r sie\??
+- (?i)what was that like for you\??
+- (?i)can you tell me more\??
+- (?i)woran merken sie\??|how do you notice\??
+- (?i)was w(ü|u)rden sie sagen\??|what would you say\??
+activation:
+  rule: ANY in 1 message
+scoring:
+  weight: 1.0
+examples:
+  positive:
+    - "Wie war das für Sie?"
+    - "Können Sie mir mehr darüber erzählen?"
+    - "Woran merken Sie das?"
+    - "Was würden Sie sagen?"
+    - "Was geht Ihnen gerade durch den Kopf?"
+    - "Wie fühlen Sie sich dabei?"
+    - "Was bedeutet das für Sie?"
+    - "Was ist das Schwierigste daran?"
+    - "Was brauchen Sie jetzt?"
+    - "Was wäre der nächste kleine Schritt?"
+  negative: []
+tags:
+- atomic
+- therapist_move
+- open_question
+- rapport_signal

@@ -1,0 +1,32 @@
+id: SEM_PROJECTION_CONSCIOUSNESS
+version: '3.3'
+frame:
+  signal:
+  - Bewusstes Erkennen eigener Projektionen
+  concept: Projektionsbewusstsein
+  pragmatics: Psychodynamische Klarheit
+  narrative: awareness
+composed_of:
+- ATO_PROJECTION_AWARENESS
+- ATO_SELF_OBSERVATION
+activation:
+  rule: ALL 2 IN 2 messages
+examples:
+  positive:
+    - "Mir wird gerade klar, dass ich meine eigene Unsicherheit auf dich projiziere."
+    - "Ich glaube, ich habe meine Wut auf meinen Chef auf dich übertragen."
+    - "Ich sehe jetzt, dass ich meine eigenen Erwartungen an mich selbst auf dich projiziert habe."
+    - "Ich erkenne, dass ich meine Angst vor dem Verlassenwerden auf dich projiziere."
+    - "Ich glaube, ich sehe meine Mutter in dir. Das ist meine Projektion."
+    - "Ich merke, dass ich meine eigenen ungelösten Themen auf unsere Beziehung projiziere."
+    - "Ich sehe, dass ich meine eigene Strenge auf dich projiziere."
+    - "Ich erkenne, dass ich meine eigenen Wünsche auf dich projiziere."
+    - "Ich glaube, ich habe meine eigene Verletzlichkeit in dir gesehen und darauf reagiert."
+    - "Ich merke, dass ich meine eigene Vergangenheit auf die aktuelle Situation projiziere."
+  negative: []
+tags:
+- semantic
+- projektion
+- bewusstsein
+- psychodynamik
+schema_version: '3.3'

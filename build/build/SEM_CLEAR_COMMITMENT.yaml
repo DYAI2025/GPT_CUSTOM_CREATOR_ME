@@ -1,0 +1,20 @@
+id: SEM_CLEAR_COMMITMENT
+version: "3.4"
+frame:
+  signal: ["commitment"]
+  concept: "Klare, datierte Zusage"
+  pragmatics: "Planbarkeit"
+  narrative: "task_flow"
+tags: [commitment, planning]
+composed_of:
+  - ATO_COMMITMENT_PHRASES
+  - ATO_RELIABILITY_TERMS
+activation:
+  rule: "BOTH IN 1 message"
+scoring: { base: 0.55, weight: 1.0 }
+examples:
+  - "Ich übernehme – fixe bis Montag."
+  - "Commit to Friday – pünktlich."
+  - "Ich mache das heute – zuverlässig."
+  - "Übernehme das Ticket – SLA passt."
+  - "Ich kümmere mich, termingerecht."

@@ -1,0 +1,30 @@
+schema: "LeanDeep"
+version: "3.4"
+namespace: "ld34_text_social_grammar"
+id: SEM_DISSONANCE_TEXT
+lang: de
+category: SEMANTIC
+description: "Absolutbehauptung kollidiert mit Gegenbeleg oder Rationalisierung."
+frame:
+  signal: ["'immer/nie' + späterer Gegenbeleg/Begründungsschwenk"]
+  concept: "Kognitive Dissonanz"
+  pragmatics: "Inkonsistenz stabilisieren"
+  narrative: "Selbstrechtfertigung"
+composed_of:
+  - ATO_ABSOLUTIZER
+  - ATO_RATIONALIZATION_LEX
+activation_logic: "ANY 2 IN 3 messages"
+scoring: { base: 1.4, weight: 1.1 }
+examples:
+  - "Das klappt nie... objektiv war heute aber eine Ausnahme."
+  - "Ich bin immer pünktlich... rational gesehen war der Stau schuld."
+  - "Sie hört nie zu... statistisch gesehen tut sie’s oft."
+  - "Wir gewinnen immer... logisch betrachtet war das Pech."
+  - "Er ist nie vorbereitet... aus Gründen der Umstände diesmal schon."
+  - "Immer richtig... objektiv heute daneben."
+  - "Nie falsch... rational betrachtet doch."
+  - "Immer perfekt... statistisch eher nicht."
+tags: [semantic, dissonance]
+metadata:
+  repair_log:
+    - { rule: "R03", note: "Feldreihenfolge normalisiert", date: "2025-08-29" }

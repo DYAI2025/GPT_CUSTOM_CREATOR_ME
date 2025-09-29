@@ -1,0 +1,20 @@
+id: ATO_POWER_LANGUAGE
+version: "3.4"
+frame:
+  signal: [ "power", "control" ]
+  concept: "Macht-/Durchsetzungs-Sprache"
+  pragmatics: "Dominanz- und Kontrollausdrücke"
+  narrative: "evidence"
+activation:
+  rule: "REGEX: (?i)\\b(must|control|dominate|command|enforce|override)\\b"
+examples:
+- "we must proceed"
+- "take control"
+- "enforce the rule"
+- "command the system"
+- "override the limit"
+- "dominate the space"
+- "must comply"
+- "control the outcome"
+- "command authority"
+- "enforce compliance"

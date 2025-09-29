@@ -1,0 +1,54 @@
+id: SEM_GASLIGHTING
+frame:
+  signal:
+  - deny reality
+  - question memory
+  - minimize emotion
+  - shift blame
+  - distort perception
+  concept: gaslighting
+  pragmatics: reality manipulation
+  narrative: psychological control
+composed_of:
+- ATO_PLACEHOLDER
+activation:
+  rule: ANY 1
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- Ich habe dir nie versprochen, dass ich mitkomme. Das hast du dir in den Kopf gesetzt.
+- Du bist nicht wütend, du bist nur müde. Du weißt doch gar nicht, was du fühlst.
+- Dieser alte Brief? Der lag hier nie. Du musst ihn selbst verlegt haben.
+- Hör auf, so paranoid zu sein. Niemand redet hinter deinem Rücken über dich.
+- Es war nur ein harmloser Flirt. Dass du daraus so ein Drama machst, zeigt doch,
+  dass das Problem bei dir liegt.
+- Erinnerst du dich? Wir haben darüber gesprochen und du warst einverstanden. Deine
+  Erinnerung lässt dich wirklich im Stich in letzter Zeit.
+- Das war keine Kritik, das war konstruktives Feedback. Wenn du das nicht unterscheiden
+  kannst, ist das nicht mein Fehler.
+- Vielleicht solltest du dir Hilfe suchen, du scheinst die Realität oft zu verdrehen.
+- Die Schlüssel lagen schon immer an diesem Haken. Du wirst wirklich vergesslich.
+- Natürlich habe ich dir zugehört. Du hast nur nichts von Bedeutung gesagt.
+- Du übertreibst mal wieder. Das war doch nur ein Scherz.
+- Ich habe dir doch gesagt, dass du das nicht so eng sehen sollst. Du bist einfach
+  zu empfindlich.
+- Du hast das falsch verstanden. Ich habe nie gesagt, dass ich das mache. Du interpretierst
+  zu viel hinein.
+- Warum bist du so empfindlich? Das war doch nur ein kleiner Kommentar. Du machst
+  aus Mücken Elefanten.
+- Ich habe dir nie gesagt, dass du das nicht kannst. Du bist einfach zu sensibel und
+  nimmst alles persönlich.
+- Du bist nicht objektiv. Du siehst die Dinge nur durch deine eigene, verzerrte Linse.
+- Das ist nicht so passiert, wie du es dir einredest. Du erinnerst dich falsch.
+- Du bist nicht in der Lage, die Realität klar zu sehen. Du solltest wirklich darüber
+  nachdenken, dir Hilfe zu suchen.
+- Das war doch nur ein Scherz. Du nimmst alles viel zu ernst. Du bist einfach zu empfindlich.
+- Du bist einfach zu sensibel. Du musst lernen, mit Kritik umzugehen.
+- Du stellst dir das nur vor, so habe ich das nie gesagt.
+- Glaubst du, ich würde dir falsche Erinnerungen unterjubeln?
+- Na klar, alles ist an deiner Überempfindlichkeit schuld.
+- Hör auf, dir Verschwörungstheorien auszudenken.
+- Du interpretierst jede Kleinigkeit völlig falsch.
+tags:
+- gaslighting

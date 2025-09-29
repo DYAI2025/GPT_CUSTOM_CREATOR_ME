@@ -1,0 +1,19 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_DEEPER_QUESTIONING
+frame:
+  signal: ["deeper_questioning"]
+  concept: "Vertiefende Nachfrage / Nachbohren"
+  pragmatics: "Exploration / Klärung"
+  narrative: "interaction"
+tags: [question, probing]
+pattern:
+  regex: "\\b(kannst du genauer|erzähl mir mehr|was steckt dahinter|wie genau|was genau meinst du)"
+  flags: ["IGNORECASE"]
+examples:
+  - "Kannst du genauer erklären, was du meinst?"
+  - "Erzähl mir mehr darüber."
+  - "Was steckt dahinter?"
+  - "Wie genau lief das ab?"
+  - "Was genau meinst du damit?"
+  - "Hilf mir zu verstehen: worum geht's dir da?"

@@ -1,0 +1,29 @@
+id: SEM_EMOTIONAL_OVERWHELM
+schema_version: LD-3.3
+lang: en
+category: SEMANTIC
+description: Semantic pattern for emotional overwhelm states
+frame:
+  signal: ["emotional flooding"]
+  concept: "Emotional Overwhelm"
+  pragmatics: "micro pattern recognition"
+  narrative: "intent"
+composed_of:
+  - ATO_EMOTIONAL_REGULATION
+  - ATO_UNCERTAINTY
+  - ATO_BOUNDARY_SETTING
+activation_logic: "ANY 2"
+window:
+  messages: 2
+examples:
+  - "I feel completely overwhelmed. I'm not sure I can handle this conversation right now."
+  - "My emotions are everywhere. I need to stop before I say something I'll regret."
+  - "I'm feeling too much at once. I don't know how to process all of this."
+  - "This is too intense for me. I can't continue when I'm this emotional."
+  - "I feel like I'm drowning. Maybe we should take a break before I lose it completely."
+  - "I'm emotionally flooded right now. I need space to calm down and think clearly."
+  - "I feel too triggered to think straight. I'm not sure what the right response is."
+  - "This is overwhelming my system. I can't engage productively when I'm this activated."
+  - "I'm having trouble regulating myself. I don't know if I can stay present for this."
+  - "I feel completely dysregulated. I need to step away before I make this worse."
+tags: [semantic, v3.3, emotional-overwhelm]

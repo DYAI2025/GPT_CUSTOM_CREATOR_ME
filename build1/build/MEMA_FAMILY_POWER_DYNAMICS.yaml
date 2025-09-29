@@ -1,0 +1,41 @@
+id: MEMA_FAMILY_POWER_DYNAMICS
+display_title: "Familiäre Machtdynamiken"
+version: "3.3"
+lang: de
+category: MEMA
+description: "Meta-Muster komplexer Machtverteilung und -kämpfe in Familiensystemen."
+frame:
+  signal: ["Komplexe familiäre Machtstrukturen"]
+  concept: "Familiäre Machtdynamiken"
+  pragmatics: "Vielschichtige Macht- und Kontrollstrukturen in Familien"
+  narrative: "Macht-Systemdynamik"
+combination:
+  type: "AND"
+  components:
+    - marker_id: "SEM_PARENTAL_AUTHORITY"
+      weight: 0.5
+    - marker_id: "SEM_CHILD_RESISTANCE"
+      weight: 0.4
+    - marker_id: "CLU_HOUSEHOLD_ROUTINE_CONFLICTS"
+      weight: 0.4
+    - marker_id: "ATO_GOTTMAN_CRITICISM"
+      weight: 0.3
+    - marker_id: "ATO_GOTTMAN_CONTEMPT"
+      weight: 0.4
+  threshold: 0.8
+activation:
+  rule: "WEIGHTED_AND"
+window:
+  messages: 100
+scoring:
+  base: 2.3
+  weight: 0.95
+  decay: 0.01
+  formula: "logistic"
+examples:
+  - "Anhaltende Machtkämpfe zwischen Eltern und Kindern mit wechselnden Allianzen."
+  - "Autoritäre Strukturen führen zu verdecktem Widerstand und Sabotage."
+tags: [mema, family, power, dynamics, control, resistance]
+detect_class: "E"
+criteria: "Komplexe Interaktion von Autorität, Widerstand und Machtkämpfen"
+updated_at: "2025-08-19T10:30:00Z"

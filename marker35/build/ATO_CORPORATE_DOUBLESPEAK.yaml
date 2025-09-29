@@ -1,0 +1,38 @@
+id: ATO_CORPORATE_DOUBLESPEAK
+version: "3.3"
+description: "Erkennung von typischen Begriffen und Phrasen der Unternehmenssprache, die oft zur Verschleierung von Inhalten oder zur Abstraktion verwendet werden."
+frame:
+  signal: ["synergie", "skalieren", "leverage", "alignment"]
+  concept: "Unternehmenssprache"
+  pragmatics: "Verschleierung durch Abstraktion"
+  narrative: "corporate"
+pattern:
+  - "(?i)\\b(synergie.?effekte?|synergien)\\b"
+  - "(?i)\\b(skalier(en|bar|ung))\\b"
+  - "(?i)\\b(leverage|hebel.?wirkung)\\b"
+  - "(?i)\\b(alignment|aligned)\\b"
+  - "(?i)\\b(low.?hanging.?fruits?)\\b"
+examples:
+  - "Wir müssen die Synergieeffekte nutzen"
+  - "Das lässt sich gut skalieren"
+  - "Wir sollten unsere Assets leveragen"
+  - "Sind alle aligned bei diesem Thema?"
+  - "Lasst uns die low-hanging fruits ernten"
+  - "Wir müssen die Stakeholder ins Boot holen"
+  - "Das ist ein Game Changer für unsere Strategie"
+  - "Wir müssen die KPIs im Blick behalten"
+  - "Das ist ein Paradigmenwechsel"
+  - "Wir sollten die Roadmap anpassen"
+  - "Wir müssen die Vision klar kommunizieren"
+  - "Das ist ein Win-Win-Szenario"
+  - "Wir müssen die Effizienz steigern"
+  - "Das ist ein Best Practice Beispiel"
+  - "Wir sollten die Value Proposition klarstellen"
+  - "Das ist ein Thought Leader in der Branche"
+  - "Wir müssen die Stakeholder-Engagement erhöhen"
+  - "Das ist ein Disruptor im Markt"
+  - "Wir sollten die Customer Journey optimieren"
+  - "Das ist ein Core Competency für uns"
+  - "Wir müssen die Pain Points adressieren"
+tags: [atomic, corporate, business, sprache]
+schema_version: "3.3"

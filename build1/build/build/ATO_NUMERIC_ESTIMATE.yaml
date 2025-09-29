@@ -1,0 +1,19 @@
+id: ATO_NUMERIC_ESTIMATE
+version: "3.4"
+frame:
+  signal: ["surface","numeric"]
+  concept: "quantitative_claim"
+  pragmatics: "evidence/estimate"
+  narrative: "data"
+pattern: '\b(\d{1,3}(?:[.,]\d+)?\s?(k|M|Mio|%)|\d{2,4})\b'
+examples:
+  - "Wir erwarten 50.000 Umsatz."
+  - "Ca. 10% Wachstum."
+  - "Rund 250k dieses Jahr."
+  - "Etwa 12% Churn aktuell."
+  - "Budget liegt bei 80k."
+  - "Zielgröße 1500 Nutzer in Q2."
+  - "Pipeline ca. 40 Deals."
+scoring:
+  base: 0.6
+  weight: 1.5

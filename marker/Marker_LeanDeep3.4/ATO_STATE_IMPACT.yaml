@@ -1,0 +1,20 @@
+id: ATO_STATE_IMPACT
+version: "3.3"
+lang: de
+frame:
+  signal:
+    - "Wirkung auf mich in einem Satz (ohne Schuldzuweisung)"
+  concept: "Impact-Statement"
+  pragmatics: "transparente Rückmeldung"
+  narrative: "Selbstklärung"
+pattern:
+  - '(?i)\b(es|das)\s*(macht|ließ)\s*mich\s+\w+\b'
+  - '(?i)\b(es)\s*hat\s*mich\s+(verletzt|verunsichert|gefreut)\b'
+  - '(?i)\b(dadurch|damit)\s+bin\s+ich\s+\w+\b'
+examples:
+  - "Das hat mich verunsichert."
+  - "Es macht mich traurig, wenn ich im Unklaren bleibe."
+  - "Dadurch bin ich misstrauisch geworden."
+  - "Das hat mich gefreut."
+  - "Es hat mich verletzt."
+tags: [impact, feedback, atomic]

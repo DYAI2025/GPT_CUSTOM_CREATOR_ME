@@ -1,0 +1,23 @@
+id: SEM_BUSINESS_FOCUS
+version: "3.4"
+frame:
+  signal: ["semantic","focus"]
+  concept: "business_model_clarity"
+  pragmatics: "topic_relevance"
+  narrative: "focus"
+composed_of:
+  - ATO_FIRST_PERSON_PRONOUN
+  - ATO_FINANCIAL_TERM
+activation:
+  rule: "BOTH IN 1 message"
+examples:
+  - "Ich erwarte, dass der Umsatz in Q4 steigt."
+  - "Wir fokussieren uns auf B2B SaaS mit wiederkehrenden Umsätzen."
+  - "Ich sehe unseren Umsatzpfad klar strukturiert."
+  - "Ich treibe das Umsatz-Reporting jetzt wöchentlich."
+  - "Ich analysiere regelmäßig unsere Burn-Rate."
+  - "Ich erkläre Investoren unsere Marge und Umsatzstruktur."
+  - "Ich plane Cashflow und Umsatz parallel."
+scoring:
+  base: 0.6
+  weight: 1.8

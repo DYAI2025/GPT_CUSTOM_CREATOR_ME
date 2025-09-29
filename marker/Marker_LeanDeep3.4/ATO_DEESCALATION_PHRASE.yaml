@@ -1,0 +1,25 @@
+id: ATO_DEESCALATION_PHRASE
+frame:
+  signal:
+  - Deeskalation
+  - Friedensangebot
+  - Beruhigung
+  concept: Konfliktentschärfung
+  pragmatics: Reduktion von Spannung
+  narrative: Schlichtung
+pattern:
+- (?i)Schritt zurück
+- (?i)Entschuldige
+- (?i)lösen
+- (?i)klären
+- (?i)verzeih
+activation:
+  rule: ANY 1
+examples:
+- Lass uns einen Schritt zurückgehen und besprechen, was passiert ist.
+- Entschuldige, wenn ich zu forsch war.
+- Wie können wir das lösen?
+- Ich möchte, dass wir das klären.
+- Das war nicht meine Absicht, bitte verzeih mir.
+tags:
+- deescalation

@@ -1,0 +1,26 @@
+id: SEM_SIMU_LOVE_SCAM_HUMAN01
+frame:
+  signal:
+  - abrupt emotional spike
+  - declaration of love
+  - lack of contextual buildup
+  - emotional overload
+  concept: humanized love-scam pattern
+  pragmatics: identify contextless intense emotion
+  narrative: sudden emotional shift
+composed_of:
+- ATO_PLACEHOLDER
+activation:
+  rule: ANY 2 IN 3 messages
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- Ich liebe dich schon nach wenigen Nachrichten, ohne uns wirklich zu kennen.
+- Oh mein Gott, ich kann nicht aufhören, an dich zu denken!
+- Du bist das Wichtigste in meinem Leben – und wir haben uns gerade erst vorgestellt.
+- Ich fühle mich so verbunden mit dir, obwohl wir uns nie persönlich getroffen haben.
+- Es ist verrückt, wie stark ich dich schon jetzt liebe.
+tags:
+- love_scam
+- emotional_intensity

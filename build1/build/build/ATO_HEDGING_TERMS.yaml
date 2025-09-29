@@ -1,0 +1,17 @@
+id: ATO_HEDGING_TERMS
+version: "3.4"
+frame:
+  signal: ["hedging"]
+  concept: "Abschwächende Modalisierung"
+  pragmatics: "Unsicherheitskommunikation"
+  narrative: "uncertainty"
+tags: [uncertainty, hedging]
+pattern:
+  regex: "\\b(vielleicht|eventuell|wohl|tendenziell|possibly|might)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Vielleicht passt das."
+  - "Eventuell später."
+  - "Wohl eher nicht."
+  - "It might work."
+  - "Tendenziell ja."

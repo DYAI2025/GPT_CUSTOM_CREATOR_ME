@@ -1,0 +1,24 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_LEARNED_HELPLESSNESS
+frame:
+  signal: ["helplessness"]
+  concept: "Erlernte Hilflosigkeit"
+  pragmatics: "Ohnmacht / Aufgabenvermeidung"
+  narrative: "affect"
+tags: [helplessness, avoidance]
+pattern:
+  regex: "(?i)\\b(egal was ich tue|es bringt nichts|ich kann das nicht|ich schaffe das nie|keine chance)\\b"
+  flags: ["IGNORECASE"]
+examples:
+  - "Egal was ich tue, es bringt nichts."
+  - "Ich kann das nicht."
+  - "Ich schaffe das nie."
+  - "Es hat sowieso keine Chance."
+  - "Ich komme da nie raus."
+  - "Das ändert sich nie."
+  - "Ich kriege das nie hin."
+  - "Warum versuche ich es überhaupt?"
+  - "Alles ist zwecklos."
+  - "Ich weiß gar nicht, wo ich anfangen soll."
+  - "Das überfordert mich immer."

@@ -1,0 +1,28 @@
+id: CLU_INNER_EMPTINESS_MARKER
+frame:
+  signal:
+  - egal
+  - schnuppe
+  - keinen Antrieb
+  - keine Lust
+  concept: Emotionale Abgestumpftheit
+  pragmatics: Desinteresse signalisieren
+  narrative: emotional_numbness
+composed_of:
+- SEM_APATHY_EXPRESSION
+- SEM_ENERGY_DEFICIT
+activation:
+  rule: AT_LEAST 2 IN 5 messages
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+- Ist mir egal.
+- Hab gar keinen Antrieb, tut mir leid.
+- Kochen? Ach, ist mir schnuppe.
+- Mir ist das gerade echt egal.
+- Keine Lust auf gar nichts.
+- Alles ist mir zu viel und gleichzeitig egal.
+tags:
+- emotional_state
+- apathy

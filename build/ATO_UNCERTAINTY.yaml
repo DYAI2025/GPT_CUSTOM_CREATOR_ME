@@ -1,0 +1,18 @@
+id: ATO_UNCERTAINTY
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for uncertainty expressions
+frame:
+  signal: ["uncertainty"]
+  concept: "Uncertainty signal"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\b(I'm not sure|maybe|perhaps|I don't know|unclear)\\b"]
+examples:
+  - "I'm not sure how to handle this."
+  - "Maybe we should try something else."
+  - "Perhaps there's another way."
+  - "I don't know what the right answer is."
+  - "This is unclear to me."
+tags: [atomic, v3.3, auto-generated]

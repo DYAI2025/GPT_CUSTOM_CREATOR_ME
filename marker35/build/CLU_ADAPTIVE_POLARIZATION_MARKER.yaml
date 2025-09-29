@@ -1,0 +1,31 @@
+id: CLU_ADAPTIVE_POLARIZATION_MARKER
+frame:
+  signal:
+  - sag mal
+  - hör zu
+  - verstehst du
+  concept: Kommunikationsmuster
+  pragmatics: Dialog führen
+  narrative: exchange
+composed_of:
+- SEM_GENERIC_PATTERN
+activation:
+  rule: AT_LEAST 2 IN 5 messages
+scoring:
+  base: 1.5
+  weight: 1.2
+examples:
+  positive:
+    - "Auf der einen Seite verstehe ich das, aber auf der anderen Seite sehe ich das komplett anders."
+    - "Ich sehe deinen Punkt, aber meiner Meinung nach liegst du da völlig falsch."
+    - "Wir drehen uns im Kreis. Du hast deine Meinung, ich habe meine."
+    - "Das ist deine Perspektive. Meine ist eine ganz andere."
+    - "Ich kann dir da überhaupt nicht zustimmen."
+    - "Wir kommen hier auf keinen grünen Zweig."
+    - "Das ist doch absurd, was du da sagst."
+    - "Ich glaube, wir reden aneinander vorbei. Mein Punkt ist..."
+    - "Nein, das ist nicht richtig. Richtig ist, dass..."
+    - "Ich sehe das diametral entgegengesetzt."
+  negative: []
+tags:
+- communication

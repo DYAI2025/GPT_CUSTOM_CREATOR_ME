@@ -1,0 +1,36 @@
+id: CLU_INTUITION_TRUST
+version: "3.4"
+frame:
+  signal: ["intuition","weak-aggregation"]
+  concept: "Vorahnung: (Miss)vertrauen / Verlässlichkeit"
+  pragmatics: "Risikoabschätzung für Kooperation"
+  narrative: "hypothesis"
+tags: [intuition, trust, distrust, learning]
+composed_of:
+  - SEM_TRUST_SIGNALING
+  - SEM_DISTRUST_ACCUSATION
+  - SEM_RELIABILITY_CONCERN
+activation: { rule: "AT_LEAST 2 DISTINCT SEMs IN 5 messages" }
+scoring: { base: 0.5, weight: 1.0 }
+metadata:
+  intuition:
+    state: "provisional"
+    confirm_window: 5
+    confirm_rule: "AT_LEAST 1 of [SEM_TRUST_SIGNALING, SEM_DISTRUST_ACCUSATION] IN confirm_window"
+    multiplier_on_confirm: 1.6
+    decay_window: 7
+  telemetry_keys:
+    counter_confirmed: "INT_TRUST.confirmed"
+    counter_retracted: "INT_TRUST.retracted"
+    ewma_precision: "INT_TRUST.ewma_precision"
+examples:
+  - "… 'ich vertraue dir' + Zusicherung …"
+  - "… 'kann mich auf dich verlassen?' …"
+  - "… Vertrauensaufbau + Referenzen …"
+  - "… 'zweifle an deiner Ehrlichkeit' …"
+  - "… 'verlässlich' + SLA-Hinweis …"
+  - "… 'vertrauenswürdig' + Empfehlung …"
+  - "… Skepsis + 'Beweis mir's' …"
+  - "… 'wir teilen Credentials' + Boundary-Setting …"
+  - "… 'enttäuscht' + Kontrollwunsch …"
+  - "… 'Handshake' + Absicherung …"

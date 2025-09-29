@@ -1,0 +1,30 @@
+schema: "LeanDeep"
+version: "3.4"
+id: SEM_EXCELLENCE_DRIVE
+frame:
+  signal: ["excellence_drive"]
+  concept: "Exzellenz/Bestleistung anstreben"
+  pragmatics: "Ziel-/Leistungsorientierung"
+  narrative: "motive_achievement"
+tags: [excellence, deadline, standards]
+composed_of:
+  any_of:
+    - ATO_ACHIEVEMENT_GOAL
+    - ATO_PROBLEM_SOLVING
+    - ATO_MINI_DEADLINE
+    - SEM_PROOF_STD_SHIFT
+activation:
+  rule: "AT_LEAST 2 IN 4 messages"
+  window: 4
+scoring: { base: 0.63, weight: 1.08 }
+examples:
+  - "Ziel: Exzellenz – heute EOD Lösung A/B."
+  - "Bis 14:00 Draft mit Qualitätskriterien."
+  - "Standard hoch: peer‑reviewed Quellen."
+  - "Ich will der Beste sein – Plan jetzt."
+  - "Timebox 30 Min., Ergebnis in Top‑Qualität."
+  - "Kriterien definieren, dann Best‑in‑Class liefern."
+  - "Spitzenposition anstreben, klare Messwerte."
+  - "Jetzt Lösung bauen, Qualität first."
+  - "Exzellenzziel: #1 im Segment – bis Q4."
+  - "Kein Kompromiss bei Standards – danach go."

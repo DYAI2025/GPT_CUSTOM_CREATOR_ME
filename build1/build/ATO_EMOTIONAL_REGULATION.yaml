@@ -1,0 +1,18 @@
+id: ATO_EMOTIONAL_REGULATION
+schema_version: LD-3.3
+lang: en
+category: ATOMIC
+description: Atomic pattern for emotional regulation language
+frame:
+  signal: ["emotional regulation"]
+  concept: "Emotional regulation signal"
+  pragmatics: "lexical indicator"
+  narrative: "surface"
+pattern: ["(?i)\\b(I feel|I'm feeling|emotions|calm down|breathe)\\b"]
+examples:
+  - "I feel overwhelmed right now."
+  - "I'm feeling frustrated about this."
+  - "My emotions are running high."
+  - "I need to calm down first."
+  - "Let me take a breath here."
+tags: [atomic, v3.3, auto-generated]

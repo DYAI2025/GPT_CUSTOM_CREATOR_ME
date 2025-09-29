@@ -1,0 +1,23 @@
+schema: "LeanDeep"
+version: "3.4"
+id: ATO_STATUS_SIGNALING
+frame:
+  signal: ["status_signaling"]
+  concept: "Selbstaufwertung über Status/Prestige"
+  pragmatics: "Impression Management"
+  narrative: "motive_achievement"
+tags: [status, prestige]
+pattern:
+  regex: '(?i)\b(top\s*(uni|universit[aä]t|unternehmen)|auszeichnung(en)?|preis(e)?\s+gewonnen|markt(f[üu]hrer|fuehrer)|nr\.?\s*1|(die\s+)?besten?\s+noten)\b'
+  flags: ["IGNORECASE"]
+examples:
+  - "Ich habe den Preis gewonnen."
+  - "Top‑Uni, beste Noten."
+  - "Wir sind Marktführer."
+  - "Nr. 1 in der Kategorie."
+  - "Auszeichnung für Exzellenz erhalten."
+  - "Top‑Unternehmen im Portfolio."
+  - "Beste Noten im Abschluss."
+  - "Prämiert als Team des Jahres."
+  - "Wir führen den Markt an."
+  - "Award gewonnen – stolz darauf."
